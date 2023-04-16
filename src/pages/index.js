@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div>
       <a href="/blog/bun-v0.5.9" className="">
-        <div className="flex h-10 w-full flex-row items-center  justify-center bg-gray-900 text-center text-gray-200">
+        <div className="flex h-10 w-full flex-row items-center  justify-center bg-neutral-900 text-center text-neutral-200">
           <p className="duration-100 group-hover:scale-105 m-0">
             Bun v0.5.9 is now available →
           </p>
@@ -34,15 +34,15 @@ export default function Home() {
         </Head>
         <div
           id="homepage"
-          className="px-20 flex w-full flex-row items-center justify-center bg-gray-900  pt-[5rem] pb-[5rem] text-gray-100 md:pt-[6rem] md:pb-[8rem]"
+          className="px-20 flex w-full flex-row items-center justify-center bg-neutral-900  pt-[5rem] pb-[5rem] text-neutral-100 md:pt-[6rem] md:pb-[8rem]"
         >
           <main className="mx-auto my-0 flex w-full flex-col items-center gap-8 md:max-w-screen-sm lg:max-w-[var(--max-width)] lg:flex-row lg:justify-between">
             <div className="flex-1 lg:max-w-[700px]">
-              <h1 className="mt-0 text-[26pt] font-extrabold leading-none dark:text-gray-50 md:text-[32pt] lg:text-[38pt] xl:text-[40pt]">
+              <h1 className="mt-0 text-[26pt] font-extrabold leading-none dark:text-neutral-50 md:text-[32pt] lg:text-[38pt] xl:text-[40pt]">
                 Bun is a fast all-in-one JavaScript runtime
               </h1>
               <div className="h-8"></div>
-              <p className="text-[1.3rem] leading-normal dark:text-gray-300">
+              <p className="text-[1.3rem] leading-normal dark:text-neutral-300">
                 Run, test, transpile, and bundle JavaScript &amp; TypeScript projects — all in Bun. Bun is a new JavaScript runtime built for speed and ease of use.
               </p>
               {/* <div className="h-12"></div> */}

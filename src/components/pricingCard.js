@@ -6,7 +6,7 @@ function PricingCard() {
             <div className="relative z-10 mx-auto -mt-8 w-full px-4 sm:px-6 lg:px-8 ">
                 <div className="mx-auto max-w-md grid lg:max-w-6xl lg:grid-cols-3 gap-24 lg:gap-5">
                     <div className="flex flex-col overflow-hidden border h-full rounded-[4px]">
-                        <div className="dark:bg-gray-800 bg-gray-100 px-8 pt-6 rounded-tr-[4px] rounded-tl-[4px] ">
+                        <div className="dark:bg-neutral-800 bg-neutral-100 px-8 pt-6 rounded-tr-[4px] rounded-tl-[4px] ">
                             <div className="mb-2 flex items-center gap-2">
                                 <div className="flex items-center gap-2">
                                     <h3 className="gradient-text-brand-500 dark:gradient-text-brand-100 text-2xl font-normal uppercase flex items-center gap-4 font-mono">
@@ -40,7 +40,7 @@ function PricingCard() {
                                 </div>
                             </div>
                         </div>
-                        <div className="dark:border-scale-400 dark:bg-gray-800 flex h-full rounded-bl-[4px] rounded-br-[4px] flex-1 flex-col bg-white px-8 py-6 ">
+                        <div className="dark:border-scale-400 dark:bg-neutral-800 flex h-full rounded-bl-[4px] rounded-br-[4px] flex-1 flex-col bg-white px-8 py-6 ">
                             <p className="text-scale-1100 text-xs mt-2 mb-4">Get started with:</p>
                             <ul role="list" className="text-xs text-scale-1000">
                                 <li className="flex items-center py-2 first:mt-0">
@@ -138,7 +138,7 @@ function PricingCard() {
             
                     </div>
                     <div className="flex flex-col overflow-hidden border h-full rounded-[4px]">
-                        <div className="dark:bg-gray-800 bg-gray-100 px-8 pt-6 rounded-tr-[4px] rounded-tl-[4px] ">
+                        <div className="dark:bg-neutral-800 bg-neutral-100 px-8 pt-6 rounded-tr-[4px] rounded-tl-[4px] ">
                             <div className="mb-2 flex items-center gap-2">
                                 <div className="flex items-center gap-2">
                                     <h3 className="gradient-text-brand-500 dark:gradient-text-brand-100 text-2xl font-normal uppercase flex items-center gap-4 font-mono">
@@ -172,7 +172,7 @@ function PricingCard() {
                                 </div>
                             </div>
                         </div>
-                        <div className="dark:border-scale-400 dark:bg-gray-800 flex h-full rounded-bl-[4px] rounded-br-[4px] flex-1 flex-col bg-white px-8 py-6 ">
+                        <div className="dark:border-scale-400 dark:bg-neutral-800 flex h-full rounded-bl-[4px] rounded-br-[4px] flex-1 flex-col bg-white px-8 py-6 ">
                             <p className="text-scale-1100 text-xs mt-2 mb-4">Get started with:</p>
                             <ul role="list" className="text-xs text-scale-1000">
                                 <li className="flex items-center py-2 first:mt-0">
@@ -270,7 +270,7 @@ function PricingCard() {
             
                     </div>
                     <div className="flex flex-col overflow-hidden border h-full rounded-[4px]">
-                        <div className="dark:bg-gray-800 bg-gray-100 px-8 pt-6 rounded-tr-[4px] rounded-tl-[4px] ">
+                        <div className="dark:bg-neutral-800 bg-neutral-100 px-8 pt-6 rounded-tr-[4px] rounded-tl-[4px] ">
                             <div className="mb-2 flex items-center gap-2">
                                 <div className="flex items-center gap-2">
                                     <h3 className="gradient-text-brand-500 dark:gradient-text-brand-100 text-2xl font-normal uppercase flex items-center gap-4 font-mono">
@@ -304,7 +304,7 @@ function PricingCard() {
                                 </div>
                             </div>
                         </div>
-                        <div className="dark:border-scale-400 dark:bg-gray-800 flex h-full rounded-bl-[4px] rounded-br-[4px] flex-1 flex-col bg-white px-8 py-6 ">
+                        <div className="dark:border-scale-400 dark:bg-neutral-800 flex h-full rounded-bl-[4px] rounded-br-[4px] flex-1 flex-col bg-white px-8 py-6 ">
                             <p className="text-scale-1100 text-xs mt-2 mb-4">Get started with:</p>
                             <ul role="list" className="text-xs text-scale-1000">
                                 <li className="flex items-center py-2 first:mt-0">

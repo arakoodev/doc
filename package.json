@@ -33,7 +33,8 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.4.0",
-    "@faker-js/faker": "^7.6.0"
+    "@faker-js/faker": "^7.6.0",
+    "gh-pages": "^5.0.0"
   },
   "browserslist": {
     "production": [
