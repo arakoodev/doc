@@ -34,7 +34,7 @@ export default function Home() {
         </Head>
         <div
           id="homepage"
-          className="px-20 flex w-full flex-row items-center justify-center bg-neutral-900  pt-[5rem] pb-[5rem] text-neutral-100 md:pt-[6rem] md:pb-[8rem]"
+          className="px-10 lg:px-20 flex w-full flex-row items-center justify-center bg-neutral-900  pt-[5rem] pb-[5rem] text-neutral-100 md:pt-[6rem] md:pb-[8rem]"
         >
           <main className="mx-auto my-0 flex w-full flex-col items-center gap-8 md:max-w-screen-sm lg:max-w-[var(--max-width)] lg:flex-row lg:justify-between">
             <div className="flex-1 lg:max-w-[700px]">
@@ -50,13 +50,13 @@ export default function Home() {
                 <InstallBox />
               </div>
             </div>
-            <div className="hidden lg:block flex-1">
+            <div className="w-full flex-0 lg:flex-1">
                 <Benchmark />
               {/* <img src="/img/homepage.png" alt="Bun homepage" /> */}
             </div>
           </main>
         </div>
-        <div className='px-40 py-20'>
+        <div className=' px-8 py-16 lg:px-40 md:py-20'>
           <MDXContent >
             <HomeContent />
           </MDXContent>

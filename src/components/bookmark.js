@@ -67,7 +67,7 @@ function Benchmark() {
         <div>
             <Bar options={options} data={data} />
         </div>
-                        );
+    );
 }
 
-                        export default Benchmark;
+export default Benchmark;

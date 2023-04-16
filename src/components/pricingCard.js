@@ -1,9 +1,10 @@
 import React from "react";
 import GetStartedButton from "./GetStartedButton";
+import PricingTable from "./PricingCardv2";
 function PricingCard() {
     return (
         <div className="mx-auto flex max-w-7xl flex-col">
-            <div className="relative z-10 mx-auto -mt-8 w-full px-4 sm:px-6 lg:px-8 ">
+            <div className="relative z-10 mx-auto -mt-4 w-full px-4 sm:px-6 lg:px-8 ">
                 <div className="mx-auto max-w-md grid lg:max-w-6xl lg:grid-cols-3 gap-24 lg:gap-5">
                     <div className="flex flex-col overflow-hidden border h-full rounded-[4px]">
                         <div className="dark:bg-neutral-800 bg-neutral-100 px-8 pt-6 rounded-tr-[4px] rounded-tl-[4px] ">
@@ -131,13 +132,14 @@ function PricingCard() {
                                     </span>
                                 </li>
                             </ul>
-                            
+                            <div className="space-y-2 mt-12"><p className="text-xs text-neutral-400 mb-8">Free projects are paused after 1 week of inactivity.</p></div>
                            <GetStartedButton links={"#"}/>
                             
                             </div>
             
                     </div>
-                    <div className="flex flex-col overflow-hidden border h-full rounded-[4px]">
+                    <PricingTable />
+                    {/* <div className="flex flex-col overflow-hidden border h-full rounded-[4px]">
                         <div className="dark:bg-neutral-800 bg-neutral-100 px-8 pt-6 rounded-tr-[4px] rounded-tl-[4px] ">
                             <div className="mb-2 flex items-center gap-2">
                                 <div className="flex items-center gap-2">
@@ -268,7 +270,7 @@ function PricingCard() {
                             
                             </div>
             
-                    </div>
+                    </div> */}
                     <div className="flex flex-col overflow-hidden border h-full rounded-[4px]">
                         <div className="dark:bg-neutral-800 bg-neutral-100 px-8 pt-6 rounded-tr-[4px] rounded-tl-[4px] ">
                             <div className="mb-2 flex items-center gap-2">
@@ -395,12 +397,15 @@ function PricingCard() {
                                     </span>
                                 </li>
                             </ul>
-                            
-                           <GetStartedButton links={"#"}/>
+                            <div className="space-y-2 mt-[7em]">
+                                    <GetStartedButton links={"#"}/>
+                            </div>
                             
                             </div>
             
                     </div>
+
+                    
                 </div>
             </div>
 </div>
@@ -409,3 +414,5 @@ function PricingCard() {
 }
 
 export default PricingCard;
+
+
