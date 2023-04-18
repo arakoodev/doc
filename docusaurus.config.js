@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/arako.ico',
 
   // Set the production url of your site here
   url: 'https://muhzulzidan.github.io',
@@ -104,10 +104,10 @@ const config = {
       //   ],
       // },
       navbar: {
-        title: 'Buns',
+        title: 'arakoo',
         logo: {
-          alt: 'Buns Logo',
-          src: 'img/logo.svg',
+          alt: 'arakoo Logo',
+          src: 'img/arako-logo-white.svg',
         },
         items: [
           {

@@ -27,11 +27,16 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-table-stripe-background: transparent;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.footer--dark {
+    --ifm-footer-background-color: transparent;
+    --ifm-footer-color: var(--ifm-footer-link-color);
+    --ifm-footer-link-color: var(--ifm-color-secondary);
+    --ifm-footer-title-color: var(--ifm-color-white);
+}
+
 
 .navbar__icon:before {
   content: "";
@@ -54,3 +59,68 @@
   mask: url(/img/discord-icon-svgrepo-com.svg) no-repeat 100% 100%;
   mask-size: cover;
 }
+
+
+.is-sticky {
+  position: sticky;
+  top: 3.5em;
+  z-index: 999;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  background: rgb(38 38 38);
+}
+
+
+/* .divide-neutral-400 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(163 163 163 / var(--tw-divide-opacity));
+} */
+
+/* .divide-y > :not([hidden]) ~ :not([hidden]) { */
+    /* --tw-divide-y-reverse: 0; */
+    /* border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse))); */
+    /* border-bottom-width: calc(1px * var(--tw-divide-y-reverse)); */
+/* } */
+/* table tr:nth-child(2n) { */
+    /* background-color: var(--ifm-table-stripe-background); */
+/* } */
+
+/* Custom CSS to override the styles */
+/* .divide-neutral-400 > :not([hidden]) ~ :not([hidden]) {
+  border:inherit;
+  --tw-border-opacity: 1;
+  border-color: inherit;
+  border-color: rgb(38 38 38 / var(--tw-border-opacity)) !important;
+}
+
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+  --tw-border-opacity: 1;
+    border-style: solid;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-color: rgb(38 38 38 / var(--tw-border-opacity));
+} */
+
+table.tablecostum tr:nth-child(2n) {
+    background-color: inherit;
+}
+
+table.tablecostum th,
+table.tablecostum td {
+  border: none;
+}
+
+table.tablecostum thead tr {
+    border-bottom: 0;
+}
+
+table.tablecostum tr {
+    border-top: 0;
+}
+
+table.tablecostum p {
+  margin: 0;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
