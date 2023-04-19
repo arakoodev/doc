@@ -31,7 +31,7 @@ export default function Home() {
         title={`Hello from ${siteConfig.title}`}
         description="Description will go into a meta tag in <head />">
         <Head>
-          <title>Bun - A Fast All-in-One JavaScript Runtime</title>
+          <title>arako - A Fast All-in-One JavaScript Runtime</title>
         </Head>
         <div
           id="homepage"
