@@ -8,7 +8,7 @@ import Head from '@docusaurus/Head';
 // import { MDXRenderer } from '@docusaurus/mdx';
 import MDXContent from '@theme/MDXContent';
 
-import HomeContent from '../markdown/home.mdx';
+import HomeContent, {frontMatter} from '../markdown/home.mdx';
 
 import InstallBox from '../components/installBox';
 import Benchmark from '../components/bookmark';
@@ -31,7 +31,7 @@ export default function Home() {
         title={`Hello from ${siteConfig.title}`}
         description="Description will go into a meta tag in <head />">
         <Head>
-          <title>arako - A Fast All-in-One JavaScript Runtime</title>
+          <title>{frontMatter.title}</title>
         </Head>
         <div
           id="homepage"
@@ -40,19 +40,18 @@ export default function Home() {
           <main className="mx-auto my-0 flex w-full flex-col items-center gap-8 md:max-w-screen-sm lg:max-w-[var(--max-width)] lg:flex-row lg:justify-between">
             <div className="lg:w-3/5">
               <h1 className="mt-0 text-[26pt] font-extrabold leading-none dark:text-neutral-50 md:text-[32pt] lg:text-[38pt] xl:text-[40pt]">
-                Bun is a fast all-in-one JavaScript runtime
+                {frontMatter.title}
               </h1>
               <p className="text-[1.3rem] leading-normal dark:text-neutral-300">
-                Run, test, transpile, and bundle JavaScript &amp; TypeScript projects — all in Bun. Bun is a new JavaScript runtime built for speed and ease of use.
+                {frontMatter.desc}
               </p>
               <div className="flex flex-col gap-4 ">
-                <InstallBox code={`curl -fsSL https://bun.sh/install{' '} | bash`} source={"https://bun.sh/install"}/>
+                <InstallBox code={frontMatter.code} source={frontMatter.link}/>
               </div>
             </div>
             <div className="w-full flex-0 lg:flex-1">
                 {/* <Benchmark /> */}
-              <TabPanel YoutubeVideoId={"cOv1GoWVcY4"}/>
-              {/* <img src="/img/homepage.png" alt="Bun homepage" /> */}
+              <TabPanel TabpanelValue={frontMatter.Tabpanel} />
             </div>
           </main>
         </div>
