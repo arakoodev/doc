@@ -6,20 +6,20 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Arakoo',
+  tagline: 'EdgeChains & TokenEdge - devtool & caching for LLM and GPT',
   favicon: 'img/logo-arako.ico',
 
   // Set the production url of your site here
-  url: 'https://muhzulzidan.github.io',
+  url: 'https:/arakoodev.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/alekhaweb/',
+  baseUrl: '/doc/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'muhzulzidan', // Usually your GitHub org/user name.
-  projectName: 'alekhaweb', // Usually your repo name.
+  organizationName: 'arakoodev', // Usually your GitHub org/user name.
+  projectName: 'doc', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
