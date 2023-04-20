@@ -13,7 +13,7 @@ const ApiRequestsRow = ({ text, tierFree, tierFreeValue, tierPro, tierProValue, 
                         <span className="sr-only">Included in</span>
                     </span>
                 ) : <span className="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" class="text-neutral-700"><path fill="currentColor" fill-rule="evenodd" d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18ZM5.534 9.534h6.804v-1H5.534v1Z" clip-rule="evenodd"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" class="text-neutral-700"><path fill="currentColor" fillRule="evenodd" d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18ZM5.534 9.534h6.804v-1H5.534v1Z" clipRule="evenodd"></path></svg>
                     <span className="sr-only">Included in</span>
                 </span>}
                 {tierFreeValue && (
@@ -30,7 +30,7 @@ const ApiRequestsRow = ({ text, tierFree, tierFreeValue, tierPro, tierProValue, 
                         <span className="sr-only">Included in</span>
                     </span>
                 ) : <span className="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" class="text-neutral-700"><path fill="currentColor" fill-rule="evenodd" d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18ZM5.534 9.534h6.804v-1H5.534v1Z" clip-rule="evenodd"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" class="text-neutral-700"><path fill="currentColor" fillRule="evenodd" d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18ZM5.534 9.534h6.804v-1H5.534v1Z" clipRule="evenodd"></path></svg>
                     <span className="sr-only">Included in</span>
                 </span>}
                 {tierProValue && (
@@ -46,7 +46,7 @@ const ApiRequestsRow = ({ text, tierFree, tierFreeValue, tierPro, tierProValue, 
                         <span className="sr-only">Included in</span>
                     </span>
                 ) : <span className="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" class="text-neutral-700"><path fill="currentColor" fill-rule="evenodd" d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18ZM5.534 9.534h6.804v-1H5.534v1Z" clip-rule="evenodd"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" class="text-neutral-700"><path fill="currentColor" fillRule="evenodd" d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18ZM5.534 9.534h6.804v-1H5.534v1Z" clipRule="evenodd"></path></svg>
                     <span className="sr-only">Included in</span>
                 </span>}
 
@@ -216,7 +216,7 @@ const TableRow = ({ children, name, }) => {
         <TableRow name={"Auth"}>
             <svg class="h-5 w-5 stroke-white  dark:stroke-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"
                     d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z">
                 </path>
             </svg>
@@ -243,7 +243,7 @@ const TableRow = ({ children, name, }) => {
         <TableRow name={"Storage"}>
             <svg class="h-5 w-5 stroke-white  dark:stroke-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"
                     d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z">
                 </path>
             </svg>
