@@ -5,7 +5,7 @@ const PricingCard = ({ monthlyPrice, description }) => {
         <div className="mt-8 px-4 mobile-header">
             <h2 className=" text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 dark:from-emerald-600 text-3xl font-medium uppercase font-mono m-0">Free</h2>
             <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-bold">${monthlyPrice}</span>
+                <span className="text-3xl font-bold">{monthlyPrice}</span>
                 <p className="text-base">/mo</p>
             </div>
             <p className="text-base my-3">{description}</p>
