@@ -77,16 +77,16 @@ const config = {
     ({
       colorMode: {
         defaultMode: 'dark',
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'arakoo',
+        // title: 'arakoo',
         logo: {
           alt: 'arakoo Logo',
-          src: 'img/arako-logo-white.svg',
+          src: 'img/arakoo-03.png',
         },
         items: [
           {

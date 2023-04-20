@@ -835,6 +835,7 @@ const ComparePlans = ({ className }) => {
 
         )
     }
+    
     const ContentRow = ({ text, tierFree, tierFreeValue, tierPro, tierProValue, tierEnterprise, tierEnterpriseValue }) => {
         return (
             <div className="border-0 border-t border-solid border-neutral-700 dark:divide-scale-400 flex">

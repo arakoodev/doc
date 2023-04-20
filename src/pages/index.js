@@ -8,7 +8,7 @@ import Head from '@docusaurus/Head';
 // import { MDXRenderer } from '@docusaurus/mdx';
 import MDXContent from '@theme/MDXContent';
 
-import HomeContent from './home.mdx';
+import HomeContent from '../markdown/home.mdx';
 
 import InstallBox from '../components/installBox';
 import Benchmark from '../components/bookmark';

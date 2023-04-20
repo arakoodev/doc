@@ -1,0 +1,178 @@
+import { Disclosure, Transition } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
+
+
+<Disclosure as={"div"} >
+  <Disclosure.Button
+        className="flex ring-0 items-center justify-between w-full px-4 py-2 text-sm font-medium text-left text-neutral-200 cursor-pointer bg-transparent outline-none border-0"
+    >
+    <span>Can I cap my usage so my bill doesn't run over?</span>
+    <ChevronDownIcon
+            className={`ui-open:rotate-180 ui-open:transform w-5 h-5 text-gray-500`}
+        />
+    </Disclosure.Button>
+    <Transition
+        className="transition-all duration-500 overflow-hidden"
+        enterFrom="transform scale-95 opacity-0 max-h-0"
+        enterTo="transform scale-100 opacity-100 max-h-96"
+        leaveFrom="transform scale-100 opacity-100 max-h-96"
+        leaveTo="transform scale-95 opacity-0 max-h-0"
+    >
+        <Disclosure.Panel className="px-4 py-4 text-sm text-neutral-500">
+        Yes. Spend caps are on by default on the Pro tier. You can turn spend caps off for usage beyond the tier limits to pay as you grow.
+        </Disclosure.Panel>
+    </Transition>
+</Disclosure>
+
+<Disclosure as={"div"} >
+  <Disclosure.Button
+        className="flex ring-0 items-center justify-between w-full px-4 py-2 text-sm font-medium text-left text-neutral-200 cursor-pointer bg-transparent outline-none border-0"
+    >
+    <span>I'm worried I could end up with a huge bill at the end of the month.</span>
+    <ChevronDownIcon
+            className={`ui-open:rotate-180 ui-open:transform w-5 h-5 text-gray-500`}
+        />
+    </Disclosure.Button>
+    <Transition
+        className="transition-all duration-500 overflow-hidden"
+        enterFrom="transform scale-95 opacity-0 max-h-0"
+        enterTo="transform scale-100 opacity-100 max-h-96"
+        leaveFrom="transform scale-100 opacity-100 max-h-96"
+        leaveTo="transform scale-95 opacity-0 max-h-0"
+    >
+        <Disclosure.Panel className="px-4 py-4 text-sm text-neutral-500">
+        Spend caps are on by default and you need to toggle them off from your dashboard to enable pay as you grow pricing.
+        </Disclosure.Panel>
+    </Transition>
+</Disclosure>
+
+<Disclosure as={"div"} >
+  <Disclosure.Button
+        className="flex ring-0 items-center justify-between w-full px-4 py-2 text-sm font-medium text-left text-neutral-200 cursor-pointer bg-transparent outline-none border-0"
+    >
+    <span>When will I be billed?</span>
+    <ChevronDownIcon
+            className={`ui-open:rotate-180 ui-open:transform w-5 h-5 text-gray-500`}
+        />
+    </Disclosure.Button>
+    <Transition
+        className="transition-all duration-500 overflow-hidden"
+        enterFrom="transform scale-95 opacity-0 max-h-0"
+        enterTo="transform scale-100 opacity-100 max-h-96"
+        leaveFrom="transform scale-100 opacity-100 max-h-96"
+        leaveTo="transform scale-95 opacity-0 max-h-0"
+    >
+        <Disclosure.Panel className="px-4 py-4 text-sm text-neutral-500">
+        Our Pro tier is charged up front, and billed on a monthly basis. Additional usage costs are also billed at the end of the month.
+        </Disclosure.Panel>
+    </Transition>
+</Disclosure>
+<Disclosure as={"div"} >
+  <Disclosure.Button
+        className="flex ring-0 items-center justify-between w-full px-4 py-2 text-sm font-medium text-left text-neutral-200 cursor-pointer bg-transparent outline-none border-0"
+    >
+    <span>Are you going to change your pricing in the future?</span>
+    <ChevronDownIcon
+            className={`ui-open:rotate-180 ui-open:transform w-5 h-5 text-gray-500`}
+        />
+    </Disclosure.Button>
+    <Transition
+        className="transition-all duration-500 overflow-hidden"
+        enterFrom="transform scale-95 opacity-0 max-h-0"
+        enterTo="transform scale-100 opacity-100 max-h-96"
+        leaveFrom="transform scale-100 opacity-100 max-h-96"
+        leaveTo="transform scale-95 opacity-0 max-h-0"
+    >
+        <Disclosure.Panel className="px-4 py-4 text-sm text-neutral-500">
+        Our pricing is in Beta. You can read more about our decisions in our pricing blog post. Pricing may change in the future, however as a team of developers we are committed to pricing being as developer friendly as possible.
+        </Disclosure.Panel>
+    </Transition>
+</Disclosure>
+
+<Disclosure as={"div"} >
+  <Disclosure.Button
+        className="flex ring-0 items-center justify-between w-full px-4 py-2 text-sm font-medium text-left text-neutral-200 cursor-pointer bg-transparent outline-none border-0"
+    >
+    <span>What happens if I cancel my subscription?</span>
+    <ChevronDownIcon
+            className={`ui-open:rotate-180 ui-open:transform w-5 h-5 text-gray-500`}
+        />
+    </Disclosure.Button>
+    <Transition
+        className="transition-all duration-500 overflow-hidden"
+        enterFrom="transform scale-95 opacity-0 max-h-0"
+        enterTo="transform scale-100 opacity-100 max-h-96"
+        leaveFrom="transform scale-100 opacity-100 max-h-96"
+        leaveTo="transform scale-95 opacity-0 max-h-0"
+    >
+        <Disclosure.Panel className="px-4 py-4 text-sm text-neutral-500">
+        The organization is allocated credits for unused time during the billing month. Those credits can be used for other projects.
+        </Disclosure.Panel>
+    </Transition>
+</Disclosure>
+
+<Disclosure as={"div"} >
+  <Disclosure.Button
+        className="flex ring-0 items-center justify-between w-full px-4 py-2 text-sm font-medium text-left text-neutral-200 cursor-pointer bg-transparent outline-none border-0"
+    >
+    <span>What if I need one project for development and one for production?</span>
+    <ChevronDownIcon
+            className={`ui-open:rotate-180 ui-open:transform w-5 h-5 text-gray-500`}
+        />
+    </Disclosure.Button>
+    <Transition
+        className="transition-all duration-500 overflow-hidden"
+        enterFrom="transform scale-95 opacity-0 max-h-0"
+        enterTo="transform scale-100 opacity-100 max-h-96"
+        leaveFrom="transform scale-100 opacity-100 max-h-96"
+        leaveTo="transform scale-95 opacity-0 max-h-0"
+    >
+        <Disclosure.Panel className="px-4 py-4 text-sm text-neutral-500">
+            We are working on multi-environment projects. For now, you can create a project for your development backend and production backend. We give you 2 free projects as part of our free tier. This means you could have a development and a production server as part of your free tier.
+        </Disclosure.Panel>
+    </Transition>
+</Disclosure>
+
+<Disclosure as={"div"} >
+  <Disclosure.Button
+        className="flex ring-0 items-center justify-between w-full px-4 py-2 text-sm font-medium text-left text-neutral-200 cursor-pointer bg-transparent outline-none border-0"
+    >
+    <span>Can I self-host Supabase for free?</span>
+    <ChevronDownIcon
+            className={`ui-open:rotate-180 ui-open:transform w-5 h-5 text-gray-500`}
+        />
+    </Disclosure.Button>
+    <Transition
+        className="transition-all duration-500 overflow-hidden"
+        enterFrom="transform scale-95 opacity-0 max-h-0"
+        enterTo="transform scale-100 opacity-100 max-h-96"
+        leaveFrom="transform scale-100 opacity-100 max-h-96"
+        leaveTo="transform scale-95 opacity-0 max-h-0"
+    >
+        <Disclosure.Panel className="px-4 py-4 text-sm text-neutral-500">
+            Yes, you can use the Docker setup or the Supabase CLI. Supabase Studio is also available in the Docker setup.
+        </Disclosure.Panel>
+    </Transition>
+</Disclosure>
+
+<Disclosure as={"div"} >
+  <Disclosure.Button
+    className="flex ring-0 items-center justify-between w-full px-4 py-2 text-sm font-medium text-left text-neutral-200 cursor-pointer bg-transparent outline-none border-0"
+  >
+    <span>Can I pause a free project?</span>
+    <ChevronDownIcon
+      className={`ui-open:rotate-180 ui-open:transform w-5 h-5 text-gray-500`}
+    />
+  </Disclosure.Button>
+  <Transition
+    className="transition-all duration-500 overflow-hidden"
+    enterFrom="transform scale-95 opacity-0 max-h-0"
+    enterTo="transform scale-100 opacity-100 max-h-96"
+    leaveFrom="transform scale-100 opacity-100 max-h-96"
+    leaveTo="transform scale-95 opacity-0 max-h-0"
+  >
+    <Disclosure.Panel className="px-4 py-4 text-sm text-neutral-500">
+      Yes, you can pause a project at any time. Our Free tier gives you 2 free projects, but you can have as many paused projects as you want. Just pause and unpause them as needed.
+    </Disclosure.Panel>
+  </Transition>
+</Disclosure>

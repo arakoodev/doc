@@ -3,7 +3,7 @@ import GetStartedButton from "../GetStartedButton";
 import PricingTable from "./PricingCardv2";
 function PricingCard() {
     return (
-        <div className="mx-auto flex max-w-7xl flex-col">
+        <div className="mx-auto flex max-w-7xl flex-col pt-12">
             <div className="relative z-10 mx-auto -mt-4 w-full px-4 sm:px-6 lg:px-8 ">
                 <div className="mx-auto max-w-md grid lg:max-w-6xl lg:grid-cols-3 gap-24 lg:gap-5">
                     <div className="flex flex-col overflow-hidden border h-full rounded-[4px]">
