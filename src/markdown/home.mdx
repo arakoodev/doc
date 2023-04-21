@@ -1,128 +1,87 @@
 ---
-title: "arako - A Fast All-in-One JavaScript Runtime"
-desc: "Run, test, transpile, and bundle JavaScript &amp; TypeScript projects — all in Bun. Bun is a new JavaScript runtime built for speed and ease of use."
-code: "curl -fsSL https://bun.sh/install{' '} | bash"
-link: "https://bun.sh/install"
+title: "arakoo - Serverless, Compression and Cache for GPT & LLM"
+desc: "Build Production-ready and Blazing Fast LLM chains on the JVM. Scale using serverless and caching. "
+code: "java -jar flyfly.jar <command>"
+link: "[https://bun.sh/install](https://github.com/arakoodev/FlySpring/releases)"
 Tabpanel: 
   tab1: 
-    title: "New York"
-    desc: "Messages sent per second (Linux x64, 16 clients)"
-    youtube: "cOv1GoWVcY4"
+    title: "FlySpring"
+    desc: "Java magic!"
+    youtube: "ZH86LTfjWtU"
   tab2: 
-    title: "Youtube Video About google"
-    desc: "Messages sent per second (Linux x64, 16 clients)"
-    youtube: "4WXs3sKu41I"
+    title: "FlySpring"
+    desc: "Java magic!"
+    youtube: "ZH86LTfjWtU"
 ---
-## What is Bun?
+## What is Arakoo?
 
-> **​​Bun is still under development.** Use it to speed up your development workflows or run simpler production code in resource-constrained environments like serverless functions. We're working on more complete Node.js compatibility and integration with existing frameworks. Join the [Discord](https://bun.sh/discord) and watch the [GitHub repository](https://github.com/oven-sh/bun) to keeps tabs on future releases.
+> **​​Arakoo FlySpring & EdgeChains is still under development.** Use it to speed up your development workflows for LLMs and GPTs or run it in production as serverless functions. # FlyFly
+`flyfly` is our magical cli. It supercharges your development cycle. Your spring code gets autorefreshed whenever you make a code change. instant reloads. Also sets up Testcontainers for you.
+And does instantaneous code formatting for you, so your java code looks fresh and clean. Dont leave home without `flyfly`.
 
-<Highlight color="#25c2a0">Bun</Highlight> is an all-in-one toolkit for <Highlight color="#ff6524">JavaScript</Highlight> and TypeScript apps. It ships as a single executable called `bun​`.
+[![FlyFly cli from Arakoo FlySpring](https://user-images.githubusercontent.com/76883/210039417-6b513ed8-8a25-4e69-83c5-49ab05520c9d.jpg)](https://youtu.be/ZH86LTfjWtU)
 
-At its core is the _Bun runtime_, a fast JavaScript <Highlight color="#998524">Runtime</Highlight>  designed as a drop-in replacement for Node.js. It's written in Zig and powered by JavaScriptCore under the hood, dramatically reducing startup times and memory usage.
 
+## ⚔️ Kill The Decorator
+
+
+## 🎊 Community
+
+💫💫💫 **we would be very grateful if you could take 5 seconds to star our repository on Github. It helps get the word out to more Java developers & open source committers about FlySpring.** 💫💫💫
+
+- Follow our [Twitter](https://twitter.com/arakoodev)
+- Join  [Discord](https://discord.gg/MtEPK9cnSF) to write code, get help, or to chat with us!!!
+- Open a [discussion](https://github.com/arakoodev/FlySpring/discussions/new) with your question, or
+- Open [a bug](https://github.com/arakoodev/FlySpring/issues/new)
+- Check open [Github Issues](https://github.com/arakoodev/FlySpring/issues)
+- Make sure to read our [contributing CLA](https://github.com/arakoodev/.github/blob/main/CLA.md).
+
+## 🪅 Getting Started
+
+It's Spring ! Just three steps.
+
+cd to autoroute directory
+```console
+mvn clean package -P gofly
+```
+cd to flyfly directory
+```console
+mvn clean package -P gofly
+```
+Now cd into Examples/starter :- flyfly is ready to roll!
 ```bash
-bun run index.tsx             # TS and JSX supported out of the box
+java -jar flyfly.jar <command>
 ```
 
-​​The `bun​` command-line tool also implements a test runner, script runner, and Node.js-compatible package manager. Instead of 1,000 node_modules for development, you only need `bun`. Bun's built-in tools are significantly faster than existing options and usable in existing Node.js projects with little to no changes.
+## 🧐 Contributing Guidelines (There is only one)
 
-```bash
-bun test                      # run tests
-bun run start                 # run the `start` script in `package.json`
-bun install <pkg>​             # install a package
-bunx cowsay 'Hello, world!'   # execute a package
+This project hopes and requests for clean pull request merges. the way we merge is squash and merge. This fundamentally can only work if you **NEVER ISSUE A PULL REQUEST TWICE FROM THE SAME LOCAL BRANCH**. If you create another pull request from same local branch, then the merge will always fail.
+
+solution is simple - **ONE BRANCH PER PULL REQUEST**. We Follow this strictly. if you have created this pull request using your master/main branch, then follow these steps to fix it:
+```
+# Note: Any changes not committed will be lost.
+git branch newbranch      # Create a new branch, saving the desired commits
+git checkout master       # checkout master, this is the place you want to go back
+git reset --hard HEAD~3   # Move master back by 3 commits (Make sure you know how many commits you need to go back)
+git checkout newbranch    # Go to the new branch that still has the desired commits. NOW CREATE A PULL REQUEST
 ```
 
-## Install
+## 💌 Acknowledgements
 
-Bun supports Linux (x64 & arm64) and macOS (x64 & Apple Silicon).
+- First Hat tip to  [Spring](https://github.com/spring-projects/spring-framework).
+- We are inspired by the spirit of [Nextjs](https://github.com/vercel/next.js/).
+- All the other [contributors](https://github.com/wootzapp/wootz-browser/graphs/contributors).
 
-> **Linux users** — Kernel version 5.6 or higher is strongly recommended, but the minimum is 5.1.
-> 
-> **Windows users** — Bun does not currently provide a native Windows build. We're working on this; progress can be tracked at [this issue](https://github.com/oven-sh/bun/issues/43). In the meantime, use one of the installation methods below for Windows Subsystem for Linux.
+## ✍️ Authors and Contributors
 
-```sh
-# with install script (recommended)
-curl -fsSL https://bun.sh/install | bash
+- Sandeep Srinivasa ([@sandys](https://twitter.com/sandeepssrin))
 
-# with npm
-npm install -g bun
+We love contributors! Feel free to contribute to this project but please read the [CLA](https://github.com/wootzapp/.github/blob/main/CLA.md) first!
 
-# with Homebrew
-brew tap oven-sh/bun
-brew install bun
+<a href="https://github.com/arakoodev/FlySpring/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=arakoodev/FlySpring&max=300&columns=12&anon=0" />
+</a>
 
-# with Docker
-docker pull oven/bun
-docker run --rm --init --ulimit memlock=-1:-1 oven/bun
-```
+## 📜 License
 
-
-### Upgrade
-
-To upgrade to the latest version of Bun, run:
-
-```sh
-bun upgrade
-```
-
-Bun automatically releases a canary build on every commit to `main`. To upgrade to the latest canary build, run:
-
-```sh
-bun upgrade --canary
-```
-
-[View canary build](https://github.com/oven-sh/bun/releases/tag/canary)
-
-## Quick links
-
-- Intro
-  - [What is Bun?](https://bun.sh/docs/index)
-  - [Installation](https://bun.sh/docs/installation)
-  - [Quickstart](https://bun.sh/docs/quickstart)
-- CLI
-  - [`bun run`](https://bun.sh/docs/cli/run)
-  - [`bun install`](https://bun.sh/docs/cli/install)
-  - [`bun test`](https://bun.sh/docs/cli/test)
-  - [`bun create`](https://bun.sh/docs/cli/create)
-  - [`bunx`](https://bun.sh/docs/cli/bunx)
-- Runtime
-  - [Runtime](https://bun.sh/docs/runtime/index)
-  - [Module resolution](https://bun.sh/docs/runtime/modules)
-  - [Hot &amp; live reloading](https://bun.sh/docs/runtime/hot)
-  - [Plugins](https://bun.sh/docs/runtime/plugins)
-- Ecosystem
-  - [Node.js](https://bun.sh/docs/ecosystem/nodejs)
-  - [TypeScript](https://bun.sh/docs/ecosystem/typescript)
-  - [React](https://bun.sh/docs/ecosystem/react)
-  - [Elysia](https://bun.sh/docs/ecosystem/elysia)
-  - [Hono](https://bun.sh/docs/ecosystem/hono)
-  - [Express](https://bun.sh/docs/ecosystem/express)
-  - [awesome-bun](https://github.com/apvarun/awesome-bun)
-- API
-  - [HTTP](https://bun.sh/docs/api/http)
-  - [WebSockets](https://bun.sh/docs/api/websockets)
-  - [TCP Sockets](https://bun.sh/docs/api/tcp)
-  - [File I/O](https://bun.sh/docs/api/file-io)
-  - [SQLite](https://bun.sh/docs/api/sqlite)
-  - [FileSystemRouter](https://bun.sh/docs/api/file-system-router)
-  - [Globals](https://bun.sh/docs/api/globals)
-  - [Spawn](https://bun.sh/docs/api/spawn)
-  - [Transpiler](https://bun.sh/docs/api/transpiler)
-  - [Console](https://bun.sh/docs/api/console)
-  - [FFI](https://bun.sh/docs/api/ffi)
-  - [HTMLRewriter](https://bun.sh/docs/api/html-rewriter)
-  - [Testing](https://bun.sh/docs/api/test)
-  - [Utils](https://bun.sh/docs/api/utils)
-  - [DNS](https://bun.sh/docs/api/dns)
-  - [Node-API](https://bun.sh/docs/api/node-api)
-
-
-## Contributing
-
-Refer to the [Project > Development](https://bun.sh/docs/project/development) guide to start contributing to Bun.
-
-## License
-
-Refer to the [Project > License](https://bun.sh/docs/project/licensing) page for information about Bun's licensing.
+FlySpring is open-source OSS software licensed under the MIT license.
