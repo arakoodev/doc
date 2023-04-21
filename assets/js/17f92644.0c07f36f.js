@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[1363],{6048:a=>{a.exports=JSON.parse('{"label":"docusaurus","permalink":"/doc/blog/tags/docusaurus","allTagsPath":"/doc/blog/tags","count":4}')}}]);
