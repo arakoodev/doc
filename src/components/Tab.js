@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import YouTube from 'react-youtube';
 
-function TabPanel({ YoutubeVideoId }) {
+function TabPanel({ TabpanelValue }) {
 
     const [activeTab, setActiveTab] = useState(1);
 
@@ -36,28 +36,28 @@ function TabPanel({ YoutubeVideoId }) {
                         <div className='py-4 lg:py-0' > 
                         <div className="py-4 text-center">
                             <h2 className="m-0 text-1.5rem font-medium leading-snug text-gray-300">
-                                New York
+                                {TabpanelValue.tab1.title}
                             </h2>
                             <p className="m-0 text-1rem text-gray-400">
-                                Messages sent per second (Linux x64, 16 clients)
+                                {TabpanelValue.tab1.desc}
                             </p>
                         </div>
 
-                        <div className='aspect-w-16 aspect-h-9'> <iframe  src={`https://www.youtube.com/embed/${YoutubeVideoId}`}title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
+                        <div className='aspect-w-16 aspect-h-9'> <iframe src={`https://www.youtube.com/embed/${TabpanelValue.tab1.youtube}`}title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
                         </div>
                     }
                 {activeTab === 2 && 
                     <div className='py-4 lg:py-0' >
                         <div className="py-4 text-center">
                             <h2 className="m-0 text-1.5rem font-medium leading-snug text-gray-300">
-                                Youtube Video About google
+                                {TabpanelValue.tab2.title}
                             </h2>
                             <p className="m-0 text-1rem text-gray-400">
-                                Messages sent per second (Linux x64, 16 clients)
+                                {TabpanelValue.tab2.desc}
                             </p>
                         </div>
 
-                        <div className="aspect-w-16 aspect-h-9"> <iframe src="https://www.youtube.com/embed/4WXs3sKu41I" title="Google — Year in Search 2022" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
+                        <div className="aspect-w-16 aspect-h-9"> <iframe src={`https://www.youtube.com/embed/${TabpanelValue.tab2.youtube}`} title="Google — Year in Search 2022" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
                 </div>
                 }
             </div>
