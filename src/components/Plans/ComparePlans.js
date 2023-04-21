@@ -827,20 +827,23 @@ const ComparePlans = ({ className }) => {
 
     // const { monthlyPrice: enterpriseMonthlyPrice, features: enterpriseFeatures, description: enterpriseDescription } = priceMap.Enterprise;
 
-    const freeMonthlyName = frontMatter.Free[0].name;
-    const freeMonthlyPrice = frontMatter.Free[1].monthlyPrice;
-    const freeFeatures = frontMatter.Free[3].features;
-    const FreeDescription = frontMatter.Free[2].description;
+    const freeMonthlyLink = frontMatter.Free[0].link;
+    const freeMonthlyName = frontMatter.Free[1].name;
+    const freeMonthlyPrice = frontMatter.Free[2].monthlyPrice;
+    const FreeDescription = frontMatter.Free[3].description;
+    const freeFeatures = frontMatter.Free[4].features;
 
-    const proMonthlyName = frontMatter.Pro[0].name;
-    const proMonthlyPrice = frontMatter.Pro[1].monthlyPrice;
-    const proDescription = frontMatter.Pro[2].description;
-    const proFeatures = frontMatter.Pro[3].features;
+    const proMonthlyLink = frontMatter.Pro[0].link;
+    const proMonthlyName = frontMatter.Pro[1].name;
+    const proMonthlyPrice = frontMatter.Pro[2].monthlyPrice;
+    const proDescription = frontMatter.Pro[3].description;
+    const proFeatures = frontMatter.Pro[4].features;
 
-    const enterpriseMonthlyName = frontMatter.Enterprise[0].name;
-    const enterpriseMonthlyPrice = frontMatter.Enterprise[1].monthlyPrice;
-    const enterpriseDescription = frontMatter.Enterprise[2].description;
-    const enterpriseFeatures = frontMatter.Enterprise[3].features;
+    const enterpriseMonthlyLink = frontMatter.Enterprise[0].link;
+    const enterpriseMonthlyName = frontMatter.Enterprise[1].name;
+    const enterpriseMonthlyPrice = frontMatter.Enterprise[2].monthlyPrice;
+    const enterpriseDescription = frontMatter.Enterprise[3].description;
+    const enterpriseFeatures = frontMatter.Enterprise[4].features;
 
     const all = frontMatter.All
 
@@ -935,7 +938,7 @@ const ComparePlans = ({ className }) => {
 
     return (
         <div className=' '>
-            {console.log(all.Database.FeatureIncluded)}
+
             <div className="lg:hidden">
                 <div className="bg-zinc-900 p-2 sticky top-14 z-10 pt-4">
                     <div className="bg-zinc-800 rounded-lg border border-zinc-600 py-2 px-4 flex justify-between items-center">
@@ -1085,14 +1088,13 @@ const ComparePlans = ({ className }) => {
 
                         </div>
 
-                        <HeadingRow name={"Database"}>
+                        <HeadingRow name={all.Database.name}>
                             <svg className="h-5 w-5 stroke-white  dark:stroke-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
                             </svg>
                         </HeadingRow>
                         {all.Database.FeatureIncluded.map(feature => (
                             <div>
-                                {console.log(feature)}
                                 <ContentRow
                                     key={feature.text}
                                     text={feature.name}
@@ -1115,10 +1117,25 @@ const ComparePlans = ({ className }) => {
                         <ContentRow text={"Database egress"} tierFreeValue={"2GB"} tierProValue={"50 GB, then $0.09 per GB"} tierEnterpriseValue={"Unlimited"} /> */}
 
                         <div className="h-16"></div>
-                        <HeadingRow name={"Auth"}>
+                        <HeadingRow name={all.Auth.name}>
                             <svg className="h-5 w-5 stroke-white  dark:stroke-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>
                         </HeadingRow>
-                        <ContentRow text={"Total Users"} tierFreeValue={"Unlimited"} tierProValue={"Unlimited"} tierEnterpriseValue={"Unlimited"} />
+                        {all.Auth.FeatureIncluded.map(feature => (
+                            <div>
+                                <ContentRow
+                                    key={feature.text}
+                                    text={feature.name}
+                                    tierFree={feature.tierFree}
+                                    tierPro={feature.tierPro}
+                                    tierEnterprise={feature.tierEnterprise}
+                                    tierFreeValue={feature.tierFreeValue}
+                                    tierProValue={feature.tierProValue}
+                                    tierEnterpriseValue={feature.tierEnterpriseValue}
+                                />
+                            </div>
+                        ))}
+
+                        {/* <ContentRow text={"Total Users"} tierFreeValue={"Unlimited"} tierProValue={"Unlimited"} tierEnterpriseValue={"Unlimited"} />
                         <ContentRow text={"MAUs"} tierFreeValue={"50,000"} tierProValue={"100,000, then $0.00325 per MAU"} tierEnterpriseValue={"Unlimited"} />
                         <ContentRow text={"Social OAuth providers"} tierFree={true} tierPro={true} tierEnterprise={true} />
                         <ContentRow text={"Custom SMTP server"} tierFree={true} tierPro={true} tierEnterprise={true} />
@@ -1128,45 +1145,130 @@ const ComparePlans = ({ className }) => {
                         <ContentRow text={"Supabase Auth emails"} tierFreeValue={"30 / hour"} tierProValue={"100 / hour"} tierEnterpriseValue={"Contact Us"} />
                         <ContentRow text={"Single Sign-On (SAML 2.0)"} tierFree={false}  tierProValue={"50 free, then $0.015 per MAU"} tierEnterprise={false} tierEnterpriseValue={"Contact Us"} />
                         <ContentRow text={"Advanced security features"} tierFree={false} tierPro={false} tierEnterprise={false}  tierEnterpriseValue={"Contact Us"} />
-                        <div className="h-16"></div>
+                         */}
                         
-                        <HeadingRow name={"Storage"}>
+                        <div className="h-16"></div>
+
+                        <HeadingRow name={all.Storage.name}>
                             <svg className="h-5 w-5 stroke-white dark:stroke-black dark:stroke-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
                         </HeadingRow>
-                        <ContentRow text={"Storage"} tierFreeValue={"1 GB"} tierProValue={"100 GB, then $0.021 per GB"} tierEnterpriseValue={"Unlimited"} />
+                        {all.Storage.FeatureIncluded.map(feature => (
+                            <div>
+                                <ContentRow
+                                    key={feature.text}
+                                    text={feature.name}
+                                    tierFree={feature.tierFree}
+                                    tierPro={feature.tierPro}
+                                    tierEnterprise={feature.tierEnterprise}
+                                    tierFreeValue={feature.tierFreeValue}
+                                    tierProValue={feature.tierProValue}
+                                    tierEnterpriseValue={feature.tierEnterpriseValue}
+                                />
+                            </div>
+                        ))}
+
+                        {/* <ContentRow text={"Storage"} tierFreeValue={"1 GB"} tierProValue={"100 GB, then $0.021 per GB"} tierEnterpriseValue={"Unlimited"} />
                         <ContentRow text={"Storage egress"} tierFreeValue={"2 GB"} tierProValue={"200 GB, then $0.09 per GB"} tierEnterpriseValue={"Unlimited"} />
                         <ContentRow text={"Custom access controls"} tierFree={true} tierPro={true} tierEnterprise={true} />
                         <ContentRow text={"Max file upload size"} tierFreeValue={"50MB"} tierProValue={"5GB"} tierEnterpriseValue={"Unlimited"} />
-                        <ContentRow text={"Asset transformations"} tierFree={false} tierProValue={"100 origin images, then $5 per 1000 origin images"} tierEnterprise={true} />
-                        <div className="h-16"></div>
-                        <HeadingRow name={"Realtime"}>
-                            <svg className="h-5 w-5 stroke-white dark:stroke-black dark:stroke-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </HeadingRow>
-                        <ContentRow text={"Postgres Changes"} tierFree={true} tierPro={true} tierEnterprise={true} />
-                        <ContentRow text={"Concurrent Peak Connections"} tierFreeValue={"200"} tierProValue={"500, then $10 per 1000"} tierEnterpriseValue={"Unlimited concurrent connections and volume discount"} />
-                        <ContentRow text={"Messages Per Month"} tierFreeValue={"2 Million"} tierProValue={"5 Million, then $2.50 per Million"} tierEnterpriseValue={"Volume discounts on messages"} />
-                        <ContentRow text={"Max Message Size"} tierFreeValue={"250 KB"} tierProValue={"3 MB"} tierEnterpriseValue={"Custom"} />
-                        <div className="h-16"></div>
-                        <HeadingRow name={"Edge Functions"}>
-                            <svg className="h-5 w-5 stroke-white dark:stroke-black dark:stroke-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                        </HeadingRow>
-                        <ContentRow text={"Invocations"} tierFreeValue={"500K/month"} tierProValue={"2 Million, then $2 per 1 Million"} tierEnterpriseValue={"Unlimited"} />
-                        <ContentRow text={"Script size"} tierFreeValue={"2 MB"} tierProValue={"10 MB"} tierEnterpriseValue={"Unlimited"} />
-                        <ContentRow text={"Number of functions"} tierFreeValue={"10"} tierProValue={"100, then $10 per additional 100"} tierEnterpriseValue={"Unlimited"} />
+                        <ContentRow text={"Asset transformations"} tierFree={false} tierProValue={"100 origin images, then $5 per 1000 origin images"} tierEnterprise={true} /> */}
 
                         <div className="h-16"></div>
-                        <HeadingRow name={"Dashboard"}>
-                            <svg className="h-5 w-5 stroke-white dark:stroke-black dark:stroke-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+
+
+                        <HeadingRow name={all.Realtime.name}>
+                            <svg className="h-5 w-5 stroke-white dark:stroke-black dark:stroke-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </HeadingRow>
-                        
-                        <ContentRow text={"Team members"}  tierFreeValue={"Unlimited"} tierProValue={"Unlimited"} tierEnterpriseValue={"Unlimited"} />
-                        <ContentRow text={"Access controls"} tierFreeValue={"Coming soon"} tierProValue={"Coming soon"} tierFree={false} tierPro={false} tierEnterprise={true} />
-                        <ContentRow text={"Audit trails"} tierFree={false} tierPro={false} tierEnterprise={true}  />
+                        {all.Realtime.FeatureIncluded.map(feature => (
+                            <div>
+                                <ContentRow
+                                    key={feature.text}
+                                    text={feature.name}
+                                    tierFree={feature.tierFree}
+                                    tierPro={feature.tierPro}
+                                    tierEnterprise={feature.tierEnterprise}
+                                    tierFreeValue={feature.tierFreeValue}
+                                    tierProValue={feature.tierProValue}
+                                    tierEnterpriseValue={feature.tierEnterpriseValue}
+                                />
+                            </div>
+                        ))}
+
+                        {/* <ContentRow text={"Postgres Changes"} tierFree={true} tierPro={true} tierEnterprise={true} />
+                        <ContentRow text={"Concurrent Peak Connections"} tierFreeValue={"200"} tierProValue={"500, then $10 per 1000"} tierEnterpriseValue={"Unlimited concurrent connections and volume discount"} />
+                        <ContentRow text={"Messages Per Month"} tierFreeValue={"2 Million"} tierProValue={"5 Million, then $2.50 per Million"} tierEnterpriseValue={"Volume discounts on messages"} />
+                        <ContentRow text={"Max Message Size"} tierFreeValue={"250 KB"} tierProValue={"3 MB"} tierEnterpriseValue={"Custom"} /> */}
+
                         <div className="h-16"></div>
-                        <HeadingRow name={"Platform Security \n and Compliance"}>
+
+                        <HeadingRow name={all.EdgeFunctions.name}>
+                            <svg className="h-5 w-5 stroke-white dark:stroke-black dark:stroke-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </HeadingRow>
+                        {all.EdgeFunctions.FeatureIncluded.map(feature => (
+                            <div>
+                                <ContentRow
+                                    key={feature.text}
+                                    text={feature.name}
+                                    tierFree={feature.tierFree}
+                                    tierPro={feature.tierPro}
+                                    tierEnterprise={feature.tierEnterprise}
+                                    tierFreeValue={feature.tierFreeValue}
+                                    tierProValue={feature.tierProValue}
+                                    tierEnterpriseValue={feature.tierEnterpriseValue}
+                                />
+                            </div>
+                        ))}
+
+                        {/* <ContentRow text={"Invocations"} tierFreeValue={"500K/month"} tierProValue={"2 Million, then $2 per 1 Million"} tierEnterpriseValue={"Unlimited"} />
+                        <ContentRow text={"Script size"} tierFreeValue={"2 MB"} tierProValue={"10 MB"} tierEnterpriseValue={"Unlimited"} />
+                        <ContentRow text={"Number of functions"} tierFreeValue={"10"} tierProValue={"100, then $10 per additional 100"} tierEnterpriseValue={"Unlimited"} /> */}
+
+                        <div className="h-16"></div>
+
+                        <HeadingRow name={all.Dashboard.name}>
+                            <svg className="h-5 w-5 stroke-white dark:stroke-black dark:stroke-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                        </HeadingRow>     
+                        {all.Dashboard.FeatureIncluded.map(feature => (
+                            <div>
+                                <ContentRow
+                                    key={feature.text}
+                                    text={feature.name}
+                                    tierFree={feature.tierFree}
+                                    tierPro={feature.tierPro}
+                                    tierEnterprise={feature.tierEnterprise}
+                                    tierFreeValue={feature.tierFreeValue}
+                                    tierProValue={feature.tierProValue}
+                                    tierEnterpriseValue={feature.tierEnterpriseValue}
+                                />
+                            </div>
+                        ))}
+
+
+                        {/* <ContentRow text={"Team members"}  tierFreeValue={"Unlimited"} tierProValue={"Unlimited"} tierEnterpriseValue={"Unlimited"} />
+                        <ContentRow text={"Access controls"} tierFreeValue={"Coming soon"} tierProValue={"Coming soon"} tierFree={false} tierPro={false} tierEnterprise={true} />
+                        <ContentRow text={"Audit trails"} tierFree={false} tierPro={false} tierEnterprise={true}  /> */}
+
+                        <div className="h-16"></div>
+
+                        <HeadingRow name={all.PlatformSecurityandCompliance.name}>
                             <svg className="h-5 w-5 stroke-white dark:stroke-black dark:stroke-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"></path></svg>
                         </HeadingRow>
-                        <ContentRow text={"On Premises / BYO cloud"} tierFree={false} tierPro={false} tierEnterprise={true} />
+                        {all.PlatformSecurityandCompliance.FeatureIncluded.map(feature => (
+                            <div>
+                                <ContentRow
+                                    key={feature.text}
+                                    text={feature.name}
+                                    tierFree={feature.tierFree}
+                                    tierPro={feature.tierPro}
+                                    tierEnterprise={feature.tierEnterprise}
+                                    tierFreeValue={feature.tierFreeValue}
+                                    tierProValue={feature.tierProValue}
+                                    tierEnterpriseValue={feature.tierEnterpriseValue}
+                                />
+                            </div>
+                        ))}
+
+                        {/* <ContentRow text={"On Premises / BYO cloud"} tierFree={false} tierPro={false} tierEnterprise={true} />
                         <ContentRow text={"Log retention (API & Database)"} tierFreeValue={"1 day"} tierProValue={"7 days"} tierEnterpriseValue={"90 days"} />
                         <ContentRow text={"Log drain"} tierFree={false} tierPro={false} tierEnterprise={false} />
                         <ContentRow text={"Metrics endpoint"} tierFree={false} tierPro={true} tierEnterprise={true} />
@@ -1174,34 +1276,52 @@ const ComparePlans = ({ className }) => {
                         <ContentRow text={"SSO"} tierFree={false} tierPro={false} tierEnterprise={false} />
                         <ContentRow text={"Access Roles"} tierFreeValue={"Owner, Developer"} tierProValue={"Owner, Developer"} tierEnterpriseValue={"Additional owner(s), admin, read-only, billing admin, custom"} />
                         <ContentRow text={"Vanity URLs"} tierFree={false} tierPro={true} tierEnterprise={true} />
-                        <ContentRow text={"Custom Domains"} tierFree={false} tierProValue={"$10 per domain per month per project add on"} tierEnterpriseValue={"Info 1, additional $10/domain/month"} />
+                        <ContentRow text={"Custom Domains"} tierFree={false} tierProValue={"$10 per domain per month per project add on"} tierEnterpriseValue={"Info 1, additional $10/domain/month"} /> */}
+
                         <div className="h-16"></div>
-                        <HeadingRow name={"Support"}>
+
+                        <HeadingRow name={all.Support.name}>
                             <svg className="h-5 w-5 stroke-white dark:stroke-black dark:stroke-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                         </HeadingRow>
-                        <ContentRow text={"Community support"} tierFree={true} tierPro={true} tierEnterprise={true} />
+                        {all.Support.FeatureIncluded.map(feature => (
+                            <div>
+                                <ContentRow
+                                    key={feature.text}
+                                    text={feature.name}
+                                    tierFree={feature.tierFree}
+                                    tierPro={feature.tierPro}
+                                    tierEnterprise={feature.tierEnterprise}
+                                    tierFreeValue={feature.tierFreeValue}
+                                    tierProValue={feature.tierProValue}
+                                    tierEnterpriseValue={feature.tierEnterpriseValue}
+                                />
+                            </div>
+                        ))}
+
+                        {/* <ContentRow text={"Community support"} tierFree={true} tierPro={true} tierEnterprise={true} />
                         <ContentRow text={"Email support"} tierFree={false} tierPro={true} tierEnterprise={true} />
                         <ContentRow text={"Email support SLA"} tierFree={false} tierPro={false} tierEnterprise={true} />
                         <ContentRow text={"Designated support"} tierFree={false} tierPro={false} tierEnterprise={true} />
                         <ContentRow text={"On Boarding Support"} tierFree={false} tierPro={false} tierEnterprise={true} />
                         <ContentRow text={"Designated customer success engineer"} tierFree={false} tierPro={false} tierEnterprise={true} />
-                        <ContentRow text={"Security Questionnaire Help"} tierFree={false} tierPro={false} tierEnterprise={false} />
+                        <ContentRow text={"Security Questionnaire Help"} tierFree={false} tierPro={false} tierEnterprise={false} /> */}
+
                         <div className="h-16 border-t border-neutral-700"></div>
                         <div className="border-0 border-solid border-t border-neutral-700">
                             <div className="px-6 py-5 flex flex-col md:flex-row justify-center items-center space-y-2 md:space-x-2">
                                 <span className="sr-only w-1/3">Choose your plan</span>
                                 <a className="w-1/3" href="#"></a>
-                                <a className="w-1/4" href="https://app.supabase.com">
+                                <a className="w-1/4" href={freeMonthlyLink}>
                                     <button className="border border-solid border-emerald-400 relative cursor-pointer inline-flex items-center space-x-4 text-center font-regular transition ease-out duration-200 rounded outline-none transition-all outline-0 focus-visible:outline-4 focus-visible:outline-offset-1 bg-emerald-600 hover:bg-emerald-500 text-white  shadow-brand-fixed-1000 hover:shadow-brand-fixed-900 dark:shadow-brand-fixed-1000 dark:hover:shadow-brand-fixed-1000 focus-visible:outline-brand-600 w-52 flex items-center justify-center shadow-sm text-xs px-2.5 py-1">
                                         <span className="truncate">Get started</span>
                                     </button>
                                 </a>
-                                <a className="w-1/4 pl-4" href="https://app.supabase.com">
+                                <a className="w-1/4 pl-4" href={proMonthlyLink}>
                                     <button className="relative cursor-pointer inline-flex items-center space-x-4 text-center font-regular transition ease-out duration-200 rounded outline-none transition-all outline-0 focus-visible:outline-4 focus-visible:outline-offset-1 bg-emerald-600 hover:bg-emerald-500 text-white border border-solid border-emerald-400 shadow-brand-fixed-1000 hover:shadow-brand-fixed-900 dark:shadow-brand-fixed-1000 dark:hover:shadow-brand-fixed-1000 focus-visible:outline-brand-600 w-52 flex items-center justify-center shadow-sm text-xs px-2.5 py-1">
                                         <span className="truncate">Get started</span>
                                     </button>
                                 </a>
-                                <a className="w-1/4 pl-6" href="https://forms.supabase.com/enterprise">
+                                <a className="w-1/4 pl-6" href={enterpriseMonthlyLink}>
                                     <button className="relative cursor-pointer inline-flex items-center space-x-2 text-center font-regular transition ease-out duration-200 rounded outline-none transition-all outline-0 focus-visible:outline-4 focus-visible:outline-offset-1 bg-emerald-600 hover:bg-emerald-500 text-white border border-solid border-emerald-400 shadow-brand-fixed-1000 hover:shadow-brand-fixed-900 dark:shadow-brand-fixed-1000 dark:hover:shadow-brand-fixed-1000 focus-visible:outline-brand-600 w-52 flex items-center justify-center shadow-sm text-xs px-2.5 py-1">
                                         <span className="truncate">Contact us</span>
                                     </button>

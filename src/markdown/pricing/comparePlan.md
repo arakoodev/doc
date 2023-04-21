@@ -31,8 +31,198 @@ All:
         tierFreeValue: "2GB"
         tierProValue: "50 GB, then $0.09 per GB"
         tierEnterpriseValue: "Unlimited"
+  Auth:
+    name : "Auth"
+    FeatureIncluded:
+      - name: "Total Users"
+        tierFreeValue: "Unlimited"
+        tierProValue: "Unlimited"
+        tierEnterpriseValue: "Unlimited"
+      - name: "MAUs"
+        tierFreeValue: "50,000"
+        tierProValue: "100,000, then $0.00325 per MAU"
+        tierEnterpriseValue: "Unlimited"
+      - name: "Social OAuth providers"
+        tierFree: true
+        tierPro: true
+        tierEnterprise: true
+      - name: "Custom SMTP server"
+        tierFree: true
+        tierPro: true
+        tierEnterprise: true
+      - name: "Remove Supabase branding from emails"
+        tierFree: false
+        tierPro: true
+        tierEnterprise: true
+      - name: "Enterprise OAuth providers"
+        tierFree: false
+        tierPro: false
+        tierEnterprise: true
+      - name: "Audit trails"
+        tierFreeValue: "1 hour"
+        tierProValue: "7 days"
+        tierEnterprise: true
+      - name: "Supabase Auth emails"
+        tierFreeValue: "30 / hour"
+        tierProValue: "100 / hour"
+        tierEnterpriseValue: "Contact Us"
+      - name: "Single Sign-On (SAML 2.0)"
+        tierFree: false
+        tierProValue: "50 free, then $0.015 per MAU"
+        tierEnterprise: false
+        tierEnterpriseValue: "Contact Us"
+      - name: "Advanced security features"
+        tierFree: false
+        tierPro: false
+        tierEnterprise: false
+        tierEnterpriseValue: "Contact Us"
+  Storage:
+    name : "Storage"
+    FeatureIncluded:
+      - name: "Storage"
+        tierFreeValue: "1 GB"
+        tierProValue: "100 GB, then $0.021 per GB"
+        tierEnterpriseValue: "Unlimited"
+      - name: "Storage egress"
+        tierFreeValue: "2 GB"
+        tierProValue: "200 GB, then $0.09 per GB"
+        tierEnterpriseValue: "Unlimited"
+      - name: "Custom access controls"
+        tierFree: true
+        tierPro: true
+        tierEnterprise: true
+      - name: "Max file upload size"
+        tierFreeValue: "50MB"
+        tierProValue: "5GB"
+        tierEnterpriseValue: "Unlimited"
+      - name: "Asset transformations"
+        tierFree: false
+        tierProValue: "100 origin images, then $5 per 1000 origin images"
+        tierEnterprise: true
+  Realtime:
+    name : "Realtime"
+    FeatureIncluded:
+      - name: Postgres Changes
+        tierFree: true
+        tierPro: true
+        tierEnterprise: true
+      - name: Concurrent Peak Connections
+        tierFreeValue: "200"
+        tierProValue: "500, then $10 per 1000"
+        tierEnterpriseValue: "Unlimited concurrent connections and volume discount"
+      - name: Messages Per Month
+        tierFreeValue: "2 Million"
+        tierProValue: "5 Million, then $2.50 per Million"
+        tierEnterpriseValue: "Volume discounts on messages"
+      - name: Max Message Size
+        tierFreeValue: "250 KB"
+        tierProValue: "3 MB"
+        tierEnterpriseValue: "Custom"
+  EdgeFunctions:
+    name : "Edge Functions"
+    FeatureIncluded:
+      - name: Invocations
+        tierFreeValue: "500K/month"
+        tierProValue: "2 Million, then $2 per 1 Million"
+        tierEnterpriseValue: "Unlimited"
+      - name: Script size
+        tierFreeValue: "2 MB"
+        tierProValue: "10 MB"
+        tierEnterpriseValue: "Unlimited"
+      - name: Number of functions
+        tierFreeValue: "10"
+        tierProValue: "100, then $10 per additional 100"
+        tierEnterpriseValue: "Unlimited"
+  Dashboard:
+      name : "Edge Functions"
+      FeatureIncluded:
+      - name: Team members
+        tierFreeValue: "Unlimited"
+        tierProValue: "Unlimited"
+        tierEnterpriseValue: "Unlimited"
+      - name: Access controls
+        tierFreeValue: "Coming soon"
+        tierProValue: "Coming soon"
+        tierFree: false
+        tierPro: false
+        tierEnterprise: true
+      - name: Audit trails
+        tierFree: false
+        tierPro: false
+        tierEnterprise: true
+  PlatformSecurityandCompliance:
+    name: "Platform Security \n and Compliance"
+    FeatureIncluded:
+      - name: "On Premises / BYO cloud"
+        tierFree: false
+        tierPro: false
+        tierEnterprise: true
+      - name: "Log retention (API & Database)"
+        tierFreeValue: "1 day"
+        tierProValue: "7 days"
+        tierEnterpriseValue: "90 days"
+      - name: "Log drain"
+        tierFree: false
+        tierPro: false
+        tierEnterprise: false
+      - name: "Metrics endpoint"
+        tierFree: false
+        tierPro: true
+        tierEnterprise: true
+      - name: "SOC2"
+        tierFree: false
+        tierPro: false
+        tierEnterprise: true
+      - name: "SSO"
+        tierFree: false
+        tierPro: false
+        tierEnterprise: false
+      - name: "Access Roles"
+        tierFreeValue: "Owner, Developer"
+        tierProValue: "Owner, Developer"
+        tierEnterpriseValue: "Additional owner(s), admin, read-only, billing admin, custom"
+      - name: "Vanity URLs"
+        tierFree: false
+        tierPro: true
+        tierEnterprise: true
+      - name: "Custom Domains"
+        tierFree: false
+        tierProValue: "$10 per domain per month per project add on"
+        tierEnterpriseValue: "Info 1, additional $10/domain/month"
+  Support:
+    name: "Support"
+    FeatureIncluded:
+      - name: Community support
+        tierFree: true
+        tierPro: true
+        tierEnterprise: true
+      - name: Email support
+        tierFree: false
+        tierPro: true
+        tierEnterprise: true
+      - name: Email support SLA
+        tierFree: false
+        tierPro: false
+        tierEnterprise: true
+      - name: Designated support
+        tierFree: false
+        tierPro: false
+        tierEnterprise: true
+      - name: On Boarding Support
+        tierFree: false
+        tierPro: false
+        tierEnterprise: true
+      - name: Designated customer success engineer
+        tierFree: false
+        tierPro: false
+        tierEnterprise: true
+      - name: Security Questionnaire Help
+        tierFree: false
+        tierPro: false
+        tierEnterprise: false
 
 Free: 
+  - link: "https://app.supabase.com"
   - name : "Free"
   - monthlyPrice: "$0"
   - description: "Perfect for hobby projects and experiments"
@@ -182,6 +372,7 @@ Free:
             - name: "Security Questionnaire Help"
               proOnly: false
 Pro:
+  - link: "https://app.supabase.com"
   - name: "Pro"
   - monthlyPrice: "$25"
   - description: "For production applications with the option to scale."
@@ -331,6 +522,7 @@ Pro:
           - name: "Security Questionnaire Help"
             proOnly: false
 Enterprise:
+  - link: "https://app.supabase.com"
   - name: "Enterprise"
   - monthlyPrice: "Contact us for a quote"
   - description: "For large-scale applications managing serious workloads."
