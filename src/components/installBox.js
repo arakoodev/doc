@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 // import { ClipboardCopyIcon } from '@heroicons/react/24/outline';
 
-const InstallBox = ({ code, source }) => {
+const InstallBox = ({ code, source, version }) => {
     const [copySuccess, setCopySuccess] = useState(false);
 
     function copyToClipboard() {
@@ -15,7 +15,7 @@ const InstallBox = ({ code, source }) => {
     return (
         <div className="mt-0 hidden  md:block InstallBox--desktop w-full">
             <p className="all-caps mb-2 text-xl font-semibold dark:text-white">
-                Install Bun v0.5.9
+              {version}
             </p>
             <div className="rounded-md border-solid border-2 border-[#EE81C3] text-lg mb-2">
                 <div className="relative ">
