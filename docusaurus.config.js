@@ -86,6 +86,7 @@ const config = {
         // title: 'arakoo',
         logo: {
           alt: 'arakoo Logo',
+          height: 90,
           src: 'img/arakoo-03.png',
         },
         items: [

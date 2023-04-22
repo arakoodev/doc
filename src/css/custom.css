@@ -121,6 +121,11 @@ table.tablecostum p {
   margin: 0;
 }
 
+.navbar__logo img {
+  height: 160%;
+  margin-top: -9px;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
