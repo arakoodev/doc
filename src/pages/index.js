@@ -46,7 +46,7 @@ export default function Home() {
                 {frontMatter.desc}
               </p>
               <div className="flex flex-col gap-4 ">
-                <InstallBox code={frontMatter.code} source={frontMatter.link}/>
+                <InstallBox code={frontMatter.code} source={frontMatter.link} version={frontMatter.version}/>
               </div>
             </div>
             <div className="w-full flex-0 lg:flex-1">
