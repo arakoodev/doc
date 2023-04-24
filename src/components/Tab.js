@@ -43,7 +43,7 @@ function TabPanel({ TabpanelValue }) {
                             </p>
                         </div>
 
-                        <div className='aspect-w-16 aspect-h-9'> <iframe src={`${TabpanelValue.tab1.youtube}`}title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
+                        <div className='aspect-w-16 aspect-h-9'> <iframe src={`https://www.youtube.com/embed/${TabpanelValue.tab1.youtube}`}title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
                         </div>
                     }
                 {activeTab === 2 && 
@@ -57,7 +57,7 @@ function TabPanel({ TabpanelValue }) {
                             </p>
                         </div>
 
-                        <div className="aspect-w-16 aspect-h-9"> <iframe src={`${TabpanelValue.tab2.youtube}`} title="Google — Year in Search 2022" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
+                        <div className="aspect-w-16 aspect-h-9"> <iframe src={`https://www.youtube.com/embed/${TabpanelValue.tab2.youtube}`} title="Google — Year in Search 2022" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
                 </div>
                 }
             </div>
