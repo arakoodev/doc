@@ -19,7 +19,7 @@ function TabPanel({ TabpanelValue }) {
                         }`}
                     onClick={() => handleTabClick(1)}
                 >
-                    Youtube Video 1
+                    {TabpanelValue.tab1.title}
                 </button>
                 <button
                     className={`py-2 px-4 border-b-2 ${activeTab === 2
@@ -28,7 +28,7 @@ function TabPanel({ TabpanelValue }) {
                         }`}
                     onClick={() => handleTabClick(2)}
                 >
-                    Youtube Video 2
+                     {TabpanelValue.tab2.title}
                 </button>
             </div>
             <div className="flex flex-col">
