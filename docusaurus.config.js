@@ -18,8 +18,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'arakoodev', // Usually your GitHub org/user name.
-  projectName: 'doc', // Usually your repo name.
+  organizationName: 'muhzulzidan', // Usually your GitHub org/user name.
+  projectName: 'alekhaweb', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -113,7 +113,7 @@ const config = {
             position: 'right',
           },
           {
-            to: 'doc/intro',
+            to: 'doc/intro/',
             activeBasePath: 'doc',
             label: 'Doc',
             position: 'right',
@@ -145,8 +145,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Docs',
+                to: '/doc/intro',
               },
             ],
           },
