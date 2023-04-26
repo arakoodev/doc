@@ -2,11 +2,17 @@ import React, { useState, useEffect, useRef } from 'react'
 import Layout from '@theme/Layout'
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "../../static/3d_email.json";
+
+
 import Slider from "../components/slider";
 import ContactForm from "../components/form"
 import { CustomGrid, GridItemLeft, GridItemCenter, GridItemRight, Image } from "../components/CostumGrid"
 import { frontMatter as featureComaprison } from "../markdown/twillo/featureComaprison.md"
 import { frontMatter as featureCarausel } from "../markdown/twillo/featureCarausel.md"
+import { frontMatter as Section } from "../markdown/twillo/section.md"
 const TwilloPage = () => {
     const fadeInAnimation = {
         hidden: { opacity: 0, transform: "translate3d(0px, 50px, 0px) scale3d(0.5, 0.5, 0.5) rotateX(30deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)", transformStyle: "preserve-3d" },
@@ -48,11 +54,12 @@ const TwilloPage = () => {
 
     return (
         <Layout>
+            {console.log(Section)}
             <div className='px-10'>
                 <div className='flex w-full gap-4  items-center py-20 justify-around'>
 
                     <div className="hero_content_wrap ">
-                        <div className="text-neutral-400">COMPARISON &gt; TWILIO</div><h1 className="text-5xl font-semibold">The Best Twilio <br />Video Competitor</h1>
+                        <div className="text-neutral-400">{Section.sect1.title}</div><h1 className="text-5xl font-semibold">{Section.sect1.desc}</h1>
 
                         <div className="feature-flex flex-col">
                             <div className="fill-neutral-100 align-left flex gap-2 ">
@@ -63,7 +70,7 @@ const TwilloPage = () => {
                                     </svg>
 
                                 </div>
-                                <div className="features-text text-neutral-300 flex">In-built chat, polls, and plugins</div>
+                                <div className="features-text text-neutral-300 flex">{Section.sect1.feature[0]}</div>
                             </div>
                             <div className="fill-neutral-100 align-left flex gap-2">
                                 <div className="svg-icon w-embed">
@@ -75,7 +82,7 @@ const TwilloPage = () => {
                                         <path d="M16.6673 0.832031L0.833984 16.6654" stroke="white"></path>
                                     </svg>
                                 </div>
-                                <div className="features-text">Customizable UI Kit</div>
+                                <div className="features-text">{Section.sect1.feature[1]}</div>
                             </div>
                             <div className="fill-neutral-100 align-left flex gap-2">
                                 <div className="svg-icon w-embed">
@@ -83,14 +90,14 @@ const TwilloPage = () => {
                                         <path d="M12.5833 1.66764C13.0691 1.66758 13.546 1.79818 13.9639 2.04575C14.3819 2.29332 14.7256 2.64875 14.9589 3.07479C15.1923 3.50083 15.3068 3.9818 15.2904 4.4673C15.2741 4.95281 15.1274 5.42496 14.8658 5.83431H16.9583C17.5333 5.83431 18 6.30097 18 6.87597V9.79264C18 10.0328 17.9171 10.2656 17.7653 10.4516C17.6134 10.6376 17.402 10.7654 17.1667 10.8135V15.626C17.1667 16.3178 16.902 16.9833 16.4269 17.4862C15.9518 17.989 15.3023 18.291 14.6117 18.3301L14.4583 18.3343H6.54167C5.84989 18.3344 5.18431 18.0697 4.68147 17.5946C4.17864 17.1195 3.87667 16.47 3.8375 15.7793L3.83333 15.626V10.8135C3.35833 10.7168 3 10.2968 3 9.79264V6.87597C3 6.30097 3.46667 5.83431 4.04167 5.83431H6.13417C5.76035 5.25352 5.62255 4.55185 5.74896 3.87283C5.87537 3.19381 6.25643 2.58873 6.8142 2.18137C7.37197 1.77401 8.0643 1.59514 8.74959 1.68134C9.43488 1.76755 10.0613 2.11232 10.5008 2.64514C10.7545 2.33889 11.0728 2.09248 11.4328 1.9235C11.7928 1.75452 12.1856 1.66715 12.5833 1.66764ZM9.875 10.8335H5.08333V15.626C5.08335 15.992 5.22098 16.3446 5.4689 16.6138C5.71682 16.883 6.05692 17.0492 6.42167 17.0793L6.54167 17.0843H9.875V10.8335ZM15.9167 10.8335H11.125V17.0843H14.4583C14.8245 17.0843 15.1772 16.9465 15.4464 16.6984C15.7157 16.4503 15.8817 16.11 15.9117 15.7451L15.9167 15.626V10.8335ZM9.875 7.08431H4.25V9.5843L9.875 9.58347V7.08431ZM16.75 9.5843V7.08431H11.125V9.58347L16.75 9.5843ZM12.5833 2.91764C12.1966 2.91764 11.8256 3.07128 11.5521 3.34477C11.2786 3.61826 11.125 3.9892 11.125 4.37597V5.83347H12.6033L12.7033 5.82931C13.0783 5.79817 13.4267 5.62332 13.6758 5.34128C13.9249 5.05925 14.0553 4.69186 14.0398 4.31592C14.0243 3.93998 13.8641 3.58457 13.5927 3.32398C13.3212 3.0634 12.9596 2.91781 12.5833 2.91764ZM8.41667 2.91764C8.0404 2.91781 7.67877 3.0634 7.40734 3.32398C7.13592 3.58457 6.97572 3.93998 6.96023 4.31592C6.94473 4.69186 7.07514 5.05925 7.3242 5.34128C7.57326 5.62332 7.92169 5.79817 8.29667 5.82931L8.39667 5.83347H9.875V4.37597L9.87 4.25597C9.83988 3.89122 9.67372 3.55113 9.40449 3.3032C9.13526 3.05528 8.78266 2.91765 8.41667 2.91764Z" fill="inherit"></path>
                                     </svg>
                                 </div>
-                                <div className="features-text">No credit card required</div>
+                                <div className="features-text">{Section.sect1.feature[2]}</div>
                             </div>
                         </div>
                         <div className="hero_cta_wrapper align-left inline-flex gap-8 h-full pt-10 py-4 ">
                             <a data-w-id="18619ab9-ff9a-d30d-7bdd-986a30c0d5c0" href="https://dev.dyte.io/signup" className="cta-btn glossy w-inline-block inline-flex bg-emerald-400 rounded-md text-neutral-900 font-bold  p-4 max-h-[48px] items-center justify-center hover:shadow-[4px_4px_0_1px_#34d399] hover:bg-neutral-100 hover:text-emerald-700 transition-all ease-in-out duration-300 group gap-4 hover:no-underline">
 
                                 <div className="glossy_effect" ></div>
-                                <div className="text-block  ">Start building</div>
+                                <div className="text-block  ">{Section.sect1.cta[0]}</div>
                                 <div className="flex glossy_none_icon w-embed fill-neutral-800 stroke-neutral-800 group-hover:opacity-0 group-hover:hidden">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.33938 1.37116L5.33933 1.37111C5.25663 1.2836 5.15751 1.21324 5.04762 1.16403C4.93774 1.11483 4.81923 1.08776 4.69888 1.08435C4.57853 1.08095 4.45868 1.10128 4.34619 1.14419C4.2337 1.1871 4.13076 1.25175 4.04325 1.33445C3.95574 1.41714 3.88537 1.51626 3.83617 1.62615C3.78697 1.73604 3.75989 1.85454 3.75649 1.97489C3.75308 2.09524 3.77342 2.21509 3.81633 2.32758C3.85923 2.44006 3.92387 2.54298 4.00654 2.63048C4.00656 2.6305 4.00657 2.63051 4.00658 2.63052L9.07909 8.00084L4.00761 13.3714C3.92364 13.4582 3.85767 13.5608 3.81349 13.6733C3.76908 13.7863 3.74757 13.907 3.75022 14.0284C3.75286 14.1498 3.7796 14.2695 3.82889 14.3805C3.87817 14.4915 3.94902 14.5916 4.03732 14.675C4.12561 14.7583 4.22959 14.8233 4.34322 14.8662C4.45684 14.909 4.57785 14.9289 4.69921 14.9246C4.82057 14.9203 4.93987 14.8919 5.05017 14.8411C5.15992 14.7905 5.25858 14.7188 5.34049 14.63L11.006 8.63057C11.006 8.63054 11.006 8.6305 11.006 8.63047C11.1669 8.46029 11.2565 8.23499 11.2565 8.00082C11.2565 7.76664 11.1669 7.54135 11.006 7.37116C11.006 7.37113 11.006 7.3711 11.006 7.37107L5.33938 1.37116Z" fill="inherit" stroke="inherit" stroke-width="0.5"></path>
@@ -105,7 +112,7 @@ const TwilloPage = () => {
                             </a>
                             <a href="/contact" className="sec-btn-light w-inline-block inline-flex group gap-4 justify-center items-center ">
 
-                                <div>Talk to an expert</div>
+                                <div>{Section.sect1.cta[1]}</div>
 
                                 <div className="flex glossy_none_icon w-embed  group-hover:opacity-0 group-hover:hidden">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
@@ -123,13 +130,14 @@ const TwilloPage = () => {
                         </div>
                     </div>
 
-                    <div className='w-1/3'>
-                        <img src="https://uploads-ssl.webflow.com/63ca2acc6352c221abe583d0/63f8f53c60382e69e2d498c2_dytehero-p-800.png" alt="asd" />
+                    <div className='w-1/2'>
+                        <Lottie animationData={groovyWalkAnimation} />
+                        {/* <img src="https://uploads-ssl.webflow.com/63ca2acc6352c221abe583d0/63f8f53c60382e69e2d498c2_dytehero-p-800.png" alt="asd" /> */}
                     </div>
 
                 </div>
                 <div className='flex flex-col justify-center items-center py-8 mb-24'>
-                    <h4>TRUSTED ACROSS INDUSTRIES</h4>
+                    <h4>{Section.sect2.title}</h4>
                     <div className='relative flex w-screen '>
                         <Slider className='w-screen px-12 ' >
                             {items.map((item, index) => (
@@ -151,11 +159,9 @@ const TwilloPage = () => {
                         variants={fadeInAnimation}
                     >
                         <div className="section-head text-center">
-                            <div className="text-style-allcaps text-align-center ">WHY DYTE OVER TWILIO VIDEO</div>
-                            <h2 className="text-align-center text-4xl ">The Live Video &amp; Voice SDK
-                                <br />
-                                <span className="text-span"> </span> you have been looking for</h2>
-                            <p className="section-subhead">Here are reasons why you should consider Dyte over Twilio Video</p>
+                            <div className="text-style-allcaps text-align-center ">{Section.sect3.subtitle}</div>
+                            <h2 className="text-align-center text-4xl w-[15em] mx-auto ">{Section.sect3.title}</h2>
+                            <p className="section-subhead">{Section.sect3.desc}</p>
                         </div>
                         <div className="features_grid grid grid-cols-2 gap-10 pt-12">
                             <div className="cutomize_medium_card rounded-2xl bg-neutral-800 rounded-2xl bg-neutral-800 ">
@@ -190,7 +196,7 @@ const TwilloPage = () => {
                             <a data-w-id="18619ab9-ff9a-d30d-7bdd-986a30c0d5c0" href="https://dev.dyte.io/signup" className="cta-btn glossy w-inline-block inline-flex bg-emerald-400 rounded-md text-neutral-900 font-bold  p-4 max-h-[48px] items-center justify-center hover:shadow-[4px_4px_0_1px_#34d399] hover:bg-neutral-100 hover:text-emerald-700 transition-all ease-in-out duration-300 group gap-4 hover:no-underline">
 
                                 <div className="glossy_effect" ></div>
-                                <div className="text-block  ">Book a Demo</div>
+                                <div className="text-block  ">{Section.sect3.cta}</div>
                                 <div className="flex glossy_none_icon w-embed fill-neutral-800 stroke-neutral-800 group-hover:opacity-0 group-hover:hidden">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.33938 1.37116L5.33933 1.37111C5.25663 1.2836 5.15751 1.21324 5.04762 1.16403C4.93774 1.11483 4.81923 1.08776 4.69888 1.08435C4.57853 1.08095 4.45868 1.10128 4.34619 1.14419C4.2337 1.1871 4.13076 1.25175 4.04325 1.33445C3.95574 1.41714 3.88537 1.51626 3.83617 1.62615C3.78697 1.73604 3.75989 1.85454 3.75649 1.97489C3.75308 2.09524 3.77342 2.21509 3.81633 2.32758C3.85923 2.44006 3.92387 2.54298 4.00654 2.63048C4.00656 2.6305 4.00657 2.63051 4.00658 2.63052L9.07909 8.00084L4.00761 13.3714C3.92364 13.4582 3.85767 13.5608 3.81349 13.6733C3.76908 13.7863 3.74757 13.907 3.75022 14.0284C3.75286 14.1498 3.7796 14.2695 3.82889 14.3805C3.87817 14.4915 3.94902 14.5916 4.03732 14.675C4.12561 14.7583 4.22959 14.8233 4.34322 14.8662C4.45684 14.909 4.57785 14.9289 4.69921 14.9246C4.82057 14.9203 4.93987 14.8919 5.05017 14.8411C5.15992 14.7905 5.25858 14.7188 5.34049 14.63L11.006 8.63057C11.006 8.63054 11.006 8.6305 11.006 8.63047C11.1669 8.46029 11.2565 8.23499 11.2565 8.00082C11.2565 7.76664 11.1669 7.54135 11.006 7.37116C11.006 7.37113 11.006 7.3711 11.006 7.37107L5.33938 1.37116Z" fill="inherit" stroke="inherit" stroke-width="0.5"></path>
@@ -218,13 +224,13 @@ const TwilloPage = () => {
 
                         <div className="ph-card flex items-center justify-center py-8 bg-neutral-800 gap-16">
                             <div className="space-1 w-1/2">
-                                <h3 className="heading-2 text-3xl font-bold ">No. 1 <br />Product of the day 💫</h3>
-                                <p className="cta-subtext text-neutral-400">Dyte is the top competitor to Twilio Video SDK that was trusted by 1000+ developers on ProductHunt.</p>
+                                <h3 className="heading-2 text-3xl font-bold ">{Section.sect4.title}</h3>
+                                <p className="cta-subtext text-neutral-400">{Section.sect4.desc}</p>
                             </div>
                             <div>
                                 <div className="w-embed ">
                                     <a href="https://www.producthunt.com/posts/live-video-calling-sdk-by-dyte?utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_souce=badge-live-video-calling-sdk-by-dyte" target="_blank">
-                                        <img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=375989&amp;theme=light&amp;period=daily" alt="Live Video Calling SDK by Dyte - Integrate into your product within minutes | Product Hunt" width="350" height="75" />
+                                        <img src={Section.sect4.img} alt="Live Video Calling SDK by Dyte - Integrate into your product within minutes | Product Hunt" width="350" height="75" />
                                     </a>
                                 </div>
                             </div>
@@ -241,9 +247,9 @@ const TwilloPage = () => {
                     animate={inView3 ? "visible" : "hidden"}
                     variants={fadeInAnimation}>
                     <div className="section-head flex flex-col justify-center items-center text-center">
-                        <h3 className="text-style-allcaps text-align-center capitalize text-xl">feature comparison</h3>
-                        <h2 className="text-align-center text-4xl">Dyte vs Twilio</h2>
-                        <p className="section-subhead text-neutral-500">We’re the best Live Video and Voice SDK, see for yourself</p>
+                        <h3 className="text-style-allcaps text-align-center capitalize text-xl font-base">{Section.sect5.subtitle}</h3>
+                        <h2 className="text-align-center text-4xl">{Section.sect5.title}</h2>
+                        <p className="section-subhead text-neutral-500">{Section.sect5.desc}</p>
                     </div>
     
     
@@ -304,7 +310,7 @@ const TwilloPage = () => {
                     initial="hidden"
                     animate={inView4 ? "visible" : "hidden"}
                     variants={fadeInAnimation}>
-                    <div class="flex items-center justify-center pt-12 pb-8">...and everything below</div>
+                    <div class="flex items-center justify-center pt-12 pb-8">{Section.sect6.title}</div>
                     <div className='w-[90vw]'>
                         <div className=''></div>
                         <Slider className='w-[90vw] ' >
@@ -340,7 +346,7 @@ const TwilloPage = () => {
                         <a data-w-id="18619ab9-ff9a-d30d-7bdd-986a30c0d5c0" href="https://dev.dyte.io/signup" className="cta-btn glossy w-inline-block inline-flex bg-emerald-400 rounded-md text-neutral-900 font-bold  p-4 max-h-[48px] items-center justify-center hover:shadow-[4px_4px_0_1px_#34d399] hover:bg-neutral-100 hover:text-emerald-700 transition-all ease-in-out duration-300 group gap-4 hover:no-underline">
 
                             <div className="glossy_effect" ></div>
-                            <div className="text-block  ">Book a Demo</div>
+                            <div className="text-block  ">{Section.sect6.cta}</div>
                             <div className="flex glossy_none_icon w-embed fill-neutral-800 stroke-neutral-800 group-hover:opacity-0 group-hover:hidden">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.33938 1.37116L5.33933 1.37111C5.25663 1.2836 5.15751 1.21324 5.04762 1.16403C4.93774 1.11483 4.81923 1.08776 4.69888 1.08435C4.57853 1.08095 4.45868 1.10128 4.34619 1.14419C4.2337 1.1871 4.13076 1.25175 4.04325 1.33445C3.95574 1.41714 3.88537 1.51626 3.83617 1.62615C3.78697 1.73604 3.75989 1.85454 3.75649 1.97489C3.75308 2.09524 3.77342 2.21509 3.81633 2.32758C3.85923 2.44006 3.92387 2.54298 4.00654 2.63048C4.00656 2.6305 4.00657 2.63051 4.00658 2.63052L9.07909 8.00084L4.00761 13.3714C3.92364 13.4582 3.85767 13.5608 3.81349 13.6733C3.76908 13.7863 3.74757 13.907 3.75022 14.0284C3.75286 14.1498 3.7796 14.2695 3.82889 14.3805C3.87817 14.4915 3.94902 14.5916 4.03732 14.675C4.12561 14.7583 4.22959 14.8233 4.34322 14.8662C4.45684 14.909 4.57785 14.9289 4.69921 14.9246C4.82057 14.9203 4.93987 14.8919 5.05017 14.8411C5.15992 14.7905 5.25858 14.7188 5.34049 14.63L11.006 8.63057C11.006 8.63054 11.006 8.6305 11.006 8.63047C11.1669 8.46029 11.2565 8.23499 11.2565 8.00082C11.2565 7.76664 11.1669 7.54135 11.006 7.37116C11.006 7.37113 11.006 7.3711 11.006 7.37107L5.33938 1.37116Z" fill="inherit" stroke="inherit" stroke-width="0.5"></path>
@@ -363,13 +369,12 @@ const TwilloPage = () => {
                     variants={fadeInAnimation}>
                     <div className='flex border border-solid border-neutral-500 rounded-xl my-12 '>
                         <div class="support-cta-content p-10">
-                            <h3 class="heading-2 text-4xl">24*7 Support <br />Over Multiple Channels</h3>
-                            <p class="cta-subtext">Whether you need to get a few basic queries answered, or need technical heavylifting, we’re
-                                here for you.</p>
+                            <h3 class="heading-2 text-4xl">{Section.sect7.title}</h3>
+                            <p class="cta-subtext">{Section.sect7.desc}</p>
                             <a data-w-id="18619ab9-ff9a-d30d-7bdd-986a30c0d5c0" href="https://dev.dyte.io/signup" className="cta-btn glossy w-inline-block inline-flex bg-emerald-400 rounded-md text-neutral-900 font-bold  p-4 max-h-[48px] items-center justify-center hover:shadow-[4px_4px_0_1px_#34d399] hover:bg-neutral-100 hover:text-emerald-700 transition-all ease-in-out duration-300 group gap-4 hover:no-underline">
     
                                 <div className="glossy_effect" ></div>
-                                <div className="text-block  ">Book a Demo</div>
+                                <div className="text-block  ">{Section.sect7.cta}</div>
                                 <div className="flex glossy_none_icon w-embed fill-neutral-800 stroke-neutral-800 group-hover:opacity-0 group-hover:hidden">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.33938 1.37116L5.33933 1.37111C5.25663 1.2836 5.15751 1.21324 5.04762 1.16403C4.93774 1.11483 4.81923 1.08776 4.69888 1.08435C4.57853 1.08095 4.45868 1.10128 4.34619 1.14419C4.2337 1.1871 4.13076 1.25175 4.04325 1.33445C3.95574 1.41714 3.88537 1.51626 3.83617 1.62615C3.78697 1.73604 3.75989 1.85454 3.75649 1.97489C3.75308 2.09524 3.77342 2.21509 3.81633 2.32758C3.85923 2.44006 3.92387 2.54298 4.00654 2.63048C4.00656 2.6305 4.00657 2.63051 4.00658 2.63052L9.07909 8.00084L4.00761 13.3714C3.92364 13.4582 3.85767 13.5608 3.81349 13.6733C3.76908 13.7863 3.74757 13.907 3.75022 14.0284C3.75286 14.1498 3.7796 14.2695 3.82889 14.3805C3.87817 14.4915 3.94902 14.5916 4.03732 14.675C4.12561 14.7583 4.22959 14.8233 4.34322 14.8662C4.45684 14.909 4.57785 14.9289 4.69921 14.9246C4.82057 14.9203 4.93987 14.8919 5.05017 14.8411C5.15992 14.7905 5.25858 14.7188 5.34049 14.63L11.006 8.63057C11.006 8.63054 11.006 8.6305 11.006 8.63047C11.1669 8.46029 11.2565 8.23499 11.2565 8.00082C11.2565 7.76664 11.1669 7.54135 11.006 7.37116C11.006 7.37113 11.006 7.3711 11.006 7.37107L5.33938 1.37116Z" fill="inherit" stroke="inherit" stroke-width="0.5"></path>
@@ -383,7 +388,7 @@ const TwilloPage = () => {
                                 </div>
                             </a>
                         </div>
-                        <img className='w-3/5' src="https://uploads-ssl.webflow.com/63ca2acc6352c221abe583d0/6400811546690255310c2ef8_Frame%201691032523.svg" alt="" />
+                        <img className='w-3/5' src={Section.sect7.img} alt="" />
                     </div>
                 </motion.div>
                 <motion.div
@@ -394,8 +399,8 @@ const TwilloPage = () => {
     
                     <div className='py-12 '>
                         <div class="section-head flex flex-col justify-center items-center">
-                            <p class="text-style-allcaps text-align-center m-0 ">CONTACT US</p>
-                            <h2 class="text-align-center text-3xl">Ready to grow on live video with us?</h2>
+                            <p class="text-style-allcaps text-align-center m-0 ">{Section.sect8.subtitle}</p>
+                            <h2 class="text-align-center text-3xl">{Section.sect8.title}</h2>
     
                         </div>
                         <div className='flex gap-2 justify-between pt-12  '>
