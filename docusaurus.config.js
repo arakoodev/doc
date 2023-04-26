@@ -38,13 +38,18 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'doc',
+          routeBasePath: 'doc',
           sidebarPath: require.resolve('./sidebars.js'),
+          disableVersioning: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
+          path: 'case-studies',
+          routeBasePath: 'case-studies',
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -59,6 +64,7 @@ const config = {
   ],
 
   plugins: [
+    
     async function myPlugin(context, options) {
       return {
         name: "docusaurus-tailwindcss",
@@ -90,6 +96,12 @@ const config = {
           src: 'img/arakoo-03.png',
         },
         items: [
+          
+          {
+            to: 'twilio-video-competitor/',
+            label: 'twilio-video-competitor',
+            position: 'right',
+          },
           {
             to: 'pricing/',
             label: 'Pricing',
@@ -101,14 +113,14 @@ const config = {
             position: 'right',
           },
           {
-            to: 'docs/intro',
-            activeBasePath: 'docs',
-            label: 'Docs',
+            to: 'doc/intro',
+            activeBasePath: 'doc',
+            label: 'Doc',
             position: 'right',
           },
           {
-            to: 'blog/',
-            label: 'Blog',
+            to: 'case-studies/',
+            label: 'case-studies',
             position: 'right',
           },
           {
@@ -159,8 +171,8 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'case-studies',
+                to: '/case-studies',
               },
               {
                 label: 'GitHub',
