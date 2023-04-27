@@ -25,10 +25,10 @@ function SamplePrevArrow(props) {
     );
 }
 
-export default class CustomArrows extends Component {
+export default class Sliderfeature extends Component {
 
     render() {
-        const { children, className, rtl, feature } = this.props;
+        const { children, className, rtl} = this.props;
         const settings = {
             dots: false,
             infinite: true,
@@ -41,25 +41,16 @@ export default class CustomArrows extends Component {
             rtl: rtl,
             nextArrow: <SampleNextArrow />,
             prevArrow: <SamplePrevArrow />,
-            responsive: feature
-                ? [
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1,
-                        },
-                    },
-                ]
-                : [
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                        },
-                    },
-                ],
+            responsive: [
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+            
         };
         return (
             <div>

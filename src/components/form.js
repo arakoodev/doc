@@ -16,10 +16,10 @@ function ContactForm() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div className="grid grid-cols-2 gap-8">
+            <div className="flex flex-col lg:grid grid-cols-2 gap-8">
 
-                <div className="col-span-2 flex gap-4">
-                    <div className="w-1/2">
+                <div className="col-span-2 flex gap-4 flex-col lg:flex-row">
+                    <div className="w-full lg:w-1/2">
                         <label
                             htmlFor="firstName"
                             className="block text-sm font-medium text-neutral-100"
@@ -34,10 +34,10 @@ function ContactForm() {
                             required
                             value={firstName}
                             onChange={(e) => setFirstName(e.target.value)}
-                            className="mt-1 focus:ring-emerald-500 focus:border-emerald-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            className="leading-none text-gray-50 p-3 focus:outline-none focus:border-emerald-700 mt-4 border-0 bg-neutral-700 rounded w-full"
                         />
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-full lg:w-1/2">
                         <label
                             htmlFor="lastName"
                             className="block text-sm font-medium text-neutral-100"
@@ -52,14 +52,14 @@ function ContactForm() {
                             required
                             value={lastName}
                             onChange={(e) => setLastName(e.target.value)}
-                            className="mt-1 focus:ring-emerald-500 focus:border-emerald-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            className="leading-none text-gray-50 p-3 focus:outline-none focus:border-emerald-700 mt-4 border-0 bg-neutral-700 rounded w-full"
                         />
                     </div>
 
                 </div>
 
-                <div className="col-span-2 flex gap-4">
-                    <div className="w-1/2">
+                <div className="col-span-2 flex gap-4 flex-col lg:flex-row">
+                    <div className="w-full lg:w-1/2">
                         <label
                             htmlFor="email"
                             className="block text-sm font-medium text-neutral-100"
@@ -75,10 +75,10 @@ function ContactForm() {
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="mt-1 focus:ring-emerald-500 focus:border-emerald-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            className="leading-none text-gray-50 p-3 focus:outline-none focus:border-emerald-700 mt-4 border-0 bg-neutral-700 rounded w-full"
                         />
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-full lg:w-1/2">
                         <label
                             htmlFor="phoneNumber"
                             className="block text-sm font-medium text-neutral-100"
@@ -92,13 +92,13 @@ function ContactForm() {
                             autoComplete="tel"
                             value={phoneNumber}
                             onChange={(e) => setPhoneNumber(e.target.value)}
-                            className="mt-1 focus:ring-emerald-500 focus:border-emerald-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            className="leading-none text-gray-50 p-3 focus:outline-none focus:border-emerald-700 mt-4 border-0 bg-neutral-700 rounded w-full"
                         />
                     </div>
 
                 </div>
-                <div className="col-span-2 flex gap-4 items-end">
-                    <div className="w-1/2">
+                <div className="col-span-2 flex gap-4 flex-col lg:flex-row items-end">
+                    <div className="w-full lg:w-1/2">
                         <label
                             htmlFor="companyName"
                             className="block text-sm font-medium text-neutral-100"
@@ -113,10 +113,10 @@ function ContactForm() {
                             required
                             value={companyName}
                             onChange={(e) => setCompanyName(e.target.value)}
-                            className="mt-1 focus:ring-emerald-500 focus:border-emerald-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            className="leading-none text-gray-50 p-3 focus:outline-none focus:border-emerald-700 mt-4 border-0 bg-neutral-700 rounded w-full"
                         />
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-full lg:w-1/2">
                         <label
                             htmlFor="recipient"
                             className="block text-sm font-medium text-neutral-100"
@@ -129,7 +129,7 @@ function ContactForm() {
                             id="recipient"
                             value={recipient}
                             onChange={(e) => setRecipient(e.target.value)}
-                            className="mt-1 focus:ring-emerald-500 focus:border-emerald-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            className="leading-none text-gray-50 p-3 focus:outline-none focus:border-emerald-700 mt-4 border-0 bg-neutral-700 rounded w-full"
                         />
                     </div>
 </div>
@@ -148,7 +148,7 @@ function ContactForm() {
                         required
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="mt-1 focus:ring-emerald-500 focus:border-emerald-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        className="leading-none text-gray-50 p-3 focus:outline-none focus:border-emerald-700 mt-4 border-0 bg-neutral-700 rounded w-full"
                     ></textarea>
                 </div>
             </div>

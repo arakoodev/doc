@@ -21,7 +21,7 @@ const TwilloPage = () => {
 
 
     const { ref: ref12, inView: secondInView } = useInView({ threshold: 0.1 });
-    
+
     const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.3 });
     const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.3 });
     const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.1 });
@@ -54,14 +54,13 @@ const TwilloPage = () => {
 
     return (
         <Layout>
-            {console.log(Section)}
             <div className='px-10'>
-                <div className='flex w-full gap-4  items-center py-20 justify-around'>
+                <div className=' flex flex-col lg:flex-row w-full gap-4  items-center py-20 justify-around'>
 
-                    <div className="hero_content_wrap ">
-                        <div className="text-neutral-400">{Section.sect1.title}</div><h1 className="text-5xl font-semibold">{Section.sect1.desc}</h1>
+                    <div className="hero_content_wrap flex flex-col items-center lg:items-start justify-center  ">
+                        <div className="text-neutral-400">{Section.sect1.title}</div><h1 className="text-3xl text-center lg:text-left lg:text-5xl font-semibold">{Section.sect1.desc}</h1>
 
-                        <div className="feature-flex flex-col">
+                        <div className="feature-flex flex-col text-sm lg:text-base py-4">
                             <div className="fill-neutral-100 align-left flex gap-2 ">
                                 <div className="svg-icon w-embed ">
 
@@ -70,7 +69,7 @@ const TwilloPage = () => {
                                     </svg>
 
                                 </div>
-                                <div className="features-text text-neutral-300 flex">{Section.sect1.feature[0]}</div>
+                                <div className="features-text  text-neutral-300 flex">{Section.sect1.feature[0]}</div>
                             </div>
                             <div className="fill-neutral-100 align-left flex gap-2">
                                 <div className="svg-icon w-embed">
@@ -93,7 +92,7 @@ const TwilloPage = () => {
                                 <div className="features-text">{Section.sect1.feature[2]}</div>
                             </div>
                         </div>
-                        <div className="hero_cta_wrapper align-left inline-flex gap-8 h-full pt-10 py-4 ">
+                        <div className="hero_cta_wrapper align-left flex flex-col lg:inline-flex gap-8 h-full lg:pt-10 py-4 ">
                             <a data-w-id="18619ab9-ff9a-d30d-7bdd-986a30c0d5c0" href="https://dev.dyte.io/signup" className="cta-btn glossy w-inline-block inline-flex bg-emerald-400 rounded-md text-neutral-900 font-bold  p-4 max-h-[48px] items-center justify-center hover:shadow-[4px_4px_0_1px_#34d399] hover:bg-neutral-100 hover:text-emerald-700 transition-all ease-in-out duration-300 group gap-4 hover:no-underline">
 
                                 <div className="glossy_effect" ></div>
@@ -130,7 +129,7 @@ const TwilloPage = () => {
                         </div>
                     </div>
 
-                    <div className='w-1/2'>
+                    <div className='lg:w-1/2'>
                         <Lottie animationData={groovyWalkAnimation} />
                         {/* <img src="https://uploads-ssl.webflow.com/63ca2acc6352c221abe583d0/63f8f53c60382e69e2d498c2_dytehero-p-800.png" alt="asd" /> */}
                     </div>
@@ -151,19 +150,20 @@ const TwilloPage = () => {
                     </div>
 
                 </div>
-                <div className="py-4 flex flex-col justify-center items-center ">
-                    <motion.div
-                        ref={ref12}
-                        initial="hidden"
-                        animate={secondInView ? "visible" : "hidden"}
-                        variants={fadeInAnimation}
-                    >
-                        <div className="section-head text-center">
+                <motion.div
+                    ref={ref12}
+                    initial="hidden"
+                    animate={secondInView ? "visible" : "hidden"}
+                    variants={fadeInAnimation}
+                >
+                    <div className="py-4 flex flex-col justify-center items-center ">
+
+                        <div className="section-head text-center px-4 flex flex-col w-full">
                             <div className="text-style-allcaps text-align-center ">{Section.sect3.subtitle}</div>
-                            <h2 className="text-align-center text-4xl w-[15em] mx-auto ">{Section.sect3.title}</h2>
+                            <h2 className="text-align-center text-3xl lg:text-4xl w-full lg:w-[15em] mx-auto ">{Section.sect3.title}</h2>
                             <p className="section-subhead">{Section.sect3.desc}</p>
                         </div>
-                        <div className="features_grid grid grid-cols-2 gap-10 pt-12">
+                        <div className="features_grid flex flex-col lg:grid grid-cols-2 gap-10 pt-12">
                             <div className="cutomize_medium_card rounded-2xl bg-neutral-800 rounded-2xl bg-neutral-800 ">
                                 <div className="big_card_head_wrap p-8 pb-0 p-8 pb-0">
                                     <h3 className="big_card_head text-2xl">Custom experience without hassle</h3>
@@ -192,8 +192,8 @@ const TwilloPage = () => {
 
                             </div>
                         </div>
-                        <div className='py-16 flex justify-center '>
-                            <a data-w-id="18619ab9-ff9a-d30d-7bdd-986a30c0d5c0" href="https://dev.dyte.io/signup" className="cta-btn glossy w-inline-block inline-flex bg-emerald-400 rounded-md text-neutral-900 font-bold  p-4 max-h-[48px] items-center justify-center hover:shadow-[4px_4px_0_1px_#34d399] hover:bg-neutral-100 hover:text-emerald-700 transition-all ease-in-out duration-300 group gap-4 hover:no-underline">
+                        <div className='py-16 flex justify-center w-full lg:w-fit'>
+                            <a data-w-id="18619ab9-ff9a-d30d-7bdd-986a30c0d5c0" href="https://dev.dyte.io/signup" className="cta-btn w-full glossy w-inline-block inline-flex bg-emerald-400 rounded-md text-neutral-900 font-bold  p-4 max-h-[48px] items-center justify-center hover:shadow-[4px_4px_0_1px_#34d399] hover:bg-neutral-100 hover:text-emerald-700 transition-all ease-in-out duration-300 group gap-4 hover:no-underline">
 
                                 <div className="glossy_effect" ></div>
                                 <div className="text-block  ">{Section.sect3.cta}</div>
@@ -210,8 +210,8 @@ const TwilloPage = () => {
                                 </div>
                             </a>
                         </div>
-                    </motion.div>
-                </div>
+                    </div>
+                </motion.div>
 
 
                 <div className='py-12 '>
@@ -222,8 +222,8 @@ const TwilloPage = () => {
                         variants={fadeInAnimation}
                     >
 
-                        <div className="ph-card flex items-center justify-center py-8 bg-neutral-800 gap-16">
-                            <div className="space-1 w-1/2">
+                        <div className="ph-card flex flex-col lg:flex-row items-center justify-center py-8 bg-neutral-800 gap-8 lg:gap-16 p-8 lg:p-0">
+                            <div className="space-1 lg:w-1/2">
                                 <h3 className="heading-2 text-3xl font-bold ">{Section.sect4.title}</h3>
                                 <p className="cta-subtext text-neutral-400">{Section.sect4.desc}</p>
                             </div>
@@ -251,23 +251,23 @@ const TwilloPage = () => {
                         <h2 className="text-align-center text-4xl">{Section.sect5.title}</h2>
                         <p className="section-subhead text-neutral-500">{Section.sect5.desc}</p>
                     </div>
-    
-    
-                    <div className='border border-solid border-neutral-200 rounded-xl '>
+
+
+                    <div className='hidden lg:block border border-solid border-neutral-200 rounded-xl '>
                         <div className=' grid grid-cols-3 sticky top-14 bg-neutral-600 rounded-t-xl border-neutral-600'>
-    
+
                             <div className="table-header-item center ">
                             </div>
-    
+
                             <div className="table-header-item center  flex justify-center items-center border border-y-0 border-solid py-[24px] border-neutral-500">
                                 <img loading="lazy" alt="dyte logo" src="https://uploads-ssl.webflow.com/63ca2acc6352c221abe583d0/63caaeb042a0775de3e30f22_dyte-logo.svg" />
                             </div>
                             <div className="table-header-item flex justify-center items-center border border-y-0 border-solid py-[24px] border-neutral-500" >
                                 <img loading="lazy" alt="" src="https://uploads-ssl.webflow.com/63ca2acc6352c221abe583d0/63f5bdb9f8a9892603e9811c_twilo.svg" />
                             </div>
-    
+
                         </div>
-    
+
                         {featureComaprison.data.map(feature => (
                             <CustomGrid>
                                 <GridItemLeft title={feature.name} />
@@ -277,7 +277,7 @@ const TwilloPage = () => {
                                             {feature.left.images.map(node => (
                                                 <Image alt={node.alt} src={node.src} />
                                             ))}
-    
+
                                         </div>
                                         :
                                         <div>
@@ -290,18 +290,18 @@ const TwilloPage = () => {
                                             {feature.right.images.map(node => (
                                                 <Image alt={node.alt} src={node.src} />
                                             ))}
-    
+
                                         </div>
                                         :
                                         <div>
                                             {feature.right}
                                         </div>}
-    
-    
+
+
                                 </GridItemRight>
                             </CustomGrid>
                         ))}
-    
+
                     </div>
                 </motion.div>
 
@@ -313,7 +313,7 @@ const TwilloPage = () => {
                     <div class="flex items-center justify-center pt-12 pb-8">{Section.sect6.title}</div>
                     <div className='w-[90vw]'>
                         <div className=''></div>
-                        <Slider className='w-[90vw] ' >
+                        <Slider feature={true} className='w-[90vw] ' >
                             {featureCarausel.images.top.map(node => (
                                 <div className=''>
                                     <img src={`${node.img}`} alt="" />
@@ -327,7 +327,7 @@ const TwilloPage = () => {
                                 </div>
                             ))}
                         </Slider>
-                        <Slider rtl={true} className='w-[90vw]' >
+                        <Slider feature={true} rtl={true} className='w-[90vw]' >
                             {featureCarausel.images.top.map(node => (
                                 <div className=''>
                                     <img src={`${node.img}`} alt="" />
@@ -367,12 +367,12 @@ const TwilloPage = () => {
                     initial="hidden"
                     animate={inView5 ? "visible" : "hidden"}
                     variants={fadeInAnimation}>
-                    <div className='flex border border-solid border-neutral-500 rounded-xl my-12 '>
+                    <div className='flex flex-col lg:flex-row border border-solid border-neutral-500 rounded-xl my-12 '>
                         <div class="support-cta-content p-10">
                             <h3 class="heading-2 text-4xl">{Section.sect7.title}</h3>
                             <p class="cta-subtext">{Section.sect7.desc}</p>
                             <a data-w-id="18619ab9-ff9a-d30d-7bdd-986a30c0d5c0" href="https://dev.dyte.io/signup" className="cta-btn glossy w-inline-block inline-flex bg-emerald-400 rounded-md text-neutral-900 font-bold  p-4 max-h-[48px] items-center justify-center hover:shadow-[4px_4px_0_1px_#34d399] hover:bg-neutral-100 hover:text-emerald-700 transition-all ease-in-out duration-300 group gap-4 hover:no-underline">
-    
+
                                 <div className="glossy_effect" ></div>
                                 <div className="text-block  ">{Section.sect7.cta}</div>
                                 <div className="flex glossy_none_icon w-embed fill-neutral-800 stroke-neutral-800 group-hover:opacity-0 group-hover:hidden">
@@ -388,27 +388,27 @@ const TwilloPage = () => {
                                 </div>
                             </a>
                         </div>
-                        <img className='w-3/5' src={Section.sect7.img} alt="" />
+                        <img className='lg:w-3/5' src={Section.sect7.img} alt="" />
                     </div>
                 </motion.div>
                 <motion.div
                     ref={ref6}
-                    initial="hidden"
+                    initial="visible"
                     animate={inView6 ? "visible" : "hidden"}
                     variants={fadeInAnimation}>
-    
-                    <div className='py-12 '>
+
+                    <div className='py-12 flex flex-col'>
                         <div class="section-head flex flex-col justify-center items-center">
                             <p class="text-style-allcaps text-align-center m-0 ">{Section.sect8.subtitle}</p>
                             <h2 class="text-align-center text-3xl">{Section.sect8.title}</h2>
-    
+
                         </div>
-                        <div className='flex gap-2 justify-between pt-12  '>
-                            <div class="contact_form_left_wrap logo-justify w-1/3 flex flex-col relative pt-12">
-    
+                        <div className='flex gap-2 justify-between pt-12 flex-col-reverse lg:flex-row '>
+                            <div class="contact_form_left_wrap logo-justify lg:w-1/3 flex flex-col relative pt-12">
+
                                 <img src="https://uploads-ssl.webflow.com/63ca2acc6352c221abe583d0/63d276dc093634833ace874c_big-quote.svg" loading="lazy" alt="" class="big_quote_image absolute top-0 bottom-auto  left-0 right-auto" />
                                 <p class="testimonial-description-small pt-4">“We wanted to bring a video based interaction with users on our platform.
-    
+
                                     <span class="text-color-black-description font-bold">Dyte checked all the right boxes</span> for us!”</p>
                                 <div class="client-details-text flex gap-4 py-2">
                                     <div>
@@ -452,14 +452,14 @@ const TwilloPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='w-1/2'>
+                            <div className='lg:w-1/2 py-8'>
                                 <ContactForm />
                             </div>
                         </div>
-    
+
                     </div>
-    
-</motion.div>
+
+                </motion.div>
             </div>
 
 
