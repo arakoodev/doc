@@ -10,8 +10,7 @@ export default function BlogPostItemHeaderTitle({className}) {
   return (
     <TitleHeading className={clsx(styles.title, className)} itemProp="headline">
       
-      {metadata.frontMatter.talking && <h2>In conversation with {metadata.frontMatter.talking}</h2> }
-      {console.log(metadata.frontMatter)}
+      {/* {metadata.frontMatter.talking && <h2>In conversation with {metadata.frontMatter.talking}</h2> } */}
       {isBlogPostPage ? (
         title
       ) : (
@@ -24,12 +23,12 @@ export default function BlogPostItemHeaderTitle({className}) {
         <p className='text-xl pt-8'>{metadata.frontMatter.descriptions}</p>
       }
       <div className='flex py-4 gap-8 mb-32'>
-        {metadata.frontMatter.timeline.map((node, index) => (
+        {/* {metadata.frontMatter.timeline.map((node, index) => (
           <div className='flex text-xl items-center justify-center gap-4 border border-solid border-neutral-700 p-4 rounded-xl bg-neutral-800'>
             <div className='flex rounded-full bg-neutral-300 h-[40px] w-[80px] content-center text-neutral-900 justify-center items-center' >{index + 1}</div>
             <div>{node}</div>
           </div>
-        ))}
+        ))} */}
       </div>
     </TitleHeading>
   );

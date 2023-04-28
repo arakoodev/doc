@@ -19,11 +19,14 @@ import Quotes from '@site/src/components/blog/quotes';
 />
 
 
+
+
+
 # The Problem
-## Pipe's Challenge
+### Pipe's Challenge
         
 “We needed 50% fewer frontend developers than we thought we needed. Hasura and GraphQL reduced the toil to build and iterate on the frontend.”
-       
+    
 Peter Downs  
 Director of Engineering, Pipe 
     

@@ -4,6 +4,7 @@ import {useBlogPost} from '@docusaurus/theme-common/internal';
 export default function BlogPostPageMetadata() {
   const {assets, metadata} = useBlogPost();
   const {title, description, date, tags, authors, frontMatter} = metadata;
+  // const { frontMatter} = metadata;
   const {keywords} = frontMatter;
   const image = assets.image ?? frontMatter.image;
   return (
@@ -11,7 +12,8 @@ export default function BlogPostPageMetadata() {
       title={title}
       description={description}
       keywords={keywords}
-      image={image}>
+      image={image}
+      >
       <meta property="og:type" content="article" />
       <meta property="article:published_time" content={date} />
       {/* TODO double check those article meta array syntaxes, see https://ogp.me/#array */}

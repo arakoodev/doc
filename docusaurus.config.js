@@ -48,8 +48,9 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
-          path: 'case-studies',
-          routeBasePath: 'case-studies',
+          blogTitle: "Blog",
+          path: 'blog',
+          routeBasePath: 'blog',
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -63,20 +64,71 @@ const config = {
     ],
   ],
 
+
   plugins: [
+    './my-plugin',
+    [
+      '@docusaurus/plugin-content-blog',
+      { 
+        blogTitle: "case-studies",
+        id: 'case-studies',
+        routeBasePath: 'case-studies',
+        path: './case-studies',
+        blogListComponent: "/src/components/case-studies/BlogListPage",
+        blogPostComponent: "/src/components/case-studies/BlogPostPage"
+      },
+    ],
     
-    async function myPlugin(context, options) {
-      return {
-        name: "docusaurus-tailwindcss",
-        configurePostCss(postcssOptions) {
-          // Appends TailwindCSS and AutoPrefixer.
-          postcssOptions.plugins.push(require("tailwindcss"));
-          postcssOptions.plugins.push(require("autoprefixer"));
-          return postcssOptions;
-        },
-      };
-    },
   ],
+
+
+
+  // plugins: [
+  //   [
+  //     '@docusaurus/plugin-content-blog',
+  //     {
+  //       /**
+  //        * Required for any multi-instance plugin
+  //        */
+  //       id: 'blog',
+  //       /**
+  //        * URL route for the blog section of your site.
+  //        * *DO NOT* include a trailing slash.
+  //        */
+  //       routeBasePath: 'blog',
+  //       /**
+  //        * Path to data on filesystem relative to site dir.
+  //        */
+  //       path: './blog',
+  //     },
+  //   ],
+  //   [
+  //     async function myPlugin(context, options) {
+  //       return {
+  //         name: "docusaurus-tailwindcss",
+  //         configurePostCss(postcssOptions) {
+  //           // Appends TailwindCSS and AutoPrefixer.
+  //           postcssOptions.plugins.push(require("tailwindcss"));
+  //           postcssOptions.plugins.push(require("autoprefixer"));
+  //           return postcssOptions;
+  //         },
+  //       };
+  //     },
+  //   ]
+  // ],
+//   [
+//     async function myPlugin(context, options) {
+//     return {
+//       name: "docusaurus-tailwindcss",
+//       configurePostCss(postcssOptions) {
+//         // Appends TailwindCSS and AutoPrefixer.
+//         postcssOptions.plugins.push(require("tailwindcss"));
+//         postcssOptions.plugins.push(require("autoprefixer"));
+//         return postcssOptions;
+//       },
+//     };
+//   },
+// ]
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -121,6 +173,11 @@ const config = {
           {
             to: 'case-studies/',
             label: 'case-studies',
+            position: 'right',
+          },
+          {
+            to: 'blog/',
+            label: 'Blog',
             position: 'right',
           },
           {

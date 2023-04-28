@@ -10,14 +10,12 @@ import BlogLayout from '@theme/BlogLayout';
 import BlogListPaginator from '@theme/BlogListPaginator';
 import SearchMetadata from '@theme/SearchMetadata';
 import BlogPostItems from '@theme/BlogPostItems';
-import Card from "../../components/blog/card"
-import {frontMatter as title} from "../../markdown/blogList/index.md"
 function BlogListPageMetadata(props) {
-  const {metadata} = props;
+  const { metadata } = props;
   const {
-    siteConfig: {title: siteTitle},
+    siteConfig: { title: siteTitle },
   } = useDocusaurusContext();
-  const {blogDescription, blogTitle, permalink} = metadata;
+  const { blogDescription, blogTitle, permalink } = metadata;
   const isBlogOnlyMode = permalink === '/';
   const title = isBlogOnlyMode ? siteTitle : blogTitle;
   return (
@@ -28,14 +26,11 @@ function BlogListPageMetadata(props) {
   );
 }
 function BlogListPageContent(props) {
-  const {metadata, items, sidebar} = props;
+  const { metadata, items, sidebar } = props;
   return (
-    <BlogLayout title={title.title} >
-      {items.map(node => (
-          <Card key={node} props={node.content} />
-      ))}
-      {/* <BlogPostItems items={items} /> */}
-      {/* <BlogListPaginator metadata={metadata} /> */}
+    <BlogLayout sidebar={sidebar}>
+      <BlogPostItems items={items} />
+      <BlogListPaginator metadata={metadata} />
     </BlogLayout>
   );
 }
@@ -46,7 +41,6 @@ export default function BlogListPage(props) {
         ThemeClassNames.wrapper.blogPages,
         ThemeClassNames.page.blogListPage,
       )}>
-        
       <BlogListPageMetadata {...props} />
       <BlogListPageContent {...props} />
     </HtmlClassNameProvider>
