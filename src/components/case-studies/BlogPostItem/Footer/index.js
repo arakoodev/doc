@@ -21,11 +21,11 @@ export default function BlogPostItemFooter() {
         'row docusaurus-mt-lg',
         isBlogPostPage && styles.blogPostFooterDetailsFull,
       )}>
-      {tagsExists && (
+      {/* {tagsExists && (
         <div className={clsx('col', {'col--9': truncatedPost})}>
           <TagsListInline tags={tags} />
         </div>
-      )}
+      )} */}
 
       {isBlogPostPage && editUrl && (
         <div className="col margin-top--sm">

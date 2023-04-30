@@ -149,11 +149,11 @@ const config = {
         },
         items: [
           
-          {
-            to: 'twilio-video-competitor/',
-            label: 'twilio-video-competitor',
-            position: 'right',
-          },
+          // {
+          //   to: 'twilio-video-competitor/',
+          //   label: 'twilio-video-competitor',
+          //   position: 'right',
+          // },
           {
             to: 'pricing/',
             label: 'Pricing',
@@ -170,11 +170,11 @@ const config = {
             label: 'Doc',
             position: 'right',
           },
-          {
-            to: 'case-studies/',
-            label: 'case-studies',
-            position: 'right',
-          },
+          // {
+          //   to: 'case-studies/',
+          //   label: 'case-studies',
+          //   position: 'right',
+          // },
           {
             to: 'blog/',
             label: 'Blog',
@@ -230,6 +230,10 @@ const config = {
               {
                 label: 'case-studies',
                 to: '/case-studies',
+              },
+              {
+                label: 'twilio-video-competitor',
+                to: '/twilio-video-competitor/',
               },
               {
                 label: 'GitHub',

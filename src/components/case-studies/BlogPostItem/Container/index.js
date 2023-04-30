@@ -7,7 +7,7 @@ export default function BlogPostItemContainer({children, className}) {
   const image = assets.image ?? frontMatter.image;
   return (
     <article
-      className={className}
+      className={` ${className}`}
       itemProp="blogPost"
       itemScope
       itemType="http://schema.org/BlogPosting">

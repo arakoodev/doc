@@ -5,7 +5,7 @@ import { BlogPostProvider, useBlogPost } from '@docusaurus/theme-common/internal
 import BlogLayout from '@theme/BlogLayout';
 import Layout from "./layout"
 import BlogPostItem from './BlogPostItem';
-import BlogPostPaginator from '@theme/BlogPostPaginator';
+import BlogPostPaginator from './BlogPostPaginator';
 import BlogPostPageMetadata from '@theme/BlogPostPage/Metadata';
 import TOC from '@theme/TOC';
 function BlogPostPageContent({ sidebar, children }) {

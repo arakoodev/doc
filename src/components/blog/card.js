@@ -2,10 +2,10 @@ import React from 'react';
 
 function Card(props) {
     return (
-        <a className="flex relative" href={props.props.metadata.permalink}>
+        <a className="flex relative px-4 md:p-0 w-full md:w-fit" href={props.props.metadata.permalink}>
             {/* {console.log(props)} */}
             {/* {console.log(props.props.metadata.tags)} */}
-            <div className="flex flex-col border border-solid border-neutral-100 rounded-xl p-4 w-[272px]">
+            <div className="flex flex-col border border-solid border-neutral-100 rounded-xl w-full   p-4  md:w-[272px]">
                 <div  className="flex flex-col">
                     <div className="">
                         <img  className='h-10' alt={props.alt} loading="lazy" src={props.props.assets.image} />

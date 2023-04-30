@@ -13,7 +13,7 @@ function useContainerClassName() {
 export default function BlogPostItem({children, className}) {
   const containerClassName = useContainerClassName();
   return (
-    <BlogPostItemContainer className={clsx(containerClassName, className)}>
+    <BlogPostItemContainer className={`${clsx(containerClassName, className)}`}>
       {console.log("positemn")}
       <BlogPostItemHeader />
       <BlogPostItemContent>{children}</BlogPostItemContent>

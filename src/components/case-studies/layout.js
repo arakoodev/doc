@@ -15,15 +15,15 @@ export default function BlogLayout(props) {
             // className="container margin-vert--lg"
             >
                 {props.title &&
-                    <div className='flex justify-center items-center text-center py-12'>
-                        <h1 className='text-6xl'>{props.title}</h1>
+                    <div className='flex justify-center lg:justify-start  items-center text-center py-12 px-8 w-full'>
+                        <h1 className='text-3xl lg:text-6xl'>{props.title}</h1>
                     </div>
                 }
                 <div className="flex">
                     {/* <BlogSidebar sidebar={sidebar} /> */}
 
                     <main
-                        className='flex flex-wrap gap-8 px-10'
+                        className='px-4 md:px-8'
                         // className={clsx('col', {
                         //   'col--7': hasSidebar,
                         //   'col--9 col--offset-1': !hasSidebar,
