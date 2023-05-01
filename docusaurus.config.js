@@ -14,12 +14,12 @@ const config = {
   url: 'https://www.arakoo.ai',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/alekhaweb/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'arakoodev', // Usually your GitHub org/user name.
-  projectName: 'doc', // Usually your repo name.
+  organizationName: 'muhzulzidan', // Usually your GitHub org/user name.
+  projectName: 'alekhaweb', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -38,13 +38,19 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'doc',
+          routeBasePath: 'doc',
           sidebarPath: require.resolve('./sidebars.js'),
+          disableVersioning: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
+          blogTitle: "Blog",
+          path: 'blog',
+          routeBasePath: 'blog',
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -58,19 +64,71 @@ const config = {
     ],
   ],
 
+
   plugins: [
-    async function myPlugin(context, options) {
-      return {
-        name: "docusaurus-tailwindcss",
-        configurePostCss(postcssOptions) {
-          // Appends TailwindCSS and AutoPrefixer.
-          postcssOptions.plugins.push(require("tailwindcss"));
-          postcssOptions.plugins.push(require("autoprefixer"));
-          return postcssOptions;
-        },
-      };
-    },
+    './my-plugin',
+    [
+      '@docusaurus/plugin-content-blog',
+      { 
+        blogTitle: "case-studies",
+        id: 'case-studies',
+        routeBasePath: 'case-studies',
+        path: './case-studies',
+        blogListComponent: "/src/components/case-studies/BlogListPage",
+        blogPostComponent: "/src/components/case-studies/BlogPostPage"
+      },
+    ],
+    
   ],
+
+
+
+  // plugins: [
+  //   [
+  //     '@docusaurus/plugin-content-blog',
+  //     {
+  //       /**
+  //        * Required for any multi-instance plugin
+  //        */
+  //       id: 'blog',
+  //       /**
+  //        * URL route for the blog section of your site.
+  //        * *DO NOT* include a trailing slash.
+  //        */
+  //       routeBasePath: 'blog',
+  //       /**
+  //        * Path to data on filesystem relative to site dir.
+  //        */
+  //       path: './blog',
+  //     },
+  //   ],
+  //   [
+  //     async function myPlugin(context, options) {
+  //       return {
+  //         name: "docusaurus-tailwindcss",
+  //         configurePostCss(postcssOptions) {
+  //           // Appends TailwindCSS and AutoPrefixer.
+  //           postcssOptions.plugins.push(require("tailwindcss"));
+  //           postcssOptions.plugins.push(require("autoprefixer"));
+  //           return postcssOptions;
+  //         },
+  //       };
+  //     },
+  //   ]
+  // ],
+//   [
+//     async function myPlugin(context, options) {
+//     return {
+//       name: "docusaurus-tailwindcss",
+//       configurePostCss(postcssOptions) {
+//         // Appends TailwindCSS and AutoPrefixer.
+//         postcssOptions.plugins.push(require("tailwindcss"));
+//         postcssOptions.plugins.push(require("autoprefixer"));
+//         return postcssOptions;
+//       },
+//     };
+//   },
+// ]
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -90,6 +148,12 @@ const config = {
           src: 'img/arakoo-03.png',
         },
         items: [
+          
+          // {
+          //   to: 'twilio-video-competitor/',
+          //   label: 'twilio-video-competitor',
+          //   position: 'right',
+          // },
           {
             to: 'pricing/',
             label: 'Pricing',
@@ -101,11 +165,16 @@ const config = {
             position: 'right',
           },
           {
-            to: 'docs/intro',
-            activeBasePath: 'docs',
-            label: 'Docs',
+            to: 'doc/intro/',
+            activeBasePath: 'doc',
+            label: 'Doc',
             position: 'right',
           },
+          // {
+          //   to: 'case-studies/',
+          //   label: 'case-studies',
+          //   position: 'right',
+          // },
           {
             to: 'blog/',
             label: 'Blog',
@@ -133,8 +202,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Docs',
+                to: '/doc/intro',
               },
             ],
           },
@@ -159,8 +228,12 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'case-studies',
+                to: '/case-studies',
+              },
+              {
+                label: 'twilio-video-competitor',
+                to: '/twilio-video-competitor/',
               },
               {
                 label: 'GitHub',
