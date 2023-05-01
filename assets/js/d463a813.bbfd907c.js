@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[971],{9940:a=>{a.exports=JSON.parse('{"label":"asdasd","permalink":"/alekhaweb/case-studies/tags/asdasd","allTagsPath":"/alekhaweb/case-studies/tags","count":1}')}}]);

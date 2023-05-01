@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[4349],{7570:e=>{e.exports=JSON.parse('{"permalink":"/alekhaweb/case-studies/tags/facebook","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"case-studies"}')}}]);
