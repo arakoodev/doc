@@ -182,13 +182,13 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://discord.gg/myserver',
+            href: 'https://discord.gg/MtEPK9cnSF',
             // label: 'Discord',
             position: 'right',
             className: 'navbar__icon navbar__discord',
           },
           {
-            href: 'https://discord.gg/myserver',
+            href: 'https://github.com/arakoodev',
             // label: 'Github',
             position: 'right',
             className: 'navbar__icon navbar__github',
@@ -213,15 +213,15 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/arakoo',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/MtEPK9cnSF',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/arakooai',
               },
             ],
           },
@@ -229,16 +229,16 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'case-studies',
+                label: 'Case Studies',
                 to: '/case-studies',
               },
               {
-                label: 'twilio-video-competitor',
+                label: 'Twilio Video',
                 to: '/twilio-video-competitor/',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/arakoodev',
               },
             ],
           },
