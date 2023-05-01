@@ -9,7 +9,7 @@ import Faq from '../components/Faq';
 import Cards from '../components/cards';
 
 import {frontMatter as HeadPricing } from "../markdown/pricing/pricing.md"
-import { frontMatter as cardsHeading } from "../markdown/pricing/cardsHeading.mdx"
+import {frontMatter as cardsHeading } from "../markdown/pricing/cardsHeading.mdx"
 import {frontMatter as Easy} from "../markdown/pricing/easy.mdx"
 import {frontMatter as Cardsvalue} from "../markdown/pricing/cards.mdx"
 import {frontMatter as Cta} from "../markdown/pricing/cta.mdx"
