@@ -155,11 +155,11 @@ const config = {
           //   label: 'twilio-video-competitor',
           //   position: 'right',
           // },
-          {
-            to: 'pricing/',
-            label: 'Pricing',
-            position: 'right',
-          },
+          // {
+          //   to: 'pricing/',
+          //   label: 'Pricing',
+          //   position: 'right',
+          // },
           {
             to: 'privacy/',
             label: 'Privacy',
@@ -228,14 +228,14 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Case Studies',
-                to: '/case-studies',
-              },
-              {
-                label: 'Twilio Video',
-                to: '/twilio-video-competitor/',
-              },
+              // {
+              //   label: 'Case Studies',
+              //   to: '/case-studies',
+              // },
+              // {
+              //   label: 'Twilio Video',
+              //   to: '/twilio-video-competitor/',
+              // },
               {
                 label: 'GitHub',
                 href: 'https://github.com/arakoodev',
