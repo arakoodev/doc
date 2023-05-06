@@ -9,6 +9,8 @@ authors:
 tags: [chain-of-thought,llm, arakoo]
 ---
 
+![Chain of Thought](./chain-of-thought.png)
+
 # Why You Should Be Using Chain-of-Thought Instead of Prompts in ChatGPT
 
 ## Introduction
