@@ -9,6 +9,9 @@ authors:
 tags: [openai, arakoo]
 ---
 
+
+![OpenAI logo](./openai.png)
+
 # Introduction
 Getting an OpenAI API key is crucial for integrating AI services into your projects. The key enables you to access the powerful natural language processing capabilities offered by OpenAI, increasing the efficiency and accuracy of your applications. In this article, we will walk you through the process of obtaining an OpenAI API key and provide you with essential information on leveraging the API to enhance your projects. Tools like [Arakoo EdgeChains](https://github.com/arakoodev/edgechains) help you use the OpenAI API with ease.
 
