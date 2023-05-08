@@ -1,4 +1,4 @@
-# WikiSearch
+# Tool - WikiSearch
 
 - This example demonstrates an example chain called **WikiChain** which provides current time (updated) information to GPT-3 and asks it to search Wikipedia for the given query.
 
