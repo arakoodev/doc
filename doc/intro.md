@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# EdgeChains - Introduction
+# EdgeChains
 
 EdgeChains is an open-source tool which helps you compose a variety of language chains (such as, chat system, QA system, etc) by LLMs, and it also has a framework for building  Reasoning+Acting (shortly, ReAct) chains.
 
