@@ -10,7 +10,7 @@ EdgeChains is an open-source tool which helps you compose a variety of language 
 
 Get started by **creating a new chain**.
 
-Or **try EdgeChains immediately** by trying out existing **[Examples](https://docusaurus.new)**.
+Or **try EdgeChains immediately** by trying out existing **[Examples](https://www.arakoo.ai/doc/category/Examples)**.
 
 ### What you'll need
 
