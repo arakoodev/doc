@@ -8,7 +8,7 @@ EdgeChains is an open-source tool which helps you compose a variety of language 
 
 ## Getting Started
 
-Get started by **creating a new chain**.
+Get started by **[creating a new chain](https://www.arakoo.ai/doc/category/Tutorials)**.
 
 Or **try EdgeChains immediately** by trying out existing **[Examples](https://www.arakoo.ai/doc/category/Examples)**.
 
