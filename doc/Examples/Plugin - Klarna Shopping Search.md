@@ -23,4 +23,4 @@ localhost:8080/plugin/Klarna?query=YOUR_QUERY
 # Example Queries can be:
 
 - “What is the price of the iPhone 12 at Klarna?”
-- "What black tshirts are available at Klarna?"
+- "What black t-shirts are available at Klarna?"

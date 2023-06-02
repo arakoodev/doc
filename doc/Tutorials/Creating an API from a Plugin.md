@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Creating an API from a Plugin
 
-This tutorial will show you how to create an API that uses external GPT plugin. 
+This tutorial will show you how to create an API that uses an external GPT plugin. 
  - you can add as many plugin chains as you want, some GPT plugins can be **[found here.](https://www.wellknown.ai/)**
 
 The creation of this plugin API was done using **3 classes:** 
