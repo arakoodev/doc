@@ -133,11 +133,17 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+
+    
+    
+    (
+      
+      {
+
       colorMode: {
-        defaultMode: 'dark',
+        defaultMode: 'light',
         disableSwitch: true,
-        respectPrefersColorScheme: false,
+        respectPrefersColorScheme: true,
       },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
@@ -146,7 +152,7 @@ const config = {
         logo: {
           alt: 'arakoo Logo',
           height: 90,
-          src: 'img/arakoo-03.png',
+          src: 'img/arakoo-01.png',
         },
         items: [
           
@@ -197,7 +203,7 @@ const config = {
       },
 
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'Docs',
