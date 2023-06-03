@@ -26,6 +26,7 @@ module.exports = {
   plugins: [// Or with a custom prefix:
     require('@headlessui/tailwindcss')({ prefix: 'ui' }),
   require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
   ],
     
   darkMode: ['class', '[data-theme="dark"]'],

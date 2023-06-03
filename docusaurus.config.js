@@ -141,9 +141,9 @@ const config = {
       {
 
       colorMode: {
-        defaultMode: 'light',
-        disableSwitch: true,
-        respectPrefersColorScheme: true,
+        // defaultMode: undefined,
+        // disableSwitch: true,
+        // respectPrefersColorScheme: true,
       },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
@@ -253,7 +253,7 @@ const config = {
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        darkTheme: lightCodeTheme,
       },
     }),
 

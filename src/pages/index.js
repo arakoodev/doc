@@ -52,7 +52,7 @@ export default function Home() {
                 <button className='rounded-full border-solid bg-bgLight border-indigo-950 px-8 text-indigo-950 p-3 outline-0 border'>• Learn More</button>
               </div>
             </div>
-            <div className="w-full flex-0 lg:flex-1">
+            <div className="w-full flex-0 xl:flex-1 ">
               {/* <Benchmark /> */}
 
               <TabPanel TabpanelValue={frontMatter.Tabpanel} />
@@ -63,7 +63,7 @@ export default function Home() {
             </div>
           </main>
         </div>
-        <div className='second section px-4 md:px-4 xl:px-20 flex flex-col gap-4 font-mono bg-bgLight text-black'>
+        {/* <div className='second section px-4 md:px-4 xl:px-20 flex flex-col gap-4 font-mono bg-bgLight text-black'>
           <div className='text-center'>lorem ipsum.md</div>
           <div className='border border-dotted border-black p-6 px-2 '>
             <p className='m-0'>title : lorem ipsum</p>
@@ -82,7 +82,7 @@ export default function Home() {
               <p class="font-medium leading-relaxed ">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
             </blockquote>
           </div>
-        </div>
+        </div> */}
 
         <div className='third section bg-zinc-800 text-white px-4 md:px-4 xl:px-14 py-24   text-center '>
           <div className=' max-w-xl mx-auto flex flex-col justify-center gap-12 items-center'>
@@ -90,44 +90,43 @@ export default function Home() {
   
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, rerum voluptatibus non repudiandae modi fugiat tempore quidem in aut magni temporibus, obcaecati natus illo tempora quas minus at magnam error? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia molestias culpa maxime cumque sequi quis sapiente optio commodi, tempore officiis ab consequatur ex tempora, dolore, voluptatibus ea id? Ipsam, tempore!</p>
             <div className='flex gap-4'>
-              <button className='border border-solid bg-zinc-800 border-white p-4'>Github</button>
-              <button className='border border-solid bg-zinc-800 border-white p-4'>Chat</button>
+              <button className='border border-solid bg-zinc-800 border-white p-4 text-white'>Github</button>
+              <button className='border border-solid bg-zinc-800 border-white p-4 text-white'>Chat</button>
             </div>
          </div>
         </div>
 
-        <div className='Fourth bg-bgLight text-black section px-4 md:px-4 xl:px-14 py-16 '>
-          <h3 className='text-center font-semibold text-4xl mb-16'>How it Works</h3>
-          <div className='flex gap-4'>
-            <div className='flex flex-col w-1/2 justify-around'>
+        <div className="Fourth bg-bgLight text-black section px-4 md:px-4 xl:px-14 py-16">
+          <h3 className="text-center font-semibold text-4xl mb-16">How it Works</h3>
+          <div className="flex flex-col md:flex-row md:gap-4">
+            <div className="flex flex-col md:w-1/2 justify-around mb-8 md:mb-0">
               <div>
-                <h4 className='text-indigo-700 font-normal uppercase text-2xl'>get set up</h4>
-                <p>using your cli or the phyton packate to install horzon</p>
-                <p>provide yout api keys and thatrs it yove all set to create your first projects and task</p>
+                <h4 className="text-indigo-700 font-normal uppercase text-2xl">get set up</h4>
+                <p>using your CLI or the Python package to install Horizon</p>
+                <p>provide your API keys and that's it, you're all set to create your first projects and tasks</p>
               </div>
-              <div >
-                <h4 className='text-indigo-700 font-normal uppercase text-2xl'>Create your task</h4>
-                <p>using your cli or the phyton packate to install horzon</p>
-                <p>provide yout api keys and thatrs it yove all set to create your first projects and task</p>
+              <div>
+                <h4 className="text-indigo-700 font-normal uppercase text-2xl">Create your task</h4>
+                <p>using your CLI or the Python package to install Horizon</p>
+                <p>provide your API keys and that's it, you're all set to create your first projects and tasks</p>
               </div>
             </div>
 
-              {/* in the middle here add "1" with circular border, and a horizontal line to the bottom */}
+            {/* in the middle here add "1" with circular border, and a horizontal line to the bottom */}
 
-            <div className='flex flex-col items-center relative'>
+            <div className="flex flex-col items-center relative">
               <div className="flex items-center justify-center bg-bgLight rounded-full h-16 w-16 border border-indigo-700 border-solid mb-4">
                 <span className="text-2xl">1</span>
               </div>
               <div className="flex items-center justify-center z-10 absolute top-[20em] bg-bgLight rounded-full h-16 w-16 border border-indigo-700 border-solid mb-4">
                 <span className="text-2xl">2</span>
               </div>
-              <hr className="border-b absolute top-10 border-zinc-700 border-solid h-3/4 w-px bg-zinc-400 " />
-              <hr className="border-b absolute top-10 border-zinc-700 border-solid h-[1em] w-px bg-indigo-700 " />
-
+              <hr className="border-b absolute top-10 md:top-auto bottom-[-2.5em] md:bottom-[-2.5em] left-1/2 transform -translate-x-1/2 md:translate-x-0 border-zinc-700 border-solid h-3/4 w-px bg-zinc-400" />
+              <hr className="border-b absolute top-10 md:top-auto bottom-[-2.5em] md:bottom-[-2.5em] left-1/2 transform -translate-x-1/2 md:translate-x-0 border-zinc-700 border-solid h-[1em] w-px bg-indigo-700" />
             </div>
 
-            <div className=' flex flex-col gap-16 w-1/2'>
-              <div className=''>
+            <div className="flex flex-col gap-16 md:w-1/2">
+              <div className="">
                 <CodeTabPanel />
               </div>
               <div>
@@ -136,7 +135,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='dark:bg-bgLight dark:text-black px-8 py-16 lg:px-40 md:py-20'>
+
+        <div className='dark:bg-bgLight dark:text-black px-8 py-16 lg:px-40 md:py-20 prose max-w-none prose-img:my-0 prose-img:mt-1 prose-headings:text-indigo-900 prose-headings:text-semibold prose-headings:font-sans prose-code:bg-bgLight prose-code:border-black prose-code:border prose-code:border-solid prose-p:text-normal font-mono '>
           <MDXContent >
             <HomeContent />
           </MDXContent>
