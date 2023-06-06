@@ -14,7 +14,7 @@ tags: [chain-of-thought,llm, github, arakoo]
 
 ## Introduction
 
-In today's fast-paced software development world, efficient support and issue resolution are paramount to a project's success. Building a powerful GitHub support bot with GPT-3 and chain-of-thought techniques can help streamline the process and enhance user experience. This comprehensive guide will delve into the intricacies of creating such a bot, discussing the benefits, implementation, and performance optimization.
+In today's fast-paced software development world, efficient support and issue resolution is paramount to a project's success. Building a powerful GitHub support bot with GPT-3 and chain-of-thought techniques can help streamline the process and enhance user experience. This comprehensive guide will delve into the intricacies of creating such a bot, discussing the benefits, implementation, and performance optimization.
 
 ### Benefits of a GitHub Support Bot
 

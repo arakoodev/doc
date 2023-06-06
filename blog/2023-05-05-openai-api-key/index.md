@@ -26,7 +26,7 @@ Getting an OpenAI API key is crucial for integrating AI services into your proje
 ## Registering for an OpenAI Account
 
 ### Create an Account
-To begin, navigate to the [OpenAI website](https://www.openai.com/) and click on the `Sign Up` button. Complete the registration process by providing the required details, such as your email address, password, and verification code. It is important to use a secure pasword to maintain the integrity and security of your account.
+To begin, navigate to the [OpenAI website](https://www.openai.com/) and click on the `Sign Up` button. Complete the registration process by providing the required details, such as your email address, password, and verification code. It is important to use a secure password to maintain the integrity and security of your account.
 
 ### Account Verification
 Once you have created your account, OpenAI will send a verification email to the address provided during registration. Ensure to verify your email account by clicking the provided link. This step is critical, as it validates the authenticity of the account holder and helps in securing your access.
