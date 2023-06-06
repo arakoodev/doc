@@ -84,31 +84,35 @@ export default function Home() {
           </div>
         </div> */}
 
-        <div className='third section bg-zinc-800 text-white px-4 md:px-4 xl:px-14 py-24   text-center '>
+        <div className='third section bg-white text-black px-4 md:px-4 xl:px-14 py-24   text-center '>
           <div className=' max-w-xl mx-auto flex flex-col justify-center gap-12 items-center'>
-            <h3 className='text-red-600 text-4xl'>Open and Free Community <br /> <span className='text-white'>Based Software</span></h3>
+            <h3 className=' text-4xl font-serif font-normal'>Open and Free Community <br /> <span className=''>Based Software</span></h3>
   
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, rerum voluptatibus non repudiandae modi fugiat tempore quidem in aut magni temporibus, obcaecati natus illo tempora quas minus at magnam error? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia molestias culpa maxime cumque sequi quis sapiente optio commodi, tempore officiis ab consequatur ex tempora, dolore, voluptatibus ea id? Ipsam, tempore!</p>
             <div className='flex gap-4'>
-              <button className='border border-solid bg-zinc-800 border-white p-4 text-white'>Github</button>
-              <button className='border border-solid bg-zinc-800 border-white p-4 text-white'>Chat</button>
+              <button className='border border-solid bg-white border-black p-4 '>Github</button>
+              <button className='border border-solid bg-white border-black p-4 '>Chat</button>
             </div>
          </div>
         </div>
 
         <div className="Fourth bg-bgLight text-black section px-4 md:px-4 xl:px-14 py-16">
-          <h3 className="text-center font-semibold text-4xl mb-16">How it Works</h3>
+          <h3 className="text-center font-normal font-serif text-5xl mb-16">How it Works</h3>
           <div className="flex flex-col md:flex-row md:gap-4">
-            <div className="flex flex-col md:w-1/2 justify-around mb-8 md:mb-0">
-              <div>
-                <h4 className="text-indigo-700 font-normal uppercase text-2xl">get set up</h4>
-                <p>using your CLI or the Python package to install Horizon</p>
-                <p>provide your API keys and that's it, you're all set to create your first projects and tasks</p>
+            <div className="flex flex-col md:w-1/2 md:pr-16 justify-around mb-8 md:mb-0">
+              <div className='text-sm'>
+                <h4 className="font-serif font-normal uppercase text-3xl">get set up</h4>
+                <div className='text-sm'>
+                  <p  className='m-0'>using your CLI or the Python package to install Horizon</p>
+                  <p  className='m-0'>provide your API keys and that's it, you're all set to create your first projects and tasks</p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-indigo-700 font-normal uppercase text-2xl">Create your task</h4>
-                <p>using your CLI or the Python package to install Horizon</p>
-                <p>provide your API keys and that's it, you're all set to create your first projects and tasks</p>
+              <div className='text-sm'>
+                <h4 className="font-serif font-normal uppercase text-3xl">Create your task</h4>
+                <div className='text-sm'>
+                  <p className='m-0'>using your CLI or the Python package to install Horizon</p>
+                  <p className='m-0'>provide your API keys and that's it, you're all set to create your first projects and tasks</p>
+               </div>
               </div>
             </div>
 
@@ -118,14 +122,14 @@ export default function Home() {
               <div className="flex items-center justify-center bg-bgLight rounded-full h-16 w-16 border border-indigo-700 border-solid mb-4">
                 <span className="text-2xl">1</span>
               </div>
-              <div className="flex items-center justify-center z-10 absolute top-[20em] bg-bgLight rounded-full h-16 w-16 border border-indigo-700 border-solid mb-4">
+              <div className="flex items-center justify-center z-20 absolute top-[20em] bg-bgLight rounded-full h-16 w-16 border border-indigo-700 border-solid mb-4">
                 <span className="text-2xl">2</span>
               </div>
-              <hr className="border-b absolute top-10 md:top-auto bottom-[-2.5em] md:bottom-[-2.5em] left-1/2 transform -translate-x-1/2 md:translate-x-0 border-zinc-700 border-solid h-3/4 w-px bg-zinc-400" />
-              <hr className="border-b absolute top-10 md:top-auto bottom-[-2.5em] md:bottom-[-2.5em] left-1/2 transform -translate-x-1/2 md:translate-x-0 border-zinc-700 border-solid h-[1em] w-px bg-indigo-700" />
+              <hr className="border-b absolute top-10  bottom-[-2.5em] md:bottom-[-2.5em] left-1/2 transform -translate-x-1/2 md:translate-x-0 border-zinc-700 border-solid h-3/4 w-px bg-zinc-400" />
+              <hr className="border-b absolute top-10  bottom-[-2.5em] md:bottom-[-2.5em] left-1/2 transform -translate-x-1/2 md:translate-x-0 border-zinc-700 border-solid h-[1em] z-10 w-px bg-indigo-700" />
             </div>
 
-            <div className="flex flex-col gap-16 md:w-1/2">
+            <div className="flex flex-col gap-16 pl-10 md:w-1/2">
               <div className="">
                 <CodeTabPanel />
               </div>
@@ -136,7 +140,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='dark:bg-bgLight dark:text-black px-8 py-16 lg:px-40 md:py-20 prose max-w-none prose-img:my-0 prose-img:mt-1 prose-headings:text-indigo-900 prose-headings:text-semibold prose-headings:font-sans prose-code:bg-bgLight prose-code:border-black prose-code:border prose-code:border-solid prose-p:text-normal font-mono '>
+        <div className='dark:bg-white bg-white prose-h4:mb-3 prose-h4:font-normal prose-h4:text-xl dark:text-black px-8 py-16 lg:px-40 md:py-20 prose max-w-none prose-img:my-0 prose-img:mt-1 prose-headings:text-black prose-headings:text-semibold prose-headings:font-serif prose-code:bg-white prose-code:rounded-md prose-code:border-black prose-code:border prose-code:border-solid prose-p:text-normal  '>
           <MDXContent >
             <HomeContent />
           </MDXContent>

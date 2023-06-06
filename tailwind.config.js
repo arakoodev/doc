@@ -12,7 +12,7 @@ module.exports = {
       'body': ['"Open Sans"', ],
     }, 
     colors: {
-      "bgLight": "#F2F2F2",
+      "bgLight": "#FAF7F5",
       black: colors.black,
       white: colors.white,
       gray: colors.gray,

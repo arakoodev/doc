@@ -204,6 +204,12 @@ const config = {
 
       footer: {
         style: 'light',
+        logo: {
+          alt: 'Meta Open Source Logo',
+          src: 'img/arakoo-01.png',
+          href: 'https://opensource.fb.com',
+
+        },
         links: [
           {
             title: 'Docs',
@@ -249,11 +255,11 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Arakoo Project`,
+        // copyright: `Copyright © ${new Date().getFullYear()} Arakoo Project`,e
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: lightCodeTheme,
+        // darkTheme: lightCodeTheme,
       },
     }),
 

@@ -37,19 +37,42 @@ function TabPanel({ TabpanelValue }) {
         nextArrow: <CustomNextArrow />,
         prevArrow: <CustomPrevArrow />,
         appendDots: (dots) => (
-            <div className="custom-dots">
-                <ul>{dots}</ul>
+            <div
+                style={{
+                    left:"-2em",
+                    bottom: "-3em",
+                    // backgroundColor: "#ddd",
+                    borderRadius: "10px",
+                    padding: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    // gap: "8em" // Adjust the gap size as per your preference
+                }}
+            >
+                <ul style={{ margin: "0px", listStyle: "none", gap: "2em", display: "flex", }}>{dots}</ul>
             </div>
         ),
         customPaging: (i) => (
-            <div className="custom-dot">
-                <span className="custom-dot-inner"></span>
+            <div
+                style={{
+                    width: "50px",
+                    height: "5px",
+                    borderRadius: "10px",
+                    backgroundColor: "#312E81",
+                    border: "1px #312E81 solid",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    color: "white"
+                }}
+            >
+                {/* {i + 1} */}
             </div>
         ),
     };
 
     return (
-        <div className="flex flex-col w-[17em] md:w-[35em] ">
+        <div className="flex flex-col w-[17em] md:w-[35em] my-16 ">
             <Slider {...carouselSettings}>
                 {console.log(TabpanelValue)}
                 <div className="py-4 lg:py-0 rounded-md">

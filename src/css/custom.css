@@ -18,6 +18,8 @@
   --ifm-table-stripe-background: transparent;
   --ifm-navbar-background-color: #F2F2F2;
   --ifm-navbar-link-color: black;
+  --prism-color: black;
+  --prism-background-color:white;
 }
 /* :root {
   --ifm-color-primary: #2e8555;
