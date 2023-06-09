@@ -2,6 +2,8 @@ import React from 'react';
 // import clsx from 'clsx';
 // import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import "../css/home.css";
+import Homepage from './homepage';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 // import { MDXProvider } from '@mdx-js/react';
@@ -39,10 +41,13 @@ export default function Home() {
         >
           <main className="mx-auto my-0 flex w-full flex-col items-center gap-8 md:max-w-screen-sm lg:max-w-[var(--max-width)] lg:flex-row lg:justify-between">
             <div className="lg:w-3/5">
-              <h1 className="mt-0 text-[26pt] font-extrabold leading-none dark:text-neutral-50 md:text-[32pt] lg:text-[38pt] xl:text-[40pt]">
-                {frontMatter.title}
+              <h1 className="mt-0 text-[26pt] line-1 anim-typewriter font-extrabold leading-none dark:text-neutral-50 md:text-[32pt] lg:text-[38pt] xl:text-[40pt]">
+                {frontMatter.title.slice(0,19)}
               </h1>
-              <p className="text-[1.3rem] leading-normal dark:text-neutral-300">
+              <h1 className="mt-0 text-[26pt]  font-extrabold leading-none dark:text-neutral-50 md:text-[32pt] lg:text-[38pt] xl:text-[40pt]">
+                {frontMatter.title.slice(20,)}
+              </h1>
+              <p className="text-[1.3rem] leading-normal dark:text-neutral-200">
                 {frontMatter.desc}
               </p>
               <div className="flex flex-col gap-4 ">
@@ -56,9 +61,10 @@ export default function Home() {
           </main>
         </div>
         <div className=' px-8 py-16 lg:px-40 md:py-20'>
-          <MDXContent >
+          {/* <MDXContent >
             <HomeContent />
-          </MDXContent>
+          </MDXContent> */}
+          <Homepage/>
         </div>
       </Layout>
     </div>
