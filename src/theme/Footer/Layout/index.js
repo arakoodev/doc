@@ -1,19 +1,19 @@
 import React from 'react';
 import clsx from 'clsx';
-export default function FooterLayout({style, links, logo, copyright}) {
+export default function FooterLayout({ style, links, logo, copyright }) {
   return (
     <footer
       className={clsx('footer pt-16', {
         'footer--dark': style === 'dark',
       })}>
       <div className="container container-fluid flex flex-col">
-<div className='flex gap-4'>
-          <div className='w-1/2'>
+        <div className='flex flex-col md:flex-row gap-4'>
+          <div className='md:w-1/2'>
             <h3 className='font-normal'>Arakoo</h3>
             <p>A human-centric platform for all ML, AI, and data apps.</p>
           </div>
           {links}
-</div>
+        </div>
         {/* {logo} */}
         {/* {(logo || copyright) && (
           <div className="footer__bottom text--center">
@@ -21,11 +21,11 @@ export default function FooterLayout({style, links, logo, copyright}) {
             {copyright}
           </div>
         )} */}
-        <div className='flex justify-between pt-16'>
+        <div className='flex flex-col-reverse md:flex-row  justify-between md:pt-16'>
           <p>Copyright © 2023 Arakoo Project</p>
-          <div className='flex gap-4'>
-            <p>Privacy Policy</p>
-            <p>Terms of Use</p>
+          <div className='flex flex-col md:flex-row md:gap-4'>
+            <p >Privacy Policy</p>
+            <p >Terms of Use</p>
           </div>
         </div>
       </div>

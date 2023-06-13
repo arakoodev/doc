@@ -156,6 +156,40 @@ table.tablecostum p {
   margin-top: -9px;
 }
 
+.slick-dots-costum{
+  left: -2em;
+  bottom: -3em;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8em;
+}
+
+@media (min-width: 1024px){
+  .slick-dots-costum{
+    padding: 2em;
+    padding-bottom: 1em;
+  }
+}
+
+.slick-dots-costum li {
+  width: 50px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #c7d2fe;
+  border: 1px solid #c7d2fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.slick-dots-costum li.slick-active {
+
+  background-color: #312E81;
+  border: 1px solid #312E81;
+}
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');

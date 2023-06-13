@@ -28,7 +28,7 @@ function Column({column}) {
 }
 export default function FooterLinksMultiColumn({columns}) {
   return (
-    <div className="row footer__links w-1/2">
+    <div className="row footer__links md:w-1/2">
       {columns.map((column, i) => (
         <Column key={i} column={column} />
       ))}

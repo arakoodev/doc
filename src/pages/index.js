@@ -11,9 +11,9 @@ import MDXContent from '@theme/MDXContent';
 import HomeContent, { frontMatter } from '../markdown/home.mdx';
 
 import InstallBox from '../components/installBox';
-import Benchmark from '../components/bookmark';
+// import Benchmark from '../components/bookmark';
 import TabPanel from '../components/Tab';
-import Quotes from '../components/blog/quotes';
+// import Quotes from '../components/blog/quotes';
 import CodeTabPanel from "../components/codeTab"
 import VersionsSection from '../components/VersionsSection';
 
@@ -37,88 +37,72 @@ export default function Home() {
         </Head>
         <div
           id="homepage"
-          className="px-4 md:px-4 xl:px-14  flex w-full flex-row items-center justify-center   pt-[5rem] pb-[5rem] text-indigo-950 md:pt-[6rem] md:pb-[8rem] bg-bgLight dark:bg-bgLight"
+          className="px-4 md:px-4 xl:px-14  flex w-full flex-row items-center justify-center   pt-[5rem] pb-4 md:pb-[5rem]  text-indigo-950 lg:pt-16 xl:pt-[6rem] lg:pb-[8rem] bg-bgLight dark:bg-bgLight"
         >
-          <main className="mx-auto my-0 flex w-full flex-col items-center gap-8 md:max-w-screen-sm lg:max-w-[var(--max-width)] lg:flex-row lg:justify-between">
+          <main className="mx-auto my-0 flex w-full flex-col items-center  xl:gap-8   lg:max-w-[var(--max-width)] lg:flex-row lg:justify-between">
             <div className="lg:w-3/5">
               <h1 className="mt-0 text-[26pt] font-medium font-Quicksand leading-none text-indigo-950 md:text-[32pt] lg:text-[38pt] xl:text-[4em] uppercase">
                 {frontMatter.title}
               </h1>
-              <p className="text-[1em] w-2/4 py-16  leading-normal dark:text-neutral-300">
+              <p className="text-[1em] xl:w-2/4 py-6 xl:py-16 m-0 leading-normal dark:text-neutral-300">
                 {frontMatter.desc}
               </p>
-              <div className='flex gap-4'>
-                <button className='rounded-full bg-indigo-950 px-8 text-white p-3 outline-0 border-0'>• get Started</button>
-                <button className='rounded-full border-solid bg-bgLight border-indigo-950 px-8 text-indigo-950 p-3 outline-0 border'>• Learn More</button>
+              <div className='flex gap-4 pb-6'>
+                <a className='rounded-full cursor-pointer hover:bg-bgLight hover:text-indigo-950  hover:border-indigo-950 border-solid hover:border bg-indigo-950 px-4 xl:px-8 text-white p-3 outline-0 border-0'>• get Started</a>
+                <a className='rounded-full cursor-pointer border-solid bg-bgLight border-indigo-950 px-4 xl:px-8 text-indigo-950 p-3 outline-0 border hover:bg-indigo-950 hover:text-white  '>• Learn More</a>
               </div>
             </div>
-            <div className="w-full flex-0 xl:flex-1 ">
+            <div className="w-full flex-0 lg:w-1/2 md:flex-2 xl:flex-1 flex flex-col ">
               {/* <Benchmark /> */}
 
               <TabPanel TabpanelValue={frontMatter.Tabpanel} />
-              <div className='pt-4'><VersionsSection /></div>
-              <div className="flex flex-col gap-4 py-4">
+              <div className='pt-12 md:pt-4 md:mx-10'><VersionsSection /></div>
+              <div className="flex flex-col gap-4 py-4 md:mx-9">
                 <InstallBox code={frontMatter.code} source={frontMatter.link} version={frontMatter.version} />
               </div>
             </div>
           </main>
         </div>
-        {/* <div className='second section px-4 md:px-4 xl:px-20 flex flex-col gap-4 font-mono bg-bgLight text-black'>
-          <div className='text-center'>lorem ipsum.md</div>
-          <div className='border border-dotted border-black p-6 px-2 '>
-            <p className='m-0'>title : lorem ipsum</p>
-            <p className='m-0'>author : dummy</p>
-            <p className='m-0'>description : this block is Yaml frontmatter</p>
-          </div>
-
-          <div>
-            <h3 className='text-indigo-800 text-3xl'># Lorem Ipsum</h3>
-            <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.</p>
-          </div>
-          <div>
-            <h3 className='text-indigo-800 text-3xl'>## Example Text</h3>
-            <p>a common form of <i>lorem ipsum</i> reads : </p>
-            <blockquote class="p-4 my-4 border-l-4 border-gray-300 text-black bg-zinc-200 dark:border-gray-500 ">
-              <p class="font-medium leading-relaxed ">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
-            </blockquote>
-          </div>
-        </div> */}
+      
 
         <div className='third section bg-white text-black px-4 md:px-4 xl:px-14 py-24   text-center '>
           <div className=' max-w-xl mx-auto flex flex-col justify-center gap-12 items-center'>
-            <h3 className=' text-4xl font-serif font-normal'>Open and Free Community <br /> <span className=''>Based Software</span></h3>
+            <h3 className=' text-4xl font-serif font-normal'>{frontMatter.Community.title} <br /> <span className=''>{frontMatter.Community.span}</span></h3>
   
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, rerum voluptatibus non repudiandae modi fugiat tempore quidem in aut magni temporibus, obcaecati natus illo tempora quas minus at magnam error? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia molestias culpa maxime cumque sequi quis sapiente optio commodi, tempore officiis ab consequatur ex tempora, dolore, voluptatibus ea id? Ipsam, tempore!</p>
+            <p>{frontMatter.Community.desc}</p>
             <div className='flex gap-4'>
-              <button className='border border-solid bg-white border-black p-4 '>Github</button>
-              <button className='border border-solid bg-white border-black p-4 '>Chat</button>
+              <a href={frontMatter.Community.github.link} className='border border-solid text-black no-underline bg-white border-black p-4  hover:bg-indigo-950 hover:text-white hover:no-underline '>{frontMatter.Community.github.label}</a>
+              <a href={frontMatter.Community.discord.link} className='border border-solid text-black no-underline hover:bg-indigo-950 hover:text-white hover:no-underline bg-white border-black p-4 '>{frontMatter.Community.discord.label}</a>
             </div>
          </div>
         </div>
 
         <div className="Fourth bg-bgLight text-black section px-4 md:px-4 xl:px-14 py-16">
-          <h3 className="text-center font-normal font-serif text-5xl mb-16">How it Works</h3>
+          <h3 className="text-center font-normal font-serif text-5xl mb-16">{frontMatter.How.headings}</h3>
           <div className="flex flex-col md:flex-row md:gap-4">
-            <div className="flex flex-col md:w-1/2 md:pr-16 justify-around mb-8 md:mb-0">
+
+            <div className="flex flex-col gap-6 md:w-1/2 md:pr-16 justify-around mb-8 md:mb-0">
+              
               <div className='text-sm'>
-                <h4 className="font-serif font-normal uppercase text-3xl">get set up</h4>
+                <h4 className="font-serif font-normal uppercase text-xl md:text-3xl">{frontMatter.How.firstStep.title}</h4>
                 <div className='text-sm'>
-                  <p  className='m-0'>using your CLI or the Python package to install Horizon</p>
-                  <p  className='m-0'>provide your API keys and that's it, you're all set to create your first projects and tasks</p>
+                  <p className='m-0'>{frontMatter.How.firstStep.description}</p>
                 </div>
               </div>
+
               <div className='text-sm'>
-                <h4 className="font-serif font-normal uppercase text-3xl">Create your task</h4>
+                <h4 className="font-serif font-normal uppercase text-xl md:text-3xl">{frontMatter.How.secondStep.title}</h4>
                 <div className='text-sm'>
-                  <p className='m-0'>using your CLI or the Python package to install Horizon</p>
-                  <p className='m-0'>provide your API keys and that's it, you're all set to create your first projects and tasks</p>
-               </div>
+                  <p className='m-0'>{frontMatter.How.secondStep.description}</p>
+                </div>
               </div>
+
+              
             </div>
 
             {/* in the middle here add "1" with circular border, and a horizontal line to the bottom */}
 
-            <div className="flex flex-col items-center relative">
+            <div className="hidden md:flex flex-col items-center relative ">
               <div className="flex items-center justify-center bg-bgLight rounded-full h-16 w-16 border border-indigo-700 border-solid mb-4">
                 <span className="text-2xl">1</span>
               </div>
@@ -129,7 +113,7 @@ export default function Home() {
               <hr className="border-b absolute top-10  bottom-[-2.5em] md:bottom-[-2.5em] left-1/2 transform -translate-x-1/2 md:translate-x-0 border-zinc-700 border-solid h-[1em] z-10 w-px bg-indigo-700" />
             </div>
 
-            <div className="flex flex-col gap-16 pl-10 md:w-1/2">
+            <div className="flex flex-col md:gap-16 md:pl-10 md:w-1/2">
               <div className="">
                 <CodeTabPanel />
               </div>
