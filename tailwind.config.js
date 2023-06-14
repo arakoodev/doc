@@ -2,8 +2,7 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}", 
-    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
+    "./src/**/*.{js,jsx,ts,tsx}", ],
   theme: {
     fontFamily: {
       'sans': ['Archivo', 'system-ui', ],
@@ -30,7 +29,6 @@ module.exports = {
     require('@headlessui/tailwindcss')({ prefix: 'ui' }),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
-    require('flowbite/plugin'),
   ],
     
   darkMode: ['class', '[data-theme="dark"]'],
