@@ -45,8 +45,10 @@ const config = {
           disableVersioning: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: ({ docPath }) => {
+            const nextVersionDocsDirPath = 'doc';
+            return `https://github.com/arakoodev/doc/tree/main/${nextVersionDocsDirPath}/${docPath}`;
+          },
         },
         blog: {
           blogTitle: "Blog",
@@ -55,8 +57,10 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: ({ blogPath }) => {
+            const nextVersionDocsDirPath = 'blog';
+            return `https://github.com/arakoodev/doc/tree/main/${nextVersionDocsDirPath}/${blogPath}`;
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -70,7 +74,7 @@ const config = {
     './my-plugin',
     [
       '@docusaurus/plugin-content-blog',
-      { 
+      {
         blogTitle: "case-studies",
         id: 'case-studies',
         routeBasePath: 'case-studies',
@@ -79,7 +83,7 @@ const config = {
         blogPostComponent: "/src/components/case-studies/BlogPostPage"
       },
     ],
-    
+
   ],
 
 
@@ -117,19 +121,19 @@ const config = {
   //     },
   //   ]
   // ],
-//   [
-//     async function myPlugin(context, options) {
-//     return {
-//       name: "docusaurus-tailwindcss",
-//       configurePostCss(postcssOptions) {
-//         // Appends TailwindCSS and AutoPrefixer.
-//         postcssOptions.plugins.push(require("tailwindcss"));
-//         postcssOptions.plugins.push(require("autoprefixer"));
-//         return postcssOptions;
-//       },
-//     };
-//   },
-// ]
+  //   [
+  //     async function myPlugin(context, options) {
+  //     return {
+  //       name: "docusaurus-tailwindcss",
+  //       configurePostCss(postcssOptions) {
+  //         // Appends TailwindCSS and AutoPrefixer.
+  //         postcssOptions.plugins.push(require("tailwindcss"));
+  //         postcssOptions.plugins.push(require("autoprefixer"));
+  //         return postcssOptions;
+  //       },
+  //     };
+  //   },
+  // ]
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -155,7 +159,7 @@ const config = {
           src: 'img/arakoo-01.png',
         },
         items: [
-          
+
           // {
           //   to: 'twilio-video-competitor/',
           //   label: 'twilio-video-competitor',
