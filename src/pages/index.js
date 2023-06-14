@@ -63,26 +63,24 @@ export default function Home() {
             </div>
           </main>
         </div>
-      
+
 
         <div className='third section bg-white text-black px-4 md:px-4 xl:px-14 py-24   text-center '>
           <div className=' max-w-xl mx-auto flex flex-col justify-center gap-12 items-center'>
             <h3 className=' text-4xl font-serif font-normal'>{frontMatter.Community.title} <br /> <span className=''>{frontMatter.Community.span}</span></h3>
-  
+
             <p>{frontMatter.Community.desc}</p>
             <div className='flex gap-4'>
               <a href={frontMatter.Community.github.link} className='border border-solid text-black no-underline bg-white border-black p-4  hover:bg-indigo-950 hover:text-white hover:no-underline '>{frontMatter.Community.github.label}</a>
               <a href={frontMatter.Community.discord.link} className='border border-solid text-black no-underline hover:bg-indigo-950 hover:text-white hover:no-underline bg-white border-black p-4 '>{frontMatter.Community.discord.label}</a>
             </div>
-         </div>
+          </div>
         </div>
 
         <div className="Fourth bg-bgLight text-black section px-4 md:px-4 xl:px-14 py-16">
           <h3 className="text-center font-normal font-serif text-5xl mb-16">{frontMatter.How.headings}</h3>
           <div className="flex flex-col md:flex-row md:gap-4">
-
-            <div className="flex flex-col gap-6 md:w-1/2 md:pr-16 justify-around mb-8 md:mb-0">
-              
+            <div className="flex flex-col md:w-1/2 md:pr-16 justify-around mb-8 md:mb-0">
               <div className='text-sm'>
                 <h4 className="font-serif font-normal uppercase text-xl md:text-3xl">{frontMatter.How.firstStep.title}</h4>
                 <div className='text-sm'>
@@ -96,8 +94,6 @@ export default function Home() {
                   <p className='m-0'>{frontMatter.How.secondStep.description}</p>
                 </div>
               </div>
-
-              
             </div>
 
             {/* in the middle here add "1" with circular border, and a horizontal line to the bottom */}

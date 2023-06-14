@@ -14,7 +14,7 @@ tags: [chain-of-thought,llm, arakoo]
 # Why You Should Be Using Chain-of-Thought Instead of Prompts in ChatGPT
 
 ## Introduction
-Chatbot development has progressed considerably in recent years, with the advent of powerful algorithms like GPT-3. However, there exists a common problem where simple prompts do not suffice in effectively controlling the AI's output. Chain-of-thought, a more complex method for handling AI inputs, offers a better solution to this issue. In this article, we will dives deep into why chain-of-thought should play a significant role in your ChatGPT applications.
+Chatbot development has progressed considerably in recent years, with the advent of powerful algorithms like GPT-3. However, there exists a common problem where simple prompts do not suffice in effectively controlling the AI's output. Chain-of-thought, a more complex method for handling AI inputs, offers a better solution to this issue. In this article, we will dive deep into why chain-of-thought should play a significant role in your ChatGPT applications.
 
 ## Benefits of Chain-of-Thought
 While prompts might seem like a more straightforward approach, the advantages of using chain-of-thought in ChatGPT far outweigh their simplicity. By employing chain-of-thought, developers can enjoy various benefits that ultimately lead to improved capabilities in AI interactions.
@@ -44,7 +44,7 @@ Chain-of-thought requires developers to shift their perspective from isolated pr
 With chain-of-thought, implementing an effective feedback mechanism is vital to improving the AI's understanding of the given context. Developers should leverage reinforcement learning approaches and constantly update their models with feedback gathered from users, progressively fine-tuning the AI to ensure higher quality outputs over time.
 
 ### Tools and Technologies
-To facilitate chain-of-thought implementation, developers should familiarize themselves with relevant tools and technologies that simplify and streamline the process. Tools like Arakoo EdgeChains help develoepers deal with the complexity of LLM & chain of thought, while robust APIs and SDKs support the development of coherent input-output sequences for improved AI interactions.
+To facilitate chain-of-thought implementation, developers should familiarize themselves with relevant tools and technologies that simplify and streamline the process. Tools like Arakoo EdgeChains help developers deal with the complexity of LLM & chain of thought, while robust APIs and SDKs support the development of coherent input-output sequences for improved AI interactions.
 
 ## Use Cases for Chain-of-Thought in ChatGPT
 The versatility of chain-of-thought has made it an increasingly popular choice for various applications across multiple industries, bolstering its reputation as an essential component of modern AI-powered solutions.
