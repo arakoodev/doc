@@ -8,13 +8,16 @@ import Head from '@docusaurus/Head';
 // import { MDXRenderer } from '@docusaurus/mdx';
 import MDXContent from '@theme/MDXContent';
 
-import HomeContent, { frontMatter } from '../markdown/home.mdx';
+import HomeContent, { frontMatter } from '../markdown/home/home.mdx';
+import Code1 from '../markdown/home/code1.md';
+import Code2 from '../markdown/home/code2.md';
 
 import InstallBox from '../components/installBox';
 // import Benchmark from '../components/bookmark';
 import TabPanel from '../components/Tab';
 // import Quotes from '../components/blog/quotes';
 import CodeTabPanel from "../components/codeTab"
+import CodeTabPanel2 from "../components/codeTab2"
 import VersionsSection from '../components/VersionsSection';
 
 
@@ -48,8 +51,8 @@ export default function Home() {
                 {frontMatter.desc}
               </p>
               <div className='flex gap-4 pb-6'>
-                <a className='rounded-full cursor-pointer hover:bg-bgLight hover:text-indigo-950  hover:border-indigo-950 border-solid hover:border bg-indigo-950 px-4 xl:px-8 text-white p-3 outline-0 border-0'>• get Started</a>
-                <a className='rounded-full cursor-pointer border-solid bg-bgLight border-indigo-950 px-4 xl:px-8 text-indigo-950 p-3 outline-0 border hover:bg-indigo-950 hover:text-white  '>• Learn More</a>
+                <a href={frontMatter.git.link} className='rounded-full cursor-pointer hover:bg-bgLight hover:text-indigo-950  hover:border-indigo-950 border-solid hover:border bg-indigo-950 px-4 xl:px-8 text-white p-3 outline-0 border-0'>{frontMatter.git.title}</a>
+                <a href={frontMatter.learn.link} className='rounded-full cursor-pointer border-solid bg-bgLight border-indigo-950 px-4 xl:px-8 text-indigo-950 p-3 outline-0 border hover:bg-indigo-950 hover:text-white  '>{frontMatter.learn.title}</a>
               </div>
             </div>
             <div className="w-full flex-0 lg:w-1/2 md:flex-2 xl:flex-1 flex flex-col ">
@@ -111,10 +114,16 @@ export default function Home() {
 
             <div className="flex flex-col md:gap-16 md:pl-10 md:w-1/2">
               <div className="">
+                {/* <MDXContent>
+                  <Code1 />
+                </MDXContent> */}
                 <CodeTabPanel />
               </div>
               <div>
-                <CodeTabPanel />
+               {/* <MDXContent>
+                 <Code1/> 
+               </MDXContent> */}
+                <CodeTabPanel2 />
               </div>
             </div>
           </div>
