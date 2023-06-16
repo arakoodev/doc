@@ -137,11 +137,17 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+
+    
+    
+    (
+      
+      {
+
       colorMode: {
-        defaultMode: 'dark',
-        disableSwitch: true,
-        respectPrefersColorScheme: false,
+        // defaultMode: undefined,
+        // disableSwitch: true,
+        // respectPrefersColorScheme: true,
       },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
@@ -150,7 +156,7 @@ const config = {
         logo: {
           alt: 'arakoo Logo',
           height: 90,
-          src: 'img/arakoo-03.png',
+          src: 'img/arakoo-01.png',
         },
         items: [
 
@@ -201,7 +207,13 @@ const config = {
       },
 
       footer: {
-        style: 'dark',
+        style: 'light',
+        logo: {
+          alt: 'Meta Open Source Logo',
+          src: 'img/arakoo-01.png',
+          href: 'https://opensource.fb.com',
+
+        },
         links: [
           {
             title: 'Docs',
@@ -247,11 +259,11 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Arakoo Project`,
+        // copyright: `Copyright © ${new Date().getFullYear()} Arakoo Project`,e
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        // darkTheme: lightCodeTheme,
       },
     }),
 

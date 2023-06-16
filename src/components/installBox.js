@@ -14,13 +14,15 @@ const InstallBox = ({ code, source, version }) => {
     }
     return (
         <div className="mt-0 hidden  md:block InstallBox--desktop w-full">
-            <p className="all-caps mb-2 text-xl font-semibold dark:text-white">
+            {/* <p className="all-caps mb-2 text-xl font-semibold dark:text-black">
               {version}
-            </p>
-            <div className="rounded-md border-solid border-2 border-[#EE81C3] text-lg mb-2">
-                <div className="relative ">
+            </p> */}
+            <div className="rounded-full border-solid border-2 border-[#EE81C3] text-lg mb-2">
+                <div className="relative  ">
                     <div className=''>
-                        <pre className="m-0" style={{ backgroundColor: '#282A36' }}>
+                        <pre className="m-0 rounded-full bg-indigo-950 p-2 pt-3 px-6 " 
+                        // style={{ backgroundColor: '#282A36' }}
+                        >
                             <code>
                                 <span className="line">
                                     <span style={{ color: '#F8F8F2' }}>
@@ -30,7 +32,7 @@ const InstallBox = ({ code, source, version }) => {
                             </code>
                         </pre>
                         {/* <pre>{code}</pre> */}
-                        <div id="WEeJYNsIgEDo" className="CopyIcon copy absolute right-6 top-4" onClick={copyToClipboard} >
+                        <div id="WEeJYNsIgEDo" className="CopyIcon copy text-white fill-white absolute right-6 top-2" onClick={copyToClipboard} >
                             {copySuccess ? (
                                 <>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -54,9 +56,9 @@ const InstallBox = ({ code, source, version }) => {
 
                 </div>
             </div>
-            <div className="text-sm whitespace-nowrap pt-1 text-gray-500 opacity-70 md:flex md:flex-row md:flex-wrap md:justify-between">
-                <p className="text-sm text-gray-500 dark:text-gray-300">Supported on macOS, Linux, and WSL</p>
-                <a className="text-gray-300" href={source}>View source</a>
+            <div className="text-sm whitespace-nowrap pt-1 text-black opacity-70 md:flex md:flex-row md:flex-wrap md:justify-between">
+                <p className="text-sm ">Supported on macOS, Linux, and WSL</p>
+                <a className="text-black" href={source}>View source</a>
             </div>
 
         </div>
