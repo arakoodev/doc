@@ -34,7 +34,7 @@ export default function Home() {
       </a> */}
       <Layout
         title={`Hello from ${siteConfig.title}`}
-        description="Description will go into a meta tag in <head />">
+        description="SERVERLESS, COMPRESSION AND CACHE FOR GPT & LLM">
         <Head>
           <title>{frontMatter.title}</title>
         </Head>
