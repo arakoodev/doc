@@ -13,7 +13,7 @@ export default function BlogPostPaginator(props) {
       })}>
       <h4 className='mb-0'>Other Stories</h4>
       <h3 className='text-3xl'>Learn more from of our <br/> users’ experience</h3>
-      {console.log(props)}
+      {/* {console.log(props)} */}
       {prevItem && (
         <PaginatorNavLink
           {...prevItem}

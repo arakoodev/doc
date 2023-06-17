@@ -8,8 +8,8 @@ export default function BlogLayout(props) {
     const hasSidebar = sidebar && sidebar.items.length > 0;
     return (
         <Layout {...layoutProps}>
-            {console.log("layotu")}
-            {console.log(props)}
+            {/* {console.log("layotu")} */}
+            {/* {console.log(props)} */}
             <div
                 className='py-12'
             // className="container margin-vert--lg"
