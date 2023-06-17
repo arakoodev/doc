@@ -1,10 +1,3 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
@@ -17,7 +10,6 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
@@ -31,12 +23,11 @@
 }
 
 .footer--dark {
-    --ifm-footer-background-color: transparent;
-    --ifm-footer-color: var(--ifm-footer-link-color);
-    --ifm-footer-link-color: var(--ifm-color-secondary);
-    --ifm-footer-title-color: var(--ifm-color-white);
+  --ifm-footer-background-color: transparent;
+  --ifm-footer-color: var(--ifm-footer-link-color);
+  --ifm-footer-link-color: var(--ifm-color-secondary);
+  --ifm-footer-title-color: var(--ifm-color-white);
 }
-
 
 .navbar__icon:before {
   content: "";
@@ -51,57 +42,39 @@
 }
 
 .navbar__github:before {
-  mask: url(/img/github-142-svgrepo-com.svg) no-repeat 100% 100%;
+  mask: url(/img/custom-github-icon.svg) no-repeat 100% 100%;
   mask-size: cover;
 }
 
 .navbar__discord:before {
-  mask: url(/img/discord-icon-svgrepo-com.svg) no-repeat 100% 100%;
+  mask: url(/img/custom-discord-icon.svg) no-repeat 100% 100%;
   mask-size: cover;
 }
-
 
 .is-sticky {
   position: sticky;
   top: 3.5em;
   z-index: 999;
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-  background: rgb(38 38 38);
+  background: rgb(38, 38, 38);
 }
 
-
-/* .divide-neutral-400 > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-opacity: 1;
-    border-color: rgb(163 163 163 / var(--tw-divide-opacity));
-} */
-
-/* .divide-y > :not([hidden]) ~ :not([hidden]) { */
-    /* --tw-divide-y-reverse: 0; */
-    /* border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse))); */
-    /* border-bottom-width: calc(1px * var(--tw-divide-y-reverse)); */
-/* } */
-/* table tr:nth-child(2n) { */
-    /* background-color: var(--ifm-table-stripe-background); */
-/* } */
-
-/* Custom CSS to override the styles */
-/* .divide-neutral-400 > :not([hidden]) ~ :not([hidden]) {
-  border:inherit;
-  --tw-border-opacity: 1;
-  border-color: inherit;
-  border-color: rgb(38 38 38 / var(--tw-border-opacity)) !important;
+/* Uncomment the following styles to customize dividing elements and table stripes */
+/*
+.divide-neutral-400 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(38, 38, 38, var(--tw-divide-opacity));
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]) {
-  --tw-border-opacity: 1;
-    border-style: solid;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-    border-color: rgb(38 38 38 / var(--tw-border-opacity));
-} */
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+}
+*/
 
 table.tablecostum tr:nth-child(2n) {
-    background-color: inherit;
+  background-color: inherit;
 }
 
 table.tablecostum th,
@@ -110,11 +83,11 @@ table.tablecostum td {
 }
 
 table.tablecostum thead tr {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 table.tablecostum tr {
-    border-top: 0;
+  border-top: 0;
 }
 
 table.tablecostum p {
