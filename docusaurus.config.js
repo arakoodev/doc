@@ -150,7 +150,7 @@ const config = {
         // respectPrefersColorScheme: true,
       },
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/code.png',
       navbar: {
         // title: 'arakoo',
         logo: {
