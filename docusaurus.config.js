@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Arakoo.ai',
-  tagline: 'Serverless, Compression and Cache for GPT & LLM',
+  tagline: 'RAG stack (Retriever Augmented Generative AI) for production LLM applications. On top of Serverless & JSonnet',
   favicon: 'img/logo-arako.ico',
 
   // Set the production url of your site here
