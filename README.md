@@ -2,6 +2,26 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+<br/>
+<div align="center">
+  <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+  <img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+  <img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+  <br/>
+  <img src="https://img.shields.io/github/repo-size/arakoodev/doc?style=for-the-badge" />
+  <img src="https://img.shields.io/github/license/arakoodev/doc?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-closed-raw/arakoodev/doc?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues/arakoodev/doc?style=for-the-badge" />
+  <img src="https://img.shields.io/github/stars/arakoodev/doc?style=for-the-badge" />
+  <img src="https://img.shields.io/github/forks/arakoodev/doc?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-pr/arakoodev/doc?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/arakoodev/doc?style=for-the-badge" />
+  <img src="https://img.shields.io/github/contributors/arakoodev/doc?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-pr-closed-raw/arakoodev/doc?style=for-the-badge" />
+  
+</div>
+<br/>
+
 ### Installation
 
 ```
