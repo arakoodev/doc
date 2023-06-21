@@ -1,6 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
+const path = require('path')
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -71,25 +71,18 @@ const config = {
 
 
   plugins: [
-    // adding another docs
     './my-plugin',
     [
-      '@docusaurus/plugin-content-docs',
+      '@docusaurus/plugin-content-blog',
       {
-        id: 'handbook',
-        path: 'handbook',
-        routeBasePath: 'handbook',
-        sidebarPath: require.resolve('./sidebars2.js'),
-        disableVersioning: false,
-        // Please change this to your repo.
-        // Remove this to remove the "edit this page" links.
-        editUrl: ({ docPath }) => {
-          const nextVersionDocsDirPath = 'doc2';
-          return `https://github.com/arakoodev/doc/tree/main/${nextVersionDocsDirPath}/${docPath}`;
-        },
-      }
-
-    ]
+        blogTitle: "case-studies",
+        id: 'case-studies',
+        routeBasePath: 'case-studies',
+        path: './case-studies',
+        blogListComponent: "/src/components/case-studies/BlogListPage",
+        blogPostComponent: "/src/components/case-studies/BlogPostPage"
+      },
+    ],
 
   ],
 
@@ -97,23 +90,47 @@ const config = {
 
   // plugins: [
   //   [
-  //     '@docusaurus/plugin-content-blog',
+  //     '@docusaurus/plugin-content-docs',
   //     {
   //       /**
   //        * Required for any multi-instance plugin
   //        */
-  //       id: 'blog',
-  //       /**
-  //        * URL route for the blog section of your site.
-  //        * *DO NOT* include a trailing slash.
-  //        */
-  //       routeBasePath: 'blog',
-  //       /**
-  //        * Path to data on filesystem relative to site dir.
-  //        */
-  //       path: './blog',
-  //     },
+  //       id: 'handbook',
+  //       path: path.resolve(__dirname, 'handbook'),
+  //       routeBasePath: 'handbook',
+  //       sidebarPath: require.resolve('./handbook/sidebars.js'),
+
+  //       // General config
+  //       editUrl: ({ blogPath }) => {
+  //         const nextVersionDocsDirPath = 'handbook';
+  //         return `https://github.com/arakoodev/doc/tree/main/${nextVersionDocsDirPath}/${blogPath}`;
+  //       },
+  //     }
   //   ],
+  // ],
+
+
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        /**
+         * Required for any multi-instance plugin
+         */
+        id: 'handbook',
+        path: path.resolve(__dirname, 'handbook'),
+        routeBasePath: 'handbook',
+        sidebarPath: require.resolve('./handbook/sidebars.js'),
+
+        // General config
+        editUrl: ({ blogPath }) => {
+          const nextVersionDocsDirPath = 'handbook';
+          return `https://github.com/arakoodev/doc/tree/main/${nextVersionDocsDirPath}/${blogPath}`;
+        },
+      }
+    ],
+  ],
   //   [
   //     async function myPlugin(context, options) {
   //       return {
@@ -188,17 +205,11 @@ const config = {
               label: 'Doc',
               position: 'right',
             },
-            {
-              to: 'handbook/intro',
-              activeBasePath: 'handbook',
-              label: 'Handbook',
-              position: 'right',
-            },
-            {
-              to: 'case-studies/',
-              label: 'case-studies',
-              position: 'right',
-            },
+            // {
+            //   to: 'case-studies/',
+            //   label: 'case-studies',
+            //   position: 'right',
+            // },
             {
               to: 'blog/',
               label: 'Blog',
