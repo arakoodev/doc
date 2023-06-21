@@ -51,8 +51,8 @@ export default function Home() {
                 {frontMatter.desc}
               </p>
               <div className='flex gap-4 pb-6'>
-                <a href={frontMatter.git.link} className='rounded-full cursor-pointer hover:bg-bgLight hover:text-indigo-950  hover:border-indigo-950 border-solid hover:border bg-indigo-950 px-4 xl:px-8 text-white p-3 outline-0 border-0'>{frontMatter.git.title}</a>
-                <a href={frontMatter.learn.link} className='rounded-full cursor-pointer border-solid bg-bgLight border-indigo-950 px-4 xl:px-8 text-indigo-950 p-3 outline-0 border hover:bg-indigo-950 hover:text-white  '>{frontMatter.learn.title}</a>
+                <a href={frontMatter.git.link} className='rounded-full cursor-pointer hover:bg-bgLight hover:text-indigo-950  hover:border-indigo-950 border-solid hover:border bg-indigo-950 px-4 xl:px-8 no-underline hover:no-underline text-white duration-300 transition-all p-3 outline-0 border-0'>{frontMatter.git.title}</a>
+                <a href={frontMatter.learn.link} className='rounded-full cursor-pointer border-solid bg-bgLight border-indigo-950 px-4 xl:px-8 text-indigo-950 p-3 outline-0 border hover:bg-indigo-950 no-underline hover:no-underline hover:text-white duration-300 transition-all '>{frontMatter.learn.title}</a>
               </div>
             </div>
             <div className="w-full flex-0 lg:w-1/2 md:flex-2 xl:flex-1 flex flex-col ">
@@ -74,8 +74,8 @@ export default function Home() {
 
             <p>{frontMatter.Community.desc}</p>
             <div className='flex gap-4'>
-              <a href={frontMatter.Community.github.link} className='border border-solid text-black no-underline bg-white border-black p-4  hover:bg-indigo-950 hover:text-white hover:no-underline '>{frontMatter.Community.github.label}</a>
-              <a href={frontMatter.Community.discord.link} className='border border-solid text-black no-underline hover:bg-indigo-950 hover:text-white hover:no-underline bg-white border-black p-4 '>{frontMatter.Community.discord.label}</a>
+              <a href={frontMatter.Community.github.link} className='border border-solid text-black no-underline bg-white border-black p-4  hover:bg-indigo-950 hover:text-white hover:no-underline rounded-sm duration-300 transition-all'>{frontMatter.Community.github.label}</a>
+              <a href={frontMatter.Community.discord.link} className='border border-solid text-black no-underline hover:bg-indigo-950 hover:text-white hover:no-underline bg-white border-black p-4 rounded-sm duration-300 transition-all'>{frontMatter.Community.discord.label}</a>
             </div>
           </div>
         </div>
