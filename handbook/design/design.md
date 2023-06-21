@@ -1,0 +1,56 @@
+- Pre-requisites:
+    - https://medium.com/nubank-design/nuconta-part-ii-685b446addc6
+    - https://medium.freecodecamp.org/fundamental-design-principles-for-non-designers-ad34c30caa7
+    - What is a brand ? Brent Beshore, CEO of private equity firm Adventur.es, was recently asked what a brand is. He replied: [Brand is the distribution of likely outcomes that you can expect from any company or person.](https://www.collaborativefund.com/blog/the-making-of-a-brand/)
+    - **Lean UX**
+        - [Practice "Lean UX"](https://www.interaction-design.org/literature/article/a-simple-introduction-to-lean-ux)
+        - [Lean UX](https://www.crazyegg.com/blog/lean-ux/)
+        - [Focus on Why and Not How](https://medium.com/@_sidharth_m_/beginners-guide-to-lean-ux-defined-explained-228d18940acb)
+    - **Google Design Sprints**
+        -   Why use a design sprint - [https://uxplanet.org/whats-a-design-sprint-and-why-is-it-important-f7b826651e09](https://uxplanet.org/whats-a-design-sprint-and-why-is-it-important-f7b826651e09)
+        -   [https://www.youtube.com/watch?v=33hBnZzoFAg](https://www.youtube.com/watch?v=33hBnZzoFAg)
+        -   https://www.youtube.com/watch?v=K2vSQPh6MCE
+-   Day 1
+    -   Do Figma tutorial - [https://learnux.io/course/figma](https://learnux.io/course/figma)
+        -   **After this point, all following courses must be done in Figma.**
+    - User journeys and flow -
+        -   [https://medium.com/figma-africa/user-journey-vs-user-flow-in-figma-77f510f5b738](https://medium.com/figma-africa/user-journey-vs-user-flow-in-figma-77f510f5b738)
+        -   [https://blog.prototypr.io/user-flows-in-sketch-step-by-step-guide-to-create-them-quickly-9dd130e0dd36](https://blog.prototypr.io/user-flows-in-sketch-step-by-step-guide-to-create-them-quickly-9dd130e0dd36)
+        -   [https://www.toptal.com/designers/ux/guide-to-ux-sketching](https://www.toptal.com/designers/ux/guide-to-ux-sketching)
+        -  learn how to flowcharts/wireframes in figma using https://www.figma.com/file/SJeRbHw3trZeI05a6Rpyj6/Flowcharts-Mobile?node-id=0%3A1
+        - clone Wireframe [https://www.behance.net/gallery/97088955/Wireframe-User-Flow-Mockup-Mobile-App-Finace-Banking-UI?tracking_source=search_projects_recommended%7CApp%20wireframe%20finance](https://www.behance.net/gallery/97088955/Wireframe-User-Flow-Mockup-Mobile-App-Finace-Banking-UI?tracking_source=search_projects_recommended%7CApp%20wireframe%20finance)
+-   Day 2
+    -   Learn Material Design grid - [https://material.io/design/layout/understanding-layout.html\#usage](https://material.io/design/layout/understanding-layout.html#usage)
+    -   Download [Material Design Sketch file](https://www.figma.com/community/file/778763161265841481) 
+    -   Design a calendar. pressure points are tabular design, text alignment, font sizing. Demonstrate android xml export . Use Material Components only. DO NOT CREATE YOUR OWN COMPONENTS.
+-   Day 3
+    -   Learn Material Design navigation - [https://material.io/design/navigation/understanding-navigation.html](https://material.io/design/navigation/understanding-navigation.html)
+    -   Learn Material Design Bottom Sheet - [https://material.io/components/sheets-bottom)
+    -   Design a credit score app. Use different kind of charts . Use Material Components only. DO NOT CREATE YOUR OWN COMPONENTS.
+-   Day 4
+    -   read [https://uxdesign.cc/design-better-forms-96fadca0f49c](https://uxdesign.cc/design-better-forms-96fadca0f49c)
+    -   read [https://material.io/components/text-fields](https://material.io/components/text-fields)
+    -   Design a hospital form app.  pressure points are tables and alignment. Use Material Components only. DO NOT CREATE YOUR OWN COMPONENTS.
+
+-   Day 5
+    -   Study Ant Design - https://ant.design/docs/spec/download
+    -   Study data table design - https://medium.com/nextux/design-better-data-tables-4ecc99d23356
+    -   Reimplement a dashboard for taxi booking - but by using Ant.Design. What this means is that you should use closely related elements from Ant.Design, but do NOT design your own elements. Use Ant.Design components only. DO NOT CREATE YOUR OWN COMPONENTS.
+-   Day 6
+    -   User research - [https://www.udemy.com/the-world-of-design-thinking/](https://www.udemy.com/the-world-of-design-thinking/)
+    -   Information Architecture -
+        -   Pre-requisites: https://www.figma.com/resources/assets/ux-flow/
+        -   [https://www.toptal.com/designers/ia/guide-to-information-architecture](https://www.toptal.com/designers/ia/guide-to-information-architecture)
+        -   Types of Information Architecture - [https://www.uxbooth.com/articles/designing-for-mobile-part-1-information-architecture/](https://www.uxbooth.com/articles/designing-for-mobile-part-1-information-architecture/)
+    -   Card Sorting -
+        -   [https://www.toptal.com/designers/ia/card-sorting](https://www.toptal.com/designers/ia/card-sorting)
+        -   [https://www.usability.gov/how-to-and-tools/methods/card-sorting.html](https://www.usability.gov/how-to-and-tools/methods/card-sorting.html)
+        -   [https://www.nngroup.com/articles/card-sorting-definition/](https://www.nngroup.com/articles/card-sorting-definition/)
+
+- read [lifecycle emails](https://training.kalzumeus.com/lifecycle-emails) article
+- [What is a brand moodboard](https://uxdesign.cc/a-mood-board-strategy-for-cohesive-visual-design-5620dec3fed7)
+- Table design (very important. Please learn it well)
+        - https://alistapart.com/article/web-typography-tables/
+        - https://medium.com/mission-log/design-better-data-tables-430a30a00d8c
+        - https://ant.design/docs/spec/alignment
+
