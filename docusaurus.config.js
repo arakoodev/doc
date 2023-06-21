@@ -70,21 +70,7 @@ const config = {
   ],
 
 
-  plugins: [
-    './my-plugin',
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        blogTitle: "case-studies",
-        id: 'case-studies',
-        routeBasePath: 'case-studies',
-        path: './case-studies',
-        blogListComponent: "/src/components/case-studies/BlogListPage",
-        blogPostComponent: "/src/components/case-studies/BlogPostPage"
-      },
-    ],
 
-  ],
 
 
 
@@ -121,7 +107,7 @@ const config = {
         id: 'handbook',
         path: path.resolve(__dirname, 'handbook'),
         routeBasePath: 'handbook',
-        sidebarPath: require.resolve('./handbook/sidebars.js'),
+        sidebarPath: require.resolve('./sidebars2.js'),
 
         // General config
         editUrl: ({ blogPath }) => {
@@ -203,6 +189,12 @@ const config = {
               to: 'doc/intro/',
               activeBasePath: 'doc',
               label: 'Doc',
+              position: 'right',
+            },
+            {
+              to: 'handbook/intro/',
+              activeBasePath: 'handbook',
+              label: 'Handbook',
               position: 'right',
             },
             // {

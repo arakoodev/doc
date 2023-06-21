@@ -39,8 +39,8 @@ Today's world in AI/ML & data science is fast evolving. As an organization, we m
 
 So where does the true value of a data scientist lie..... when algorithms are commodity ? Its in the **business understanding**
 
-<!-- ![ML Mistake](/culture/ss1.png)
-![ML Fix](/culture/ss2.png) -->
+![ML Mistake](./Screenshot%202022-03-20%20153703.png)
+![ML Fix](./Screenshot%202022-03-20%20153703.png)
 ![ML datasets](https://user-images.githubusercontent.com/76883/170722537-895e275d-9687-4998-a8d0-2c41494806fe.png)
 ![ML Dataset fantasy](https://user-images.githubusercontent.com/76883/170722713-b5763520-a55e-486a-8597-ec14149d1295.png)
 ![wannabe](https://user-images.githubusercontent.com/76883/170722803-c05721d8-8c50-4791-9114-e57987fad4fd.png)
