@@ -1,5 +1,9 @@
 # Getting Started
 
+Get started by **[creating a new chain](https://www.arakoo.ai/doc/category/Tutorials)**.
+
+Or **try EdgeChains immediately** by trying out existing **[Examples](https://www.arakoo.ai/doc/category/Examples)**.
+
 ## Installation Instructions
 
 To install EdgeChains, follow these steps:
@@ -14,10 +18,7 @@ To install EdgeChains, follow these steps:
 
 Make sure your system meets the following requirements to run EdgeChains:
 
-- OpenAI API Keys
-- Java 11 or higher
-- Any build tool (Maven, Gradle, etc)
-- Idea for your chain.
+<!-- add system requirements  -->
 
 ## Basic Setup and Configuration
 

@@ -32,12 +32,6 @@ Detailed implementation of examples can be found at **[Examples](https://www.ara
 
 EdgeChains is designed to be compatible with a wide range of programming languages and frameworks. It can seamlessly integrate into projects using Java, Python, JavaScript, and other popular languages. EdgeChains aims to keep dependencies minimal to ensure a smooth integration process. It leverages industry-standard libraries and frameworks to minimize the impact on your existing codebase. By reducing external dependencies, EdgeChains offers a lightweight solution that doesn't introduce unnecessary complexities or conflicts with your existing project dependencies.
 
-## Getting Started
-
-Get started by **[creating a new chain](https://www.arakoo.ai/doc/category/Tutorials)**.
-
-Or **try EdgeChains immediately** by trying out existing **[Examples](https://www.arakoo.ai/doc/category/Examples)**.
-
 ### What you'll need
 
 - [OpenAI API Keys](https://platform.openai.com/account/api-keys)
@@ -46,22 +40,53 @@ Or **try EdgeChains immediately** by trying out existing **[Examples](https://ww
 - Idea for your chain.
 
 ## Contents <a name="contents"></a>
-- 💬 [Discord Server](https://discord.com/server)
-- 🐥 [Twitter](https://twitter.com)
-- ✉️ E-Mail
 
-### EdgeChains Language 
-- 💬 [Discord Server](https://discord.com/server)
-- 🐥 [Twitter](https://twitter.com)
-- ✉️ E-Mail
+### Getting Started
+- Installation Instructions
+- System Requirements
+- Basic Setup and Configuration
+- Playgrounds
 
+### Core concepts
+- Overview of EdgeChains
+- Language Chains
+- Reasoning+Acting (ReAct) Chains
+- Components and Interactions
+- Workflow and Data Flow
 
-### Java Integration
-- 💬 [Discord Server](https://discord.com/server)
-- 🐥 [Twitter](https://twitter.com)
-- ✉️ E-Mail
+### Usage and Examples
+- Creating Language Chains
+- Use Case Examples
+- Handling Input and Output
+- Best Practices and Tips
 
-### Contribute
-- 💬 [Discord Server](https://discord.com/server)
-- 🐥 [Twitter](https://twitter.com)
-- ✉️ E-Mail
+### Configuration and Customization
+- Configuration Options and Parameters
+- Customizing Language Chains
+- Provide examples of customizations
+- Customizing ReAct Chains
+- Configuration Files and Formats
+
+### Best Practices
+- Efficient Usage of EdgeChains
+- Performance Optimization
+- Scalability Considerations
+- Error Handling and Resilience
+- Testing and Debugging
+
+###  API Reference
+- Introduction to the EdgeChains API
+- Endpoint Documentation
+- Authentication and Authorization
+- SDKs and Client Libraries
+
+### Frequently Asked Questions (FAQ)
+
+### Community and Support
+
+### Contributing to EdgeChains
+- Reporting Issues
+- Making Code Contributions
+- Submitting Pull Requests
+- Feature Requests and Suggestions
+- Engaging with the Community
