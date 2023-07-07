@@ -61,11 +61,9 @@ EdgeChains is designed to be compatible with a wide range of programming languag
 - Playgrounds
 
 ### Core concepts
-- Overview of EdgeChains
-- Language Chains
-- Reasoning+Acting (ReAct) Chains
 - Components and Interactions
 - Workflow and Data Flow
+- Schematic Representation
 
 ### Usage and Examples
 - Creating Language Chains
@@ -95,7 +93,6 @@ EdgeChains is designed to be compatible with a wide range of programming languag
 
 ### Frequently Asked Questions (FAQ)
 
-### Community and Support
 ### [Community and Support](Community_and_Support)
 
 ### Contributing to EdgeChains
