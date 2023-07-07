@@ -30,7 +30,10 @@ You can get EdgeChains by either downloading the release jar or compiling it you
 
 ### Downloading the release jar
 
+> **Note:** EdgeChains requires Java version 17 or above to run. Please make sure you have Java 17 installed on your system before proceeding.
+
 You can download the release jars from the [releases page](https://github.com/arakoodev/EdgeChains/releases). Download both flyfly.jar and edgechain-app-VERSION_NUMBER.jar.
+
 
 ### Compiling it yourself
 
@@ -94,7 +97,14 @@ You can play around with the base EdgeChains library, or integrate it into your 
 
 ### Running EdgeChains
 
-Now, you can run EdgeChains as a service or as an application using jbang, like:
+
+Before running EdgeChains, please ensure that you have completed the following steps:
+
+1. **Generate an OpenAI key**: EdgeChains requires an OpenAI key to interact with language models. You can generate an API key by following the instructions provided by OpenAI.
+
+2. **Create a Redis instance**: EdgeChains uses Redis for data storage and caching. You can create a free Redis instance on [Redis Labs](https://redislabs.com/). Sign up for an account and create a new Redis instance for your EdgeChains application. After creating the Redis instance, ***take note of the Redis host and port***, as you will need them for the configuration.
+
+Once you have completed the above steps, you can run EdgeChains as a service or as an application using jbang,like: 
 
 ```bash
 java -jar flyfly.jar jbang EdgeChainServiceApplication.java edgechain-app-1.0.0.jar
@@ -104,6 +114,7 @@ to start the service and
 java -jar flyfly.jar jbang EdgeChainApplication.java edgechain-app-1.0.0.jar
 ```
 to start the application.
+
 
 ## Usage
 
