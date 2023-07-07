@@ -10,7 +10,7 @@ Please take a moment to review the guidelines below before contributing.
 
 ## Reporting Issues
 
-If you encounter any issues or bugs while using EdgeChains, please report them by creating a new [issue](https://github.com/arakoodev/EdgeChains/issues) on the EdgeChains GitHub repository. Provide the following information:
+If you encounter any issues or bugs while using EdgeChains, please report them by creating a new [issue](https://github.com/arakoodev/edgechains/issues/new) on the EdgeChains GitHub repository. Provide the following information:
 
    - **Title**: Give a clear and concise title that summarizes the issue.
    - **Description**: In the description, provide a detailed explanation of the issue you encountered. Use Markdown formatting to structure your description, such as headings, lists, and code blocks.
@@ -24,7 +24,24 @@ You can further discuss and collaborate on the issue by adding comments, providi
 
 ## Making Code Contributions
 
-We welcome code contributions to EdgeChains. To get started, you can fork the [EdgeChains repository](https://github.com/arakoodev/EdgeChains) and create a new branch for your changes. Ensure that your code follows the project's coding conventions and guidelines. It's important to write clear, concise, and well-documented code. Additionally, include unit tests whenever possible to maintain code quality.
+We welcome code contributions to EdgeChains. You can check open Check open [Github Issues](https://github.com/arakoodev/edgechains/issues) as well. To get started, you can fork the [EdgeChains repository](https://github.com/arakoodev/EdgeChains) and create a new branch for your changes. Ensure that your code follows the project's coding conventions and guidelines. It's important to write clear, concise, and well-documented code. Additionally, include unit tests whenever possible to maintain code quality. 
+
+Make sure to read our [contributing CLA](https://github.com/arakoodev/.github/blob/main/CLA.md).
+
+To ensure clean and effective pull request merges, we follow a specific approach known as "**squash and merge**." It is crucial to avoid issuing multiple pull requests from the same local branch, as this will result in failed merges.
+
+To resolve this issue, we strictly adhere to the practice of "**ONE BRANCH PER PULL REQUEST**." If you have inadvertently created a pull request from your master/main branch, you can easily rectify it by following these steps:
+
+> Note: Please ensure that you have committed all your changes before proceeding, as any uncommitted changes will be lost.
+
+ if you have created this pull request using your master/main branch, then follow these steps to fix it:
+```
+git branch newbranch      # Create a new branch, saving the desired commits
+git checkout master       # checkout master, this is the place you want to go back
+git reset --hard HEAD~3   # Move master back by required number of commits 
+git checkout newbranch    # Go to the new branch that still has the desired commits. 
+```
+Now, you can create a pull request. 
 
 ## Submitting Pull Requests
 
@@ -43,13 +60,13 @@ Provide the following information:
 
 ## Feature Requests and Suggestions
 
-If you have ideas for new features or improvements to EdgeChains, we encourage you to share them with us. You can submit your suggestions by creating a new discussion on the [GitHub repository](https://example.com). Clearly describe the proposed feature or improvement, providing context and rationale for its inclusion. Feedback and discussion from the community are valuable in shaping the future development of EdgeChains.
+If you have ideas for new features or improvements to EdgeChains, we encourage you to share them with us. You can submit your suggestions by creating a new discussion on the [GitHub repository](https://github.com/arakoodev/edgechains/discussions/new). Clearly describe the proposed feature or improvement, providing context and rationale for its inclusion. Feedback and discussion from the community are valuable in shaping the future development of EdgeChains.
 
 ## Engaging with the Community
 
-Active engagement with the EdgeChains community is encouraged. You can join our [Discord server](https://example.com), which serves as a platform for developers to connect, collaborate, and discuss EdgeChains-related topics. Ask questions, share your experiences, and provide assistance to fellow community members. 
+Active engagement with the EdgeChains community is encouraged. You can join our [Discord server](https://discord.gg/MtEPK9cnSF), which serves as a platform for developers to connect, collaborate, and discuss EdgeChains-related topics. Ask questions, share your experiences, and provide assistance to fellow community members. 
 
-Additionally, actively participate in discussions on the [GitHub repository](https://example.com) by reviewing and commenting on pull requests, sharing insights, and providing constructive feedback.
+Additionally, actively participate in discussions on the [GitHub repository](https://github.com/arakoodev/edgechains/discussions) by reviewing and commenting on pull requests, sharing insights, and providing constructive feedback.
 
 We appreciate your contributions and engagement in making EdgeChains better. Thank you for your support! Your contributions help improve the project and benefit the entire community.
 
