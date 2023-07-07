@@ -4,9 +4,21 @@ sidebar_position: 1
 
 # EdgeChains
 
-EdgeChains is a powerful framework designed to simplify the creation of applications using large language models. It offers a comprehensive set of tools and functionalities that enable developers to leverage the capabilities of language models effectively. 
+EdgeChains is an powerful framework designed to simplify the creation of applications using large language models. It offers a comprehensive set of tools and functionalities that enable developers to leverage the capabilities of language models effectively.
 
-It is an open-source tool which helps you compose a variety of language chains (such as, chat system, QA system, etc) by LLMs. Edgechains also has a framework for building  Reasoning+Acting (shortly, ReAct) chains. By providing a streamlined workflow and addressing common challenges, EdgeChains empowers developers to build robust and scalable applications with ease.
+Built specifically for Java, EdgeChains is an open-source chain-of-thought engineering framework for Large Language Models (LLMs) and OpenAI GPT. It focuses on enterprise-grade applications and scalability, addressing the complexities and challenges associated with working with OpenAI APIs. Edgechains also has a framework for building  Reasoning+Acting (shortly, ReAct) chains. By providing a streamlined workflow and addressing common challenges, EdgeChains empowers developers to build robust and scalable applications with ease.
+
+We believe that traditional Generative AI frameworks primarily focus on the user interface and code library aspects of development. However, at EdgeChains, we approach development as a deployment and configuration management challenge. We understand that developers often encounter complexities and difficulties when working with OpenAI APIs, leading to code complexity and prompt-related issues. To overcome these challenges, we have built EdgeChains on top of jsonnet, a powerful library developed by Google based on the insights gained from managing 180 million lines of configuration code within Google's Borg infrastructure. Jsonnet is widely adopted for managing complex cloud and Kubernetes clusters.
+
+With EdgeChains, you gain the following key advantages:
+
+- **Versioning for Prompts**: With EdgeChains, prompts are written in jsonnet, enabling easy versioning and differentiation between prompt variations.
+
+- **Automatic Parallelism**: EdgeChains automates the parallelization of LLM chains and chain-of-thought tasks across CPUs, GPUs, and TPUs using the Java Virtual Machine (JVM). This ensures efficient processing and optimal utilization of computing resources.
+
+- **Fault Tolerance**: Designed with robustness in mind, EdgeChains is fault-tolerant and can gracefully handle failures. It employs mechanisms to retry and back off, maintaining the resilience of your applications.
+
+- **Scalability**: EdgeChains is highly scalable, empowering you to develop chain-of-thought applications that can seamlessly handle a significant number of APIs, varied prompt lengths, and diverse vector datasets.
 
 ### Key features and benefits
 
@@ -24,13 +36,14 @@ EdgeChains finds applications in a wide range of scenarios, including, but not l
 
 2. **Chatbot Development**: Building conversational agents that can interact with users, provide responses, and offer personalized experiences.
 
-3. **Code Analysis and Automation**: Assisting developers in analyzing code, generating code snippets, and automating repetitive programming tasks. 
+3. **Code Analysis and Automation**: Assisting developers in analyzing code, generating code snippets, and automating repetitive programming tasks.
 
-Detailed implementation of examples can be found at **[Examples](https://www.arakoo.ai/doc/category/Examples)**.
+Detailed implementation examples can be found at [Examples](https://www.arakoo.ai/doc/category/Examples).
 
 ### Compatibility and Dependencies
 
 EdgeChains is designed to be compatible with a wide range of programming languages and frameworks. It can seamlessly integrate into projects using Java, Python, JavaScript, and other popular languages. EdgeChains aims to keep dependencies minimal to ensure a smooth integration process. It leverages industry-standard libraries and frameworks to minimize the impact on your existing codebase. By reducing external dependencies, EdgeChains offers a lightweight solution that doesn't introduce unnecessary complexities or conflicts with your existing project dependencies.
+
 
 ### What you'll need
 
@@ -41,7 +54,7 @@ EdgeChains is designed to be compatible with a wide range of programming languag
 
 ## Contents <a name="contents"></a>
 
-### Getting Started
+### [Getting Started](Getting_started)
 - Installation Instructions
 - System Requirements
 - Basic Setup and Configuration
@@ -83,6 +96,7 @@ EdgeChains is designed to be compatible with a wide range of programming languag
 ### Frequently Asked Questions (FAQ)
 
 ### Community and Support
+### [Community and Support](Community_and_Support)
 
 ### Contributing to EdgeChains
 - Reporting Issues

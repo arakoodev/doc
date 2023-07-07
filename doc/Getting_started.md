@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Getting Started
 
 Get started by **[creating a new chain](https://www.arakoo.ai/doc/category/Tutorials)**.
@@ -209,7 +213,7 @@ Here is a demo using the famous research paper [**Attention is all you need**](h
 
 If you want to experiment with EdgeChains in a playground environment, you can access the online playgrounds provided by the EdgeChains team. Follow these steps:
 
-1. Visit the [EdgeChains Playground](https://playground.edgechains.io).
+1. Visit the [EdgeChains Playground](https://example.com/playground-edgechains).
 
 2. Start exploring the features and capabilities of EdgeChains in the playground environment.
 
