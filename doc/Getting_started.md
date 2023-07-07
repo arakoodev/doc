@@ -70,46 +70,6 @@ mvn clean package
 ```
 The `edgechain-app-VERSION_NUMBER.jar` file will be generated in the `FlySpring/edgechain-app/target` directory.
 
-## What does it look like ?
-
-### Schematic for Quick Overview
-
-```mermaid
-graph TD
-    subgraph ide1[Your Code]
-        ep([Your App Entrypoint])
-        logic([Your Total App Logic])
-    end
-    subgraph ide2[FlySpring]
-        id2[Combined JAR File]
-        fps[FlySpring CLI]
-    end
-    subgraph lib[EdgeChains Library]
-        connectors[Connector Classes]
-        openai[OpenAI Client]
-        others[Other Classes]
-    end
-    subgraph service[EdgeChains Services]
-        redis[Redis Service]
-        otherServices[Other Services]
-    end
-    subgraph ide3[EdgeChains]
-        lib
-        service
-    end
-    subgraph overall[Our Code]
-        ide2
-        ide3
-    end
-    fps --> id2
-    id2 --> fps
-    logic --> ep
-    ide1 --> |packed as one JAR using JBang| id2
-    lib --> ide1
-    service --> ide1
-    fps --> enp([User-facing endpoints])
-```
-
 ### Integrating EdgeChains into your code
 
 You can play around with the base EdgeChains library, or integrate it into your existing codebase as well! Just follow the instructions below:
