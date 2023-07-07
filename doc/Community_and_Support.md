@@ -5,6 +5,7 @@ sidebar_position: 5
 # Community and Support
 
 <!-- URLs to be replaced -->
+
 At EdgeChains, we believe in the power of community and the importance of providing reliable support to our users. Join our vibrant community to connect with fellow users, share your experiences, and get assistance with EdgeChains.
 
 Here are the various channels available:
