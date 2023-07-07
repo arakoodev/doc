@@ -60,18 +60,18 @@ EdgeChains is designed to be compatible with a wide range of programming languag
 - Basic Setup and Configuration
 - Playgrounds
 
-### Core concepts
+### [Core concepts](Core_concepts)
 - Components and Interactions
 - Workflow and Data Flow
 - Schematic Representation
 
-### Usage and Examples
+### [Usage and Examples](category/examples)
 - Creating Language Chains
 - Use Case Examples
 - Handling Input and Output
 - Best Practices and Tips
 
-### Configuration and Customization
+### [Configuration and Customization](Config)
 - Configuration Options and Parameters
 - Customizing Language Chains
 - Provide examples of customizations
@@ -95,7 +95,7 @@ EdgeChains is designed to be compatible with a wide range of programming languag
 
 ### [Community and Support](Community_and_Support)
 
-### Contributing to EdgeChains
+### [Contributing to EdgeChains](Contribute)
 - Reporting Issues
 - Making Code Contributions
 - Submitting Pull Requests
