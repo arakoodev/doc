@@ -10,7 +10,7 @@ Install edgechains following instructions outlined in the [Installation Guide](I
 
 ### Downloading the release jar
 
-> **Note:** EdgeChains requires Java version 17 or above to run. Please make sure you have Java 17 installed on your system before proceeding.
+> **Note:** EdgeChains requires **Java version 17** or above to run. Please make sure you have Java 17 installed on your system before proceeding. Also make sure to use a **JBang** project. 
 
 The release jars can be downloaded from the [releases page](https://github.com/arakoodev/EdgeChains/releases). Download both flyfly.jar and edgechain-app-VERSION_NUMBER.jar. Both the jar files need to be compiled. 
 
