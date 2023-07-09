@@ -20,8 +20,6 @@ EdgeChains empowers developers to leverage the full potential of language models
 
 To get started with EdgeChains, follow the installation instructions outlined in the [Installation Guide](Installation.md). This guide will walk you through necessary steps to start building your own EdgeChains applications.
 
-We recommend checking out our [Examples](/doc/Examples/Plugin%20-%20Klarna%20Shopping%20Search.md) to get a better overview and to familiarize yourself with the framework by building an example EdgeChains application.
-
 <!-- 
 ## Modules
 
