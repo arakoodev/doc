@@ -54,7 +54,7 @@ EdgeChains is designed to be compatible with a wide range of programming languag
 
 ## Contents <a name="contents"></a>
 
-### [Getting Started](Getting_started)
+### [Getting Started](category/getting-started)
 - Installation Instructions
 - System Requirements
 - Basic Setup and Configuration
