@@ -1,18 +1,12 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
-# Getting Started
+# Quickstart
 
-Get started by **[creating a new chain](https://www.arakoo.ai/doc/category/Tutorials)**.
+### Installation and Usage
 
-Or **try EdgeChains immediately** by trying out existing **[Examples](https://www.arakoo.ai/doc/category/Examples)**.
-
-## Installation and Usage
-
-### Initial setup
-
-EdgeChains can be setup either by downloading the release jar or compiling it yourself. We recommend the former.
+Install edgechains following instructions outlined in the [Installation Guide](Installation.md). 
 
 ### Downloading the release jar
 
