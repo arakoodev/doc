@@ -104,17 +104,16 @@ Now, you have to create a chat context, similar to a Chat Session in ChatGPT. Us
 
   ```bash
   curl  -X POST \
-  'localhost:8080/v1/history-context/create' \
-  --header 'Accept: */*' \
-  --header 'User-Agent: Thunder Client (https://www.thunderclient.com)' \
-  --header 'Content-Type: application/json' \
+  'localhost:8080/v1/examples/historycontext' \
+  --header 'Accept: /' \
+  --header 'User-Agent: Thunder Client (https://www.thunderclient.com/)' \
+  --header 'Content-Type: application/json'
   --data-raw '{
     "maxTokens": 4096
   }'
   ```
 
 You'll get a response like:
-
 
 <details>
 <summary>Click to see the sample response</summary>
@@ -126,7 +125,6 @@ You'll get a response like:
   "message": "Session is created. Now you can start conversational question and answer"
 }
 ```
-
 </details>
 
 You will receive a response containing an `id` for the created session. Make sure to save this `id` for future use.
@@ -144,12 +142,9 @@ curl  -X POST \
 Now, it's time to start chatting with the document by asking questions. For example, to inquire about the "transformer architecture," use the following command:
 
 ```bash
-curl  -X POST \
-  'localhost:8080/v1/redis/openai/query/context/<HISTORY_CONTEXT_VALUE>' \
-  --header 'Accept: */*' \
-  --header 'User-Agent: Thunder Client (https://www.thunderclient.com)' \
-  --header 'Content-Type: application/json' \
-  --data-raw '{
+curl --location 'localhost:8080/v1/examples/redis/openai/chat?query=What%20is%20the%20transformer%20architecture%3F&namespace=machine-learning&id=historycontext%3A50756d25-e7e4-4d7c-862c-f81bf3f8eea0' \
+--header 'Content-Type: application/json'
+ --data-raw '{
     "query": "What is the transformer architecture?"
 }
 ```
