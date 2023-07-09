@@ -38,7 +38,7 @@ EdgeChains finds applications in a wide range of scenarios, including, but not l
 
 3. **Code Analysis and Automation**: Assisting developers in analyzing code, generating code snippets, and automating repetitive programming tasks.
 
-Detailed implementation examples can be found at [Examples](https://www.arakoo.ai/doc/category/Examples).
+
 
 ### Compatibility and Dependencies
 
@@ -65,11 +65,6 @@ EdgeChains is designed to be compatible with a wide range of programming languag
 - Workflow and Data Flow
 - Schematic Representation
 
-### [Usage and Examples](category/examples)
-- Creating Language Chains
-- Use Case Examples
-- Handling Input and Output
-- Best Practices and Tips
 
 ### [Configuration and Customization](Config)
 - Configuration Options and Parameters
