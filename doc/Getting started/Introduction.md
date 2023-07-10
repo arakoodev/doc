@@ -57,7 +57,7 @@ Join our vibrant community of developers, builders, and educators. Be inspired, 
 
 <h3><span style={{color:"#2e8555"}}> Support </span></h3>
 
-Join us on [GitHub](https://github.com/arakoodev/edgechains) or [Discord](https://discord.gg/MtEPK9cnSF) where you can ask questions, share feedback, connect with like-minded developers, and engage in discussions about the future of large language models.
+Join us on [GitHub](https://github.com/arakoodev/edgechains) or [Discord](https://discord.gg/wgmvkVEKEn) where you can ask questions, share feedback, connect with like-minded developers, and engage in discussions about the future of large language models.
 
 <!-- ## API reference
 

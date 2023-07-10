@@ -47,7 +47,7 @@ export default function Home() {
               <h1 className="mt-0 text-[26pt] font-medium font-Quicksand leading-none text-indigo-950 md:text-[32pt] lg:text-[38pt] xl:text-[4em] uppercase">
                 {frontMatter.title}
               </h1>
-              <p className="text-[1em] xl:w-2/4 py-6 xl:py-16 m-0 leading-normal dark:text-neutral-300">
+              <p className="text-[1em] xl:w-3/4 py-6 xl:py-16 m-0 leading-normal dark:text-neutral-300">
                 {frontMatter.desc}
               </p>
               <div className='flex gap-4 pb-6'>
