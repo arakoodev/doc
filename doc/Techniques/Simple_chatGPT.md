@@ -115,15 +115,15 @@ public class GptConversation {
 
 The above code for **Simple chatGPT** implementation follows these steps:
 
-1. It utilizes a list of `ChatMessages`, where a message with the system role is added in the constructor. This helps define the behavior of the assistant.
+- It utilizes a list of `ChatMessages`, where a message with the system role is added in the constructor. This helps define the behavior of the assistant.
 
-2. A `Post` mapping endpoint is created, which accepts a prompt from the user in the request body and generates a response accordingly.
+- A `Post` mapping endpoint is created, which accepts a prompt from the user in the request body and generates a response accordingly.
 
-3. The `ChatMessages list` is crucial for maintaining context, as the assistant's responses are stored in it.
+- The `ChatMessages list` is crucial for maintaining context, as the assistant's responses are stored in it.
 
-4. To control the list's size, the implementation removes the first element if it exceeds 20 entries.
+- To control the list's size, the implementation removes the first element if it exceeds 20 entries.
 
-5. The endpoint can be accessed at `localhost:8080/v1/examples/gpt/ask`. 
+- The endpoint can be accessed at `localhost:8080/v1/examples/gpt/ask`. 
 
 > **Note:**  Please remember to replace `localhost:8080` with the appropriate host and port if you are running the chatbot on a different environment.
 
