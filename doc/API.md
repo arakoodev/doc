@@ -10,7 +10,7 @@ Follow these steps to effectively use the EdgeChainsSDK:
 
 **Step 1:** Visit [EdgeChains actions](https://github.com/arakoodev/EdgeChains/actions). Click on Latest ***Build and Run*** and then download Output.zip file.
 
-**Step 2:** Once the download is complete, extract the contents of the `Output.zip` file. Move the extracted folder to your desired directory.
+**Step 2:** Once the download is complete, extract the contents of the `Output.zip` file. Move the extracted folder to your desired directory.hj
 
 **Step 3:** Open the extracted directory using IntelliJ. The IDE will automatically index the project.
 
