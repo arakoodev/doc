@@ -4,7 +4,7 @@
         <title>Arakoo.ai Blog</title>
         <link>https://www.arakoo.ai/case-studies</link>
         <description>Arakoo.ai Blog</description>
-        <lastBuildDate>Mon, 10 Jul 2023 14:20:53 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 12 Jul 2023 08:49:42 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[How Philips Healthcare accelerated development by up to 4X with Hasura]]></title>
             <link>https://www.arakoo.ai/case-studies/philips</link>
             <guid>https://www.arakoo.ai/case-studies/philips</guid>
-            <pubDate>Mon, 10 Jul 2023 14:20:53 GMT</pubDate>
+            <pubDate>Wed, 12 Jul 2023 08:49:42 GMT</pubDate>
             <category>facebook</category>
             <category>gagag</category>
             <category>docusaurus</category>
@@ -21,7 +21,7 @@
             <title><![CDATA[How Pipe went from prototype to production in 11 days with Hasura]]></title>
             <link>https://www.arakoo.ai/case-studies/pipe</link>
             <guid>https://www.arakoo.ai/case-studies/pipe</guid>
-            <pubDate>Mon, 10 Jul 2023 14:20:53 GMT</pubDate>
+            <pubDate>Wed, 12 Jul 2023 08:49:42 GMT</pubDate>
             <description><![CDATA[<SpeakerCard]]></description>
             <content:encoded><![CDATA[<div class="bg-neutral-800 rounded-xl p-4 justify-center items-center shadow-lg overflow-hidden flex flex-col md:flex-row mb-4"><img class="h-72" src="/alekhaweb/img/peter.png" alt=""><div class="px-2 md:px-6 py-4"><h2 class="text-base md:text-2xl font-bold mb-2">"<!-- -->Hasura is a fantastic way to create a data fetching layer to our database. It’s ultra-stable and often better at planning queries than ones we were writing ourselves.<!-- -->"</h2><div class="pt-4"><p class="text-lg font-semibold m-0">Peter Downs</p><p class="text-neutral-400">Director of Engineering, Pipe</p></div></div></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-problem">The Problem<a href="#the-problem" class="hash-link" aria-label="Direct link to The Problem" title="Direct link to The Problem">​</a></h3><h1>Pipe's Challenge</h1><p>“We needed 50% fewer frontend developers than we thought we needed. Hasura and GraphQL reduced the toil to build and iterate on the frontend.”</p><p>Peter Downs<br>
 <!-- -->Director of Engineering, Pipe </p><p>Pipe’s development team needed to thread the needle balancing the immediate requirements of the business while also building for the future. Their technical architecture started with a Postgres database, Go as their backend language, REST APIs, and React for their web front-end running on Google Cloud. As they rapidly grew, they needed to consider additional concerns:</p><p>Fast Time to Market <!-- -->&amp;<!-- --> Feature Innovation Pipe’s team needed to quickly create or change features based to gain new customers and respond to user feedback.Flexible ArchitectureOne of Pipe’s architectural goals was to keep the architecture as agile as possible, where changes to the underlying database and frontend UX could happen rapidly.Small Development TeamPipe’s 11 engineers needed to stay agile and flexible - understanding all layers of their system - database, backend, integrations, and the frontend web UI Flexible Web APIs</p><p>  One of their early challenges was inflexibility of utilizing REST APIs, where they encountered multiple variations of similar request types, but each requiring its own REST endpoint because of differing requirements.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="performance">Performance<a href="#performance" class="hash-link" aria-label="Direct link to Performance" title="Direct link to Performance">​</a></h3><p>Pipe’s website needed to run quickly to provide a great user experience, and scale to meet the traffic of their rapidly growing customer base.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="security--authorization">Security <!-- -->&amp;<!-- --> Authorization<a href="#security--authorization" class="hash-link" aria-label="Direct link to security--authorization" title="Direct link to security--authorization">​</a></h3><p>Pipe’s system stores sensitive financial and customer data of their customers and they needed to make sure that the data was secure and that users could only view data they were authorized to see.</p><div class="bg-neutral-800 rounded-xl p-4 justify-center items-center shadow-lg overflow-hidden flex flex-col md:flex-row mb-4"><div class="px-2 md:px-6 py-4"><h2 class="text-base md:text-2xl font-bold mb-2">"<!-- -->“… Basically, we’re seeing that it takes only about a tenth of the time to develop a new page in our application or a new component based on having adopted Hasura.”<!-- -->"</h2><div class="pt-4"><p class="text-lg font-semibold m-0">Peter Downs</p><p class="text-neutral-400">Director of Engineering, Pipe</p></div></div></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-solution">The Solution<a href="#the-solution" class="hash-link" aria-label="Direct link to The Solution" title="Direct link to The Solution">​</a></h3><h1>Why Pipe chose Hasura</h1><p>As Pipe started investigating solutions to these challenges, they discovered Hasura and went into production with it within 11 days.</p><p><img loading="lazy" src="https://hasura.io/static/pipe_arch-8fa7fde158eefeed4f700072cc8b543d.png" alt="MarineGEO circle logo" class="img_ev3q"></p><span class="flex justify-center items-center text-center text-sm"> Pipe architecture diagram </span>]]></content:encoded>
@@ -33,7 +33,7 @@
             <title><![CDATA[How Pulley Cut Development Time by 50% with Hasura]]></title>
             <link>https://www.arakoo.ai/case-studies/pulley</link>
             <guid>https://www.arakoo.ai/case-studies/pulley</guid>
-            <pubDate>Mon, 10 Jul 2023 14:20:53 GMT</pubDate>
+            <pubDate>Wed, 12 Jul 2023 08:49:42 GMT</pubDate>
             <category>asdasd</category>
             <category>hello</category>
             <category>docusaurus</category>
