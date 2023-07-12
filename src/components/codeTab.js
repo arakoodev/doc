@@ -40,7 +40,7 @@ function CodeTabPanel() {
                         }`}
                     onClick={() => handleTabClick(1)}
                 >
-                    Clone
+                    Downloading the release jar
                 </button>
                 <button
                     className={`py-2 px-4 border-b-2 ${activeTab === 2
@@ -49,7 +49,7 @@ function CodeTabPanel() {
                         }`}
                     onClick={() => handleTabClick(2)}
                 >
-                    JavaScript
+                    Clone the repository
                 </button>
             </div>
             <div className="flex flex-col">

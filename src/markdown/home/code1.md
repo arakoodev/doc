@@ -1,8 +1,5 @@
 ``` 
-install horziontal and get api key
-pip install horizontal
-horizontal api user key
+# Download output.zip from Latest Build and Run
 
-create project (each can contain mainy tasks)
-horizontal project create
+https://github.com/arakoodev/EdgeChains/actions
 ```
