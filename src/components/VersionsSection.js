@@ -28,7 +28,7 @@ function VersionsSection() {
                 <div className="flex ">
                     <FontAwesomeIcon icon={faNpm} className="w-6 h-6 text-primary-500" />
                    
-                    <p className="m-0 ml-2">Progressing...</p>
+                    <p className="m-0 ml-2">On progress</p>
                 </div>
             </div>
         </div>

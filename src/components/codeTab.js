@@ -40,7 +40,7 @@ function CodeTabPanel() {
                         }`}
                     onClick={() => handleTabClick(1)}
                 >
-                    Python
+                    Clone
                 </button>
                 <button
                     className={`py-2 px-4 border-b-2 ${activeTab === 2

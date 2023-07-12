@@ -6,56 +6,31 @@ sidebar_position: 2
 
 ### Initial setup
 
-EdgeChains can be setup either by downloading the release jar or compiling it yourself. We recommend the former.
+EdgeChains can be setup by downloading the release jar.
 
 ### Downloading the release jar
 
 > **Note:** EdgeChains requires Java version 17 or above to run. Please make sure you have Java 17 installed on your system before proceeding.
 
-The release jars can be downloaded from the [releases page](https://github.com/arakoodev/EdgeChains/releases). Download both flyfly.jar and edgechain-app-VERSION_NUMBER.jar. Both the jar files need to be compiled. 
+The release jars can be downloaded from the [latest Build and release](https://github.com/arakoodev/EdgeChains/actions) in EdgeChains actions. Click on Latest ***Build and Run***. Download the output.zip file that contains two jar files `flyfly.jar` and `edgechain-app-VERSION_NUMBER.jar`. Both these jar files are need for running edgechains. 
 
 Once downloaded, Follow these steps:
 
+1. Create a new folder in your desired location and Extract the contents of the downloaded `output.zip` file into the newly created folder.
+
+2. Clone the Edgechains repository
+
 ```bash
 # Clone the repository
- git clone https://github.com/arakoodev/EdgeChains.git && cd FlySpring
+ git clone https://github.com/arakoodev/EdgeChains.git 
 
-# Compile flyfly.jar
-cd autoroute && mvn clean package -P gofly
-cd ../flyfly && mvn clean package -P gofly
+ # Go to Examples folder
+ cd Examples
 ```
-The `flyfly.jar` file will be generated in the `Script` folder on the root directory.
+3. Copy or clone all the contents from the _Examples_ folder and paste to the folder where you extracted the `output.zip` file. The _Examples_ folder includes all the jsonnet files and `EdgeChainApplication.java` file.
 
-```bash
-# Compile edgechain-app-VERSION_NUMBER.jar
-cd edgechain-app && mvn clean package
-cd ../flyfly && mvn clean package -P gofly
-```
-The `edgechain-app-VERSION_NUMBER.jar` file will be generated in the `FlySpring/edgechain-app/target` directory.
+4. Open the directory where you extracted the output in IntelliJ.
 
-### Integrate EdgeChains into your code
+> **Note:** You can use an IDE of your choice, but IntelliJ is preferred as it will index the project automatically and choose **Java SDK 17 or above**, which is necessary for EdgeChains. Also ensure to use a **JBang project**. 
 
-You have the flexibility to explore and experiment with the base EdgeChains library, or seamlessly incorporate it into your existing codebase. To get started, simply follow the step-by-step instructions below:
-
-1. Within your root project folder, which contains the `pom.xml`file, create a new directory named `dependencies`.
-
-2. Copy the `edgechain-app-VERSION_NUMBER.jar` app file into the newly created `dependencies` folder.
-
-3. Open your `pom.xml` file and add the following XML code:
-
-```xml
-<dependency>
-    <groupId>com.edgechain</groupId>
-    <artifactId>edgechain-app</artifactId>
-    <version>VERSION_NUMBER</version>
-    <scope>system</scope>
-    <systemPath>${basedir}/dependencies/edgechain-app-VERSION_NUMBER.jar</systemPath>
-</dependency>
-```
-
-4. Execute the command
-```bash
-mvn clean install
-```
-
-This command will install the EdgeChains library into your local Maven repository, making it available for your project's use.
+> Optionally, you can rename the file `EdgeChainApplication.java` to your desired name. Write your own code or modify the example implementation according to your requirements.

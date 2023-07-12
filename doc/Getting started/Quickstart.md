@@ -8,58 +8,6 @@ sidebar_position: 3
 
 Install edgechains following instructions outlined in the [Installation Guide](Installation.md). 
 
-### Downloading the release jar
-
-> **Note:** EdgeChains requires **Java version 17** or above to run. Please make sure you have Java 17 installed on your system before proceeding. Also make sure to use a **JBang** project. 
-
-The release jars can be downloaded from the [releases page](https://github.com/arakoodev/EdgeChains/releases). Download both flyfly.jar and edgechain-app-VERSION_NUMBER.jar. Both the jar files need to be compiled. 
-
-Once downloaded, Follow these steps:
-
-```bash
-# Clone the repository
- git clone https://github.com/arakoodev/EdgeChains.git && cd FlySpring
-
-# Compile flyfly.jar
-cd autoroute && mvn clean package -P gofly
-cd ../flyfly && mvn clean package -P gofly
-```
-The `flyfly.jar` file will be generated in the `Script` folder on the root directory.
-
-```bash
-# Compile edgechain-app-VERSION_NUMBER.jar
-cd edgechain-app && mvn clean package
-cd ../flyfly && mvn clean package -P gofly
-```
-The `edgechain-app-VERSION_NUMBER.jar` file will be generated in the `FlySpring/edgechain-app/target` directory.
-
-### Integrate EdgeChains into your code
-
-You have the flexibility to explore and experiment with the base EdgeChains library, or seamlessly incorporate it into your existing codebase. To get started, simply follow the step-by-step instructions below:
-
-1. Within your root project folder, which contains the `pom.xml`file, create a new directory named `dependencies`.
-
-2. Copy the `edgechain-app-VERSION_NUMBER.jar` app file into the newly created `dependencies` folder.
-
-3. Open your `pom.xml` file and add the following XML code:
-
-```xml
-<dependency>
-    <groupId>com.edgechain</groupId>
-    <artifactId>edgechain-app</artifactId>
-    <version>VERSION_NUMBER</version>
-    <scope>system</scope>
-    <systemPath>${basedir}/dependencies/edgechain-app-VERSION_NUMBER.jar</systemPath>
-</dependency>
-```
-
-4. Execute the command
-```bash
-mvn clean install
-```
-
-This command will install the EdgeChains library into your local Maven repository, making it available for your project's use.
-
 ### Run EdgeChains
 
 Before running EdgeChains, Ensure that you have completed the following steps:
@@ -68,10 +16,38 @@ Before running EdgeChains, Ensure that you have completed the following steps:
 
 2. **Create a Redis instance**: EdgeChains uses Redis for data storage and caching. To proceed, you will need to create a Redis instance. You can create a free Redis instance on [Redis Labs](https://redislabs.com/). Sign up for an account and create a new Redis instance for your EdgeChains application. After creating the Redis instance, ***take note of the Redis host and port***, as you will need them for the configuration.
 
+3. Open the `EdgeChainApplication.java` file and add your _OPENAI Auth Key, Redis URL, Password_ and _port_ in the Started class and redisenv method of Redisenc class. 
+```java
+public class Starter {
+
+    private final String OPENAI_AUTH_KEY = ""; // YOUR OPENAI KEY
+    private final String PINECONE_AUTH_KEY = ""; // YOUR PINECONE API KEY
+    private final String PINECONE_QUERY_API = ""; // YOUR PINECONE QUERY API
+    private final String PINECONE_UPSERT_API = ""; // YOUR PINECONE UPSERT API
+    private final String PINECONE_DELETE = ""; // YOUR PINECONE DELETE
+
+    public static void main(String[] args) {
+        System.setProperty("server.port", "8080");
+        SpringApplication.run(Starter.class, args);
+    }
+
+    .
+    .
+    .
+
+     public RedisEnv redisEnv() {
+        RedisEnv redisEnv = new RedisEnv();
+        redisEnv.setUrl(""); //YOU REDIS URL
+        redisEnv.setPort(); //YOUR REDIS PORT
+        redisEnv.setUsername("default");
+        redisEnv.setPassword(""); // YOUR REDIS PASSWORD
+        redisEnv.setTtl(3600); // Configuring ttl for HistoryContext;
+        return redisEnv;
+    }
+```
 Once you have completed these steps, you are ready to run EdgeChains either as a service or as an application using jbang, like:
 
 ```bash
-cd Examples
 # To start the application.
 java -jar flyfly.jar jbang EdgeChainApplication.java edgechain-app-1.0.0.jar
 ```
