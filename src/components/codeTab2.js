@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Gist from 'react-gist';
 import MDXContent from '@theme/MDXContent';
-import Code1 from "../markdown/home/code1.md"
-import Code2 from "../markdown/home/code2.md"
+import Code3 from "../markdown/home/code3.md"
+import Code4 from "../markdown/home/code4.md"
 function CodeTabPanel() {
     const [activeTab, setActiveTab] = useState(1);
 
@@ -40,7 +40,7 @@ function CodeTabPanel() {
                         }`}
                     onClick={() => handleTabClick(1)}
                 >
-                    Python
+                    Copy the contents
                 </button>
                 <button
                     className={`py-2 px-4 border-b-2 ${activeTab === 2
@@ -49,7 +49,7 @@ function CodeTabPanel() {
                         }`}
                     onClick={() => handleTabClick(2)}
                 >
-                    JavaScript
+                    Run the application
                 </button>
             </div>
             <div className="flex flex-col">
@@ -57,7 +57,7 @@ function CodeTabPanel() {
                     <div className="py-4 lg:py-0">
                         {/* <Gist id={gistData.id} /> */}
                         <MDXContent>
-                            <Code1 />
+                            <Code3 />
                         </MDXContent>
                     </div>
                 )}
@@ -65,7 +65,7 @@ function CodeTabPanel() {
                     <div className="py-4 lg:py-0">
                         {/* <Gist id={gistData.id} /> */}
                         <MDXContent>
-                            <Code2 />
+                            <Code4 />
                         </MDXContent>
                     </div>
                 )}
