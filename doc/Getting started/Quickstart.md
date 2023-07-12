@@ -16,7 +16,8 @@ Before running EdgeChains, Ensure that you have completed the following steps:
 
 2. **Create a Redis instance**: EdgeChains uses Redis for data storage and caching. To proceed, you will need to create a Redis instance. You can create a free Redis instance on [Redis Labs](https://redislabs.com/). Sign up for an account and create a new Redis instance for your EdgeChains application. After creating the Redis instance, ***take note of the Redis host and port***, as you will need them for the configuration.
 
-3. Open the `EdgeChainApplication.java` file and add your _OPENAI Auth Key, Redis URL, Password_ and _port_ in the Started class and redisenv method of Redisenc class. 
+3. Open the `EdgeChainApplication.java` file and add your _OPENAI Auth Key_, inside the Starter class and _Redis URL, Password_ and _port_ inside redisenv method of Redisenv class. 
+
 ```java
 public class Starter {
 
@@ -130,11 +131,13 @@ Here is a demo using the famous research paper [**Attention is all you need**](h
 
 ![Demo](https://s12.gifyu.com/images/SQ6y0.gif)
 
-## Playgrounds 
+<!-- Add playground part when it is present -->
+
+<!-- ## Playgrounds 
 
 If you want to experiment with EdgeChains in a playground environment, you can access the online playgrounds provided by the EdgeChains team. Follow these steps:
 
 1. Visit the [EdgeChains Playground](https://example.com/playground-edgechains).
 
-2. Start exploring the features and capabilities of EdgeChains in the playground environment.
+2. Start exploring the features and capabilities of EdgeChains in the playground environment. -->
 
