@@ -7,7 +7,7 @@ To run the "Simple ChatGPT" implementation, please follow these steps:
 1. Make sure you have the `edgechain-app-VERSION_NUMBER.jar`and the `flyfly.jar` files available.
 If you haven't downloaded them yet, please refer to the [Installation Guide](/doc/Getting%20started/Installation.md)  for instructions. Additionally, the [Quickstart](/doc/Getting%20started/Quickstart.md) guide provides a helpful overview and easy setup for your project.
 
-2. Open your terminal or command prompt and navigate to the directory where the JAR files are located.
+2. Open your terminal or command prompt and navigate to the directory where your project and the JAR files are located.
 
 > **Note:** Remember to configure the OpenAI key to ensure the chatbot functions correctly.
 
