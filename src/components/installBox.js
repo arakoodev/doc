@@ -20,7 +20,7 @@ const InstallBox = ({ code, source, version }) => {
             <div className="rounded-full border-solid border-2 border-[#EE81C3] text-lg mb-2">
                 <div className="relative  ">
                     <div className=''>
-                        <pre className="m-0 rounded-full bg-indigo-950 p-2 pt-3 px-6 " 
+                        <pre className="m-0 rounded-full bg-indigo-950 p-2 pt-3 px-6 "
                         // style={{ backgroundColor: '#282A36' }}
                         >
                             <code>
@@ -58,7 +58,10 @@ const InstallBox = ({ code, source, version }) => {
             </div>
             <div className="text-sm whitespace-nowrap pt-1 text-black opacity-70 md:flex md:flex-row md:flex-wrap md:justify-between">
                 <p className="text-sm ">Supported on macOS, Linux, and WSL</p>
-                <a className="text-black" href={source}>View source</a>
+                <a className="text-black" href="https://github.com/arakoodev/EdgeChains" target="_blank" rel="noopener noreferrer">
+                    View source
+                </a>
+
             </div>
 
         </div>

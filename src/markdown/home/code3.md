@@ -1,4 +1,3 @@
 ```bash
-# Copy content in Examples folder to destination    
-cp -r /path/to/Examples/* .
+# Add OpenAI, redis and Pinecone credentials 
 ```

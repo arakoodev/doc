@@ -49,7 +49,7 @@ function CodeTabPanel() {
                         }`}
                     onClick={() => handleTabClick(2)}
                 >
-                    Clone the repository
+                    Copy the contents
                 </button>
             </div>
             <div className="flex flex-col">
