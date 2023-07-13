@@ -125,7 +125,7 @@ curl --location 'localhost:8080/v1/examples/redis/openai/chat?query=What%20is%20
     "query": "What is the transformer architecture?"
 }
 ```
-Please note that you should replace <HISTORY_CONTEXT_VALUE> in the last command with the actual value.
+<!-- Please note that you should replace <HISTORY_CONTEXT_VALUE> in the last command with the actual value. -->
 
 Here is a demo using the famous research paper [**Attention is all you need**](https://arxiv.org/pdf/1706.03762.pdf):
 
