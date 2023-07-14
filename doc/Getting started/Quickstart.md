@@ -38,7 +38,7 @@ public class Starter {
 
      public RedisEnv redisEnv() {
         RedisEnv redisEnv = new RedisEnv();
-        redisEnv.setUrl(""); //YOU REDIS URL
+        redisEnv.setUrl(""); //YOUR REDIS URL
         redisEnv.setPort(); //YOUR REDIS PORT
         redisEnv.setUsername("default");
         redisEnv.setPassword(""); // YOUR REDIS PASSWORD
