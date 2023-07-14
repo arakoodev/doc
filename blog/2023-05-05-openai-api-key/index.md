@@ -1,6 +1,6 @@
 ---
 slug: openai-api-key
-title: how to get openai api key
+title: how to get OpenAI API key
 authors:
   name: Arakoo
   title: Arakoo Core Team
@@ -40,31 +40,42 @@ To begin with, follow the steps below.
 
 To get started, please navigate to the [OpenAI platform website](https://openai.com/) and proceed with creating an account by following the provided instructions. You have the option to sign up using your preferred email address and password, or alternatively, you can utilize your existing Google or Microsoft account for a seamless registration process.
 
-After completing the registration, OpenAI will send you a confirmation email to verify your account. Please locate the email in your inbox and click on the verification link provided to ensure the utmost security of your account. Once you have verified your account, return to the OpenAI website and click on the "Log In" button. 
-
 ![OpenAI login page](./Login.png)
 
-### 4. Navigate to the API section
+After completing the registration, OpenAI will send you a confirmation email to verify your account. Please locate the email in your inbox and click on the verification link provided to ensure the utmost security of your account. Once you have verified your account, return to the OpenAI website and click on the "Log In" button. 
 
-Upon logging in, you will locate your name and profile icon situated in the upper-right corner of the OpenAI platform homepage. Please click on your name to unveil a dropdown menu, and proceed to select the _View API keys_ option. Alternatively you can navigate to the [apps section](https://platform.openai.com/apps) and click on API. 
+### 2. Navigate to the API section
+
+Upon logging in, you will locate your name and profile icon situated in the upper-right corner of the OpenAI platform homepage. Please click on your name to unveil a dropdown menu, and proceed to select the _View API keys_ option. 
+
+Alternatively you can navigate to the [apps section](https://platform.openai.com/apps) and click on API. 
 
 ![OpenAI API page](./APIpage.png)
 
-### 5. Generate a new API key
-In the API keys section, please find the _Create new secret key_ button and proceed to click on it in order to generate a fresh API key. A dialog box will promptly appear, requesting you to provide a descriptive name for your secret API key. It is advisable to choose a name that conveys its purpose clearly, facilitating future identification. Ensure that you save the API key promptly, as the window displaying it cannot be reopened once closed.
+### 3. Generate a new API key
+In the API keys section, find the _Create new secret key_ button and proceed to click on it in order to generate a fresh API key. A dialog box will promptly appear, requesting you to provide a descriptive name for your secret API key. It is advisable to choose a name that conveys its purpose clearly, facilitating future identification. 
 
-![OpenAI API Key page](./create.png)
+![OpenAI API Key page](./create.jpeg)
 
-### 7. Set up billing
+Ensure that you save the API key promptly, as the window displaying it cannot be reopened once closed.
+
+![OpenAI API Key page](./create2.png)
+### 4. Set up billing
 OpenAI charges for API usage based on your usage volume. Therefore, if you haven't already set up a payment method for billing, it's necessary to do so before your newly created API key can function.
 
-To initiate the billing setup process, navigate to the _Billing_ section located in the left-hand menu, followed by selecting the _Payment methods_ option. Within the payment methods interface, you will encounter an option labeled _Add payment method_. By clicking on this option, a pop-up window will emerge, facilitating the input of your credit card details and pertinent billing information. Once you have provided all the required information, please proceed by clicking _Submit_ to finalize the process.
+To initiate the billing setup process, navigate to the _Billing_ section located in the left-hand menu, followed by selecting the _Payment methods_ option. 
 
 ![OpenAI Billing page](./pay.png)
 
+Within the payment methods interface, you will find an option labeled _Set up paid account_. This option allows you to choose between two methods: For Individual and Company.
+
 ![OpenAI Billing page](./pay2.png)
 
-### 8. Set usage limits
+By clicking on any option, a pop-up window will emerge, facilitating the input of your credit card details and pertinent billing information. Once you have provided all the required information, please proceed by clicking _Submit_ to finalize the process.
+
+![OpenAI Billing page](./pay3.png)
+
+### 5. Set usage limits
 To ensure efficient management of your monthly API expenditure, it is advisable to establish usage limits after setting up the billing process.
 
 To proceed, navigate to the left menu and select the option _Usage limits_. Here, you can define both hard and soft usage limits based on your specific requirements. Once you have determined the desired limits, simply click on the _Save_ button to save your changes.
