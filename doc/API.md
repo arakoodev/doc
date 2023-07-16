@@ -24,8 +24,7 @@ Follow these steps to effectively use the EdgeChainsSDK:
 <summary>Click here for a sample starter file</summary>
 
 ```java
-{
-  package com.edgechain;
+package com.edgechain;
 
 import com.edgechain.lib.configuration.RedisEnv;
 import com.edgechain.lib.request.ArkRequest;
@@ -77,7 +76,6 @@ public class Starter {
     }
 
 
-}
 }
 ```
 
