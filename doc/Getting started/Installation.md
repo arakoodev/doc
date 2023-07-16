@@ -12,7 +12,7 @@ To set up EdgeChains, you will need to download the release jar.
 
 > **Note:** EdgeChains requires Java version 17 or above to run. Please ensure that you have Java 17 installed on your system before proceeding.
 
-You can download the release jars and associated files from the [latest release](https://github.com/arakoodev/EdgeChains/releases/tag/0.3.0). Make sure to download the `flyfly.jar`, `edgechain-app-VERSION_NUMBER.jar` and the `source code` zip file. Both jar files are necessary for running EdgeChains.
+You can download the release jars and associated files from the [latest release](https://github.com/arakoodev/EdgeChains/releases/tag/0.3.0). Make sure to download the `flyfly.jar`, `edgechain-app-VERSION_NUMBER.jar` and the `Source code.zip` file. Both jar files are necessary for running EdgeChains.
 
 Once downloaded, Follow these steps:
 
@@ -22,7 +22,7 @@ Once downloaded, Follow these steps:
 
 4. Navigate to the directory in which you have extracted the files within the IntelliJ IDE.
 
-> **Note:** You can use any IDE of your choice, but IntelliJ is recommended as it automatically indexes the project and selects the **Java SDK 17 or above**, which is required for EdgeChains. Additionally, ensure that you are using a **JBang project**. 
+> **Note:** You can use any IDE of your choice, but IntelliJ is recommended as it automatically indexes the project and selects the **Java SDK 17 or above**, which is required for EdgeChains. Additionally, ensure that you are using a **JBang project**. You can set up JBang for IntelliJ by simply installing the JBang plugin extension. 
 
 > Optionally, you may rename the file `EdgeChainApplication.java` to a name of your preference. You can then write your own code or modify the example implementation to meet your specific requirements.
 
@@ -30,9 +30,11 @@ Once downloaded, Follow these steps:
 
 Before running EdgeChains, Ensure that you have completed the following steps:
 
-1. **Generate an OpenAI key**: In order to interact with the language models, EdgeChains requires a valid OpenAI key. You can generate an API key by following the instructions provided by OpenAI.
+1. **Generate an OpenAI key**: In order to interact with the language models, EdgeChains requires a valid OpenAI key. You can generate an API key by following the instructions provided by OpenAI. Refer [How to get your OpenAI Key](https://www.arakoo.ai/blog/openai-api-key) for a detailed guide.
 
-2. **Create a Redis instance**: EdgeChains uses Redis for data storage and caching. To proceed, you will need to create a Redis instance. You can create a free Redis instance on [Redis Labs](https://redislabs.com/). Sign up for an account and create a new Redis instance for your EdgeChains application. After creating the Redis instance, ***take note of the Redis host and port***, as you will need them for the configuration.
+2. **Create a Redis instance**: EdgeChains uses Redis for data storage and caching. To proceed, you will need to create a Redis instance. You can create a free Redis instance on [Redis Labs](https://redislabs.com/). For step-by-step instructions on creating a new Redis instance, refer to the blog post [How to create a new instance in Redis](https://www.arakoo.ai/blog/redis). 
+
+After creating the Redis instance, ***take note of the Redis host and port***, as you will need them for the configuration.
 
 3. Open the `EdgeChainApplication.java` file and add your _OPENAI Auth Key_, inside the Starter class and _Redis URL, Password_ and _port_ inside redisenv method of Redisenv class. 
 
