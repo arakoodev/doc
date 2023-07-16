@@ -17,7 +17,7 @@ One of the key benefits of Redis is its ability to store and retrieve data in me
 ## II. Creating a free Redis Instance
 To integrate Redis into your EdgeChains application, you'll first need to create a Redis instance. Follow these step-by-step instructions to create a Redis instance:
 
-**1. Sign up for Redis:** Visit [Redis website](https://redis.com/) and click on the _Try Free_ button in the top left corner. You can sign up using your preferred email address and password, or utilize your existing Google or GitHub account for a seamless registration process. 
+**1. Sign up for Redis:** Visit [Redis website](https://redis.com/) and click on the _Try Free_ button in the top right corner. You can sign up using your preferred email address and password, or utilize your existing Google or GitHub account for a seamless registration process. 
 
 ![Redis landing page](./redis1.png)
 
