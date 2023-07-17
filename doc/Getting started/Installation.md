@@ -12,7 +12,7 @@ To set up EdgeChains, you will need to download the release jar.
 
 > **Note:** EdgeChains requires Java version 17 or above to run. Please ensure that you have Java 17 installed on your system before proceeding.
 
-You can download the release jars and associated files from the [latest release](https://github.com/arakoodev/EdgeChains/releases/tag/0.3.0). Make sure to download the `flyfly.jar`, `edgechain-app-VERSION_NUMBER.jar` and the `Source code.zip` file. Both jar files are necessary for running EdgeChains.
+You can download the release jars and associated files from the [latest release](https://github.com/arakoodev/EdgeChains/releases/tag/0.3.0). Make sure to download the `flyfly.jar`, `edgechain-app-1.0.0.jar` and the `Source code.zip` file. Both jar files are necessary for running EdgeChains.
 
 Once downloaded, Follow these steps:
 
@@ -38,41 +38,41 @@ After creating the Redis instance, ***take note of the Redis host and port***, a
 
 3. Open the `EdgeChainApplication.java` file and add your _OPENAI Auth Key_, inside the Starter class and _Redis URL, Password_ and _port_ inside redisenv method of Redisenv class. 
 
-```java
-public class Starter {
+  ```java
+  public class Starter {
 
-    private final String OPENAI_AUTH_KEY = ""; // YOUR OPENAI KEY
-    private final String PINECONE_AUTH_KEY = ""; // YOUR PINECONE API KEY
-    private final String PINECONE_QUERY_API = ""; // YOUR PINECONE QUERY API
-    private final String PINECONE_UPSERT_API = ""; // YOUR PINECONE UPSERT API
-    private final String PINECONE_DELETE = ""; // YOUR PINECONE DELETE
+      private final String OPENAI_AUTH_KEY = ""; // YOUR OPENAI KEY
+      private final String PINECONE_AUTH_KEY = ""; // YOUR PINECONE API KEY
+      private final String PINECONE_QUERY_API = ""; // YOUR PINECONE QUERY API
+      private final String PINECONE_UPSERT_API = ""; // YOUR PINECONE UPSERT API
+      private final String PINECONE_DELETE = ""; // YOUR PINECONE DELETE
 
-    public static void main(String[] args) {
-        System.setProperty("server.port", "8080");
-        SpringApplication.run(Starter.class, args);
-    }
+      public static void main(String[] args) {
+          System.setProperty("server.port", "8080");
+          SpringApplication.run(Starter.class, args);
+      }
 
-    .
-    .
-    .
+      .
+      .
+      .
 
-     public RedisEnv redisEnv() {
-        RedisEnv redisEnv = new RedisEnv();
-        redisEnv.setUrl(""); //YOUR REDIS URL
-        redisEnv.setPort(); //YOUR REDIS PORT
-        redisEnv.setUsername("default");
-        redisEnv.setPassword(""); // YOUR REDIS PASSWORD
-        redisEnv.setTtl(3600); // Configuring ttl for HistoryContext;
-        return redisEnv;
-    }
-```
-Once you have completed these steps, you are ready to run EdgeChains either as a service or as an application using jbang, like:
+      public RedisEnv redisEnv() {
+          RedisEnv redisEnv = new RedisEnv();
+          redisEnv.setUrl(""); //YOUR REDIS URL
+          redisEnv.setPort(); //YOUR REDIS PORT
+          redisEnv.setUsername("default");
+          redisEnv.setPassword(""); // YOUR REDIS PASSWORD
+          redisEnv.setTtl(3600); // Configuring ttl for HistoryContext;
+          return redisEnv;
+      }
+  ```
+  Once you have completed these steps, you are ready to run EdgeChains either as a service or as an application using jbang, like:
 
-```bash
-# To start the application.
-java -jar flyfly.jar jbang EdgeChainApplication.java edgechain-app-1.0.0.jar
-```
----
+  ```bash
+  # To start the application.
+  java -jar flyfly.jar jbang EdgeChainApplication.java edgechain-app-1.0.0.jar
+  ```
+  ---
 ## Understanding EdgeChains
 
 At EdgeChains, we take a unique approach to development, viewing it as a deployment and configuration management challenge rather than solely focusing on the user interface and code library aspects. We understand the difficulties developers face when using OpenAI APIs, which can result in code complexity and prompt-related issues.  To overcome them, we have leveraged the power of jsonnet, the advanced library developed by Google based on their experience managing a vast amount of configuration code in the Borg infrastructure, which underlies their extensive cloud and Kubernetes clusters. And building on top of this, Edgechains gives you:

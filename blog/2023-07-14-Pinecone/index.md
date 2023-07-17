@@ -1,6 +1,6 @@
 ---
 slug: Pinecone
-title: How to create an instance in Pinecone
+title: How to create an index in Pinecone
 authors:
   name: Arakoo
   title: Arakoo Core Team
