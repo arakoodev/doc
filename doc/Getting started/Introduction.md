@@ -4,50 +4,70 @@ sidebar_position: 0
 
 # Introduction
 
-**EdgeChains** is an advanced framework designed for developing language model-powered applications. It offers a range of capabilities that enable developers to create applications with the following features:
+**EdgeChains** is an powerful framework designed to simplify the creation of applications using large language models. It offers a comprehensive set of tools and functionalities that enable developers to leverage the capabilities of language models effectively. It offers a range of capabilities that enable developers to create applications with the following features:
 
 **Data Integration**: Seamlessly connect language models with other data sources, allowing for rich and comprehensive information processing.
 
 **Interactive Functionality**: Enable language models to interact with their environment, making applications more dynamic and responsive.
 
-EdgeChains provides a set of powerful components that simplify working with language models. These components are designed to be modular and user-friendly, whether you are using the complete EdgeChains framework or incorporating specific components into your existing workflows.
+Built _specifically for Java_, EdgeChains is an open-source chain-of-thought engineering framework for Large Language Models (LLMs) and OpenAI GPT. It focuses on enterprise-grade applications and scalability, addressing the complexities and challenges associated with working with OpenAI APIs. 
 
-In addition to the components, EdgeChains offers pre-built chains for common tasks. These ready-to-use chains allow for quick prototyping and easy implementation. For more complex applications and specific use cases, the framework allows for easy customization of existing chains or the creation of new ones using the available components.
+Edgechains also has a framework for building Reasoning+Acting (shortly, ReAct) chains. By providing a streamlined workflow and addressing common challenges, EdgeChains empowers developers to build robust and scalable applications with ease.
 
-EdgeChains empowers developers to leverage the full potential of language models, making it straightforward to integrate them into diverse applications and achieve desired outcomes.
+---
+
+We believe that traditional Generative AI frameworks primarily focus on the user interface and code library aspects of development. At EdgeChains, we approach development as a deployment and configuration management challenge. We understand that developers often encounter complexities and difficulties when working with OpenAI APIs, leading to code complexity and prompt-related issues. To overcome these challenges, we have built EdgeChains on top of **Jsonnet**, a powerful library developed by Google based on the insights gained from managing 180 million lines of configuration code within Google's Borg infrastructure. 
+
+> Jsonnet is widely adopted for managing complex cloud and Kubernetes clusters.
+
+With EdgeChains, you gain the following key advantages:
+
+- **Versioning for Prompts**: With EdgeChains, prompts are written in jsonnet, enabling easy versioning and differentiation between prompt variations.
+
+- **Automatic Parallelism**: EdgeChains automates the parallelization of LLM chains and chain-of-thought tasks across CPUs, GPUs, and TPUs using the Java Virtual Machine (JVM). This ensures efficient processing and optimal utilization of computing resources.
+
+- **Fault Tolerance**: Designed with robustness in mind, EdgeChains is fault-tolerant and can gracefully handle failures. It employs mechanisms to retry and back off, maintaining the resilience of your applications.
+
+- **Scalability**: EdgeChains is highly scalable, empowering you to develop chain-of-thought applications that can seamlessly handle a significant number of APIs, varied prompt lengths, and diverse vector datasets.
+
+---
 
 ## Get started
 
-To get started with EdgeChains, follow the installation instructions outlined in the [Installation Guide](Installation.md). This guide will walk you through necessary steps to start building your own EdgeChains applications.
+To get started with EdgeChains, follow the installation instructions outlined in the [Installation Guide](Installation.md). This guide will walk you through necessary steps to start building your own EdgeChains applications. For a quick start, you can also follow the instructions in [EdgeChains Quickstart](Quickstart.md).
 
-<!-- 
-## Modules
 
-LangChain provides standard, extendable interfaces and external integrations for the following modules, listed from least to most complex:
 
-#### [Model I/O](/docs/modules/model_io/)
-Interface with language models
-#### [Data connection](/docs/modules/data_connection/)
-Interface with application-specific data
-#### [Chains](/docs/modules/chains/)
-Construct sequences of calls
-#### [Agents](/docs/modules/agents/)
-Let chains choose which tools to use given high-level directives
-#### [Memory](/docs/modules/memory/)
-Persist application state between runs of a chain
-#### [Callbacks](/docs/modules/callbacks/)
-Log and stream intermediate steps of any chain -->
 
-## Examples, ecosystem, and resources
+### Key features and benefits
 
-### Use cases
-Discover step-by-step guides and best practices for common applications such as chatbots, answering questions using different sources, and analyzing structured data. These examples will help you understand how to use EdgeChains to solve real-world problems effectively.
+- **Simplified Integration**: EdgeChains abstracts away the complexities of working with language models, providing a user-friendly interface for integration into applications. It handles the underlying infrastructure, allowing developers to focus on application logic.
 
-<!-- ### Guides
-Learn the essential techniques and tips for developing with EdgeChains. Our comprehensive guides provide practical insights and guidance to help you make the most of the framework. -->
+- **Efficient Prompting**: EdgeChains offers advanced prompt management and manipulation capabilities. Developers can easily define prompts, modify them, and control the interaction with language models to achieve desired outputs.
 
-<!-- ### [Ecosystem](/docs/ecosystem/)
-EdgeChains is part of a dynamic ecosystem of tools and integrations that enhance its capabilities. Explore our growing list of [integrations](/docs/ecosystem/integrations/) and [dependent repos](/docs/ecosystem/dependents.html) to uncover exciting opportunities and expand the functionality of EdgeChains. -->
+- **Scalability and Performance**: EdgeChains is designed for scalability and performance. It can handle large-scale applications with ease, leveraging parallelism and distributed computing to achieve optimal throughput.
+
+### Use cases 
+
+EdgeChains finds applications in a wide range of scenarios, including, but not limited to:
+
+1. **Document Analysis and Summarization**: Extracting key information from documents, generating summaries, and performing content analysis.
+
+2. **Chatbot Development**: Building conversational agents that can interact with users, provide responses, and offer personalized experiences.
+
+3. **Code Analysis and Automation**: Assisting developers in analyzing code, generating code snippets, and automating repetitive programming tasks.
+
+### Compatibility and Dependencies
+
+EdgeChains is designed to be compatible with a wide range of programming languages and frameworks. It can seamlessly integrate into projects using Java, Python, JavaScript, and other popular languages. EdgeChains aims to keep dependencies minimal to ensure a smooth integration process. It leverages industry-standard libraries and frameworks to minimize the impact on your existing codebase. By reducing external dependencies, EdgeChains offers a lightweight solution that doesn't introduce unnecessary complexities or conflicts with your existing project dependencies.
+
+### What you'll need
+
+To get started with EdgeChains, you'll need [OpenAI API Keys](https://platform.openai.com/account/api-keys), **Java 11** or higher installed, and a clear **idea of the chain** you want to build.
+
+
+
+
 
 ### Additional resources
 

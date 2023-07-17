@@ -90,7 +90,7 @@ public class Starter {
 **Step 7:** Now, run your first EdgeChains application using JBang.
 
 ```bash
-java -jar flyfly.jar jbang EdgeChainApplication.java edgechain-app-1.0.0.jar
+java -jar flyfly.jar jbang Starter.java edgechain-app-1.0.0.jar
 ```
 
 **Step 8:** Begin writing your code and building your LLM applications based on your requirements.

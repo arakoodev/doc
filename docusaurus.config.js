@@ -176,7 +176,7 @@ const config = {
             position: 'right',
           },
           {
-            to: 'doc/intro/',
+            to: 'doc/category/getting-started',
             activeBasePath: 'doc',
             label: 'Doc',
             position: 'right',

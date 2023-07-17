@@ -26,6 +26,8 @@ Once downloaded, Follow these steps:
 
 > Optionally, you may rename the file `EdgeChainApplication.java` to a name of your preference. You can then write your own code or modify the example implementation to meet your specific requirements.
 
+---
+
 ### Run EdgeChains
 
 Before running EdgeChains, Ensure that you have completed the following steps:
