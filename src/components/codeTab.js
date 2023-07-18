@@ -61,7 +61,6 @@ function CodeTabPanel() {
                         </MDXContent>
                     </div>
                 )}
-
             </div>
         </div>
     );

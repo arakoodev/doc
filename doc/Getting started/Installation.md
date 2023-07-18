@@ -12,7 +12,11 @@ To set up EdgeChains, you will need to download the release jar.
 
 > **Note:** EdgeChains requires Java version 17 or above to run. Please ensure that you have Java 17 installed on your system before proceeding.
 
+<<<<<<< HEAD
 You can download the release jars and associated files from the [latest release](https://github.com/arakoodev/EdgeChains/releases/tag/0.3.0). Make sure to download the `flyfly.jar`, `edgechain-app-1.0.0.jar` and the `Source code.zip` file. Both jar files are necessary for running EdgeChains.
+=======
+You can download the release jars and associated files from the [latest release](https://github.com/arakoodev/EdgeChains/releases/tag/0.3.0). Make sure to download the `flyfly.jar`, `edgechain-app-VERSION_NUMBER.jar` and the `Source code.zip` file. Both jar files are necessary for running EdgeChains.
+>>>>>>> 533a388fea69d95cf58a868bdf19df243b8cfd7a
 
 Once downloaded, Follow these steps:
 
