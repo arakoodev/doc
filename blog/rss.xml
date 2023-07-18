@@ -9,7 +9,7 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[How to create an instance in Pinecone]]></title>
+            <title><![CDATA[How to create an index in Pinecone]]></title>
             <link>https://www.arakoo.ai/blog/Pinecone</link>
             <guid>https://www.arakoo.ai/blog/Pinecone</guid>
             <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>

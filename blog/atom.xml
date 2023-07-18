@@ -8,7 +8,7 @@
     <subtitle>Arakoo.ai Blog</subtitle>
     <icon>https://www.arakoo.ai/img/logo-arako.ico</icon>
     <entry>
-        <title type="html"><![CDATA[How to create an instance in Pinecone]]></title>
+        <title type="html"><![CDATA[How to create an index in Pinecone]]></title>
         <id>https://www.arakoo.ai/blog/Pinecone</id>
         <link href="https://www.arakoo.ai/blog/Pinecone"/>
         <updated>2023-07-14T00:00:00.000Z</updated>
