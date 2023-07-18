@@ -112,9 +112,10 @@ export default function Home() {
 
               <TabPanel TabpanelValue={frontMatter.Tabpanel} />
               <div className='pt-12 md:pt-4 md:mx-10'><VersionsSection /></div>
-              <div className="flex flex-col gap-4 py-4 md:mx-9">
+              {/* <div className="flex flex-col gap-4 py-4 md:mx-9">
                 <InstallBox code={frontMatter.code} source={frontMatter.link} version={frontMatter.version} />
-              </div>
+              </div> */}
+              {/* uncomment when installation is present */}
             </div>
           </main>
         </div>
