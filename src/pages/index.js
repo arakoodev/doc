@@ -25,7 +25,7 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
   const handleDownload = () => {
-    const downloadUrl = '/doc/src/pages/release/flyfly.jar';
+    const downloadUrl = 'https://github.com/arakoodev/EdgeChains/releases/download/0.3.0/flyfly.jar';
 
     // Create an anchor element
     const link = document.createElement('a');
@@ -41,7 +41,7 @@ export default function Home() {
   };
 
   const handleDownload1 = () => {
-    const downloadUrl = '/doc/src/pages/release/edgechain-app-1.0.0.jar';
+    const downloadUrl = 'https://github.com/arakoodev/EdgeChains/releases/download/0.3.0/edgechain-app-1.0.0.jar';
 
     const link = document.createElement('a');
     link.href = downloadUrl;
@@ -54,7 +54,7 @@ export default function Home() {
   };
 
   const handleDownload2 = () => {
-    const downloadUrl = '/release/EdgeChains-0.3.0.zip';
+    const downloadUrl = 'https://github.com/arakoodev/EdgeChains/archive/refs/tags/0.3.0.zip';
 
     const link = document.createElement('a');
     link.href = downloadUrl;
@@ -64,6 +64,15 @@ export default function Home() {
 
     URL.revokeObjectURL(link.href);
     link.remove();
+  };
+
+  const download = (p, f) => {
+    const anchor = document.createElement('a');
+    anchor.href = p;
+    anchor.download = f;
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
   };
 
   return (
@@ -185,6 +194,10 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="mt-12 text-xl text-center">
+            <p>For detailed instructions, refer to the <a href="https://www.arakoo.ai/doc/Getting%20started/Quickstart" target="_blank" rel="noopener noreferrer">Quickstart Guide</a>.</p>
+          </div>
+
         </div>
 
         <div className='dark:bg-white bg-white prose-h4:mb-3 prose-h4:font-normal prose-h4:text-xl dark:text-black px-8 py-16 lg:px-40 md:py-20 prose max-w-none prose-img:my-0 prose-img:mt-1 prose-headings:text-black prose-headings:text-semibold prose-headings:font-serif prose-code:bg-white prose-code:rounded-md prose-code:border-black prose-code:border prose-code:border-solid prose-p:text-normal  '>
