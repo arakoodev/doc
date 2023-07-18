@@ -220,7 +220,7 @@ const config = {
             items: [
               {
                 label: 'Docs',
-                to: '/doc/intro',
+                to: 'doc/category/getting-started',
               },
             ],
           },
