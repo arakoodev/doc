@@ -23,6 +23,49 @@ import VersionsSection from '../components/VersionsSection';
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
+
+  const handleDownload = () => {
+    const downloadUrl = '/doc/src/pages/release/flyfly.jar';
+
+    // Create an anchor element
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = 'flyfly.jar';
+
+    // Dispatch a click event on the anchor element
+    link.dispatchEvent(new MouseEvent('click'));
+
+    // Clean up the anchor element
+    URL.revokeObjectURL(link.href);
+    link.remove();
+  };
+
+  const handleDownload1 = () => {
+    const downloadUrl = '/doc/src/pages/release/edgechain-app-1.0.0.jar';
+
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = 'edgechain-app-1.0.0.jar';
+
+    link.dispatchEvent(new MouseEvent('click'));
+
+    URL.revokeObjectURL(link.href);
+    link.remove();
+  };
+
+  const handleDownload2 = () => {
+    const downloadUrl = '/release/EdgeChains-0.3.0.zip';
+
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = 'EdgeChains-0.3.0.zip';
+
+    link.dispatchEvent(new MouseEvent('click'));
+
+    URL.revokeObjectURL(link.href);
+    link.remove();
+  };
+
   return (
     <div>
       {/* <a href="/blog/bun-v0.5.9" className="">
@@ -87,7 +130,22 @@ export default function Home() {
               <div className='text-sm'>
                 <h4 className="font-serif font-normal uppercase text-xl md:text-3xl">{frontMatter.How.firstStep.title}</h4>
                 <div className='text-sm'>
-                  <p className='m-0'>{frontMatter.How.firstStep.description}</p>
+                  <p className='mb-2'>{frontMatter.How.firstStep.description}</p>
+                </div>
+                <div className="download-link">
+                  <button onClick={handleDownload} className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded mb-4">
+                    Download flyfly.jar
+                  </button>
+                </div>
+                <div className="download-link">
+                  <button onClick={handleDownload1} className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded mb-4">
+                    Download edgechain-app-1.0.0.jar
+                  </button>
+                </div>
+                <div className="download-link">
+                  <button onClick={handleDownload2} className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded mb-4">
+                    Download Source code (zip)
+                  </button>
                 </div>
               </div>
 
@@ -120,7 +178,7 @@ export default function Home() {
                 <CodeTabPanel />
               </div>
               <div>
-               {/* <MDXContent>
+                {/* <MDXContent>
                  <Code1/> 
                </MDXContent> */}
                 <CodeTabPanel2 />

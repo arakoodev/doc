@@ -1,4 +1,4 @@
 ```bash
-# Copy content in Examples folder to destination    
-cp -r /path/to/Examples/* .
+# To start the application.
+java -jar flyfly.jar jbang EdgeChainApplication.java edgechain-app-1.0.0.jar
 ```

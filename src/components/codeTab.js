@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Gist from 'react-gist';
 import MDXContent from '@theme/MDXContent';
 import Code1 from "../markdown/home/code1.md"
-import Code2 from "../markdown/home/code2.md"
 function CodeTabPanel() {
     const [activeTab, setActiveTab] = useState(1);
 
@@ -35,13 +34,14 @@ function CodeTabPanel() {
             <div className="flex border-b border-zinc-300 bg-bgLight">
                 <button
                     className={`py-2 px-4 border-b-2 ${activeTab === 1
-                        ? 'font-medium text-black border-zinc-100 bg-zinc-100 border-0 rounded-t-[7px] w-full lg:w-auto'
-                        : 'w-full cursor-pointer rounded-t-[7px] border-0 outline-none border-b-[3px] border-zinc-300  bg-zinc-300 py-[12px] px-[3px] text-center sm:py-[12px] sm:px-[5px] md:px-4 lg:py-[16px] text-black lg:w-auto  outline-0  focus-visible:outline-4 focus-visible:outline-offset-1 -visible:outline-zinc-100  font-regular transition ease-out duration-200  hover:bg-zinc-400   hover:border-zinc-100 dark:shadow-zinc-300  shadow-sm text-ms leading-4  m-0 '
+                        ? 'w-full cursor-pointer rounded-t-[7px] border-0 outline-none border-b-[3px] border-zinc-300  bg-zinc-300 py-[12px] px-[3px] text-center sm:py-[12px] sm:px-[5px] md:px-4 lg:py-[16px] text-black lg:w-auto  outline-0  focus-visible:outline-4 focus-visible:outline-offset-1 -visible:outline-zinc-100  font-regular transition ease-out duration-200  hover:bg-zinc-400   hover:border-zinc-100 dark:shadow-zinc-300  shadow-sm text-ms leading-4  m-0 '
+                        : 'font-medium text-black border-zinc-100 bg-zinc-100 border-0 rounded-t-[7px] w-full lg:w-auto'
                         }`}
                     onClick={() => handleTabClick(1)}
                 >
                     Downloading the release jar
                 </button>
+
                 {/* <button
                     className={`py-2 px-4 border-b-2 ${activeTab === 2
                         ? 'font-medium text-black border-zinc-100 bg-zinc-100 border-0 rounded-t-[7px] w-full lg:w-auto '
@@ -61,6 +61,7 @@ function CodeTabPanel() {
                         </MDXContent>
                     </div>
                 )}
+
             </div>
         </div>
     );
