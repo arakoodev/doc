@@ -1,3 +1,7 @@
+# Endpoint documentation
+
+>Postman collection with various endpoints and their associated request and response details.
+
 # Pinecone controller
 
 ## Open AI
