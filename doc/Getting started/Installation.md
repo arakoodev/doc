@@ -16,7 +16,7 @@ You can download the release jars and associated files from the [latest release]
 
 Once downloaded, Follow these steps:
 
-1. Create a new folder in your desired location and add the jar files into the newly created folder.
+1. Create a folder in your desired location and paste the contents of `Source code.zip` in it. Add the `flyfly.jar` file in the Script folder on the root directory and `edgechain-app-1.0.0.jar` in the FlySpring/edgechain-app/target directory.
 
 2. Copy all the contents from the _Examples_ folder and paste to your folder. The _Examples_ folder includes all the jsonnet files and `EdgeChainApplication.java` file.    
 

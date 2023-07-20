@@ -10,13 +10,13 @@ Follow these steps to quickly setup and run your first EdgeChains application in
 
 **Step 1:** Go to the [latest release](https://github.com/arakoodev/EdgeChains/releases/tag/0.3.0) of EdgeChains. From the assets section, download the `flyfly.jar`, `edgechain-app-VERSION_NUMBER.jar`, and the `Source code.zip` file.
 
-**Step 2:** Create a new **Java JBang project** in your desired location. Add the downloaded JAR files to the project folder.
+**Step 2:** Create a new **Java JBang project** in your desired location.
 
 > If you are not familiar with JBang projects, you can install the JBang plugin in IntelliJ IDE to easily set up and manage your project.
 
 > **Note:** IntelliJ is recommended as it automatically indexes the project and selects the **Java SDK 17 or above**, which is required for EdgeChains.
 
-**Step 3:** Copy all the contents from the _Examples_ folder from extracted `Source code.zip` and paste them into your working directory. 
+**Step 3:** Copy all the contents from extracted `Source code.zip` and paste them into your working directory. Add the `flyfly.jar` file in the Script folder on the root directory and `edgechain-app-1.0.0.jar` in the FlySpring/edgechain-app/target directory.
 
 **Step 4:** Navigate to the directory in which you have extracted the files within the IntelliJ IDE.
 
