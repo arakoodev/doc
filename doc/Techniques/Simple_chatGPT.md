@@ -133,20 +133,24 @@ Feel free to modify the code and experiment with different prompts to engage in 
 3. To start the chatbot, execute the following command:
 
    ```bash
-   java -jar flyfly.jar jbang GptConversation.java edgechain-app-1.0.0.jar
+   java -jar flyfly.jar jbang YourPreferredName.java edgechain-app-1.0.0.jar
     ```
 
 This command will initiate the chatbot and prepare it to receive prompts from users.
 
+> **Note:** Please note that _'YourPreferredName.java'_ can be renamed to any name of your choice. 
+
+
 4. To interact with the chatbot, you can utilize the provided curl command:
 
-   ```bash
-   curl --location 'localhost:8080/v1/examples/gpt/ask' \
+```bash
+curl --location 'localhost:8080/v1/examples/gpt/ask' \
 --header 'Content-Type: application/json' \
 --data '{
     "prompt": "Who was Nikola Tesla?"
 }'
-    ```
+```
+
 Simply replace the prompt with your own message to receive a response from the chatbot. The chatbot will provide a contextual message based on the conversation history.
 
 Here's a sample response:
