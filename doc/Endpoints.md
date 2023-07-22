@@ -32,40 +32,63 @@ file: <path_to_file>
 ```
 
 ### 2. Open AI - Query
-   - **Description:** Execute a query on Open AI data in the Pinecone namespace.
-   - **Method:** GET
-   - **URL:** `localhost:8080/v1/examples/pinecone/openai/query?topK=4&query=What is the collect stage for data maturity?&namespace=machine-learning`
+   - **Description:**  Perform a query to retrieve results from Open AI in the Pinecone namespace.
+   - **Method:** POST
+   - **URL:** `localhost:8080/v1/examples/pinecone/openai/query?topK=6&namespace=machine-learning`
    - **Headers:**
      ```
      Content-Type: application/json
      ```
 
+    - **Body:**
+     - Mode: raw
+     - Data: 
+
+```json
+{
+    "query": "What is the collect stage for data maturity?"
+}
+```
+
 **Request:**
 
 ``` bash
-GET /v1/examples/pinecone/openai/query?topK=4&query=What is the collect stage for data maturity?&namespace=machine-learning
+POST /v1/examples/pinecone/openai/query?topK=6&namespace=machine-learning
 Content-Type: application/json
+
+{
+    "query": "What is the collect stage for data maturity?"
+}
 ```
 
-### 3. Pinecone Chat - Upsert
-   - **Description:** Execute a chat message on Open AI data in the Pinecone namespace.
-   - **Method:** GET
-   - **URL:** `localhost:8080/v1/examples/pinecone/openai/chat?query=Are neural networks part of data maturity?&namespace=machine-learning&id=historycontext:9838938-1e-ff-2fff2-ddd`
+### 3. Pinecone Chat 
+   - **Description:** Initiate a chat with Open AI in the Pinecone namespace.
+   - **Method:** POST
+   - **URL:** `localhost:8080/v1/examples/pinecone/openai/chat?namespace=machine-learning&id=historycontext:29557c60-715d-434c-acca-bf3a033783ad`
    - **Headers:** None
    - **Body:**
      - Mode: raw
-     - Raw JSON Body: `{"query": "What is the collect stage for data maturity?"}`
+     - data: 
+```json
+{
+    "query": "What is the collect stage for data maturity?"
+}
+```
 
 **Request:**
 
 ``` bash
-GET /v1/examples/pinecone/openai/chat?query=Are neural networks part of data maturity?&namespace=machine-learning&id=historycontext:9838938-1e-ff-2fff2-ddd
+POST /v1/examples/pinecone/openai/chat?namespace=machine-learning&id=historycontext:29557c60-715d-434c-acca-bf3a033783ad
+
+{
+    "query": "What is the collect stage for data maturity?"
+}
 ```
 
-### <font color="red">Delete</font>
-   - **Description:** Delete all data in the Pinecone namespace for the specified machine-learning pattern.
+### <font color="red">Delete All Pinecone Data</font>
+   - **Description:** Delete all data in the Pinecone namespace for machine learning.
    - **Method:** DELETE
-   - **URL:** `localhost:8080/v1/examples/pinecone/deleteAll?namespace=machine-learning`
+   - **URL:** `localhost:8080/v1/pinecone/deleteAll?namespace=machine-learning`
    - **Headers:**
      ```
      Content-Type: application/json
@@ -74,18 +97,17 @@ GET /v1/examples/pinecone/openai/chat?query=Are neural networks part of data mat
 **Request:**
 
 ``` bash
-DELETE /v1/examples/pinecone/deleteAll?namespace=machine-learning
+DELETE /v1/pinecone/deleteAll?namespace=machine-learning
 Content-Type: application/json
 ```
 
 ***
-
-## Redis Controller
+## Postgres Controller
 
 ### 1. Open AI - Upsert
-   - **Description:** Upload a file to update Open AI data in the Redis namespace.
+   - **Description:** Upload a file to update Open AI data in the Postgres namespace.
    - **Method:** POST
-   - **URL:** `localhost:8080/v1/examples/redis/openai/upsert?namespace=machine-learning`
+   - **URL:** `localhost:8080/v1/examples/postgres/openai/upsert?table=spring_vectors&namespace=machine-learning`
    - **Headers:**
      ```
      Content-Type: multipart/form-data
@@ -94,21 +116,78 @@ Content-Type: application/json
      - Mode: formdata
      - Key: file
      - Type: file
-     - Source: `/R:/Fiverr/alekhaweb (client)/spark-openai-files/spark/introduction-to-natural-language-processing.pdf`
 
 **Request:**
 
 ``` bash
-POST /v1/examples/redis/openai/upsert?namespace=machine-learning
+POST /v1/examples/postgres/openai/upsert?table=spring_vectors&namespace=machine-learning
 Content-Type: multipart/form-data
 
 file: <path_to_file>
 ```
 
 ### 2. Open AI - Query
-   - **Description:** Execute a query on Open AI data in the Redis namespace.
-   - **Method:** GET
-   - **URL:** `localhost:8080/v1/examples/redis/openai/query?topK=10&query=What is lexicography? Can you also explain social network analysis&namespace=machine-learning`
+   - **Description:** Perform a query to retrieve results from Open AI in the Postgres namespace.
+   - **Method:** POST
+   - **URL:** `localhost:8080/v1/examples/postgres/openai/query?topK=5&table=spring_vectors&namespace=machine-learning`
+   - **Headers:**
+     ```
+     Content-Type: application/json
+     ```
+
+    - **Body:**
+     - Mode: raw
+     - Data: 
+
+```json
+{
+    "query": "What is the collect stage for data maturity?"
+}
+```
+
+**Request:**
+
+``` bash
+POST /v1/examples/postgres/openai/query?topK=5&table=spring_vectors&namespace=machine-learning
+Content-Type: application/json
+
+{
+    "query": "What is the collect stage for data maturity?"
+}
+```
+
+### 3. Open AI - Postgres Chat
+   - **Description:** Initiate a chat with Open AI in the Postgres namespace.
+   - **Method:** POST
+   - **URL:** `localhost:8080/v1/examples/postgres/openai/chat?table=spring_vectors&id=historycontext:e350042b-d12b-4cb8-b072-51b854402ab3&namespace=machine-learning`
+    - **Headers:**
+     ```
+     Content-Type: application/json
+     ```
+   - **Body:**
+     - Mode: raw
+     - data: 
+```json
+{
+    "query": "What is the collect stage for data maturity?"
+}
+```
+
+**Request:**
+
+``` bash
+POST /v1/examples/postgres/openai/chat?table=spring_vectors&id=historycontext:e350042b-d12b-4cb8-b072-51b854402ab3&namespace=machine-learning
+Content-Type: application/json
+
+{
+    "query": "What is the collect stage for data maturity?"
+}
+```
+
+### <font color="red">Delete All Postgres Data</font>
+   - **Description:** Delete all data in the Postgres namespace for machine learning.
+   - **Method:** DELETE
+   - **URL:** `localhost:8080/v1/examples/postgres/deleteAll?table=spring_vectors&namespace=machine-learning`
    - **Headers:**
      ```
      Content-Type: application/json
@@ -117,47 +196,119 @@ file: <path_to_file>
 **Request:**
 
 ``` bash
-POST /v1/examples/redis/openai/upsert?namespace=machine-learning
+DELETE /v1/examples/postgres/deleteAll?table=spring_vectors&namespace=machine-learning
+Content-Type: application/json
+```
+
+***
+## Redis Controller
+
+### 1. Open AI - Upsert
+   - **Description:** Upload a file to update Open AI data in the Redis namespace.
+   - **Method:** POST
+   - **URL:** `localhost:8080/v1/examples/redis/openai/upsert?namespace=machine-learning&indexName=vector_index`
+   - **Headers:**
+     ```
+     Content-Type: multipart/form-data
+     ```
+   - **Body:**
+     - Mode: formdata
+     - Key: file
+     - Type: file
+
+**Request:**
+
+``` bash
+POST /v1/examples/redis/openai/upsert?namespace=machine-learning&indexName=vector_index
 Content-Type: multipart/form-data
 
 file: <path_to_file>
 ```
 
-### 3. Redis Chat
-   - **Description:** Execute a chat message on Open AI data in the Redis namespace.
-   - **Method:** GET
-   - **URL:** `localhost:8080/v1/examples/redis/openai/chat?query=Then, what is social engineering?&namespace=machine-learning&id=historycontext:9838938-1e-ff-2fff2-ddd`
-   - **Headers:** None
-   - **Body:**
-     - Mode: raw
-     - Raw JSON Body: `{"query": "What is the collect stage for data maturity?"}`
-
-
-**Request:**
-
-``` bash
-GET /v1/examples/redis/openai/chat?query=Then, what is social engineering?&namespace=machine-learning&id=historycontext:9838938-1e-ff-2fff2-ddd
-```
-
-### 4. Redis Similarity Search
-   - **Description:** Perform a similarity search on Open AI data in the Redis namespace.
-   - **Method:** GET
-   - **URL:** `localhost:8080/v1/examples/redis/openai/similarity-search?topK=7&query=What is lexicography? Can you also explain social network analysis&namespace=machine-learning`
+### 2. Open AI - Query
+   - **Description:**  Perform a query to retrieve results from Open AI in the Redis namespace.
+   - **Method:** POST
+   - **URL:** `localhost:8080/v1/examples/redis/openai/query?topK=7&namespace=machine-learning&indexName=vector_index`
    - **Headers:**
      ```
      Content-Type: application/json
      ```
+   - **Body:**
+   - Mode: raw
+   - data: 
+```json
+{
+    "query":  "What is lexicography? Can you also explain social network analysis?"
+}
+```
 
 **Request:**
 
 ``` bash
-GET /v1/examples/redis/openai/similarity-search?topK=7&query=What is lexicography? Can you also explain social network analysis&namespace=machine-learning
+POST /v1/examples/redis/openai/query?topK=7&namespace=machine-learning&indexName=vector_index
 Content-Type: application/json
+
+{
+    "query": "What is lexicography? Can you also explain social network analysis?"
+}
 ```
 
-### <font color="red">Delete</font>
+### 3. Redis Chat
+   - **Description:** Initiate a chat with Open AI in the Redis namespace.
+   - **Method:** POST
+   - **URL:** `localhost:8080/v1/examples/redis/openai/chat?namespace=machine-learning&id=historycontext:edd1e8d8-8734-4b8e-aa3d-de6a38f45ca9&indexName=vector_index`
+   - **Headers:** None
+   - **Body:**
+   - Mode: raw
+   - data: 
+```json
+{
+    "query":  "What is lexicography? Can you also explain social network analysis?"
+}
+```
 
-   - **Description:** Delete data in the Redis namespace matching the specified pattern.
+
+**Request:**
+
+``` bash
+POST /v1/examples/redis/openai/chat?namespace=machine-learning&id=historycontext:edd1e8d8-8734-4b8e-aa3d-de6a38f45ca9&indexName=vector_index
+
+{
+    "query": "What is lexicography? Can you also explain social network analysis?"
+}
+```
+
+### 4. Redis Similarity Search
+   - **Description:** Perform a similarity search on Open AI data in the Redis namespace.
+   - **Method:** POST
+   - **URL:** `localhost:8080/v1/examples/redis/openai/similarity-search?topK=7&namespace=machine-learning&indexName=vector_index`
+   - **Headers:**
+     ```
+     Content-Type: application/json
+     ```
+   - **Body:**
+   - Mode: raw
+   - data: 
+```json
+{
+    "query": "What is lexicography? Can you also explain social network analysis?"
+}
+```
+
+**Request:**
+
+``` bash
+POST /v1/examples/redis/openai/similarity-search?topK=7&namespace=machine-learning&indexName=vector_index
+Content-Type: application/json
+
+{
+    "query": "What is lexicography? Can you also explain social network analysis?"
+}
+```
+
+### <font color="red">Delete Redis Data</font>
+
+   - **Description:** Delete all data in the Redis namespace that matches the specified pattern.
    - **Method:** DELETE
    - **URL:** `localhost:8080/v1/examples/redis/delete?pattern=machine-learning*`
    - **Headers:**
@@ -186,6 +337,9 @@ Content-Type: application/json
      Content-Type: application/json
      stream: false
      ```
+   - **Body:**
+   - Mode: raw
+   - data: (empty)
 
 **Request:**
 
