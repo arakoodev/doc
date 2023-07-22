@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.arakoo.ai/blog</id>
     <title>Arakoo.ai Blog</title>
-    <updated>2023-07-14T00:00:00.000Z</updated>
+    <updated>2023-07-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.arakoo.ai/blog"/>
     <subtitle>Arakoo.ai Blog</subtitle>
     <icon>https://www.arakoo.ai/img/logo-arako.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Getting Started with Supabase]]></title>
+        <id>https://www.arakoo.ai/blog/Supabase</id>
+        <link href="https://www.arakoo.ai/blog/Supabase"/>
+        <updated>2023-07-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Introduction]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2><p><strong>Supabase</strong> is a powerful, open-source platform that simplifies the creation of secure and high-performance Postgres backends, offering functionalities similar to Firebase, such as authentication and real-time database. When used with <strong>EdgeChains</strong>, Supabase enhances the backend capabilities of applications built with the framework, enabling developers to create advanced and interactive applications powered by large language models.</p><p>In the EdgeChains configuration, the following parameters need to be configured for Supabase integration:</p><ul><li><p><strong>SupabaseURL</strong>: The URL of the Supabase backend, which allows EdgeChains to communicate with the Supabase service.</p></li><li><p><strong>Supabase AnnonKey</strong>: The anonymous key used for authentication when interacting with the Supabase backend.</p></li><li><p><strong>Supabase JWTSecret</strong>: The JSON Web Token (JWT) secret for secure communication and user authentication.</p></li><li><p><strong>jdbc:postgresql://${SUPABASE_DB_URK}/postgres</strong>: The JDBC URL for connecting to the PostgreSQL database in Supabase. This URL provides the necessary information to establish a connection to the database.</p></li><li><p><strong>DbUsername</strong>: The username for the PostgreSQL database in Supabase. In this example, it is set to "postgres."</p></li><li><p><strong>DbPassword</strong>: The password for the PostgreSQL database in Supabase, which is required for authentication and access to the database.</p></li></ul><p>By providing the appropriate values for these configuration parameters, EdgeChains can seamlessly integrate with Supabase, enabling developers to leverage the features and functionalities of Supabase as the backend for their language model-powered applications.</p>]]></content>
+        <author>
+            <name>Arakoo</name>
+            <uri>https://github.com/arakoodev</uri>
+        </author>
+        <category label="Supabase" term="Supabase"/>
+        <category label="Arakoo" term="Arakoo"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[How to create an index in Pinecone]]></title>
         <id>https://www.arakoo.ai/blog/Pinecone</id>
@@ -79,24 +93,5 @@
         </author>
         <category label="openai" term="openai"/>
         <category label="arakoo" term="arakoo"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Welcome]]></title>
-        <id>https://www.arakoo.ai/blog/welcome</id>
-        <link href="https://www.arakoo.ai/blog/welcome"/>
-        <updated>2021-08-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></summary>
-        <content type="html"><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p><p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p><p>Regular blog authors can be added to <code>authors.yml</code>.</p><p>The blog post date can be extracted from filenames, such as:</p><ul><li><code>2019-05-30-welcome.md</code></li><li><code>2019-05-30-welcome/index.md</code></li></ul><p>A blog post folder can be convenient to co-locate blog post images:</p><p><img loading="lazy" alt="Docusaurus Plushie" src="/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p><p>The blog supports tags as well!</p><p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in your Docusaurus config.</p>]]></content>
-        <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
-        </author>
-        <author>
-            <name>Yangshun Tay</name>
-            <uri>https://github.com/yangshun</uri>
-        </author>
-        <category label="facebook" term="facebook"/>
-        <category label="hello" term="hello"/>
-        <category label="docusaurus" term="docusaurus"/>
     </entry>
 </feed>
