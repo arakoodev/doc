@@ -22,9 +22,9 @@ In the EdgeChains configuration, the following parameters need to be configured 
 
 - **Supabase JWTSecret**: The JSON Web Token (JWT) secret for secure communication and user authentication.
 
-- **Supabase DBhost:**: The JDBC URL for connecting to the PostgreSQL database in Supabase. This URL provides the necessary information to establish a connection to the database. (jdbc:postgresql://${SUPABASE_DB_URK}/postgres)
+- **Supabase DBhost:**: The JDBC URL for connecting to the PostgreSQL database in Supabase. This URL provides the necessary information to establish a connection to the database. _ie, jdbc:postgresql://${SUPABASE_DB_URK}/postgres_
 
-- **DbUsername**: The username for the PostgreSQL database in Supabase. In this example, it is set to "postgres."
+- **DbUsername**: The username for the PostgreSQL database in Supabase. In this example, it is set to _postgres_.
 
 - **DbPassword**: The password for the PostgreSQL database in Supabase, which is required for authentication and access to the database.
 
