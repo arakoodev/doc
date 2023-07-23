@@ -2,7 +2,7 @@
 
 These example APIs can be added to the `EdgeChainApplication.java` file in the source code to enhance the functionalities of EdgeChains. Below is a list of example APIs that you can use as reference and inspiration for your own implementations:
 
-- [1. Adding CORS Configuration {#adding-cors-configuration}](#1-adding-cors-configuration-adding-cors-configuration)
+- [1. Adding CORS Configuration](#1-adding-cors-configuration-adding-cors-configuration)
 - [2. Configuring Redis (Optional)](#2-configuring-redis-optional)
 - [3. Configuring Supabase (Optional)](#3-configuring-supabase-optional)
 - [4. Excluding API Calls from Filtering (Optional)](#4-excluding-api-calls-from-filtering-optional)
@@ -11,7 +11,7 @@ These example APIs can be added to the `EdgeChainApplication.java` file in the s
 - [7. Creating HistoryContext (Using PostgreSQL) Controller](#7-creating-historycontext-using-postgresql-controller)
 - [8. PDF reader](#8-pdf-reader)
 
-### 1. Adding CORS Configuration {#adding-cors-configuration}
+### 1. Adding CORS Configuration 
 
 To enable Cross-Origin Resource Sharing (CORS) in your EdgeChains application and allow multiple origins, add the following code snippet to the `EdgeChainApplication.java` file:
 
