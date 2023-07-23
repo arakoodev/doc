@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+hide_sidebar: true
 ---
 
 # Installation 
@@ -20,9 +21,9 @@ Once downloaded, Follow these steps:
 
 2. Copy all the contents from the _Examples_ folder and paste to your folder. The _Examples_ folder includes all the jsonnet files and `EdgeChainApplication.java` file.    
 
-4. Navigate to the directory in which you have extracted the files within the IntelliJ IDE.
+4. Navigate to the directory in which you have extracted the files in your preferred IDE.
 
-> **Note:** You can use any IDE of your choice, but IntelliJ is recommended as it automatically indexes the project and selects the **Java SDK 17 or above**, which is required for EdgeChains. Additionally, ensure that you are using a **JBang project**. You can set up JBang for IntelliJ by simply installing the JBang plugin extension. 
+> **Note:** You can use any IDE of your choice, but IntelliJ is recommended as it automatically indexes the project and selects the **Java SDK 17 or above**, which is required for EdgeChains. Additionally, ensure that you are using a <font color="red">**JBang project**</font>. You can set up JBang for IntelliJ by simply installing the JBang plugin extension. 
 
 > Optionally, you may rename the file `EdgeChainApplication.java` to a name of your preference. You can then write your own code or modify the example implementation to meet your specific requirements.
 
@@ -34,46 +35,35 @@ Before running EdgeChains, Ensure that you have completed the following steps:
 
 1. **Generate an OpenAI key**: In order to interact with the language models, EdgeChains requires a valid OpenAI key. You can generate an API key by following the instructions provided by OpenAI. Refer [How to get your OpenAI Key](https://www.arakoo.ai/blog/openai-api-key) for a detailed guide.
 
-2. **Create a Redis instance**: EdgeChains uses Redis for data storage and caching. To proceed, you will need to create a Redis instance. You can create a free Redis instance on [Redis Labs](https://redislabs.com/). For step-by-step instructions on creating a new Redis instance, refer to the blog post [How to create a new instance in Redis](https://www.arakoo.ai/blog/redis). 
-
-After creating the Redis instance, ***take note of the Redis host and port***, as you will need them for the configuration.
-
-3. Open the `EdgeChainApplication.java` file and add your _OPENAI Auth Key_, inside the Starter class and _Redis URL, Password_ and _port_ inside redisenv method of Redisenv class. 
+2. Open the `EdgeChainApplication.java` file and add your _OPENAI Auth Key_, inside the Starter class.
 
   ```java
   public class Starter {
 
-      private final String OPENAI_AUTH_KEY = ""; // YOUR OPENAI KEY
-      private final String PINECONE_AUTH_KEY = ""; // YOUR PINECONE API KEY
-      private final String PINECONE_QUERY_API = ""; // YOUR PINECONE QUERY API
-      private final String PINECONE_UPSERT_API = ""; // YOUR PINECONE UPSERT API
-      private final String PINECONE_DELETE = ""; // YOUR PINECONE DELETE
-
-      public static void main(String[] args) {
-          System.setProperty("server.port", "8080");
-          SpringApplication.run(Starter.class, args);
-      }
-
-      .
-      .
-      .
-
-      public RedisEnv redisEnv() {
-          RedisEnv redisEnv = new RedisEnv();
-          redisEnv.setUrl(""); //YOUR REDIS URL
-          redisEnv.setPort(); //YOUR REDIS PORT
-          redisEnv.setUsername("default");
-          redisEnv.setPassword(""); // YOUR REDIS PASSWORD
-          redisEnv.setTtl(3600); // Configuring ttl for HistoryContext;
-          return redisEnv;
-      }
+      private final String OPENAI_AUTH_KEY = ""; // YOUR OPENAI KEY 
+      ...
+  }
   ```
+
   Once you have completed these steps, you are ready to run EdgeChains either as a service or as an application using jbang, like:
 
   ```bash
   # To start the application.
   java -jar flyfly.jar jbang EdgeChainApplication.java edgechain-app-1.0.0.jar
   ```
+> <details>
+> <summary>For a few things to note while using EdgeChainApplication.java, expand this section.</summary>
+>
+> ```json
+> {
+>   "id": "historycontext-571b0c2c-8d07-452b-a1d8-96bd5f82234e",
+>   "maxTokens": 4096,
+>   "message": "Session is created. Now you can start conversational question and answer"
+> }
+> ```
+>
+> </details>
+  
   ---
 ## Understanding EdgeChains
 
