@@ -1,8 +1,5 @@
 ``` 
-install horziontal and get api key
-pip install horizontal
-horizontal api user key
-
-create project (each can contain mainy tasks)
-horizontal project create
+# Download Assets from the latest release
+# Add the downloaded JAR files and all the contents 
+from the Examples folder to your project.
 ```

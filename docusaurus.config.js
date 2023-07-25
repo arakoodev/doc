@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Arakoo.ai',
-  tagline: 'Serverless, Compression and Cache for GPT & LLM',
+  tagline: 'RAG stack (Retriever Augmented Generative AI) for production LLM applications. On top of Serverless & JSonnet',
   favicon: 'img/logo-arako.ico',
 
   // Set the production url of your site here
@@ -150,7 +150,7 @@ const config = {
         // respectPrefersColorScheme: true,
       },
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/code.png',
       navbar: {
         // title: 'arakoo',
         logo: {
@@ -176,7 +176,7 @@ const config = {
             position: 'right',
           },
           {
-            to: 'doc/intro/',
+            to: 'doc/category/getting-started',
             activeBasePath: 'doc',
             label: 'Doc',
             position: 'right',
@@ -192,7 +192,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://discord.gg/MtEPK9cnSF',
+            href: 'https://discord.gg/wgmvkVEKEn',
             // label: 'Discord',
             position: 'right',
             className: 'navbar__icon navbar__discord',
@@ -220,7 +220,7 @@ const config = {
             items: [
               {
                 label: 'Docs',
-                to: '/doc/intro',
+                to: 'doc/category/getting-started',
               },
             ],
           },

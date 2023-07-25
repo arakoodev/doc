@@ -6,22 +6,6 @@
 
 /* You can override the default Infima variables here. */
 :root {
- --ifm-color-primary: #A988F2;
-  --ifm-color-primary-dark: #2F0459;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #D5E5F2;
-  --ifm-color-primary-lighter: #F2DA91;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: #F2F2F2;
-  --ifm-background-color:#F2F2F2;
-  --ifm-table-stripe-background: transparent;
-  --ifm-navbar-background-color: #F2F2F2;
-  --ifm-navbar-link-color: black;
-  --prism-color: black;
-  --prism-background-color:white;
-}
-/* :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -154,51 +138,6 @@ table.tablecostum p {
 .navbar__logo img {
   height: 160%;
   margin-top: -9px;
-}
-
-.slick-dots-costum{
-  left: -2em;
-  bottom: -3em;
-  border-radius: 10px;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 8em;
-}
-
-@media (min-width: 1024px){
-  .slick-dots-costum{
-    padding: 2em;
-    padding-bottom: 1em;
-  }
-}
-
-.slick-dots-costum li {
-  width: 50px;
-  height: 5px;
-  border-radius: 10px;
-  background-color: #c7d2fe;
-  border: 1px solid #c7d2fe;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-.slick-dots-costum li.slick-active {
-
-  background-color: #312E81;
-  border: 1px solid #312E81;
-}
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
-h1,h2,h3,h4,h5{
-  font-family: Tinos, Georgia;
 }
 
 @tailwind base;

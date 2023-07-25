@@ -10,7 +10,7 @@ function VersionsSection() {
                 <hr className="my-2 border-neutral-300" />
                 <div className="flex ">
                     <FontAwesomeIcon icon={faNpm} className="w-6 h-6 text-primary-500" />
-                    <p className="m-0 ml-2">v8.39 on date</p>
+                    <p className="m-0 ml-2">v0.3.0 on July 8, 2023</p>
                 </div>
             </div>
             <div className="flex flex-col md:ml-4  ">
@@ -18,7 +18,7 @@ function VersionsSection() {
                 <hr className="my-2  border-neutral-300" />
                 <div className="flex ">
                     <FontAwesomeIcon icon={faNpm} className="w-6 h-6 text-primary-500" />
-                    <p className="m-0 ml-2">v8.39 on date</p>
+                    <p className="m-0 ml-2">v0.4.0</p>
                 </div>
 
             </div>
@@ -27,7 +27,8 @@ function VersionsSection() {
                 <hr className="my-2 border-neutral-300" />
                 <div className="flex ">
                     <FontAwesomeIcon icon={faNpm} className="w-6 h-6 text-primary-500" />
-                    <p className="m-0 ml-2">head on date</p>
+                   
+                    <p className="m-0 ml-2">On progress</p>
                 </div>
             </div>
         </div>
