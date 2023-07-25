@@ -1687,6 +1687,11 @@
   resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-7.6.0.tgz#9ea331766084288634a9247fcd8b84f16ff4ba07"
   integrity sha512-XK6BTq1NDMo9Xqw/YkYyGjSsg44fbNwYRx7QK2CuoQgyy+f1rrTDHoExVM5PsyXCtfl2vs2vVJ0MN0yN6LppRw==
 
+"@fontsource/sora@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/sora/-/sora-5.0.5.tgz#0b38faf2ac013b96240cb4b64784b222e9f3f2c0"
+  integrity sha512-sHoVgzY12utgWCkTor4lrtKIUYMqXlixmZ9d88oJnQwIQmFXXSlC6d5DNzDlq7Z/DZxeb+phuz87ytA9z1mfbg==
+
 "@fortawesome/fontawesome-common-types@6.4.0":
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.4.0.tgz#88da2b70d6ca18aaa6ed3687832e11f39e80624b"

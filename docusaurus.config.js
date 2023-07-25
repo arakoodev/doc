@@ -262,7 +262,7 @@ const config = {
         // copyright: `Copyright © ${new Date().getFullYear()} Arakoo Project`,e
       },
       prism: {
-        theme: lightCodeTheme,
+        theme: darkCodeTheme,
         // darkTheme: lightCodeTheme,
       },
     }),

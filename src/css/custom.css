@@ -4,8 +4,14 @@
  * work well for content-centric websites.
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 /* You can override the default Infima variables here. */
+
 :root {
+  --ifm-navbar-background-color: white;
+  --ifm-navbar-shadow: none;
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -15,7 +21,13 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-} */
+  --ifm-footer-background-color: #0A2B3A;
+  --ifm-footer-color: var(--ifm-navbar-background-color);
+  --ifm-footer-link-color: var(--ifm-navbar-background-color);
+} 
+
+
+
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
@@ -31,6 +43,8 @@
   --ifm-table-stripe-background: transparent;
   --ifm-navbar-background-color: #F2F2F2;
   --ifm-navbar-link-color: black;
+  --ifm-footer-background-color: #0A2B3A;
+  --ifm-footer-color: var(--ifm-navbar-background-color);
 }
 /* [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
@@ -45,7 +59,7 @@
 } */
 
 .footer--dark {
-    --ifm-footer-background-color: transparent;
+    --ifm-footer-background-color: #0A2B3A;
     --ifm-footer-color: var(--ifm-footer-link-color);
     --ifm-footer-link-color: var(--ifm-color-secondary);
     --ifm-footer-title-color: var(--ifm-color-white);
@@ -73,6 +87,8 @@
   mask: url(/img/discord-icon-svgrepo-com.svg) no-repeat 100% 100%;
   mask-size: cover;
 }
+
+
 
 
 .is-sticky {
@@ -143,3 +159,20 @@ table.tablecostum p {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.navbar{
+  @apply w-full lg:w-[85%]  mx-auto bg-transparent;
+  /* @apply mx-auto; */
+} 
+.navbar--fixed-top{
+    @apply fixed lg:-translate-x-1/2 lg:left-1/2 lg:transform ;
+}
+
+.HowCode > div{
+  @apply w-full m-0;
+}
+
+
+
+

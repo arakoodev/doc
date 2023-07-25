@@ -6,17 +6,22 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 // import { MDXProvider } from '@mdx-js/react';
 // import { MDXRenderer } from '@docusaurus/mdx';
-import MDXContent from '@theme/MDXContent';
+// import MDXContent from '@theme/MDXContent';
+import GetStartedButtonSvg from "../../static/svg/getStatedHome.svg"
 
-import HomeContent, {frontMatter} from '../markdown/home.mdx';
+import HomeContent, {frontMatter} from '../markdown/home/home.mdx';
 
-import InstallBox from '../components/installBox';
+// import InstallBox from '../components/installBox';
 // import Benchmark from '../components/bookmark';
 import TabPanel from '../components/Tab';
 // import Quotes from '../components/blog/quotes';
-import CodeTabPanel from "../components/codeTab"
-import CodeTabPanel2 from "../components/codeTab2"
-import VersionsSection from '../components/VersionsSection';
+// import CodeTabPanel from "../components/codeTab"
+// import CodeTabPanel2 from "../components/codeTab2"
+// import VersionsSection from '../components/VersionsSection';
+import FeaturesSection from "../components/FeaturesSection";
+import APISection from '../components/APISection';
+import ResearchPaper from '../components/ResearchPaper';
+import HowTo from '../components/HowTo';
 
 
 export default function Home() {
@@ -37,33 +42,53 @@ export default function Home() {
           <title>{frontMatter.title}</title>
         </Head>
         <div
+
           id="homepage"
-          className="px-4 md:px-4 xl:px-14  flex w-full flex-row items-center justify-center   pt-[5rem] pb-4 md:pb-[5rem]  text-indigo-950 lg:pt-16 xl:pt-[6rem] lg:pb-[8rem] bg-bgLight dark:bg-bgLight"
+          className="px-4 md:px-4 xl:px-14  flex w-full flex-col items-center justify-center   pt-[5rem] pb-4 md:pb-[5rem]  text-indigo-950 lg:pt-16 xl:pt-52 lg:pb-[8rem] bg-white dark:bg-bgLight bg-[url('/img/backgroundPattern.png')]"
         >
-          <main className="mx-auto my-0 flex w-full flex-col items-center  xl:gap-8   lg:max-w-[var(--max-width)] lg:flex-row lg:justify-between">
-            <div className="lg:w-3/5">
-              <h1 className="mt-0 text-[26pt] font-medium font-Quicksand leading-none text-indigo-950 md:text-[32pt] lg:text-[38pt] xl:text-[4em] uppercase">
-                {frontMatter.title}
+          <main className="mx-auto my-0 flex  w-full flex-col items-center  xl:gap-8   lg:max-w-[var(--max-width)] lg:justify-between">
+            <div className="flex items-center flex-col text-center mb-12 lg:mb-0 lg:w-3/5 ">
+              <h1 className="mt-0 mb-12 text-[26pt] font-semibold font-Quicksand leading-none text-gray-900 md:text-[32pt] lg:text-[38pt] xl:text-[3.5em] ">
+                {frontMatter.title[0]}
+                <br />
+                {frontMatter.title[1]}
+
               </h1>
-              <p className="text-[1.3rem] leading-normal dark:text-neutral-300">
+              <p className="text-[1.3rem] leading-normal text-gray-600">
                 {frontMatter.desc}
               </p>
-              <div className="flex flex-col gap-4 ">
-                <InstallBox code={frontMatter.code} source={frontMatter.link} version={frontMatter.version}/>
-              </div>
+
+
+              <a className='pt-4' href={frontMatter.button[1]}>
+
+                <GetStartedButtonSvg/>
+              </a>
             </div>
-            <div className="w-full flex-0 lg:w-1/2 md:flex-2 xl:flex-1 flex flex-col ">
+            <div className="flex flex-col w-[80%]">
               {/* <Benchmark /> */}
 
               <TabPanel TabpanelValue={frontMatter.Tabpanel} />
             </div>
           </main>
         </div>
-        <div className=' px-8 py-16 lg:px-40 md:py-20'>
+       <div className='py-24 bg-bgLight'>
+          <APISection data={frontMatter.Api} />
+       </div>
+        <div>
+          <FeaturesSection/>
+        </div>
+        <div className='bg-bgLight py-24'>
+          <ResearchPaper/>
+        </div>
+        <div className='px-4 py-24'>
+         
+          <HowTo props={frontMatter.How} />
+        </div>
+        {/* <div className=' px-8 py-16 lg:px-40 md:py-20'>
           <MDXContent >
             <HomeContent />
           </MDXContent>
-        </div>
+        </div> */}
       </Layout>
     </div>
   );
