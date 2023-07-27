@@ -165,8 +165,12 @@ table.tablecostum p {
 @tailwind utilities;
 
 
-.navbar{
+#homepage .navbar{
   @apply w-full lg:w-[85%]  mx-auto bg-transparent;
+} 
+
+.navbar{
+  @apply w-full lg:w-[90%] mx-auto bg-transparent;
 } 
 
 .navbar:before {
@@ -183,9 +187,14 @@ table.tablecostum p {
     content: "";
 }
 
+#homepage .navbar--fixed-top{
+    @apply fixed lg:-translate-x-1/2 lg:left-1/2 lg:transform ;
+}
+
 .navbar--fixed-top{
     @apply fixed lg:-translate-x-1/2 lg:left-1/2 lg:transform ;
 }
+
 
 .HowCode > div{
   @apply w-full m-0;
