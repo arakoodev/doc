@@ -24,7 +24,7 @@ const FeaturesSection = () => {
                     </h2>
 
                 </div>
-                {console.log(features)}
+                {/* {console.log(features)} */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full lg:w-[90%] mx-auto">
                     {features.map((feature, index) => (
                         <FeatureCard
@@ -47,7 +47,7 @@ const FeatureCard = ({ title, description, icon, style }) => {
         <div className="bg-[#F5F5F5] p-6 flex items-center h-36 mx-2  rounded-3xl relative">
 
             {/* <img src={`/svg/benefits/${icon}`} alt="" className="-left-4 top-2 w-36  h-full  absolute lg:top-4 lg:-left-16  lg:w-1/2 lg:h-32" /> */}
-{console.log(style)}
+{/* {console.log(style)} */}
             <div className="flex items-center justify-center rounded-full border border-solid text-orange-600 border-gray-300 bg-[#F7F7F7] bg-opacity-50 w-24 h-20  p-4  mr-6 shadow-lg">
                 <FontAwesomeIcon icon={icon} size='2xl' className={` ${style}`} />
             </div>

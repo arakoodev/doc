@@ -26,6 +26,8 @@
   --ifm-footer-background-color: #0A2B3A;
   --ifm-footer-color: #8BA5B0;
   --ifm-footer-link-color: #8BA5B0;
+  /* --ifm-global-spacing: 5rem; */
+  /* --ifm-spacing-vertical: 5rem; */
 } 
 
 
@@ -187,6 +189,9 @@ table.tablecostum p {
 
 .HowCode > div{
   @apply w-full m-0;
+}
+.padding-top--md{
+  @apply mt-20 md:mt-52;
 }
 
 .rotate-270 {
