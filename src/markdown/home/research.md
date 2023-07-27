@@ -1,10 +1,14 @@
 ---
 subtitle: ["[", "The Research Paper", "]"]
 title: "Prompting Is Programming: A Query Language For Large Language Models"
-author: "Luca Beurer Kellner, Marc Fischer, Martin Vechev"
+authors: ["Luca Beurer Kellner,", "Marc Fischer,", "Martin Vechev"]
+authorsImg: 
+    - "/img/avatar1.png"
+    - "/img/avatar2.png"
+    - "/img/avatar3.png"
 icon: /svg/research/flag.svg
-conference: "ACM SIGPLAN PLDI'23"
-location: "SRIlab ETH Zurich, Switzerland"
+conference: ["Accepted at","ACM SIGPLAN PLDI'23"]
+location: ["fa-regular fa-flag","SRIlab","SRIlab ETH Zurich, Switzerland"]
 experiment: 
     title: Experimental Results
     desc: Compared to standard decoding using 🤗 Transformers' `generate()` function, LMQL allows for high-level control and requires fewer tokens to be processed.
