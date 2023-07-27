@@ -170,7 +170,7 @@ table.tablecostum p {
 } 
 
 .navbar{
-  @apply w-full lg:w-[90%] mx-auto bg-transparent;
+  @apply w-full mx-auto bg-transparent;
 } 
 
 .navbar:before {
@@ -203,7 +203,7 @@ table.tablecostum p {
    @apply pt-12 ;
 }
 .padding-top--md{
-  @apply mt-20 md:mt-52;
+  @apply mt-12;
 }
 
 .rotate-270 {
