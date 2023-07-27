@@ -1,5 +1,5 @@
 ---
-step: "[ Step 01. ]"
+step: ["[","Step 01.","]"]
 title: "Push to deploy"
 description: "Install Cosmic in just one command. Once installed, your content is waiting to be delivered.  "
 ---

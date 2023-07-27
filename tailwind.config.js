@@ -11,8 +11,10 @@ module.exports = {
       "Quicksand": [ "Sora"],
       'display': ['Oswald', ],
       'body': ['"Open Sans"', ],
+      'Switzer': ['Switzer', "sans-serif"],
     }, 
     colors: {
+      "head": "#083040",
       "bgLight": "#F8F4F1",
       black: colors.black,
       white: colors.white,

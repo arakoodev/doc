@@ -48,13 +48,13 @@ export default function Home() {
         >
           <main className="mx-auto my-0 flex  w-full flex-col items-center  xl:gap-8   lg:max-w-[var(--max-width)] lg:justify-between">
             <div className="flex items-center flex-col text-center mb-12 lg:mb-0 lg:w-3/5 ">
-              <h1 className="mt-0 mb-12 text-[26pt] font-semibold font-Quicksand leading-none text-gray-900 md:text-[32pt] lg:text-[38pt] xl:text-[3.5em] ">
+              <h1 className="mt-0 mb-8 text-[26pt]  font-semibold font-Quicksand leading-none text-head md:text-[32pt] lg:text-[38pt] xl:text-[3.5em] ">
                 {frontMatter.title[0]}
                 <br />
                 {frontMatter.title[1]}
 
               </h1>
-              <p className="text-[1.3rem] leading-normal text-gray-600">
+              <p className="text-[1.3rem] leading-normal text-gray-400">
                 {frontMatter.desc}
               </p>
 

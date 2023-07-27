@@ -1,5 +1,5 @@
 ---
-step: "[  Step 02.  ]"
+step: ["[","Step 02.","]"]
 title: "Connect to your Bucket"
 description: "Log in to your Cosmic account and go to Bucket > Settings > API Access to get your Bucket slug and API access keys."
 ---

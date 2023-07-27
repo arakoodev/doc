@@ -15,17 +15,17 @@ const HowTo = (props) => {
         <div className="my-8 max-w-screen-lg mx-auto">
 
             <div className='text-center mb-16'>
-                <p className='text-gray-700 font-bold uppercase'>
+                <p className='text-head font-Quicksand font-semibold uppercase'>
                     {subtitle[0]}
-                    &nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
                     {subtitle[1]}
-                    &nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
                     {subtitle[2]}
                 </p>
-                <h1 className="mt-0 mb-6 text-[26pt] font-semibold font-Quicksand leading-none text-gray-900 md:text-[32pt] lg:text-[38pt] xl:text-[3.5em] ">
+                <h1 className="mt-0 mb-6 text-[26pt] font-semibold font-Quicksand leading-none text-head md:text-[32pt] lg:text-[38pt] xl:text-[3.5em] ">
                     {headings}
                 </h1>
-                <p className="text-lg mb-6 w-[80%] mx-auto">
+                <p className="text-lg text-[#666666] mb-6 w-[80%] mx-auto">
                     {desc}
                 </p>
             </div>
@@ -86,9 +86,15 @@ const StepCard = ({ step, title, description, reversed, children }) => {
             </div>
             <div className={`bg-white flex  flex-col md:w-1/2 px-4 md:px-0 justify-center 
             ${reversed ? "" : "md:pl-4"}`}>
-                <p className="text-normal text-orange-600 font-semibold mb-2">{step}</p>
-                <h2 className="text-2xl font-semibold mb-4">{title}</h2>
-                <p>{description}</p>
+                <p className="text-sm uppercase text-orange-600 font-Quicksand font-semibold mb-4">
+                 {step[0]}
+                    &nbsp;&nbsp;&nbsp;
+                 {step[1]}
+                    &nbsp;&nbsp;&nbsp;
+                 {step[2]}
+                </p>
+                <h2 className="text-2xl font-Quicksand font-semibold mb-2">{title}</h2>
+                <p className='font-sans text-[#666666]'>{description}</p>
             </div>
         </div>
     );

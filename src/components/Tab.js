@@ -31,7 +31,7 @@ function TabPanel({ TabpanelValue }) {
                         <div className='py-0' >
                             <div className="py-3 text-center bg-gray-800  text-white border-0 rounded-t-2xl border-b border-solid border-bgLight"></div>
     
-                            <div className="aspect-w-16 aspect-h-9"> <iframe src={`https://www.youtube.com/embed/${TabpanelValue.tab2.youtube}`} title="Google — Year in Search 2022" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
+                            <div className="aspect-w-16 aspect-h-9"> <iframe src={`https://www.youtube.com/embed/${TabpanelValue.tab3.youtube}`} title="Google — Year in Search 2022" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
                         </div>
                     }
                 </div>
@@ -63,7 +63,7 @@ function TabPanel({ TabpanelValue }) {
                                 : ' outline-0   focus-visible:outline-4 focus-visible:outline-offset-1 -visible:outline-neutral-700  font-regular transition ease-out duration-200  dark:shadow-neutral-900  shadow-sm text-ms leading-4  m-0 '
                                 }`}></div>
                             <p className='m-0 py-4'>
-                                {TabpanelValue.tab1.title}
+                                {TabpanelValue.tab2.title}
                             </p>
                         </div>
                     </button>
@@ -77,7 +77,7 @@ function TabPanel({ TabpanelValue }) {
                                 : ' outline-0   focus-visible:outline-4 focus-visible:outline-offset-1 -visible:outline-neutral-700  font-regular transition ease-out duration-200  dark:shadow-neutral-900  shadow-sm text-ms leading-4  m-0 '
                                 }`}></div>
                             <p className='m-0 py-4'>
-                                {TabpanelValue.tab1.title}
+                                {TabpanelValue.tab3.title}
                             </p>
                         </div>
                     </button>

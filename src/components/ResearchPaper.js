@@ -1,46 +1,69 @@
 // src/components/ResearchPaper.js
 import React from 'react';
-
-
+import MDXContent from '@theme/MDXContent';
+import Research, {frontMatter as research} from "../markdown/home/research.md"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 const ResearchPaper = () => {
+    const {} = research
     return (
-        <div className="flex flex-col md:grid grid-cols-2 gap-14 py-10 px-4 lg:w-[85%]  mx-auto">
+        <div className="flex text-[#3E3E59] flex-col md:grid grid-cols-2 gap-14 py-10 px-4 lg:w-[85%] text-sm  mx-auto">
+            {console.log(research)}
             <div className='w-full'>
-                <p className='text-gray-700 font-bold uppercase'>[ &nbsp; The Research Paper &nbsp; ]</p>
-                <h1 className="text-4xl font-bold mb-4">Prompting Is Programming: A Query Language For Large Language Models</h1>
+                <p className='text-head font-Quicksand mb-4 text-sm font-semibold uppercase'>[ &nbsp; The Research Paper &nbsp; ]</p>
+                <h1 className="text-2xl text-[#23262F] font-Quicksand font-bold mb-4">Prompting Is Programming: A Query Language For Large Language Models</h1>
 
-               <div className='flex gap-4'>
-                 <p className="font-semibold ">Accepted at ACM SIGPLAN PLDI'23</p>
-                 <p className="font-semibold">SRIlab ETH Zurich, Switzerland</p>
+                <div className='flex gap-4 font-Quicksand   text-[#083040]'>
+                    <p className="font-normal ">
+                        <span className='text-[#687E87] font-light'>Accepted at </span> 
+                        ACM SIGPLAN PLDI'23
+                    </p>
+                    <p className="font-normal">
+                        <FontAwesomeIcon icon="fa-regular fa-flag" className='mr-2' />
+                        SRIlab 
+                        <span className='text-[#687E87] font-light'> ETH Zurich, Switzerland</span> 
+                    </p> 
                </div>
-                <p className="font-semibold">by Luca Beurer Kellner Marc Fischer Martin Vechev</p>
+                <hr className='border-b border-solid border-[#E6E8EC] my-2 mb-4'/>
+                <div className=" font-Quicksand flex font-light  items-center gap-4 mb-6"> 
+                    <span className="mr-0">by</span>  
+                    <span className='flex   items-center gap-2'>
+                        <img src="/img/avatar1.png"  /> 
+                        <strong className='font-normal'>Luca Beurer Kellner </strong>
+                    </span>
+                    <span className='flex items-center gap-2'>
+                        <img src="/img/avatar2.png"  /> 
+                        <strong className='font-normal'>Marc Fischer </strong> 
+                    </span>
+                    <span className='flex items-center gap-2'>
+                        <img src="/img/avatar3.png"  /> 
+                        <strong className='font-normal'>Martin Vechev</strong>
+                    </span>
+                </div>
 
-                <p>
-                    Large language models have demonstrated outstanding performance on a wide range of tasks such as question answering and code generation. On a high level, given an input, a language model can be used to automatically complete the sequence in a statistically-likely way. Based on this, users prompt these models with language instructions or examples, to implement a variety of downstream tasks. Advanced prompting methods can even imply interaction between the language model, a user, and external tools such as calculators. However, to obtain state-of-the-art performance or adapt language models for specific tasks, complex task- and model-specific programs have to be implemented, which may still require ad-hoc interaction.
-                </p>
-                <p>
-                    Based on this, we present the novel idea of Language Model Programming (LMP). LMP generalizes language model prompting from pure text prompts to an intuitive combination of text prompting and scripting. Additionally, LMP allows constraints to be specified over the language model output. This enables easy adaption to many tasks, while abstracting language model internals and providing high-level semantics.
-                </p>
-                <p>
-                    To enable LMP, we implement LMQL (short for Language Model Query Language), which leverages the constraints and control flow from an LMP prompt to generate an efficient inference procedure that minimizes the number of expensive calls to the underlying language model.
-                </p>
+                <div className="leading-6">
+                 <MDXContent >
+                     <Research />
+                 </MDXContent>
+               </div>
             </div>
             <div className='w-full'>
-                <h2 className="text-2xl font-semibold mb-4">Experimental Results</h2>
-                <p>Compared to standard decoding using 🤗 Transformers' generate() function, LMQL allows for high-level control and requires less tokens to be processed.</p>
-                <img src="/svg/research/cot.svg" alt="" />
-                <p className='text-center'>Chain-Of-Thought reasoning with LMQL vs. standard decoding.</p>
-                <img src="/svg/research/interactive.svg" alt="" />
-                <p>Query statistics of using LMQL for interactive language model querying vs. standard decoding.</p>
-                <a
-                    href="https://example.com/full-paper.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    // className="text-blue-500 font-semibold hover:underline"
-                >
-                    <img src="/svg/research/read.svg" alt="" />
-                    {/* Read full paper */}
-                </a>
+                <h2 className="text-2xl font-Quicksand text-head font-semibold mb-4">Experimental Results</h2>
+                <p className='text-head'>Compared to standard decoding using 🤗 Transformers' generate() function, LMQL allows for high-level control and requires less tokens to be processed.</p>
+               <div className='flex flex-col gap-4'>
+                    <img src="/svg/research/cot.svg" alt="" />
+                    <p className='text-center font-semibold text-[#23262F]'>Chain-Of-Thought reasoning with LMQL vs. standard decoding.</p>
+                    <img src="/svg/research/interactive.svg" alt="" />
+                    <p>Query statistics of using LMQL for interactive language model querying vs. standard decoding.</p>
+                    <a
+                        href="https://example.com/full-paper.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        // className="text-blue-500 font-semibold hover:underline"
+                    >
+                        <img src="/svg/research/read.svg" alt="" />
+                        {/* Read full paper */}
+                    </a>
+               </div>
             </div>
             
           
