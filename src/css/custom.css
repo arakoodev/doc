@@ -190,6 +190,9 @@ table.tablecostum p {
 .HowCode > div{
   @apply w-full m-0;
 }
+.margin-vert--lg{
+   @apply pt-12 ;
+}
 .padding-top--md{
   @apply mt-20 md:mt-52;
 }
