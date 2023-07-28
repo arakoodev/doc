@@ -2,28 +2,28 @@
 subtitle: ["[", "features", "]"]
 title: ["Some Benefits & ", "Advantages"]
 data: 
-  - title: Engagement
-    description: Get feedback from everyone in the organization and find insights to build the culture you desire.
+  - title: Open-Source
+    description: Get feedback from a friendly opensource community
     svg: fas fa-bullhorn
 
-  - title: Analytics
-    description: Utilize advanced people analytics to increase impact and innovation.
+  - title: Token Analytics
+    description: Token counts & costs built-in (next release).
     svg: far fa-chart-bar
     style: rotate-270
 
-  - title: Grow
-    description: Increase growth and engagement with Macrivate’s dynamic employee development tools.
+  - title: Testability
+    description: Testability through Jsonnet declarative prompt integration. Edgechain will integrate with most prompt A/B testing tools
     svg: fas fa-chart-line 
 
   - title: Performance
-    description: Identify your top performers, and equip every person to succeed with their work.
+    description: Built for scale. Java, Fastapi(upcoming), Go (upcoming) and nodejs(upcoming) as targets
     svg: fas fa-rocket
 
-  - title: Reimbursement
-    description: Engage and retain employees by connecting performance and compensation.
+  - title: Integrations & Streaming
+    description: Everything is an API. Edgechains supports Streaming out-of-the-box and integrations.
     svg: fas fa-random
 
-  - title: "OKR’s & Goals"
-    description: Operate the business in a way that bridges the gap between people and operations.
+  - title: Mult-LLM support
+    description: Will integrate with multiple LLM. OpenAI & LLama out-of-the-box
     svg: fas fa-bullseye
 ---
