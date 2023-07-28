@@ -5,15 +5,17 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}", ],
   theme: {
     fontFamily: {
-      'sans': ['Archivo', 'system-ui', ],
+      'sans': ['Inter', 'system-ui', ],
       'serif': ['Tinos', 'Georgia',  ],
       'mono': ['ui-monospace', 'SFMono-Regular', ],
-      "Quicksand": [ "Quicksand"],
+      "Quicksand": [ "Sora"],
       'display': ['Oswald', ],
       'body': ['"Open Sans"', ],
+      'Switzer': ['Switzer', "sans-serif"],
     }, 
     colors: {
-      "bgLight": "#FAF7F5",
+      "head": "#083040",
+      "bgLight": "#F8F4F1",
       black: colors.black,
       white: colors.white,
       gray: colors.gray,
@@ -22,6 +24,7 @@ module.exports = {
       indigo: colors.indigo,
       yellow: colors.yellow,
       red: colors.red,
+      orange: colors.orange,
       transparent: colors.transparent,
     }
   },
