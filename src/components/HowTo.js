@@ -57,7 +57,6 @@ const HowTo = (props) => {
 
 
 
-                </div>
             </div>
         </div>
     );
