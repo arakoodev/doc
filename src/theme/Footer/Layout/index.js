@@ -7,8 +7,8 @@ export default function FooterLayout({ style, links, logo, copyright }) {
         'footer--dark': style === 'dark',
       })}>
       <div className="container container-fluid flex flex-col">
-        <div className='flex flex-col md:flex-row gap-4'>
-          <div className='md:w-1/2'>
+        <div className='flex flex-col md:flex-row gap-4 mb-20'>
+          <div className='md:w-10/12'>
             <h3 className='font-normal'>Arakoo</h3>
             <p>Arakoo: Enabling Human-Centric ML, AI, and Data Applications</p>
           </div>
@@ -21,12 +21,13 @@ export default function FooterLayout({ style, links, logo, copyright }) {
             {copyright}
           </div>
         )} */}
-        <div className='flex flex-col-reverse md:flex-row  justify-between md:pt-16'>
+        <hr className='border-b border-solid border-[#4A6875] my-4'/>
+        <div className='flex flex-col-reverse md:flex-row  justify-between '>
           <p>Copyright © 2023 Arakoo Project</p>
-          <div className='flex flex-col md:flex-row md:gap-4'>
+          {/* <div className='flex flex-col md:flex-row md:gap-4'>
             <p >Privacy Policy</p>
             <p >Terms of Use</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
