@@ -9,7 +9,7 @@ export default function FooterLinkItem({item}) {
   const normalizedHref = useBaseUrl(href, {forcePrependBaseUrl: true});
   return (
     <Link
-      className="footer__link-item"
+      className="footer__link-item gap-3 flex items-center"
       {...(href
         ? {
             href: prependBaseUrlToHref ? normalizedHref : href,

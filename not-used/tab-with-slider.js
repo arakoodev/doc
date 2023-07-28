@@ -52,7 +52,7 @@ function TabPanel({ TabpanelValue }) {
                 <ul style={{ margin: "0px", listStyle: "none", gap: "2em", display: "flex", }}
                 
                 >
-                    {console.log(dots)}
+                   
                     
                     {dots}</ul>
             </div>
@@ -79,7 +79,7 @@ function TabPanel({ TabpanelValue }) {
     return (
         <div className="flex flex-col w-[17em] md:w-[35em] my-16 ">
             <Slider {...carouselSettings}>
-                {/* {console.log(TabpanelValue)} */}
+                
                 <div className="py-4 lg:py-0 rounded-md">
                    <div className="aspect-w-16 aspect-h-9 ro">
                         <iframe

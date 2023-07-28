@@ -6,75 +6,26 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 // import { MDXProvider } from '@mdx-js/react';
 // import { MDXRenderer } from '@docusaurus/mdx';
-import MDXContent from '@theme/MDXContent';
+// import MDXContent from '@theme/MDXContent';
+import GetStartedButtonSvg from "../../static/svg/getStatedHome.svg"
 
-import HomeContent, { frontMatter } from '../markdown/home/home.mdx';
-import Code1 from '../markdown/home/code1.md';
-import Code2 from '../markdown/home/code2.md';
+import HomeContent, {frontMatter} from '../markdown/home/home.mdx';
 
-import InstallBox from '../components/installBox';
+// import InstallBox from '../components/installBox';
 // import Benchmark from '../components/bookmark';
 import TabPanel from '../components/Tab';
 // import Quotes from '../components/blog/quotes';
-import CodeTabPanel from "../components/codeTab"
-import CodeTabPanel2 from "../components/codeTab2"
-import VersionsSection from '../components/VersionsSection';
+// import CodeTabPanel from "../components/codeTab"
+// import CodeTabPanel2 from "../components/codeTab2"
+// import VersionsSection from '../components/VersionsSection';
+import FeaturesSection from "../components/FeaturesSection";
+import APISection from '../components/APISection';
+import ResearchPaper from '../components/ResearchPaper';
+import HowTo from '../components/HowTo';
 
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
-
-  const handleDownload = () => {
-    const downloadUrl = 'https://github.com/arakoodev/EdgeChains/releases/download/0.3.0/flyfly.jar';
-
-    // Create an anchor element
-    const link = document.createElement('a');
-    link.href = downloadUrl;
-    link.download = 'flyfly.jar';
-
-    // Dispatch a click event on the anchor element
-    link.dispatchEvent(new MouseEvent('click'));
-
-    // Clean up the anchor element
-    URL.revokeObjectURL(link.href);
-    link.remove();
-  };
-
-  const handleDownload1 = () => {
-    const downloadUrl = 'https://github.com/arakoodev/EdgeChains/releases/download/0.3.0/edgechain-app-1.0.0.jar';
-
-    const link = document.createElement('a');
-    link.href = downloadUrl;
-    link.download = 'edgechain-app-1.0.0.jar';
-
-    link.dispatchEvent(new MouseEvent('click'));
-
-    URL.revokeObjectURL(link.href);
-    link.remove();
-  };
-
-  const handleDownload2 = () => {
-    const downloadUrl = 'https://github.com/arakoodev/EdgeChains/archive/refs/tags/0.3.0.zip';
-
-    const link = document.createElement('a');
-    link.href = downloadUrl;
-    link.download = 'EdgeChains-0.3.0.zip';
-
-    link.dispatchEvent(new MouseEvent('click'));
-
-    URL.revokeObjectURL(link.href);
-    link.remove();
-  };
-
-  const download = (p, f) => {
-    const anchor = document.createElement('a');
-    anchor.href = p;
-    anchor.download = f;
-    document.body.appendChild(anchor);
-    anchor.click();
-    document.body.removeChild(anchor);
-  };
-
+  const {siteConfig} = useDocusaurusContext();
   return (
     <div>
       {/* <a href="/blog/bun-v0.5.9" className="">
@@ -91,121 +42,53 @@ export default function Home() {
           <title>{frontMatter.title}</title>
         </Head>
         <div
+
           id="homepage"
-          className="px-4 md:px-4 xl:px-14  flex w-full flex-row items-center justify-center   pt-[5rem] pb-4 md:pb-[5rem]  text-indigo-950 lg:pt-16 xl:pt-[6rem] lg:pb-[8rem] bg-bgLight dark:bg-bgLight"
+          className="px-4 md:px-4 xl:px-14  flex w-full flex-col items-center justify-center   pt-[7rem] pb-4 md:pb-[5rem]  text-indigo-950 md:pt-52 lg:pb-[8rem] bg-white dark:bg-bgLight bg-[url('/img/backgroundPattern.png')]"
         >
-          <main className="mx-auto my-0 flex w-full flex-col items-center  xl:gap-8   lg:max-w-[var(--max-width)] lg:flex-row lg:justify-between">
-            <div className="lg:w-3/5">
-              <h1 className="mt-0 text-[26pt] font-medium font-Quicksand leading-none text-indigo-950 md:text-[32pt] lg:text-[38pt] xl:text-[4em] uppercase">
-                {frontMatter.title}
+          <main className="mx-auto my-0 flex  w-full flex-col items-center  gap-8   lg:max-w-[var(--max-width)] lg:justify-between">
+            <div className="flex items-center flex-col text-center mb-12 lg:mb-0 lg:w-3/5 ">
+              <h1 className="mt-0 mb-8 text-[26pt]  font-semibold font-Quicksand leading-none text-head md:text-[32pt] lg:text-[38pt] xl:text-[3.5em] ">
+                {frontMatter.title[0]}
+                <br />
+                {frontMatter.title[1]}
+
               </h1>
-              <p className="text-[1em] xl:w-3/4 py-6 xl:py-16 m-0 leading-normal dark:text-neutral-300">
+              <p className="text-[1.3rem] leading-normal text-gray-400">
                 {frontMatter.desc}
               </p>
-              <div className='flex gap-4 pb-6'>
-                <a href={frontMatter.git.link} className='rounded-full cursor-pointer hover:bg-bgLight hover:text-indigo-950  hover:border-indigo-950 border-solid hover:border bg-indigo-950 px-4 xl:px-8 no-underline hover:no-underline text-white duration-300 transition-all p-3 outline-0 border-0'>{frontMatter.git.title}</a>
-                <a href={frontMatter.learn.link} className='rounded-full cursor-pointer border-solid bg-bgLight border-indigo-950 px-4 xl:px-8 text-indigo-950 p-3 outline-0 border hover:bg-indigo-950 no-underline hover:no-underline hover:text-white duration-300 transition-all '>{frontMatter.learn.title}</a>
-              </div>
+
+
+              <a className='pt-4' href={frontMatter.button[1]}>
+
+                <GetStartedButtonSvg/>
+              </a>
             </div>
-            <div className="w-full flex-0 lg:w-1/2 md:flex-2 xl:flex-1 flex flex-col ">
+            <div className="flex flex-col w-[80%]">
               {/* <Benchmark /> */}
 
               <TabPanel TabpanelValue={frontMatter.Tabpanel} />
-              <div className='pt-12 md:pt-4 md:mx-10'><VersionsSection /></div>
-              {/* <div className="flex flex-col gap-4 py-4 md:mx-9">
-                <InstallBox code={frontMatter.code} source={frontMatter.link} version={frontMatter.version} />
-              </div> */}
-              {/* uncomment when installation is present */}
             </div>
           </main>
         </div>
-
-
-        <div className='third section bg-white text-black px-4 md:px-4 xl:px-14 py-24   text-center '>
-          <div className=' max-w-xl mx-auto flex flex-col justify-center gap-12 items-center'>
-            <h3 className=' text-4xl font-serif font-normal'>{frontMatter.Community.title} <br /> <span className=''>{frontMatter.Community.span}</span></h3>
-
-            <p>{frontMatter.Community.desc}</p>
-            <div className='flex gap-4'>
-              <a href={frontMatter.Community.github.link} className='border border-solid text-black no-underline bg-white border-black p-4  hover:bg-indigo-950 hover:text-white hover:no-underline rounded-sm duration-300 transition-all'>{frontMatter.Community.github.label}</a>
-              <a href={frontMatter.Community.discord.link} className='border border-solid text-black no-underline hover:bg-indigo-950 hover:text-white hover:no-underline bg-white border-black p-4 rounded-sm duration-300 transition-all'>{frontMatter.Community.discord.label}</a>
-            </div>
-          </div>
+       <div className='py-24 bg-bgLight'>
+          <APISection data={frontMatter.Api} />
+       </div>
+        <div>
+          <FeaturesSection/>
         </div>
-
-        <div className="Fourth bg-bgLight text-black section px-4 md:px-4 xl:px-14 py-16">
-          <h3 className="text-center font-normal font-serif text-5xl mb-16">{frontMatter.How.headings}</h3>
-          <div className="flex flex-col md:flex-row md:gap-4">
-            <div className="flex flex-col md:w-1/2 md:pr-16 justify-around mb-8 md:mb-0">
-              <div className='text-sm'>
-                <h4 className="font-serif font-normal uppercase text-xl md:text-3xl">{frontMatter.How.firstStep.title}</h4>
-                <div className='text-sm'>
-                  <p className='mb-2'>{frontMatter.How.firstStep.description}</p>
-                </div>
-                <div className="download-link">
-                  <button onClick={handleDownload} className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded mb-4">
-                    Download flyfly.jar
-                  </button>
-                </div>
-                <div className="download-link">
-                  <button onClick={handleDownload1} className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded mb-4">
-                    Download edgechain-app-1.0.0.jar
-                  </button>
-                </div>
-                <div className="download-link">
-                  <button onClick={handleDownload2} className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded mb-4">
-                    Download Source code (zip)
-                  </button>
-                </div>
-              </div>
-
-              <div className='text-sm'>
-                <h4 className="font-serif font-normal uppercase text-xl md:text-3xl">{frontMatter.How.secondStep.title}</h4>
-                <div className='text-sm'>
-                  <p className='m-0'>{frontMatter.How.secondStep.description}</p>
-                </div>
-              </div>
-            </div>
-
-            {/* in the middle here add "1" with circular border, and a horizontal line to the bottom */}
-
-            <div className="hidden md:flex flex-col items-center relative ">
-              <div className="flex items-center justify-center bg-bgLight rounded-full h-16 w-16 border border-indigo-700 border-solid mb-4">
-                <span className="text-2xl">1</span>
-              </div>
-              <div className="flex items-center justify-center z-20 absolute top-[20em] bg-bgLight rounded-full h-16 w-16 border border-indigo-700 border-solid mb-4">
-                <span className="text-2xl">2</span>
-              </div>
-              <hr className="border-b absolute top-10  bottom-[-2.5em] md:bottom-[-2.5em] left-1/2 transform -translate-x-1/2 md:translate-x-0 border-zinc-700 border-solid h-3/4 w-px bg-zinc-400" />
-              <hr className="border-b absolute top-10  bottom-[-2.5em] md:bottom-[-2.5em] left-1/2 transform -translate-x-1/2 md:translate-x-0 border-zinc-700 border-solid h-[1em] z-10 w-px bg-indigo-700" />
-            </div>
-
-            <div className="flex flex-col md:gap-16 md:pl-10 md:w-1/2">
-              <div className="">
-                {/* <MDXContent>
-                  <Code1 />
-                </MDXContent> */}
-                <CodeTabPanel />
-              </div>
-              <div>
-                {/* <MDXContent>
-                 <Code1/> 
-               </MDXContent> */}
-                <CodeTabPanel2 />
-              </div>
-            </div>
-          </div>
-          <div className="mt-12 text-xl text-center">
-            <p>For detailed instructions, refer to the <a href="https://www.arakoo.ai/doc/Getting%20started/Quickstart" target="_blank" rel="noopener noreferrer">Quickstart Guide</a>.</p>
-          </div>
-
+        <div className='bg-bgLight py-24'>
+          <ResearchPaper/>
         </div>
-
-        <div className='dark:bg-white bg-white prose-h4:mb-3 prose-h4:font-normal prose-h4:text-xl dark:text-black px-8 py-16 lg:px-40 md:py-20 prose max-w-none prose-img:my-0 prose-img:mt-1 prose-headings:text-black prose-headings:text-semibold prose-headings:font-serif prose-code:bg-white prose-code:rounded-md prose-code:border-black prose-code:border prose-code:border-solid prose-p:text-normal  '>
+        <div className='px-4 py-24'>
+         
+          <HowTo props={frontMatter.How} />
+        </div>
+        {/* <div className=' px-8 py-16 lg:px-40 md:py-20'>
           <MDXContent >
             <HomeContent />
           </MDXContent>
-        </div>
+        </div> */}
       </Layout>
     </div>
   );
