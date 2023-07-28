@@ -195,11 +195,6 @@ const config = {
           //   position: 'right',
           // },
           {
-            to: 'kb/',
-            label: 'Kb',
-            position: 'right',
-          },
-          {
             to: 'privacy/',
             label: 'Privacy',
             position: 'right',
@@ -255,6 +250,10 @@ const config = {
               {
                 label: 'GitHub',
                 href: 'https://github.com/arakoodev',
+              },
+                {
+                label: 'Knowledgebase',
+                href: 'kb',
               },
             ],
           },
