@@ -27,19 +27,19 @@ const ResearchPaper = () => {
                </div>
                 <hr className='border-b border-solid border-[#E6E8EC] my-2 mb-4'/>
                 <div className=" font-Quicksand flex font-light  items-center gap-4 mb-6"> 
-                    // <span className="mr-0">by</span>  
-                    // <span className='flex   items-center gap-2'>
-                    //     <img src={authorsImg[0]}  /> 
-                    //     <strong className='font-normal'>{authors[0]} </strong>
-                    // </span>
-                    // <span className='flex items-center gap-2'>
-                    //     <img src={authorsImg[1]}  /> 
-                    //     <strong className='font-normal'>{authors[1]}</strong> 
-                    // </span>
-                    // <span className='flex items-center gap-2'>
-                    //     <img src={authorsImg[2]}  /> 
-                    //     <strong className='font-normal'>{authors[2]}</strong>
-                    // </span>
+                    <!--span className="mr-0">by</span>  
+                    <span className='flex   items-center gap-2'>
+                        <img src={authorsImg[0]}  /> 
+                        <strong className='font-normal'>{authors[0]} </strong>
+                    </span>
+                    <span className='flex items-center gap-2'>
+                        <img src={authorsImg[1]}  /> 
+                        <strong className='font-normal'>{authors[1]}</strong> 
+                    </span>
+                    <span className='flex items-center gap-2'>
+                        <img src={authorsImg[2]}  /> 
+                        <strong className='font-normal'>{authors[2]}</strong>
+                    </span-->
                 </div>
 
                 <div className="leading-6">
