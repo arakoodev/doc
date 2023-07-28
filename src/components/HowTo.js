@@ -10,7 +10,7 @@ import Step2, { frontMatter as frontMatterStep2 } from "../markdown/home/step/st
 import Step3, { frontMatter as frontMatterStep3 } from "../markdown/home/step/step3.md"
 
 const HowTo = (props) => {
-    const { headings, desc, subtitle, button } = props.props
+    const { headings, desc, subtitle } = props.props
     return (
         <div className="my-8 max-w-screen-lg mx-auto">
 
@@ -54,14 +54,6 @@ const HowTo = (props) => {
                 >
                     <Step3 />
                 </StepCard>
-
-
-
-                <div className='flex mx-auto gap-2 px-4 md:px-0 lg:gap-8'>
-                    <a href={button[1]} className='cursor-pointer'>
-                        <QuickStart className='w-32 md:w-full' />
-
-                    </a >
 
 
 
