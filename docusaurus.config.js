@@ -96,6 +96,17 @@ const config = {
         blogPostComponent: "/src/components/case-studies/BlogPostPage"
       },
     ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        blogTitle: "kb",
+        id: 'kb',
+        routeBasePath: 'kb',
+        path: './kb',
+        // blogListComponent: "/src/components/case-studies/BlogListPage",
+        // blogPostComponent: "/src/components/case-studies/BlogPostPage"
+      },
+    ],
 
   ],
 
@@ -184,10 +195,16 @@ const config = {
           //   position: 'right',
           // },
           {
+            to: 'kb/',
+            label: 'Kb',
+            position: 'right',
+          },
+          {
             to: 'privacy/',
             label: 'Privacy',
             position: 'right',
           },
+          
           {
             to: 'doc/category/getting-started',
             activeBasePath: 'doc',
