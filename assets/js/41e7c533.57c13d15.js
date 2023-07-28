@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[2247],{2396:a=>{a.exports=JSON.parse('{"label":"chain-of-thought","permalink":"/kb/tags/chain-of-thought","allTagsPath":"/kb/tags","count":2}')}}]);

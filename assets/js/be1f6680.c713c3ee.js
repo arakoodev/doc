@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[6820],{3379:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-blog","id":"kb"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[4061],{2507:a=>{a.exports=JSON.parse('{"label":"github","permalink":"/kb/tags/github","allTagsPath":"/kb/tags","count":1}')}}]);
