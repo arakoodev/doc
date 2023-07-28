@@ -3,10 +3,10 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faCodeBranch, } from '@fortawesome/free-solid-svg-icons';
-import { faStackOverflow, faDiscord, faTwitter } from '@fortawesome/free-brands-svg-icons'; // Importing from the brands icon set
-import React from 'react';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faBook, faCodeBranch, } from '@fortawesome/free-solid-svg-icons';
+// import { faStackOverflow, faDiscord, faTwitter } from '@fortawesome/free-brands-svg-icons'; // Importing from the brands icon set
+// import React from 'react';
 
 
 /** @type {import('@docusaurus/types').Config} */
@@ -241,7 +241,7 @@ const config = {
               {
                 label: 'Stack Overflow',
                 href: 'https://stackoverflow.com/questions/tagged/arakoo',
-                icon: <FontAwesomeIcon icon={faStackOverflow} />,
+                
               },
               {
                 label: 'Discord',
