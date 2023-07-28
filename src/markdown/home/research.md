@@ -12,7 +12,7 @@ location: ["fa-regular fa-flag","Google","Google, Mountain View"]
 experiment: 
     title: Why Jsonnet ?
     desc: Being a superset of JSON, the syntax is very similar.
-    img: ["/svg/research/cot.svg","/svg/research/interactive.svg", ]
+    img: ["/svg/research/jsonnet1.png","/svg/research/jsonnet-conditional.png","/svg/research/jsonnet-functions.png" ]
     imgDesc: ["Simple Jsonnet syntax.", "Jsonnet conditionals."]
     readmore: 
         title: Read the full documentation
