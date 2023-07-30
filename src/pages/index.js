@@ -47,7 +47,7 @@ export default function Home() {
           className="px-4 md:px-4 xl:px-14  flex w-full flex-col items-center justify-center   pt-[7rem] pb-4 md:pb-[5rem]  text-indigo-950 md:pt-52 lg:pb-[8rem] bg-white dark:bg-bgLight bg-[url('/img/backgroundPattern.png')]"
         >
           <main className="mx-auto my-0 flex  w-full flex-col items-center  gap-8   lg:max-w-[var(--max-width)] lg:justify-between">
-            <div className="flex items-center flex-col text-center mb-12 lg:mb-0 lg:w-3/5 ">
+            <div className="flex items-center flex-col text-center mb-12 lg:mb-0">
               <h1 className="mt-0 mb-8 text-[26pt]  font-semibold font-Quicksand leading-none text-head md:text-[32pt] lg:text-[38pt] xl:text-[3.5em] ">
                 {frontMatter.title[0]}
                 <br />
