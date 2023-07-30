@@ -10,7 +10,7 @@ export default function FooterLayout({ style, links, logo, copyright }) {
         <div className='flex flex-col md:flex-row gap-4 mb-20'>
           <div className='md:w-10/12 font-sans'>
             <h3 className='font-normal'>Arakoo</h3>
-            <p>Arakoo: Enabling Human-Centric ML, AI, and Data Applications</p>
+            <p>Arakoo: Building chain & prompts through declarative orchestration </p>
           </div>
           {links}
         </div>
