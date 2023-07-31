@@ -26,6 +26,7 @@
   --ifm-footer-background-color: #0A2B3A;
   --ifm-footer-color: #8BA5B0;
   --ifm-footer-link-color: #8BA5B0;
+  --ifm-navbar-height: 0px;
   /* --ifm-global-spacing: 5rem; */
   /* --ifm-spacing-vertical: 5rem; */
 } 
