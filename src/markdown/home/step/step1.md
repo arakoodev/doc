@@ -1,7 +1,8 @@
 ---
 step: ["[","Step 01.","]"]
-title: "Push to deploy"
-description: "Install Cosmic in just one command. Once installed, your content is waiting to be delivered.  "
+title: "Download The Assets"
+description: "Download from the latest release i.e. 0.5.0 - the jar(edgechain.jar) and associated files(source code (zip) or Source code(tar.gz)) 
+  "
 ---
 
 ```jsx title="/step1.js"
