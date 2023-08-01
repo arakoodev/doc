@@ -1,19 +1,18 @@
-```jsx title="/code7.md"
-    const CustomNextArrow = (props) => {
-        const { onClick } = props;
-        return (
-            <div className="custom-arrow custom-next-arrow hidden md:flex absolute -left-10 top-40" onClick={onClick}>
-                <FontAwesomeIcon icon={faChevronLeft} size='2x' />
-            </div>
-        );
-    };
+```
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
+import io.edgechains.common.security.ExcludeMappingFilter;
+import java.util.List;
 
-    const CustomPrevArrow = (props) => {
-        const { onClick } = props;
-        return (
-            <div className="custom-arrow custom-prev-arrow hidden md:flex md:absolute -right-10 top-40" onClick={onClick}>
-                <FontAwesomeIcon icon={faChevronRight} size='2x' />
-            </div>
-        );
-    };
+@Bean
+@Primary
+public ExcludeMappingFilter mappingFilter() {
+    ExcludeMappingFilter mappingFilter = new ExcludeMappingFilter();
+    mappingFilter.setRequestPost(
+        List.of("/v1/examples/**", "/v1/signup", "/v1/login", "/v1/refreshToken"));
+    mappingFilter.setRequestGet(List.of("/v1/examples/**"));
+    mappingFilter.setRequestDelete(List.of("/v1/examples/**"));
+    mappingFilter.setRequestPut(List.of("/v1/examples/**"));
+    return mappingFilter;
+}
 ```
