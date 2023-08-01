@@ -1,7 +1,8 @@
 ---
 step: ["[","Step 03.","]"]
-title: "Get your content"
-description: "Use the find method to fetch your content into your application. From simple to complex queries; search, filter, sort, and display content to meet your various needs."
+title: "Run the Command"
+description: "Execute the following command in your IDE’s terminal:
+java -jar edgechain.jar jbang wikiExample.java. "
 ---
 
 ```jsx title="/step1.js"
