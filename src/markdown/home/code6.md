@@ -1,9 +1,17 @@
-```jsx title="/hash"
-const password = “super-secure-pa$$word”;
+```
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 
-const hash = await Bun.password.hash(password);
-// => $argon2d$v=19$m=65536, t=2, p=1$tFq+9AVr1bfPxQdh...
-
-const isMatch = await Bun.password.verify(password, hash);
-// => true
+@Bean
+@Primary
+public SupabaseEnv supabaseEnv() {
+    SupabaseEnv env = new SupabaseEnv();
+    env.setUrl(""); // SupabaseURL
+    env.setAnnonKey(""); // Supabase AnnonKey
+    env.setJwtSecret(""); // Supabase JWTSecret
+    env.setDbHost(""); // jdbc:postgresql://${SUPABASE_DB_URK}/postgres
+    env.setDbUsername("postgres");
+    env.setDbPassword("");
+    return env;
+}
 ```
