@@ -1,7 +1,7 @@
 ---
 step: ["[","Step 02.","]"]
-title: "Connect to your Bucket"
-description: "Log in to your Cosmic account and go to Bucket > Settings > API Access to get your Bucket slug and API access keys."
+title: "Set Up your IDE"
+description: "The edge chains 0.5.0  folder when unzipped consists of an Example folder. Copy all the contents from the Examples folder and paste them into your desired folder. Navigate to the directory where you have extracted the files in your preferred IDE."
 ---
 
 ```jsx title="/step1.js"
