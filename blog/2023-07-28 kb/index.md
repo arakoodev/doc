@@ -1,6 +1,6 @@
 ---
 slug: kb
-title: KB
+title: GitHub Link
 authors:
   name: Arakoo
   title: Arakoo Core Team
