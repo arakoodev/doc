@@ -4,7 +4,7 @@ The "Simple ChatGPT" implementation is a basic chatbot powered by EdgeChains. It
 
 To run the "Simple ChatGPT" implementation, please follow these steps:
 
-1. Make sure you have the `edgechain.jar` available.
+1. Make sure you have the edgechain.jar available.
 If you haven't downloaded them yet, please refer to the [Installation Guide](/doc/Getting%20started/Installation.md)  for instructions. Additionally, the [Quickstart](/doc/Getting%20started/Quickstart.md) guide provides a helpful overview and easy setup for your project.
 
 2. Open your terminal or command prompt and navigate to the directory where your project and the JAR files are located.
