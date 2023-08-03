@@ -16,7 +16,7 @@ Follow these steps to quickly setup and run your first EdgeChains application in
 
 > **Note:** IntelliJ is recommended as it automatically indexes the project and selects the **Java SDK 17 or above**, which is required for EdgeChains.
 
-**Step 3:** Copy all the contents from extracted `Source code.zip` and paste them into your working directory. Add the `flyfly.jar` file in the Script folder on the root directory and `edgechain-app-1.0.0.jar` in the FlySpring/edgechain-app/target directory.
+**Step 3:** Copy all the contents from extracted `Source code.zip` and paste them into your working directory. 
 
 **Step 4:** Navigate to the directory in which you have extracted the files within the IntelliJ IDE.
 
