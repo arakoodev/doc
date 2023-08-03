@@ -8,7 +8,8 @@ Follow these steps to quickly setup and run your first EdgeChains application in
 
 ### Initial setup
 
-**Step 1:** Go to the [latest release](https://github.com/arakoodev/EdgeChains/releases/tag/0.5.0) of EdgeChains. From the assets section, download the `jar(edgechain.jar)` and `associated files(source code (zip) or Source code(tar.gz))'. A single jar file is necessary for running EdgeChains.
+**Step 1:** Go to the [latest release](https://github.com/arakoodev/EdgeChains/releases/tag/0.5.0) of EdgeChains. From the assets section, download the `jar(edgechain.jar)` and `associated files(source code (zip) or Source code(tar.gz))`. A single jar file is necessary for running EdgeChains.
+
 **Step 2:** Create a new **Java JBang project** in your desired location.
 
 > If you are not familiar with JBang projects, you can install the JBang plugin in IntelliJ IDE to easily set up and manage your project.
