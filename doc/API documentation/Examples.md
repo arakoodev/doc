@@ -522,3 +522,63 @@ To query data from Pinecone, you can use the following steps:
 
 ---
 ### ReactChain Application
+
+
+
+<details>
+<summary>Click here for sample code</summary>
+
+```java
+ @RequestMapping("/v1/examples")
+  public class ExampleController {
+
+    @GetMapping(value = "/react-chain")
+    public String reactChain(ArkRequest arkRequest) {
+      String prompt = (String) arkRequest.getBody().get("prompt");
+      StringBuilder context = new StringBuilder();
+      JsonnetLoader loader =
+          new FileJsonnetLoader("./react-chain.jsonnet")
+              .put("context", new JsonnetArgs(DataType.STRING, "This is context"))
+              .put("gptResponse", new JsonnetArgs(DataType.STRING, ""))
+              .loadOrReload();
+      String preset = loader.get("preset");
+
+      prompt = preset + " \nQuestion: " + prompt;
+
+      String gptResponse =
+          userChatEndpoint
+              .chatCompletion(prompt, "React-Chain", arkRequest)
+              .blockingFirst()
+              .getChoices()
+              .get(0)
+              .getMessage()
+              .getContent();
+      context.append(prompt);
+      loader.put("context", new JsonnetArgs(DataType.STRING, context.toString()));
+      loader.put("gptResponse", new JsonnetArgs(DataType.STRING, gptResponse));
+
+      while (!checkIfFinished(gptResponse)) {
+        loader.loadOrReload();
+        prompt = loader.get("prompt");
+        gptResponse =
+            userChatEndpoint
+                .chatCompletion(prompt, "React-Chain", arkRequest)
+                .blockingFirst()
+                .getChoices()
+                .get(0)
+                .getMessage()
+                .getContent();
+        context.append("\n" + prompt);
+        loader.put("context", new JsonnetArgs(DataType.STRING, context.toString()));
+        loader.put("gptResponse", new JsonnetArgs(DataType.STRING, gptResponse));
+      }
+      return gptResponse.substring(gptResponse.indexOf("Finish[") + 7, gptResponse.indexOf("]"));
+    }
+
+    private boolean checkIfFinished(String gptResponse) {
+      return gptResponse.contains("Finish");
+    }
+  }
+}
+```
+</details>
