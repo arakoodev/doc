@@ -581,4 +581,4 @@ React prompting as the name infer is a combination of reason and act (REason +AC
 }
 ```
 </details>
-The above code takes the initial Input, loads the JsonnetFile to extract the base prompt i.e “preset” then concatenates with the output provided by OpenAI Chat Completion. `prompt = preset + " \nQuestion: " + prompt.` This entire thing happens in a loop where you are extracting the answer, passing it to jsonnet file and then again passing `${preset} + $ {output}` until Chat Completion returns “Finish”. `return gptResponse.contains("Finish")`
+The above code takes the initial Input, loads the JsonnetFile to extract the base prompt i.e “preset” then concatenates with the output provided by OpenAI Chat Completion. `prompt = preset + " \nQuestion: " + prompt` This entire thing happens in a loop where you are extracting the answer, passing it to jsonnet file and then again passing `${preset} + $ {output}` until Chat Completion returns “Finish”. `return gptResponse.contains("Finish")`
