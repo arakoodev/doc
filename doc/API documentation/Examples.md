@@ -521,7 +521,7 @@ To query data from Pinecone, you can use the following steps:
 </details>
 
 ---
-### ReactChain Application
+## 9. ReactChain Application
 React prompting as the name infer is a combination of reason and act (REason +ACt = REACT). An interaction takes place between external APIs such as Wikipedia and your chain in order to retrieve information. When you ask a question, your chain performs an action to retrieve the information and provide an answer based on the information retrieved. This is continued in a loop until the LLM returns “Finish” as a response. In our case, the LLM used is OpenAI Chat Completion.
 
 <details>
