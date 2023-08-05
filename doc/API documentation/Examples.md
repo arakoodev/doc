@@ -10,6 +10,7 @@ These example APIs can be added to the `EdgeChainApplication.java` file in the s
 - [6. Creating HistoryContext (Using Redis) Controller](#6-creating-historycontext-using-redis-controller)
 - [7. Creating HistoryContext (Using PostgreSQL) Controller](#7-creating-historycontext-using-postgresql-controller)
 - [8. PDF reader](#8-pdf-reader)
+- [9. ReactChainApplication](#9-ReactChain-Application)
 
 ### 1. Adding CORS Configuration 
 
@@ -520,3 +521,4 @@ To query data from Pinecone, you can use the following steps:
 </details>
 
 ---
+### ReactChain Application
