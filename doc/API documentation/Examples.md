@@ -586,6 +586,8 @@ The above code takes the initial Input, loads the JsonnetFile to extract the bas
 `${preset} + $ {output}` until Chat Completion returns “Finish”. `return gptResponse.contains("Finish")`.
 
  You have to be interactive so ask the queries one by one from the user to reach the final answer. Please provide a single Thought and single Action to the user so that the user can search the query of the action and provide you with the observation. When you have found the answer to the original prompt then the final response should be Action: Finish[Answer to the original prompt].
+ 
+  ### For example, the chain would be like this:
 
 ```
  Question: Which magazine was started first Arthur's Magazine or First for Women?
