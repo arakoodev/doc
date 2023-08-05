@@ -588,10 +588,7 @@ The above code takes the initial Input, loads the JsonnetFile to extract the bas
  You have to be interactive so ask the queries one by one from the user to reach the final answer. Please provide a single Thought and single Action to the user so that the user can search the query of the action and provide you with the observation. When you have found the answer to the original prompt then the final response should be Action: Finish[Answer to the original prompt].
 
 <details>
-<summary>
-    For example, the chain would be like this-  
-</summary>
-
+<summary> For example, the chain would be like this- </summary>
 
 
 ```
@@ -626,5 +623,6 @@ The above code takes the initial Input, loads the JsonnetFile to extract the bas
                     Action 3: Finish[yes]
 ```
 <details>
+    
 ---
 
