@@ -583,7 +583,42 @@ React prompting as the name infer is a combination of reason and act (REason +AC
 </details>
 
 The above code takes the initial Input, loads the JsonnetFile to extract the base prompt i.e “preset” then concatenates with the output provided by OpenAI Chat Completion. `prompt = preset + " \nQuestion: " + prompt` This entire thing happens in a loop where you are extracting the answer, passing it to jsonnet file and then again passing 
-`${preset} + $ {output}` until Chat Completion returns “Finish”. `return gptResponse.contains("Finish")`
+`${preset} + $ {output}` until Chat Completion returns “Finish”. `return gptResponse.contains("Finish")`.
 
+ You have to be interactive so ask the queries one by one from the user to reach the final answer. Please provide a single Thought and single Action to the user so that the user can search the query of the action and provide you with the observation. When you have found the answer to the original prompt then the final response should be Action: Finish[Answer to the original prompt].
+ <details>
+<summary>For example the chain would be like this</summary>
+```java
+ Question: Which magazine was started first Arthur's Magazine or First for Women?
+                    Thought 1: I need to search Arthur's Magazine and First for Women, and find which was
+                    started first.
+                    Action 1: Search[Arthur's Magazine]
+                    Observation 1: Arthur's Magazine (1844-1846) was an American literary periodical published
+                    in Philadelphia in the 19th century.
+                    Thought 2: Arthur's Magazine was started in 1844. I need to search First for Women
+                    next.
+                    Action 2: Search[First for Women]
+                    Observation 2: First for Women is a woman’s magazine published by Bauer Media Group in the
+                    USA.[1] The magazine was started in 1989.
+                    Thought 3: First for Women was started in 1989. 1844 (Arthur's Magazine) < 1989 (First
+                    for Women), so Arthur's Magazine was started first.
+                    Action 3: Finish[Arthur's Magazine]
+
+                    Question: Were Pavel Urysohn and Leonid Levin known for the same type of work?
+                    Thought 1: I need to search Pavel Urysohn and Leonid Levin, find their types of work,
+                    then find if they are the same.
+                    Action 1: Search[Pavel Urysohn]
+                    Observation 1: Pavel Samuilovich Urysohn (February 3, 1898 - August 17, 1924) was a Soviet
+                    mathematician who is best known for his contributions in dimension theory.
+                    Thought 2: Pavel Urysohn is a mathematician. I need to search Leonid Levin next and
+                    find its type of work.
+                    Action 2: Search[Leonid Levin]
+                    Observation 2: Leonid Anatolievich Levin is a Soviet-American mathematician and computer
+                    scientist.
+                    Thought 3: Leonid Levin is a mathematician and computer scientist. So Pavel Urysohn
+                    and Leonid Levin have the same type of work.
+                    Action 3: Finish[yes]
+```
+</details>
 ---
 
