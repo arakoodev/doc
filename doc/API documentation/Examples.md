@@ -522,8 +522,7 @@ To query data from Pinecone, you can use the following steps:
 
 ---
 ### ReactChain Application
-
-
+React prompting as the name infer is a combination of reason and act (REason +ACt = REACT). An interaction takes place between external APIs such as Wikipedia and your chain in order to retrieve information. When you ask a question, your chain performs an action to retrieve the information and provide an answer based on the information retrieved. This is continued in a loop until the LLM returns “Finish” as a response. In our case, the LLM used is OpenAI Chat Completion.
 
 <details>
 <summary>Click here for sample code</summary>
@@ -582,3 +581,4 @@ To query data from Pinecone, you can use the following steps:
 }
 ```
 </details>
+The above code takes the initial Input, loads the JsonnetFile to extract the base prompt i.e “preset” then concatenates with the output provided by OpenAI Chat Completion. `prompt = preset + " \nQuestion: " + prompt.` This entire thing happens in a loop where you are extracting the answer, passing it to jsonnet file and then again passing `${preset} + $ {output}` until Chat Completion returns “Finish”. `return gptResponse.contains("Finish")`
