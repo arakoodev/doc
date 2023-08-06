@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[1227],{8859:e=>{e.exports=JSON.parse('{"permalink":"/kb","page":1,"postsPerPage":10,"totalPages":2,"totalCount":12,"nextPage":"/kb/page/2","blogDescription":"Blog","blogTitle":"kb"}')}}]);
