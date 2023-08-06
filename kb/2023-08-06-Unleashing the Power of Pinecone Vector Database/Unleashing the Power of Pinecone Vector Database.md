@@ -1,4 +1,4 @@
-**Title: Unleashing the Power of Pinecone Vector Database: A Comprehensive Guide**
+** Unleashing the Power of Pinecone Vector Database: A Comprehensive Guide**
 
 Introduction:
 
