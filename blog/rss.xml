@@ -4,20 +4,10 @@
         <title>Arakoo.ai Blog</title>
         <link>https://www.arakoo.ai/blog</link>
         <description>Arakoo.ai Blog</description>
-        <lastBuildDate>Fri, 28 Jul 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 22 Jul 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
-        <item>
-            <title><![CDATA[GitHub Link]]></title>
-            <link>https://www.arakoo.ai/blog/kb</link>
-            <guid>https://www.arakoo.ai/blog/kb</guid>
-            <pubDate>Fri, 28 Jul 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[Kb]]></description>
-            <content:encoded><![CDATA[<p>Kb</p>]]></content:encoded>
-            <category>Supabase</category>
-            <category>Arakoo</category>
-        </item>
         <item>
             <title><![CDATA[Getting Started with Supabase]]></title>
             <link>https://www.arakoo.ai/blog/Supabase</link>

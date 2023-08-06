@@ -2,25 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.arakoo.ai/blog</id>
     <title>Arakoo.ai Blog</title>
-    <updated>2023-07-28T00:00:00.000Z</updated>
+    <updated>2023-07-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.arakoo.ai/blog"/>
     <subtitle>Arakoo.ai Blog</subtitle>
     <icon>https://www.arakoo.ai/img/logo-arako.ico</icon>
-    <entry>
-        <title type="html"><![CDATA[GitHub Link]]></title>
-        <id>https://www.arakoo.ai/blog/kb</id>
-        <link href="https://www.arakoo.ai/blog/kb"/>
-        <updated>2023-07-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Kb]]></summary>
-        <content type="html"><![CDATA[<p>Kb</p>]]></content>
-        <author>
-            <name>Arakoo</name>
-            <uri>https://github.com/arakoodev</uri>
-        </author>
-        <category label="Supabase" term="Supabase"/>
-        <category label="Arakoo" term="Arakoo"/>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Getting Started with Supabase]]></title>
         <id>https://www.arakoo.ai/blog/Supabase</id>
