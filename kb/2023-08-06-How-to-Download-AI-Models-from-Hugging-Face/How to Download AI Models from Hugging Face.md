@@ -1,3 +1,13 @@
+---
+slug: Download-AI Models from Hugging Face
+title: How to Download AI Models from Hugging Face
+authors:
+  name: Arakoo
+  title: Arakoo Core Team
+  url: https://github.com/arakoodev
+  image_url: https://avatars.githubusercontent.com/u/114422989
+tags: [huggingface,llm,ai,model arakoo]
+---
 # How to Download AI Models from Hugging Face
 
 The world of Artificial Intelligence (AI) is constantly evolving, with new models and algorithms being developed to tackle complex tasks. As an AI enthusiast or developer, you are always on the lookout for cutting-edge models that can enhance your projects and applications. This is where Hugging Face comes into play.
