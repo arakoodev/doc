@@ -1,6 +1,6 @@
 ---
 slug: Building- AI Semantic Search with Hugging Face Embedding Models
-title:Building AI Semantic Search with Hugging Face Embedding Models
+title: Building AI Semantic Search with Hugging Face Embedding Models
 authors:
   name: Arakoo
   title: Arakoo Core Team
