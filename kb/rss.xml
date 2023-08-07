@@ -201,7 +201,8 @@
             <category>pinecone</category>
             <category>llm</category>
             <category>vector</category>
-            <category>database arakoo</category>
+            <category>database</category>
+            <category>arakoo</category>
         </item>
         <item>
             <title><![CDATA[Using Llama AI Models from Hugging Face- Unleashing the Power of AI]]></title>
