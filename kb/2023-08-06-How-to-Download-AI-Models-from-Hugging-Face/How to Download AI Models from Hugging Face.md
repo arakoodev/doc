@@ -6,7 +6,7 @@ authors:
   title: Arakoo Core Team
   url: https://github.com/arakoodev
   image_url: https://avatars.githubusercontent.com/u/114422989
-tags: [huggingface,llm,ai,model arakoo]
+tags: [huggingface,llm,ai,model,arakoo]
 ---
 # How to Download AI Models from Hugging Face
 
