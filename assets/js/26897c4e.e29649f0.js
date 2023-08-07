@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[5643],{10:a=>{a.exports=JSON.parse('{"label":"NSFW","permalink":"/kb/tags/nsfw","allTagsPath":"/kb/tags","count":1}')}}]);

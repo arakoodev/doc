@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[8179],{7516:e=>{e.exports=JSON.parse('{"permalink":"/kb/tags/nsfw","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"kb"}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[237],{4105:a=>{a.exports=JSON.parse('{"label":"NSFQ","permalink":"/kb/tags/nsfq","allTagsPath":"/kb/tags","count":1}')}}]);
