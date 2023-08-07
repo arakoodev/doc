@@ -1,6 +1,6 @@
 ---
 slug: Harnessing- the Power of Hugging Face Models
-title: How to Sign Up and Use Hugging Face
+title: Harnessing the Power of Hugging Face Models-Building Character AI
 authors:
   name: Arakoo
   title: Arakoo Core Team
