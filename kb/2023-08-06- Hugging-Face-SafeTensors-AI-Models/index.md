@@ -6,7 +6,7 @@ authors:
   title: Arakoo Core Team
   url: https://github.com/arakoodev
   image_url: https://avatars.githubusercontent.com/u/114422989
-tags: [huggingface,llm,safetensors,ai, models arakoo]
+tags: [huggingface,llm,safetensors,ai,models arakoo]
 ---
 
 # Hugging Face SafeTensors AI Models: Preserving Privacy and Ensuring Trustworthiness
