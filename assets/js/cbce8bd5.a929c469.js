@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[4258],{878:a=>{a.exports=JSON.parse('{"label":"huggingface","permalink":"/kb/tags/huggingface","allTagsPath":"/kb/tags","count":12}')}}]);
