@@ -1,3 +1,13 @@
+---
+slug: Unleashing-Power of Pinecone Vector Database
+title: Unleashing the Power of Pinecone Vector Database- A Comprehensive Guide
+authors:
+  name: Arakoo
+  title: Arakoo Core Team
+  url: https://github.com/arakoodev
+  image_url: https://avatars.githubusercontent.com/u/114422989
+tags: [pinecone,llm,vector,database arakoo]
+---
 # Unleashing the Power of Pinecone Vector Database: A Comprehensive Guide
 
 Introduction:
