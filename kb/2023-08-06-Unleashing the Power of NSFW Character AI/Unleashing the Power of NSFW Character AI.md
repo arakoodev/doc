@@ -6,7 +6,7 @@ authors:
   title: Arakoo Core Team
   url: https://github.com/arakoodev
   image_url: https://avatars.githubusercontent.com/u/114422989
-tags: [NSFQ,Character,llm,AI,arakoo]
+tags: [NSFW,Character,llm,AI,arakoo]
 ---
 # Unleashing the Power of NSFW Character AI: Building with Hugging Face Transformers
 
@@ -14,7 +14,7 @@ Artificial Intelligence (AI) has made remarkable strides in the field of natural
 
 ## The World of Hugging Face Transformers
 
-Hugging Face has revolutionized the AI landscape by providing a comprehensive library of pre-trained Transformer models. Transformers, a type of deep learning architecture, have proven to be highly effective in processing and generating natural language text. By leveraging large-scale pre-training on massive datasets, Hugging Face Transformers have become synonymous with state-of-the-art language understanding and generation capabilities.
+Hugging Face has revolutionised the AI landscape by providing a comprehensive library of pre-trained Transformer models. Transformers, a type of deep learning architecture, have proven to be highly effective in processing and generating natural language text. By leveraging large-scale pre-training on massive datasets, Hugging Face Transformers have become synonymous with state-of-the-art language understanding and generation capabilities.
 
 ## The Fascination with NSFW Character AI
 
