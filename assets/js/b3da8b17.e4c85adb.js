@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[2704],{3143:e=>{e.exports=JSON.parse('{"permalink":"/kb/tags/ai","page":1,"postsPerPage":10,"totalPages":1,"totalCount":7,"blogDescription":"Blog","blogTitle":"kb"}')}}]);
