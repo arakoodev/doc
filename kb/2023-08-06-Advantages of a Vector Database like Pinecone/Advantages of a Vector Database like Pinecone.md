@@ -1,6 +1,6 @@
 ---
 slug:  Advantages-Vector Database like Pinecone
-title: How to Sign Up and Use Hugging Face
+title: Advantages of a Vector Database like Pinecone
 authors:
   name: Arakoo
   title: Arakoo Core Team
