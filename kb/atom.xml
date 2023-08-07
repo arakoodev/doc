@@ -138,7 +138,8 @@
         <category label="huggingface" term="huggingface"/>
         <category label="llm" term="llm"/>
         <category label="ai" term="ai"/>
-        <category label="model arakoo" term="model arakoo"/>
+        <category label="model" term="model"/>
+        <category label="arakoo" term="arakoo"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hugging Face Transformers for AI Models-Revolutionizing Natural Language Processing and Computer Vision]]></title>
