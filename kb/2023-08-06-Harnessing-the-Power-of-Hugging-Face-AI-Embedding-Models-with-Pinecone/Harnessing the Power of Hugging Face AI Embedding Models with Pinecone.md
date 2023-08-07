@@ -1,6 +1,6 @@
 ---
-slug: Harnessing-the Power of Hugging Face AI Embedding Models with Pinecone
-title: How to Sign Up and Use Hugging Face
+slug: Harnessing-Power of Hugging Face AI Embedding Models with Pinecone
+title: Harnessing the Power of Hugging Face AI Embedding Models with Pinecone
 authors:
   name: Arakoo
   title: Arakoo Core Team
