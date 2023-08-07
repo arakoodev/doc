@@ -187,10 +187,11 @@
             <name>Arakoo</name>
             <uri>https://github.com/arakoodev</uri>
         </author>
-        <category label="pinecone" term="pinecone"/>
+        <category label="huggingface" term="huggingface"/>
         <category label="llm" term="llm"/>
-        <category label="vector" term="vector"/>
-        <category label="database arakoo" term="database arakoo"/>
+        <category label="diffusion" term="diffusion"/>
+        <category label="model" term="model"/>
+        <category label="arakoo" term="arakoo"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Pinecone vs FAISS for AI Embedding Models from Hugging Face- Unlocking Efficient Retrieval Systems]]></title>
