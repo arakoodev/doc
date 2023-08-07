@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[5180],{855:e=>{e.exports=JSON.parse('{"label":"embedding","permalink":"/kb/tags/embedding","allTagsPath":"/kb/tags","count":3}')}}]);
