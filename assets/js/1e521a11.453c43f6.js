@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[7188],{1374:e=>{e.exports=JSON.parse('{"permalink":"/kb/tags/pinecone","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"kb"}')}}]);
