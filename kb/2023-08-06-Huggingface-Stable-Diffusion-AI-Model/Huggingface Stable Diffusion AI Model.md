@@ -6,7 +6,7 @@ authors:
   title: Arakoo Core Team
   url: https://github.com/arakoodev
   image_url: https://avatars.githubusercontent.com/u/114422989
-tags: [pinecone,llm,vector,database arakoo]
+tags: [huggingface,llm,diffusion,model,arakoo]
 ---
 # Huggingface Stable Diffusion AI Model: Unleashing the Power of Language Understanding
 
