@@ -1,6 +1,6 @@
 ---
 slug: unleash-hugging-face-SafeTensors-AI-Models
-title: Hugging Face SafeTensors AI Models: Preserving Privacy and Ensuring Trustworthiness
+title: Hugging Face SafeTensors AI Models - Preserving Privacy and Ensuring Trustworthiness
 authors:
   name: Arakoo
   title: Arakoo Core Team
