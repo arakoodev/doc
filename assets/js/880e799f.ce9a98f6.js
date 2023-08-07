@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[7547],{5028:a=>{a.exports=JSON.parse('{"label":"openai","permalink":"/kb/tags/openai","allTagsPath":"/kb/tags","count":1}')}}]);
