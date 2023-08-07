@@ -1,6 +1,6 @@
 ---
 slug:  Unleash- the Power of AI Embedding Models
-title: How to Sign Up and Use Hugging Face
+title: Unleashing the Power of AI Embedding Models-Exploring the Top 10 from HuggingFace
 authors:
   name: Arakoo
   title: Arakoo Core Team
