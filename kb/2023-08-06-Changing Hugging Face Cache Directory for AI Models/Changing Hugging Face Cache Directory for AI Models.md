@@ -1,6 +1,6 @@
 ---
 slug:  Changing-Hugging Face Cache Directory for AI Models
-title: How to Sign Up and Use Hugging Face
+title: Changing Hugging Face Cache Directory for AI Models-Optimizing Model Management Efficiency
 authors:
   name: Arakoo
   title: Arakoo Core Team
