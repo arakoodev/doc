@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[8697],{2573:e=>{e.exports=JSON.parse('{"label":"vector","permalink":"/kb/tags/vector","allTagsPath":"/kb/tags","count":1}')}}]);
