@@ -152,10 +152,12 @@
             <name>Arakoo</name>
             <uri>https://github.com/arakoodev</uri>
         </author>
-        <category label="pinecone" term="pinecone"/>
+        <category label="huggingface" term="huggingface"/>
         <category label="llm" term="llm"/>
-        <category label="vector" term="vector"/>
-        <category label="database arakoo" term="database arakoo"/>
+        <category label="ai" term="ai"/>
+        <category label="model" term="model"/>
+        <category label="NLP" term="NLP"/>
+        <category label="arakoo" term="arakoo"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Huggingface Diffuser AI Models-Unlocking the Power of Natural Language Processing, Image Recognition, and Speech Processing]]></title>

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[747],{5397:e=>{e.exports=JSON.parse('{"permalink":"/kb/tags/huggingface/page/2","page":2,"postsPerPage":10,"totalPages":2,"totalCount":11,"previousPage":"/kb/tags/huggingface","blogDescription":"Blog","blogTitle":"kb"}')}}]);
