@@ -1,3 +1,13 @@
+---
+slug: Building-AI Semantic Search with Hugging Face Embedding Models
+title:Building AI Semantic Search with Hugging Face Embedding Models
+authors:
+  name: Arakoo
+  title: Arakoo Core Team
+  url: https://github.com/arakoodev
+  image_url: https://avatars.githubusercontent.com/u/114422989
+tags: [huggingface,llm,semantic,models,embedding,arakoo]
+---
 # Building AI Semantic Search with Hugging Face Embedding Models
 
 **Introduction**
