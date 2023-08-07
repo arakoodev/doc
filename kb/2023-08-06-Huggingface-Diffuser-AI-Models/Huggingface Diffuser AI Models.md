@@ -6,7 +6,7 @@ authors:
   title: Arakoo Core Team
   url: https://github.com/arakoodev
   image_url: https://avatars.githubusercontent.com/u/114422989
-tags: [pinecone,llm,vector,database arakoo]
+tags: [huggingface,llm,ai,model,arakoo]
 ---
 # Huggingface Diffuser AI Models: Unlocking the Power of Natural Language Processing, Image Recognition, and Speech Processing
 
