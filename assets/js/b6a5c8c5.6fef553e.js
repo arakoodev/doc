@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[1067],{5819:a=>{a.exports=JSON.parse('{"label":"models arakoo","permalink":"/kb/tags/models-arakoo","allTagsPath":"/kb/tags","count":1}')}}]);

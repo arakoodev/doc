@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[492],{2038:e=>{e.exports=JSON.parse('{"label":"safetensors","permalink":"/kb/tags/safetensors","allTagsPath":"/kb/tags","count":1}')}}]);
