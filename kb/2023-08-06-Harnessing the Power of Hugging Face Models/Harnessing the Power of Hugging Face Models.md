@@ -1,3 +1,13 @@
+---
+slug: Harnessing- the Power of Hugging Face Models
+title: How to Sign Up and Use Hugging Face
+authors:
+  name: Arakoo
+  title: Arakoo Core Team
+  url: https://github.com/arakoodev
+  image_url: https://avatars.githubusercontent.com/u/114422989
+tags: [huggingface,llm,models,arakoo]
+---
 # Harnessing the Power of Hugging Face Models: Building Character AI
 
 AI technology has rapidly evolved in recent years, revolutionizing various industries and transforming the way we interact with machines. One fascinating application of AI is the development of character AI, which enables machines to simulate human-like conversations and behavior. Whether it's in chatbots, virtual assistants, or video game characters, character AI has become an integral part of creating immersive and interactive experiences.
