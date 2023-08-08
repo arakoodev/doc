@@ -1,5 +1,5 @@
 ---
-slug:  Advantages-Vector Database like Pinecone
+slug:  Advantages-Vector-Database-like-Pinecone
 title: Advantages of a Vector Database like Pinecone
 authors:
   name: Arakoo
