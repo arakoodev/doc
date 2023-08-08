@@ -1,5 +1,5 @@
 ---
-slug: Pinecone vs FAISS- AI Embedding Models from Hugging Face
+slug: Pinecone-vs-FAISS-AI-Embedding-Models-from-Hugging-Face
 title: Pinecone vs FAISS for AI Embedding Models from Hugging Face- Unlocking Efficient Retrieval Systems
 authors:
   name: Arakoo
