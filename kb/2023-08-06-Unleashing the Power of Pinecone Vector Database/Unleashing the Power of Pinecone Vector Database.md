@@ -1,5 +1,5 @@
 ---
-slug: Unleashing-Power of Pinecone Vector Database
+slug: Unleashing-Power-of-Pinecone-Vector-Database
 title: Unleashing the Power of Pinecone Vector Database- A Comprehensive Guide
 authors:
   name: Arakoo
