@@ -1,5 +1,5 @@
 ---
-slug: huggingface diffuser-AI models
+slug: huggingface-diffuser-AI-models
 title:  Huggingface Diffuser AI Models-Unlocking the Power of Natural Language Processing, Image Recognition, and Speech Processing
 authors:
   name: Arakoo
