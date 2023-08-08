@@ -1,5 +1,5 @@
 ---
-slug: huggingface transformers- AI Models
+slug: huggingface-transformers-AI-Models
 title: Hugging Face Transformers for AI Models-Revolutionizing Natural Language Processing and Computer Vision
 authors:
   name: Arakoo
