@@ -1,5 +1,5 @@
 ---
-slug:  Unleash -power how Pinecone Works with OpenAI
+slug:  Unleash-power-how-Pinecone-Work-with-OpenAI
 title:  Unleashing the Power-How Pinecone Works with OpenAI
 authors:
   name: Arakoo
