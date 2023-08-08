@@ -1,5 +1,5 @@
 ---
-slug:  Unleash- the Power of AI Embedding Models
+slug:  Unleash-the-Power-of-AI-Embedding-Models
 title: Unleashing the Power of AI Embedding Models-Exploring the Top 10 from HuggingFace
 authors:
   name: Arakoo
