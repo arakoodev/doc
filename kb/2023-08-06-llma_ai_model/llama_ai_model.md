@@ -1,5 +1,5 @@
 ---
-slug:  Revolutionizing-Understanding and Interacting with Llamas
+slug:  Revolutionizing-Understanding-and-Interacting-with-Llamas
 title: Llama AI Model-Revolutionizing the Way We Understand and Interact with Llamas
 authors:
   name: Arakoo
