@@ -1,5 +1,5 @@
 ---
-slug: Harnessing-Power of Hugging Face AI Embedding Models with Pinecone
+slug: Harnessing-Power-of-Hugging-Face-AI-Embedding-Models-with-Pinecone
 title: Harnessing the Power of Hugging Face AI Embedding Models with Pinecone
 authors:
   name: Arakoo
