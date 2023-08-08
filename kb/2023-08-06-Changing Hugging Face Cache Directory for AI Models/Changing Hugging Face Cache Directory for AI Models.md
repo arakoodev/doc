@@ -1,5 +1,5 @@
 ---
-slug:  Changing-Hugging Face Cache Directory for AI Models
+slug:  Changing-Hugging-Face-Cache-Directory-for-AI-Models
 title: Changing Hugging Face Cache Directory for AI Models-Optimizing Model Management Efficiency
 authors:
   name: Arakoo
