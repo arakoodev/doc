@@ -1,5 +1,5 @@
 ---
-slug: Harnessing- the Power of Hugging Face Models
+slug: Harnessing-the-Power-of-Hugging-Face-Models
 title: Harnessing the Power of Hugging Face Models-Building Character AI
 authors:
   name: Arakoo
