@@ -1,5 +1,5 @@
 ---
-slug: Download-AI Models from Hugging Face
+slug: Download-AI-Models-from-Hugging-Face
 title: How to Download AI Models from Hugging Face
 authors:
   name: Arakoo
