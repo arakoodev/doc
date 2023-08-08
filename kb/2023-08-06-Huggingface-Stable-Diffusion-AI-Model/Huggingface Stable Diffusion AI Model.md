@@ -1,5 +1,5 @@
 ---
-slug: Huggingface Stable Diffusion- AI Model
+slug: Huggingface-Stable-Diffusion-AI-Model
 title: Huggingface Stable Diffusion AI Model-Unleashing the Power of Language Understanding
 authors:
   name: Arakoo
