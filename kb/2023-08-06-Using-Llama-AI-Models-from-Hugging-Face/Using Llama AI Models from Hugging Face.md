@@ -1,5 +1,5 @@
 ---
-slug:  Unleashing- Power of AI- Using Llama AI Models from Hugging Fac
+slug:  Unleashing-Power-of-AI-Using-Llama-AI-Models-from-Hugging-Face
 title: Using Llama AI Models from Hugging Face- Unleashing the Power of AI
 authors:
   name: Arakoo
