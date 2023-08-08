@@ -1,5 +1,5 @@
 ---
-slug:  Unleashing- Power of NSFW Character AI
+slug:  Unleashing-Power-of-NSFW-Character-AI
 title: Unleashing the Power of NSFW Character AI-Building with Hugging Face Transformers
 authors:
   name: Arakoo
