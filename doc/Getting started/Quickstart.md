@@ -60,10 +60,10 @@ properties.setProperty("supabase.url", "https://itlgddqhlxhdbncdqowa.supabase.co
 
 ```
 </details>
-#### For JWT decoding:
+For JWT decoding:
 If you aren't using Supabase and want to use EdgeChains Authentication feature, therefore make sure your jwt must contain these two fields: 
--a) email:  "..."
--b) role: "authenticated, user_create"
+- a) email:  "..."
+- b) role: "authenticated, user_create"
 <details>
 
 <summary>Click to expand</summary>
