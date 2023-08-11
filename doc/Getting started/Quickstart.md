@@ -56,7 +56,8 @@ properties.setProperty("postgres.db.password", "");
 
 ```java
 
-properties.setProperty("supabase.url", "https://itlgddqhlxhdbncdqowa.supabase.co%22/); properties.setProperty("supabase.annon.key", ""); 
+properties.setProperty("supabase.url", "https://itlgddqhlxhdbncdqowa.supabase.co%22/);
+properties.setProperty("supabase.annon.key", ""); 
 
 ```
 </details>
