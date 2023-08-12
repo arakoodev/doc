@@ -272,6 +272,7 @@ Use Cases and Applications:
 Performance and Evaluation Metrics:
 - Diversity Metrics: For text generation tasks, metrics like n-gram diversity or unique tokens ratio can measure the diversity of generated text across different prompts or contexts.
 - Transfer Learning Performance: Task-specific metrics relevant to the downstream application can be used to evaluate the model's performance after fine-tuning.
+  
 ### Model 8: T5 (Text-to-Text Transfer Transformer)
 
 T5 frames all NLP tasks as a text-to-text problem. It's a versatile model that can be fine-tuned for a wide range of tasks by formulating them as text generation tasks.
