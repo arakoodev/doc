@@ -8,6 +8,7 @@ LangChain differentiates between three types of models that differ in their inpu
   code to be inserted
   ```
   -Chat models are similar to LLMs. They take a list of chat messages as input and return a chat message.
+  
   -Text embedding models take text input and return a list of floats (embeddings), which are the numerical 
   representation of the input text.  Embeddings help extract information from a text. 
   This information can then be later used, e.g., for calculating similarities between texts (e.g., movie summaries).
