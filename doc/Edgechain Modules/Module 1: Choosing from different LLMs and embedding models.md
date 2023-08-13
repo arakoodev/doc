@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Models: Choosing from different LLMs and embedding models  
 
 Currently, many different LLMs are emerging. LangChain offers integrations to a wide range of models and a streamlined interface to all of them.
