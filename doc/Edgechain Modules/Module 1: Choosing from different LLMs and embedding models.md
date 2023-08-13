@@ -4,8 +4,8 @@ sidebar_position: 5
 
 # Models: Choosing from different LLMs and embedding models  
 
-Currently, many different LLMs are emerging. LangChain offers integrations to a wide range of models and a streamlined interface to all of them.
-LangChain differentiates between three types of models that differ in their inputs and outputs:
+Currently, many different LLMs are emerging. Edgechain offers integrations to a wide range of models and a streamlined interface to all of them.
+Edgechain differentiates between three types of models that differ in their inputs and outputs:
 
 -LLMs take a string as an input (prompt) and output a string (completion).
   ```
