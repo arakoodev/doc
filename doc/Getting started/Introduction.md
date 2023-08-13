@@ -34,7 +34,7 @@ With EdgeChains, you gain the following key advantages:
 
 ## Get started
 
-To get started with EdgeChains, follow the installation instructions outlined in the [Installation Guide](Installation.md). This guide will walk you through necessary steps to start building your own EdgeChains applications. For a quick start, you can also follow the instructions in [EdgeChains Quickstart](Quickstart.md).
+To get started with EdgeChains, follow the installation instructions outlined in the [Quick Start](Quickstart.md). This guide will walk you through necessary steps to start building your own EdgeChains applications. 
 
 
 
