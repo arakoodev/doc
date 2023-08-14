@@ -9,7 +9,25 @@ Edgechain differentiates between three types of models that differ in their inpu
 
 -LLMs take a string as an input (prompt) and output a string (completion).
   ```
-  code to be inserted
+  @PostMapping("/chat")
+    public ArkResponse chat(ArkRequest arkRequest) {
+
+      OpenAiEndpoint gpt4Endpoint =
+              new OpenAiEndpoint(
+                      OPENAI_CHAT_COMPLETION_API,
+                      OPENAI_AUTH_KEY,
+                      "gpt-3.5-turbo",
+                      "user",
+                      0.7,
+                      new ExponentialDelay(3, 5, 2, TimeUnit.SECONDS));
+
+      String prompt = "Arakoo has a cat. What animal is Arakoo;s pet";
+
+      EdgeChain<ChatCompletionResponse> chatChain = 
+              new EdgeChain<>(gpt4Endpoint.chatCompletion(prompt, "ChatChain", arkRequest));
+
+      return chatChain.getArkResponse();
+    }
   ```
   -Chat models are similar to LLMs. They take a list of chat messages as input and return a chat message.
   
@@ -17,5 +35,25 @@ Edgechain differentiates between three types of models that differ in their inpu
   representation of the input text.  Embeddings help extract information from a text. 
   This information can then be later used, e.g., for calculating similarities between texts (e.g., movie summaries).
   ```
-code to be inserted
+ @PostMapping("/embedding")
+    public ArkResponse embedding(ArkRequest arkRequest) {
+
+      OpenAiEndpoint ada002Embeddings =
+              new OpenAiEndpoint(
+                      OPENAI_EMBEDDINGS_API,
+                      OPENAI_AUTH_KEY,
+                      "",//orgId
+                      "text-embedding-ada-002",
+                      "user",
+                      0.7,
+                      false,
+                      new ExponentialDelay(3, 3, 2, TimeUnit.SECONDS));;
+
+      String input = "Alice has a parrot. What animal is Alice;s pet";
+
+      EdgeChain<ChatCompletionResponse> embeddingChain =
+              new EdgeChain<>(gpt4Endpoint.embeddings(input, "EmbeddingChianChain", arkRequest));
+
+      return embeddingChain.getArkResponse();
+    }
 ```
