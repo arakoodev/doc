@@ -1,6 +1,6 @@
 # Prompts: Managing LLM inputs
 LLMs have weird APIs. Although inputting prompts to LLMs in natural language should feel intuitive, it takes quite a bit of tweaking of the prompt until you get the desired output from an LLM. This process is called prompt engineering.
-Once you have a good prompt, you may want to use it as a template for other purposes. Thus, LangChain provides you with so-called PromptTemplates, which help you construct prompts from multiple components.
+Once you have a good prompt, you may want to use it as a template for other purposes. Thus,Edgechain provides you with so-called PromptTemplates, which help you construct prompts from multiple components.
 ```
 code
 ```
