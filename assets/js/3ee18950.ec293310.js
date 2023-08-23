@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[7582],{2551:a=>{a.exports=JSON.parse('{"label":"rate limits","permalink":"/kb/tags/rate-limits","allTagsPath":"/kb/tags","count":1}')}}]);

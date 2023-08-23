@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[8881],{5513:a=>{a.exports=JSON.parse('{"label":"chatgpt","permalink":"/kb/tags/chatgpt","allTagsPath":"/kb/tags","count":1}')}}]);

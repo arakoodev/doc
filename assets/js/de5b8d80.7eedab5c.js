@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[5557],{9029:e=>{e.exports=JSON.parse('{"permalink":"/kb/tags/rate-limits","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"kb"}')}}]);
