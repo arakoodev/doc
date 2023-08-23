@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[5392],{9433:e=>{e.exports=JSON.parse('{"label":"blocked","permalink":"/kb/tags/blocked","allTagsPath":"/kb/tags","count":1}')}}]);
