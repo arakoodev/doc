@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[181],{757:a=>{a.exports=JSON.parse('{"label":"Vector Database","permalink":"/blog/tags/vector-database","allTagsPath":"/blog/tags","count":1}')}}]);
