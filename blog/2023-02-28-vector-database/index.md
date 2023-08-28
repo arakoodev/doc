@@ -8,6 +8,7 @@ authors:
   image_url: https://avatars.githubusercontent.com/u/114422989
 tags: [Vector Database, Arakoo]
 ---
+![Vector Database](./Screenshot 2023-08-28 at 5.22.13 PM.png)
 ## Vector Database At A Glance
 
 ## Introduction – 
