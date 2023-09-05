@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Quickstart
+# Quickstart !
 
 Follow these steps to quickly setup and run your first EdgeChains application in the next 10 minutes:
 
