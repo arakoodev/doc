@@ -187,17 +187,17 @@ public  class PineconeExample {
 
   
 
-private  static  final String OPENAI_AUTH_KEY = "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"; // YOUR OPENAI AUTH KEY
+private  static  final String OPENAI_AUTH_KEY = ""; // YOUR OPENAI AUTH KEY
 
-private  static  final String OPENAI_ORG_ID = "org-ha7bPSLcoUnYzUMZ5xAogTgo"; // YOUR OPENAI ORG ID
+private  static  final String OPENAI_ORG_ID = ""; // YOUR OPENAI ORG ID
 
-private  static  final String PINECONE_AUTH_KEY = "77f25ace-05cd-4743-b0e2-b35bc0fc7928";
+private  static  final String PINECONE_AUTH_KEY = "";
 
-private  static  final String PINECONE_QUERY_API = "https://test12-f1f79e7.svc.gcp-starter.pinecone.io/query";
+private  static  final String PINECONE_QUERY_API = "";
 
-private  static  final String PINECONE_UPSERT_API = "https://test12-f1f79e7.svc.gcp-starter.pinecone.io/vectors/upsert";
+private  static  final String PINECONE_UPSERT_API = "";
 
-private  static  final String PINECONE_DELETE = "https://test12-f1f79e7.svc.gcp-starter.pinecone.io/vectors/delete";
+private  static  final String PINECONE_DELETE = "";
 
   
 
@@ -265,11 +265,11 @@ properties.setProperty("redis.ttl", "3600");*/
 
 // If you haven't specified PostgreSQL, then logs won't be stored.
 
-properties.setProperty("postgres.db.host", "jdbc:postgresql://db.rkkbllhnexkzjyxhgexm.supabase.co:5432/postgres");
+properties.setProperty("postgres.db.host", "");
 
-properties.setProperty("postgres.db.username", "postgres");
+properties.setProperty("postgres.db.username", "");
 
-properties.setProperty("postgres.db.password", "jtGhg7?JLhUF$fK");
+properties.setProperty("postgres.db.password", "");
 
   
 
