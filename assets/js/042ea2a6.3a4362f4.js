@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[8770],{245:a=>{a.exports=JSON.parse('{"label":"Semantic Search","permalink":"/blog/tags/semantic-search","allTagsPath":"/blog/tags","count":1}')}}]);
