@@ -1,8 +1,8 @@
 ---
 slug: Article-writer
-title: How to: Build a Article Writer Prompt with EdgeChains
+title: How to Build a Article Writer Prompt with EdgeChains
 authors:
-  name: Arakoo
+  name: Aditya Pandey
   title: Arakoo Core Team
   url: https://github.com/arakoodev
   image_url: https://avatars.githubusercontent.com/u/114422989
@@ -19,8 +19,9 @@ EdgeChain is a streamlined solution for developing GenAI applications, offering 
 
 ## Pre Requisites
 
- 1. You need to make an account in OpenAI, Postgres so that from there you can retrieve the AUTH key, org id and etc. which are needed for the code.
- 2.  You need to download the edgechains jar file from this url https://github.com/arakoodev/EdgeChains/releases.
+1. You need to make an account in OpenAI, Postgres so that from there you can retrieve the AUTH key, org id and etc. which are needed for the code.
+![OpenAI Landing Page](./OpenAi.png)
+2.  You need to download the edgechains jar file from this url https://github.com/arakoodev/EdgeChains/releases.
 3. Download the .java and .jsonnet file and put them in the same folder.  
 4. In the code according to the folder structure you have to write about the path.
  
@@ -33,6 +34,7 @@ EdgeChain is a streamlined solution for developing GenAI applications, offering 
 4.  Once your project is created, you’ll be directed to the project dashboard.
 5. Click the “Create Database” button to create a new PostgreSQL database.
 6. After the database is created, you can access its credentials, including the database URL, API URL and service role key.
+![Supabase Landing Page](./Supabase.png)
 
 ## Explanation of the Code 
 
@@ -63,7 +65,7 @@ EdgeChain is a streamlined solution for developing GenAI applications, offering 
         -   The third argument is the path to the second Jsonnet file (`./wiki2.jsonnet`).
 
 The purpose of this code is to create an instance of  `FileJsonnetLoader`  that loads Jsonnet files with a certain probability. Depending on the probability, either  `./wiki1.jsonnet`  or  `./wiki2.jsonnet`  will be executed.
-
+![Main Method Page](./Main.png)
  - The main method is the entry point of the application.
  -      Setting Server Port:
     -   `System.setProperty("server.port", "8080")`: This line sets the server port to 8080. It configures the application to listen on port 8080 for incoming requests.
@@ -88,6 +90,7 @@ The purpose of this code is to create an instance of  `FileJsonnetLoader`  that 
     -   `wikiEndpoint = new WikiEndpoint()`: This line creates an instance of the  `WikiEndpoint`  class, which is used to communicate with the Wikipedia API.
     -   `gpt3Endpoint = new OpenAiEndpoint(...)`: This line creates an instance of the  `OpenAiEndpoint`  class, which is used to communicate with OpenAI services. It sets various parameters such as the OpenAI chat completion API, authentication key, organization ID, model, temperature, and delay.
     -   `gpt3StreamEndpoint = new OpenAiEndpoint(...)`: This line creates another instance of the  `OpenAiEndpoint`  class, which is likely used for streaming communication with OpenAI services. It sets similar parameters as the  `gpt3Endpoint`, but with an additional flag for streaming.
+![Endpoints](./Endpoint.png)
 ## Article Writer Controller
 
  - It is a `RestController`  class named  `ArticleController`  that handles HTTP GET requests for the  `/article`  endpoint. Here's an explanation of the code within the class:
@@ -124,9 +127,8 @@ After all this we will be using the postman to test and give the requests for th
 * Headers: Content-Type: application/json
 * Body: raw
 
-### Screenshots:
-https://docs.google.com/document/d/1n_aROfSA4WUKgFeNpI7bxIk1zhQwp05njRua9G3qT_U/edit?usp=sharing
 
+![Postman Testing Page](./Postman Article.png)
 ### Full Working Code
 package com.edgechain;
 
