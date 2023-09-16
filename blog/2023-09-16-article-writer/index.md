@@ -1,4 +1,13 @@
-
+---
+slug: Article-writer
+title: How to: Build a Article Writer Prompt with EdgeChains
+authors:
+  name: Arakoo
+  title: Arakoo Core Team
+  url: https://github.com/arakoodev
+  image_url: https://avatars.githubusercontent.com/u/114422989
+tags: [Article Writer, Arakoo]
+---
 
 # How to: Build a Article Writer Prompt with EdgeChains !
 
