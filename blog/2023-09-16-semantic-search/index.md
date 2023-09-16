@@ -11,7 +11,7 @@ Semantic Search is the task of retrieving the documents from a collection of the
 ### Pre Requisites
 
 1.  You need to make an account in OPENAI, Pinecone, Postgres so that from there you can retrieve the auth key, org id and etc which are needed for the code.  
-
+![Pinecone Landing Page](./Pinecone.png)
 2.  You need to download the edgechains jar file from this url https://github.com/arakoodev/EdgeChains/releases.  
 3. Download the `.java` and `.jsonnet` file and put them in the same folder.  
 4. In the code according to the folder structure you have to write about the path.  
@@ -38,14 +38,14 @@ Semantic Search is the task of retrieving the documents from a collection of the
 1. Load the edgechains package.  
 2. Import the OPENAI_Chat_Completion API. Here we have to import the static constants from other classes. These classes are Pinecone, OpenAI, and PDF reading.  
 3. Import the Spring Framework related classes and annotations.  
-
+![Spring Page](./Spring.png)
 4. Fill in the details of the `auth key`, `org_id` and others of OpenAI and Pinecone.  
-
+![OpenAI Page](./OpenAi.png)
 5. Create variables that may be interacting with the OpenAI services used to store authentication keys and API endpoints.  
 6. Load the jsonnet file into the variable, and then load the data of that file into the variable.  
 7. In the main method, set the system server port to the desired port or by default it is `8080`. `Properties properties = new Properties ();` this property is often used in Java to manage the key-value pairs.  
 8. Then you have to configure the Hibernate to format the SQL queries for better readability. The lines written below are used to access the database. They enable SQL query logging and formatting in Spring JPA (Java Persistence API).
-
+![CORS Page](./springjpa.png)
 
 9. Set the CORS (Cross-Origin Resource Sharing) by specifying the allowed origins.  
 10. Then you have to initialize several endpoints and related configurations.  
@@ -53,21 +53,17 @@ Semantic Search is the task of retrieving the documents from a collection of the
 * `gpt3Endpoint`: This variable is another instance of the OpenAiEndpoint class, configured for GPT-3.5 Turbo, a language model for chat completions. It has similar configuration parameters as ada002Embedding but with additional settings for chat completions.  It is a configuration object that facilitates communication with OpenAI's ***"GPT-3.5 Turbo"*** model for chat-based language generation tasks. 
 *  `upsertPineconeEndpoint`: This variable is an instance of the `PineconeEndpoint` class, which is used to interact with Pinecone for upserting vectors. It is a configuration object that enables your application to interact with the Pinecone service for adding or updating vectors in a vector index. It plays a crucial role in enabling similarity-based search and retrieval functionality in your application.  
 These variables are essential for communicating with external services such as OpenAI and Pinecone.  
-
+![Endpoint Page](./Endpoints.png)
 11. After this, define a Spring class which is responsible for handling the HTTP requests and contains various methods for interacting with Pinecone and OpenAI services.
-
 12. Inject a `PdfReader` instance into the controller so that it can be used to read PDF files in the code. 
  
 ### Upsert Controller  
 Create a method `upsertPinecone` that handles HTTP POST requests to the endpoint which takes an `ArkRequest` object as a parameter which contains data required for the operation. Here `pdfReader` is used to read the input stream in chunks of 512 bytes and stores the result in a string array. An instance of `PineconeRetrieval` is created passing the string array created, the `ada002Embedding` endpoint, the `upsertPineconeEndpoint` and the `arkRequest`. The `upsert` method of the `PineconeRetrieval` instance is called to upsert the data into Pinecone. The pdf that you uploaded is divided into chunks and then the embedding vector sends that to the embedding endpoint to perform the similarity search on the query sent. 
 **NOTE**: Upsert is done only once as you can upload as many pdf files one at a time as after upserting the major work you would be doing is querying.  
-
-  
+![Upsert Page](./Upsert.png)
 ### Query Controller
-
 Define a method ‘query’ to handle HTTP POST requests to the `/pinecone/query` endpoint. It extracts the various parameters such as `namespace`, `query` from the `arkRequest` object. Here EdgeChain performs a Pinecone query using the `queryPineconeEndpoint` and retrieves word embeddings. This helps in transforming the results of the query into a list of the objects using a method. It returns the response containing the result of the query. `topk` is used to divide the pdf into chunks.  
-
-  
+![Query Page](./query.png)  
 Overall this model manages the interaction with Pinecone and OpenAI services including upserting data, querying based on the received HTTP requests.
 
   
@@ -108,8 +104,7 @@ Also one of the important to consider while uploading the files, upload only in 
        * Mode: raw  
       *   Data:  `{"query": "When is the Kolkata campus opening?"  }`
 
-  
-
+![Postman Page](./postmantesting.png)
 
 Semantic Search can change the way searching, ranking or retrieval systems work with their ability to index and store embedding vectors. Here EdgeChain helps in inserting the chunk and calculating the embedding vector. It provides methods which make it very easy for the customer so that they have just to write the business logic and their work happens easily, instead EdgeChain does everything. It ranks according to the score where the score is according to how close their similarity is with the query. And the model will return the answer of the query according to the ranking.
 
