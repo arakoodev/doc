@@ -11,7 +11,6 @@ Semantic Search is the task of retrieving the documents from a collection of the
 ### Pre Requisites
 
 1.  You need to make an account in OPENAI, Pinecone, Postgres so that from there you can retrieve the auth key, org id and etc which are needed for the code.  
-![Pinecone Landing Page](./Pinecone.png)
 2.  You need to download the edgechains jar file from this url https://github.com/arakoodev/EdgeChains/releases.  
 3. Download the `.java` and `.jsonnet` file and put them in the same folder.  
 4. In the code according to the folder structure you have to write about the path.  
