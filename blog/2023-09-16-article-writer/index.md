@@ -130,6 +130,8 @@ After all this we will be using the postman to test and give the requests for th
 
 ![Postman Page](./Postman.png)
 ### Full Working Code
+
+```
 package com.edgechain;
 
 import com.edgechain.lib.endpoint.impl.OpenAiEndpoint;
@@ -256,3 +258,4 @@ public class WikiExample {
       }
   }
 }
+```
