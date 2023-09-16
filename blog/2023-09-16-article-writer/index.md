@@ -128,7 +128,7 @@ After all this we will be using the postman to test and give the requests for th
 * Body: raw
 
 
-![Postman Testing Page](./Postman Article.png)
+![Postman Page](./Postman.png)
 ### Full Working Code
 package com.edgechain;
 
