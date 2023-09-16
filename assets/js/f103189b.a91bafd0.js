@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalekhaweb=self.webpackChunkalekhaweb||[]).push([[4186],{7198:e=>{e.exports=JSON.parse('{"label":"Article Writer","permalink":"/blog/tags/article-writer","allTagsPath":"/blog/tags","count":1}')}}]);
