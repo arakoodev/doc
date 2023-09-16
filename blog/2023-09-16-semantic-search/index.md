@@ -1,4 +1,13 @@
-
+---
+slug: Semantic-Search
+title: How to Build Semantic Search using EdgeChains
+authors:
+  name: Aditya Pandey
+  title: Arakoo Core Team
+  url: https://github.com/arakoodev
+  image_url: https://avatars.githubusercontent.com/u/114422989
+tags: [Semantic Search, Arakoo]
+---
 # How to Build Semantic Search using EdgeChains.
 
 Search for your document from a large pack of existing documents in the most effective manner.
