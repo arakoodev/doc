@@ -1,7 +1,7 @@
 ---
 step: ["[","Step 01.","]"]
 title: "Download The Assets"
-description: "Download from the latest release i.e. 0.5.0 - the jar(edgechain.jar) and associated files(source code (zip) or Source code(tar.gz)) 
+description: "Download from the latest release - the jar(edgechain.jar) and associated files(source code (zip) or Source code(tar.gz)) 
   "
 ---
 
