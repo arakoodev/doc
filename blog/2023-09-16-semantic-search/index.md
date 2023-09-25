@@ -527,3 +527,33 @@ return  gpt3Chain.getArkResponse();
 
 }
 ```
+## JSONnet for the Code 
+Data is at the heart of nearly every aspect of technology. Whether you're configuring software, managing infrastructure, or exchanging information between systems, having a clean and efficient way to structure and manipulate data is essential. This is where JSONnet steps in as a valuable tool.
+
+JSONnet is a versatile and human-friendly programming language designed for one primary purpose: simplifying the way we work with structured data. At its core, JSONnet takes the familiar concept of JSON (JavaScript Object Notation), a widely-used format for data interchange, and elevates it to a whole new level of flexibility and expressiveness. It has a declarative way of defining and describing the prompts and chains. 
+
+**The JSONnet for the query**
+```
+local maxTokens = if(payload.keepMaxTokens == "true") then payload.maxTokens else 10000;
+local preset = |||
+                  Use the following pieces of context to answer the question at the end. If
+                  you don't know the answer, just say that you don't know, don't try to make up an answer.
+                |||;
+local context = if(payload.keepContext == "true") then payload.context else "";
+local prompt = std.join("\n", [preset, context]);
+{
+    "maxTokens": maxTokens,
+    "preset" : preset,
+    "context": context,
+    "prompt": if(std.length(prompt) > xtr.parseNum(maxTokens)) then std.substr(prompt, 0, xtr.parseNum(maxTokens)) else prompt
+}
+```
+1.  `maxTokens`: This line of code is used to determine the maximum number of tokens that the bot should consider when generating a response. If  `keepMaxTokens`  in the payload is set to "true", then the  `maxTokens`  value from the payload is used. Otherwise, it defaults to 10000.
+
+2.  `preset`: This is a string that contains the instructions for the bot. It tells the bot to use the provided context to answer the question at the end. If the bot doesn't know the answer, it should admit that it doesn't know instead of making up an answer.
+
+3.  `context`: This line of code is used to determine whether the bot should consider the context from the payload when generating a response. If  `keepContext`  in the payload is set to "true", then the  `context`  value from the payload is used. Otherwise, it defaults to an empty string.
+
+4.  `prompt`: This is where the preset and context are combined to create the final prompt for the bot. The  `std.join`  function is used to join the preset and context with a newline character in between.
+
+5. The Final object- This is the output of the script. It includes everything.
