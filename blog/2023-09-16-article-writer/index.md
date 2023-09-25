@@ -259,3 +259,41 @@ public class WikiExample {
   }
 }
 ```
+## JSONnet for the Code 
+Data is at the heart of nearly every aspect of technology. Whether you're configuring software, managing infrastructure, or exchanging information between systems, having a clean and efficient way to structure and manipulate data is essential. This is where JSONnet steps in as a valuable tool.
+
+JSONnet is a versatile and human-friendly programming language designed for one primary purpose: simplifying the way we work with structured data. At its core, JSONnet takes the familiar concept of JSON (JavaScript Object Notation), a widely-used format for data interchange, and elevates it to a whole new level of flexibility and expressiveness. It has a declarative way of defining and describing the prompts and chains. 
+**The JSONnet for the above code**
+```
+local keepMaxTokens = payload.keepMaxTokens;
+local maxTokens = if keepMaxTokens == "true" then payload.maxTokens else 5120;
+
+local preset = |||
+                 You are a Summary Generator Bot. For any question other than summarizing the data, you should tell that you cannot answer it.
+                    You should detect the language and the characters the user is writing in, and reply in the same character set and language.
+
+                    You should follow the following template while answering the user:
+
+                    ```
+                    1. <POINT_1> - <DESCRIPTION_1>
+                    2. <POINT_2> - <DESCRIPTION_2>
+                    ...
+                    ```
+                    Now, given the data, create a 5-bullet point summary of:
+               |||;
+local keepContext = payload.keepContext;
+local context = if keepContext == "true" then payload.context else "";
+local prompt = std.join("\n", [preset, context]);
+{
+    "maxTokens": maxTokens,
+    "typeOfKeepContext": xtr.type(keepContext),
+    "preset" : preset,
+    "context": context,
+    "prompt": if(std.length(prompt) > xtr.parseNum(maxTokens)) then std.substr(prompt, 0, xtr.parseNum(maxTokens)) else prompt
+}
+```
+- KeepMaxTokens and maxTokens - These are used to determine the maximum number of the tokens that will be considered while generating the article.
+- preset- This is a string that contains the instructions. Here it tells the bot that it should only answer questions pertaining to giving the summary of the data and it should detect the language and character set of the user's input and respond in the same language and character set ,it kind of gives you the structure of its responses.
+- keepContext and context -Used to determine whether the bot should consider the context from the payload when generating the article
+- prompt -It is here where the context and preset are combined to create the final prompt for the bot .If the length of the prompt exceeds the maximum number of the tokens, then the prompt is truncated to fit within the limit.
+- The Final object- This is the output of the script. It includes everything.
