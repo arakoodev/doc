@@ -134,31 +134,20 @@ After all this we will be using the postman to test and give the requests for th
 ```java
 package com.edgechain;
 
-import com.edgechain.lib.endpoint.impl.OpenAiEndpoint;
-import com.edgechain.lib.endpoint.impl.WikiEndpoint;
-import com.edgechain.lib.jsonnet.JsonnetArgs;
+import com.edgechain.lib.endpoint.impl.llm.OpenAiChatEndpoint;
+import com.edgechain.lib.endpoint.impl.wiki.WikiEndpoint;
 import com.edgechain.lib.jsonnet.JsonnetLoader;
-import com.edgechain.lib.jsonnet.enums.DataType;
 import com.edgechain.lib.jsonnet.impl.FileJsonnetLoader;
-import com.edgechain.lib.openai.response.ChatCompletionResponse;
 import com.edgechain.lib.request.ArkRequest;
-import com.edgechain.lib.response.ArkResponse;
 import com.edgechain.lib.rxjava.retry.impl.ExponentialDelay;
 import com.edgechain.lib.rxjava.transformer.observable.EdgeChain;
-import com.edgechain.lib.openai.request.CompletionRequest;
-
-
-import io.reactivex.rxjava3.core.Observable;
-import java.util.*;
-import java.util.concurrent.TimeUnit;
-
-import com.edgechain.lib.wiki.response.WikiResponse;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import static com.edgechain.lib.constants.EndpointConstants.OPENAI_CHAT_COMPLETION_API;
 
@@ -169,9 +158,9 @@ public class WikiExample {
   private static final String OPENAI_ORG_ID = ""; // YOUR OPENAI ORG ID
 
   /* Step 3: Create OpenAiEndpoint to communicate with OpenAiServices; */
-  private static OpenAiEndpoint gpt3Endpoint;
+  private static OpenAiChatEndpoint gpt3Endpoint;
 
-  private static OpenAiEndpoint gpt3StreamEndpoint;
+  private static OpenAiChatEndpoint gpt3StreamEndpoint;
 
   private static WikiEndpoint wikiEndpoint;
 
@@ -200,7 +189,7 @@ public class WikiExample {
     wikiEndpoint = new WikiEndpoint();
 
     gpt3Endpoint =
-        new OpenAiEndpoint(
+        new OpenAiChatEndpoint(
             OPENAI_CHAT_COMPLETION_API,
             OPENAI_AUTH_KEY,
             OPENAI_ORG_ID,
@@ -210,7 +199,7 @@ public class WikiExample {
             new ExponentialDelay(3, 5, 2, TimeUnit.SECONDS));
 
     gpt3StreamEndpoint =
-        new OpenAiEndpoint(
+        new OpenAiChatEndpoint(
             OPENAI_CHAT_COMPLETION_API,
             OPENAI_AUTH_KEY,
             OPENAI_ORG_ID,
