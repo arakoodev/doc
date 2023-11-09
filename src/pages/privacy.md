@@ -6,7 +6,9 @@ hide_table_of_contents: true
 
 *Last Modified: 14 April 2023*
 
-Thank you for your interest in arakoo, Inc., ("arakoo," "we", "our" or "us"). arakoo provides a suite of open source tools, stitched together to build a seamless developer experience. This Privacy Notice explains how information about you, that directly identifies you, or that makes you identifiable ("personal information") is collected, used and disclosed by arakoo in connection with our website at [arakoo.ai](https://arakoo.ai) (the "Site") and our services offered in connection with the Site (collectively with the Site, the "Service").
+Thank you for your interest in arakoo ("arakoo," "we", "our" or "us"). arakoo provides a suite of open source tools, stitched together to build a seamless developer experience. This Privacy Notice explains how information about you, that directly identifies you, or that makes you identifiable ("personal information") is collected, used and disclosed by arakoo in connection with our website at [arakoo.ai](https://arakoo.ai) (the "Site") and our services offered in connection with the Site (collectively with the Site, the "Service").
+
+Arakoo.ai and Arakoo.com are fully owned and operated by Sandeep S Srinivasa (GST 07AVPPS1240Q1ZW). For any inquiries or support, please email at web-master@arakoo.ai or web-master@arakoo.com . 
 
 We may also provide you with additional privacy notices or disclosures where the scope of the inquiry, request, or personal information we require falls outside the scope of this Privacy Notice. In that case, the additional Privacy Notice or disclosures will govern how we may process the information you provide at that time. Please note that this Privacy Notice does not cover or apply to our processing of information about our employees or contractors.
 
