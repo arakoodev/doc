@@ -23,7 +23,7 @@ export default function FooterLayout({ style, links, logo, copyright }) {
         )} */}
         <hr className='border-b border-solid border-[#8BA5B0] opacity-50 my-4 mb-8'/>
         <div className='flex flex-col-reverse md:flex-row  justify-between '>
-          <p>Copyright © 2023 Arakoo Project</p>
+          <p>Copyright © 2023 Sandeep Srinivasa (GSTIN 07AVPPS1240Q1ZW) </p>
           {/* <div className='flex flex-col md:flex-row md:gap-4'>
             <p >Privacy Policy</p>
             <p >Terms of Use</p>
