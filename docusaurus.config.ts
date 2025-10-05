@@ -102,7 +102,7 @@ baseUrl: "/",
       title: "",
       logo: {
         alt: "StringCost",
-        src: "https://www.arakoo.com/img/arakoo-01.png",
+        src: "/img/arakoo-01.png",
       },
       items: [
         {

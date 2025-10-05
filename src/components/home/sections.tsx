@@ -17,7 +17,7 @@ export function HeroSection() {
 			<div className='container-custom flex flex-col gap-8 py-24 sm:py-28'>
 				<span className='text-xs uppercase tracking-[0.3em] text-brand-text-muted'>SAP for AI Agents</span>
 				<div className='flex flex-col gap-4 max-w-3xl'>
-					<h1 className='font-matter text-4xl leading-tight sm:text-5xl lg:text-6xl'>StringCost: The ERP for Enterprise AI.</h1>
+					<h1 className='font-matter text-4xl leading-tight sm:text-5xl lg:text-6xl'>StringCost: Think SAP for AI Agents.</h1>
 					<p className='text-base text-brand-text-secondary sm:text-lg'>A revenue-first framework for designing, deploying, and monetizing intelligent agents. Stop taking months to go live. Start shipping profitable AI.</p>
 					<div className='flex flex-wrap gap-2 pt-1'>
 						{accentTags.map((tag) => (
@@ -67,11 +67,11 @@ export function TrilemmaSection() {
 						<article className='flex flex-col gap-3 p-6'>
 							<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-200 px-3 py-1 text-xs font-semibold text-brand-text-primary'>Profitability</span>
 							<h3 className='text-sm font-semibold text-brand-text-primary'>Business</h3>
-							<p className='text-sm text-brand-text-secondary'>Your finance & product teams need to accurately meter usage and implement flexible billing without underbilling customers or overcharging them—a problem that kills margins and trust.</p>
+						<p className='text-sm text-brand-text-secondary'>Your finance & product teams need to accurately meter usage and implement flexible billing without <strong className='text-brand-text-primary'>underbilling customers or overcharging them</strong>—a problem that kills margins and trust.</p>
 						</article>
 					</div>
 				</div>
-				<p className='max-w-3xl text-sm text-brand-text-secondary sm:text-base'>Solving this trilemma forces teams into months of building brittle, internal billing workarounds, delaying revenue and innovation.</p>
+				<p className='max-w-3xl text-sm text-brand-text-secondary sm:text-base'>Solving this trilemma forces teams into months of brittle, internal billing workarounds—delaying revenue and innovation.</p>
 			</div>
 		</section>
 	);
@@ -84,7 +84,8 @@ export function RevenueFirstSection() {
 				<div className='grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-start'>
 					<div className='space-y-6'>
 						<h2 className='text-3xl font-matter font-semibold sm:text-4xl'>We Solved It by Putting Revenue First.</h2>
-						<p className='text-sm text-brand-text-secondary sm:text-base'>StringCost is the first framework that solves AI agent design by going revenue, costs, and billing first. Metering and monetization aren&apos;t bolted on after launch—they become core primitives of the agent itself.</p>
+						<p className='text-sm text-brand-text-secondary sm:text-base'><strong className='text-brand-text-primary'>StringCost is the first framework that solves AI agent design by going revenue, costs, and billing first.</strong> Metering and monetization aren&apos;t bolted on after launch—they become core primitives of the agent itself.</p>
+						<p className='text-sm text-brand-text-secondary sm:text-base'>By instrumenting every agent action for cost and auditability from the very first line of code, your operations behave like a financial transaction ledger with an unbreakable source of truth.</p>
 						<div className='grid gap-4 sm:grid-cols-2'>
 							<div className='rounded-2xl border border-brand-accent-100 bg-brand-accent-100/30 p-5 shadow-sm'>
 								<p className='text-xs uppercase tracking-[0.25em] text-brand-text-muted'>Ledgers, not logs</p>
@@ -140,25 +141,79 @@ export function SystemSection() {
 {`// Every step is a line item on a future invoice.
 const thought = await step({
   name: "Analyze User Intent",
-  actionType: "llm_call"
+  actionType: "llm_call",
+  unitCost: 0.001
 }, ...);
 
 const dbResult = await step({
   name: "Query Customer DB",
-  actionType: "tool_use"
+  actionType: "tool_use",
+  unitCost: 0.005
 }, ...);`}
 							</pre>
 						</div>
 					</article>
-					<article className='flex flex-col gap-4 rounded-2xl border border-brand-accent-300 bg-brand-accent-300/15 p-6 shadow-sm'>
+					<article className='flex flex-col gap-5 rounded-2xl border border-brand-accent-300 bg-brand-accent-300/15 p-6 shadow-sm'>
 						<span className='text-xs font-semibold uppercase tracking-[0.3em] text-brand-text-muted'>02</span>
 						<h3 className='text-lg font-matter font-semibold'>Deploy with Confidence on Vercel</h3>
-						<p className='text-sm text-brand-text-secondary'>Leverage Vercel&apos;s Build Output API to deploy custom agent runtimes with serverless scale. Your MCP API wrappers ship as optimized, independent functions.</p>
+						<p className='text-sm text-brand-text-secondary'>Stop choosing between flexibility and scalability. Leverage Vercel&apos;s Build Output API to ship custom runtimes with serverless performance.</p>
+						<div className='cli-window p-4'>
+							<pre className='text-xs sm:text-sm'>
+{`// vercel.json — full control of the build.
+{
+  "buildCommand": "node build.js",
+  "outputDirectory": ".vercel/output",
+  "framework": null
+}`}
+							</pre>
+						</div>
+						<div className='cli-window p-4'>
+							<pre className='text-xs sm:text-sm'>
+{`// build.js — package tools as optimized functions.
+class VercelCustomBuilder {
+  async build() {
+    await this.buildMCPFunctions(); // API wrappers
+    await this.buildAgentFunctions(); // Agent logic
+  }
+}`}
+							</pre>
+						</div>
 					</article>
-					<article className='flex flex-col gap-4 rounded-2xl border border-brand-accent-200 bg-brand-accent-200/25 p-6 shadow-sm'>
+					<article className='flex flex-col gap-5 rounded-2xl border border-brand-accent-200 bg-brand-accent-200/25 p-6 shadow-sm'>
 						<span className='text-xs font-semibold uppercase tracking-[0.3em] text-brand-text-muted'>03</span>
 						<h3 className='text-lg font-matter font-semibold'>Integrate Seamlessly with Your Financial Stack</h3>
-						<p className='text-sm text-brand-text-secondary'>Native Stripe utilities power real-time usage tracking, subscription gating, and instant invoice generation—tying every agent action straight into revenue.</p>
+						<p className='text-sm text-brand-text-secondary'>Native Stripe utilities power real-time usage tracking, subscription gating, and invoice automation—tying every agent action straight into revenue.</p>
+						<div className='cli-window p-4'>
+							<pre className='text-xs sm:text-sm'>
+{`// lib/framework.ts — automatically track usage.
+import { trackUsage } from '@/lib/stringcost/server';
+
+class BillingManager {
+  async record(event) {
+    await trackUsage({
+      userId: this.userId,
+      featureId: event.actionType,
+      usage: Math.round(event.cost * 1000) || 1,
+    });
+  }
+}`}
+							</pre>
+						</div>
+						<div className='cli-window p-4'>
+							<pre className='text-xs sm:text-sm'>
+{`// middleware.ts — protect premium features.
+import { checkEntitlement } from '@/lib/stringcost/server';
+
+export async function middleware(request: NextRequest) {
+  if (request.nextUrl.pathname.startsWith('/premium-agents')) {
+    const { hasAccess } = await checkEntitlement({ /* ... */ });
+    if (!hasAccess) {
+      return NextResponse.redirect(new URL('/pricing', request.url));
+    }
+  }
+}`}
+							</pre>
+						</div>
 					</article>
 				</div>
 			</div>
@@ -192,6 +247,97 @@ export function SourceOfTruthSection() {
 							<p className='text-sm text-brand-text-secondary'>Eliminate billing errors with a perfect record of every billable action. Sync usage to Stripe for invoices your customers—and auditors—can trust.</p>
 						</article>
 					</div>
+				</div>
+			</div>
+		</section>
+	);
+}
+
+export function AccountingSection() {
+	return (
+		<section id='accounting' className='bg-brand-base text-brand-text-primary'>
+			<div className='container-custom flex flex-col gap-10 py-16 sm:py-20'>
+				<div className='max-w-3xl space-y-3'>
+					<h2 className='text-3xl font-matter font-semibold sm:text-4xl'>Flexible Accounting for Any AI Business Model</h2>
+					<p className='text-sm text-brand-text-secondary sm:text-base'>Because every action is a discrete, billable `step`, you can implement any pricing strategy you can imagine.</p>
+				</div>
+				<div className='grid gap-6 lg:grid-cols-2'>
+					<article className='flex flex-col gap-4 rounded-2xl border border-brand-accent-100 bg-brand-surface p-6 shadow-sm'>
+						<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-100/60 px-3 py-1 text-xs font-semibold text-brand-text-secondary'>01 · Usage-Based</span>
+						<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Simple Usage-Based Billing</h3>
+						<p className='text-sm text-brand-text-secondary'>Charge a flat rate for any agent action. Perfect for pay-as-you-go models.</p>
+						<div className='cli-window p-4'>
+							<pre className='text-xs sm:text-sm'>
+{`// Agent Code
+await step({ name: "Thought 1", actionType: "llm_call", unitCost: 0.002 }, ...);
+await step({ name: "Tool Use", actionType: "tool_use", unitCost: 0.002 }, ...);
+
+// Invoice Line Items
+// - Thought 1: $0.0020
+// - Tool Use:  $0.0020`}
+							</pre>
+						</div>
+					</article>
+					<article className='flex flex-col gap-4 rounded-2xl border border-brand-accent-200 bg-brand-accent-200/25 p-6 shadow-sm'>
+						<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-200 px-3 py-1 text-xs font-semibold text-brand-text-primary'>02 · Tiered</span>
+						<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Tiered &amp; Hybrid Billing</h3>
+						<p className='text-sm text-brand-text-secondary'>Assign different costs to different actions. Charge more for premium tools or more powerful models.</p>
+						<div className='cli-window p-4'>
+							<pre className='text-xs sm:text-sm'>
+{`// Agent Code
+await step({ name: "Basic Analysis", actionType: "llm_call", unitCost: 0.001 }, ...);
+await step({ name: "Premium Data Tool", actionType: "tool_use", unitCost: 0.050 }, ...);
+
+// Invoice Line Items
+// - Basic Analysis:    $0.0010
+// - Premium Data Tool: $0.0500`}
+							</pre>
+						</div>
+					</article>
+					<article className='flex flex-col gap-4 rounded-2xl border border-brand-accent-300 bg-brand-accent-300/15 p-6 shadow-sm'>
+						<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-300 px-3 py-1 text-xs font-semibold text-white'>03 · Dynamic</span>
+						<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Dynamic &amp; Performance-Based Billing</h3>
+						<p className='text-sm text-brand-text-secondary'>Calculate the cost of a step at runtime so you always capture the true cost of external dependencies.</p>
+						<div className='cli-window p-4'>
+							<pre className='text-xs sm:text-sm'>
+{`McpRegistry.register(
+  'dataApi',
+  'https://.../api/data',
+  (metrics) => {
+    const timeCost = Math.floor(metrics.durationMs / 100) * 0.005;
+    return 0.01 + timeCost;
+  }
+);`}
+							</pre>
+						</div>
+					</article>
+					<article className='flex flex-col gap-4 rounded-2xl border border-brand-text-secondary/20 bg-brand-surface p-6 shadow-sm'>
+						<span className='inline-flex w-fit items-center rounded-full bg-brand-text-primary px-3 py-1 text-xs font-semibold text-white'>04 · Outcome-Based</span>
+						<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Outcome-Based Billing: Only Pay for Results</h3>
+						<p className='text-sm text-brand-text-secondary'>Build trust with enterprise SLAs by charging only for successful actions.</p>
+						<div className='cli-window p-4'>
+							<pre className='text-xs sm:text-sm'>
+{`try {
+  await step({ name: "AnalyzeSentiment", actionType: "tool_use", unitCost: 0.02 },
+    () => callUnreliableApi(text)
+  );
+} catch (e) {
+  console.error("Sentiment analysis failed. Customer will not be billed.");
+}`}
+							</pre>
+						</div>
+						<div className='cli-window p-4'>
+							<pre className='text-xs sm:text-sm'>
+{`function processBillingEvent(event) {
+  if (event.outcome === 'success') {
+    chargeCustomer(event.userId, event.cost);
+  } else {
+    logFailedActionForReview(event.userId, event.action);
+  }
+}`}
+							</pre>
+						</div>
+					</article>
 				</div>
 			</div>
 		</section>

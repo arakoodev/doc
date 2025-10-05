@@ -6,7 +6,7 @@ import { MdMenu } from "react-icons/md";
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const logoSrc = "https://www.arakoo.com/img/arakoo-01.png";
+  const logoSrc = "/img/arakoo-01.png";
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);

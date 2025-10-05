@@ -6,6 +6,7 @@ import {
 	RevenueFirstSection,
 	SystemSection,
 	SourceOfTruthSection,
+	AccountingSection,
 	FinalCtaSection,
 } from "../components/home/sections";
 
@@ -19,6 +20,7 @@ export default function Home() {
 				<RevenueFirstSection />
 				<SystemSection />
 				<SourceOfTruthSection />
+				<AccountingSection />
 				<FinalCtaSection />
 			</div>
 		</Layout>
