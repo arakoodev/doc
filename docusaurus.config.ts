@@ -76,7 +76,7 @@ baseUrl: "/",
   ],
 
   themeConfig: {
-    image: "/img/c63a0772-7469-4d2b-b8e6-102f2ef8cc28.png",
+    image: "/img/og-arakoo.png",
     metadata: [
     // 1) Standard meta description
     {

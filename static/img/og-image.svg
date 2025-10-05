@@ -1,0 +1,23 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#F4EAF3"/>
+
+  <!-- Arakoo Triangle Logo -->
+  <g transform="translate(300, 180)">
+    <!-- Outer triangle -->
+    <path d="M 0,80 L 40,0 L 80,80 L 0,80 Z" fill="none" stroke="#210F26" stroke-width="8" stroke-linejoin="miter"/>
+    <!-- Inner triangle -->
+    <path d="M 12,64 L 40,16 L 68,64 L 12,64 Z" fill="none" stroke="#210F26" stroke-width="8" stroke-linejoin="miter"/>
+    <!-- Horizontal line -->
+    <line x1="0" y1="64" x2="80" y2="64" stroke="#210F26" stroke-width="8"/>
+  </g>
+
+  <!-- StringCost text -->
+  <text x="420" y="240" font-family="Matter, sans-serif" font-size="72" font-weight="700" fill="#210F26">StringCost</text>
+
+  <!-- Tagline -->
+  <text x="420" y="310" font-family="Matter, sans-serif" font-size="48" font-weight="400" fill="#210F26">SAP for AI Agents.</text>
+
+  <!-- Decorative underline -->
+  <path d="M 420,330 Q 450,335 520,332 T 720,330" stroke="#D9C1D7" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+</svg>
