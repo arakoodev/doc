@@ -61,7 +61,7 @@ export function HeroSection() {
 								</span>?
 							</p>
 							<p className='mt-2 text-sm text-brand-text-secondary'>
-								The future is outcome based...but the tools to build it don&apos;t exist. This <span className='line-through'>not a <strong>payments</strong> problem</span>, but an <strong>accounting</strong> problem.
+								This <span className='line-through'>not a <strong>payments</strong> problem</span>, but an <strong>accounting</strong> problem that leads to catastrophic failure. The future is outcome based...but the tools to build it don&apos;t exist.
 								<br />
 								<span className='relative inline-block mt-2 font-semibold text-brand-text-primary text-base sm:text-lg'>
 									Until now.
