@@ -76,13 +76,13 @@ export function HeroSection() {
 
 				<div className='flex flex-col gap-3 sm:flex-row sm:items-center'>
 					<a
-						href='https://www.google.com/search?q=https://stringcost.com/demo'
+						href='https://calendar.app.google/hjN2HkZBLJMtSuku7'
 						className={primaryButton}
 					>
 						Schedule a Strategic Demo
 					</a>
 					<a
-						href='https://www.google.com/search?q=https://stringcost.com/contact'
+						href='https://calendar.app.google/hjN2HkZBLJMtSuku7'
 						className={secondaryButton}
 					>
 						Contact Sales
@@ -495,7 +495,7 @@ export function FinalCtaSection() {
 					<h2 className='text-3xl font-matter font-semibold sm:text-4xl'>Stop Building on Proxies. Start Building on a System of Record.</h2>
 					<p className='text-sm text-brand-text-secondary sm:text-base'>Schedule a demo to see how StringCost&apos;s double-entry ledger can give you the financial control to ship profitable AI agents with confidence.</p>
 					<div className='flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row'>
-						<a href='https://www.google.com/search?q=https://stringcost.com/demo' className={primaryButton}>
+						<a href='https://calendar.app.google/hjN2HkZBLJMtSuku7' className={primaryButton}>
 							Schedule a Demo
 						</a>
 						<a href='https://www.google.com/search?q=https://stringcost.com/docs' className={tertiaryButton}>
