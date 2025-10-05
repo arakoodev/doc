@@ -27,6 +27,53 @@ export function HeroSection() {
 						))}
 					</div>
 				</div>
+
+				{/* a16z Outcome-Based Pricing Callout */}
+				<div className='max-w-3xl rounded-2xl border border-brand-accent-300 bg-brand-accent-300/10 p-6 shadow-sm'>
+					<div className='flex flex-col gap-4'>
+						<div className='flex items-start gap-3'>
+							<div className='flex-shrink-0'>
+								<img src='/img/a16z-logo.svg' alt='a16z' className='h-8 w-auto' />
+							</div>
+							<div className='flex-1'>
+								<p className='text-sm font-semibold text-brand-text-primary sm:text-base'>
+									<a href='https://a16z.com/newsletter/december-2024-enterprise-newsletter-ai-is-driving-a-shift-towards-outcome-based-pricing/' target='_blank' rel='noopener noreferrer' className='hover:underline'>
+										Andreessen Horowitz just declared:
+									</a>
+								</p>
+								<p className='mt-2 text-sm italic text-brand-text-secondary sm:text-base'>
+									&ldquo;AI is driving a shift towards <span className='relative inline-block'>
+										<span className='relative z-10'>outcome-based pricing</span>
+										<svg className='absolute -bottom-0.5 left-0 w-full h-2 z-0' viewBox='0 0 200 8' preserveAspectRatio='none'>
+											<path d='M3,5 Q40,3 80,5 T195,6' stroke='#EF4444' strokeWidth='2' fill='none' strokeLinecap='round' opacity='0.7' />
+										</svg>
+									</span>. Software is becoming labor.&rdquo;
+								</p>
+							</div>
+						</div>
+						<div className='border-l-4 border-brand-accent-200 pl-4'>
+							<p className='text-base font-semibold text-brand-text-primary sm:text-lg'>
+								But where is the infrastructure for outcome-based <span className='relative inline-block'>
+									<span className='relative z-10'>billing &amp; accounting</span>
+									<svg className='absolute -bottom-1 left-0 w-full h-3 z-0' viewBox='0 0 300 12' preserveAspectRatio='none'>
+										<path d='M5,8 Q50,4 100,6 T200,7 T295,9' stroke='#EF4444' strokeWidth='2.5' fill='none' strokeLinecap='round' opacity='0.8' />
+									</svg>
+								</span>?
+							</p>
+							<p className='mt-2 text-sm text-brand-text-secondary'>
+								This is why AI startups and enterprise implementations are failing. The future is outcome based...but the tools to build it don&apos;t exist.
+								<br />
+								<span className='relative inline-block mt-2 font-semibold text-brand-text-primary text-base sm:text-lg'>
+									Until now.
+									<svg className='absolute -inset-2 w-[calc(100%+20px)] h-[calc(100%+20px)]' viewBox='0 0 100 40' preserveAspectRatio='none'>
+										<path d='M5,20 Q8,8 25,5 T75,8 Q92,10 95,20 Q92,30 75,32 T25,35 Q8,32 5,20' stroke='#10B981' strokeWidth='2.5' fill='none' strokeLinecap='round' strokeLinejoin='round' opacity='0.8' />
+									</svg>
+								</span>
+							</p>
+						</div>
+					</div>
+				</div>
+
 				<div className='flex flex-col gap-3 sm:flex-row sm:items-center'>
 					<a
 						href='https://www.google.com/search?q=https://stringcost.com/demo'
