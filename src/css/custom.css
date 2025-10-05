@@ -31,6 +31,23 @@ body {
 	font-family: "Fira Code", "Source Code Pro", monospace;
 	margin: 0;
 	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+	.cli-window pre {
+		font-size: 0.65rem;
+		line-height: 1.3;
+		padding: 0.25rem;
+	}
+
+	/* Allow horizontal scroll for very long code lines that can't wrap */
+	.cli-window {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
 }
 @font-face {
 	font-family: "Matter";
@@ -66,6 +83,41 @@ body {
 	width: 100%;
 	max-width: 1400px;
 	padding-inline: 1rem;
+}
+
+@media (max-width: 768px) {
+	.container-custom {
+		padding-inline: 1rem;
+	}
+
+	/* Ensure all cards and content blocks fit within mobile viewport */
+	article, .rounded-2xl, .rounded-xl {
+		max-width: 100%;
+	}
+
+	/* Tighten up code blocks on mobile */
+	.cli-window {
+		padding: 0.5rem !important;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	/* Make sure text wraps properly */
+	p, h1, h2, h3, h4, h5, h6 {
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+	}
+
+	/* Reduce font sizes slightly on mobile for better fit */
+	h1 {
+		font-size: 2rem !important;
+		line-height: 1.2 !important;
+	}
+
+	h2 {
+		font-size: 1.5rem !important;
+		line-height: 1.3 !important;
+	}
 }
 
 .navbar__title {

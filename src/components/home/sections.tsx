@@ -18,7 +18,7 @@ export function HeroSection() {
 				<span className='text-xs uppercase tracking-[0.3em] text-brand-text-muted'>SAP for AI Agents</span>
 				<div className='flex flex-col gap-4 max-w-3xl'>
 					<h1 className='font-matter text-4xl leading-tight sm:text-5xl lg:text-6xl'>StringCost: Think SAP for AI Agents.</h1>
-					<p className='text-base text-brand-text-secondary sm:text-lg'>A revenue-first framework for designing, deploying, and monetizing intelligent agents. Stop taking months to go live. Start shipping profitable AI.</p>
+					<p className='text-base text-brand-text-secondary sm:text-lg'>A revenue-first framework that creates a <strong className='text-brand-text-primary'>double-entry ledger</strong> for every agent operation. Stop building on shallow proxies. Start building on a true system of record for your AI business.</p>
 					<div className='flex flex-wrap gap-2 pt-1'>
 						{accentTags.map((tag) => (
 							<span key={tag.label} className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${tag.color}`}>
@@ -42,12 +42,12 @@ export function HeroSection() {
 									</a>
 								</p>
 								<p className='mt-2 text-sm italic text-brand-text-secondary sm:text-base'>
-									&ldquo;AI is driving a shift towards <span className='relative inline-block'>
+									<em>&ldquo;AI is driving a shift towards <span className='relative inline-block'>
 										<span className='relative z-10'>outcome-based pricing</span>
 										<svg className='absolute -bottom-0.5 left-0 w-full h-2 z-0' viewBox='0 0 200 8' preserveAspectRatio='none'>
 											<path d='M3,5 Q40,3 80,5 T195,6' stroke='#EF4444' strokeWidth='2' fill='none' strokeLinecap='round' opacity='0.7' />
 										</svg>
-									</span>. Software is becoming labor.&rdquo;
+									</span>. Software is becoming labor.&rdquo;</em>
 								</p>
 							</div>
 						</div>
@@ -85,9 +85,67 @@ export function HeroSection() {
 						href='https://www.google.com/search?q=https://stringcost.com/contact'
 						className={secondaryButton}
 					>
-						Talk to an Expert
+						Contact Sales
 					</a>
 				</div>
+			</div>
+		</section>
+	);
+}
+
+export function RootCauseSection() {
+	return (
+		<section id='rootcause' className='bg-brand-base text-brand-text-primary'>
+			<div className='container-custom flex flex-col gap-8 py-16 sm:py-20'>
+				<div className='max-w-3xl'><h2 className='text-3xl font-matter font-semibold sm:text-4xl'>The Root Cause: A New Cost Paradigm</h2></div>
+				<p className='max-w-3xl text-sm text-brand-text-secondary sm:text-base'>Why is monetizing AI agents so difficult? Because the financial models that powered the last decade of SaaS are fundamentally broken in the world of Generative AI.</p>
+				<div className='flex flex-col md:flex-row gap-6 items-center'>
+					<article className='flex-1 flex flex-col gap-4 p-6 rounded-2xl border border-brand-overlay/60 bg-brand-surface shadow-sm'>
+						<div className='flex items-center gap-3'>
+							<span className='inline-flex items-center rounded-full bg-gray-200 px-3 py-1 text-xs font-semibold text-gray-700'>OLD</span>
+							<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>SaaS APIs</h3>
+						</div>
+						<div className='space-y-4 text-sm text-brand-text-secondary'>
+							<div>
+								<p className='font-semibold text-brand-text-primary mb-1'>Predictable, Per-Call Cost</p>
+								<p>API calls have a fixed, amortizable compute cost. The size of the JSON payload has a negligible impact on the price.</p>
+							</div>
+							<div>
+								<p className='font-semibold text-brand-text-primary mb-1'>Billed by the Request</p>
+								<p>The billable event is the API call itself.</p>
+							</div>
+						</div>
+					</article>
+
+					<div className='flex items-center justify-center'>
+						<div className='rounded-full bg-brand-accent-200 text-brand-text-primary w-12 h-12 flex items-center justify-center text-sm font-bold'>
+							VS
+						</div>
+					</div>
+
+					<article className='flex-1 flex flex-col gap-4 p-6 rounded-2xl border border-brand-accent-300 bg-brand-accent-300/15 shadow-sm'>
+						<div className='flex items-center gap-3'>
+							<span className='inline-flex items-center rounded-full bg-brand-accent-300 px-3 py-1 text-xs font-semibold text-white'>NEW</span>
+							<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Agentic APIs</h3>
+						</div>
+						<div className='space-y-4 text-sm text-brand-text-secondary'>
+							<div>
+								<p className='font-semibold text-brand-text-primary mb-1'>Variable, Computational Cost</p>
+								<p>An agent&apos;s cost is directly tied to the <em>&ldquo;work&rdquo;</em> it performs. It&apos;s a metered, computational resource, not a fixed endpoint.</p>
+							</div>
+							<div>
+								<p className='font-semibold text-brand-text-primary mb-1'>Billed by the Computation</p>
+								<p>The billable events are the <strong className='text-brand-text-primary'>input tokens</strong>, <strong className='text-brand-text-primary'>output tokens</strong>, the <strong className='text-brand-text-primary'>number of thoughts</strong>, and every <strong className='text-brand-text-primary'>downstream tool call</strong> the agent makes.</p>
+							</div>
+						</div>
+					</article>
+				</div>
+				<p className='max-w-3xl text-sm text-brand-text-secondary sm:text-base'>This creates a <strong className='text-brand-text-primary'>massive accounting problem</strong> that traditional billing systems cannot solve. Trying to price a variable, multi-step agentic workflow like a simple API call forces you to either guess—and consistently <span className='relative inline-block'>
+					<strong className='relative z-10 text-brand-text-primary'>underbill or overcharge</strong>
+					<svg className='absolute -bottom-0.5 left-0 w-full h-2 z-0' viewBox='0 0 250 8' preserveAspectRatio='none'>
+						<path d='M3,5 Q50,3 100,5 T245,6' stroke='#EF4444' strokeWidth='2' fill='none' strokeLinecap='round' opacity='0.7' />
+					</svg>
+				</span> your customers—or build a complex, brittle accounting system from scratch.</p>
 			</div>
 		</section>
 	);
@@ -98,7 +156,7 @@ export function TrilemmaSection() {
 		<section id='trilemma' className='bg-brand-base text-brand-text-primary'>
 			<div className='container-custom flex flex-col gap-8 py-16 sm:py-20'>
 				<div className='max-w-3xl'><h2 className='text-3xl font-matter font-semibold sm:text-4xl'>The AI Agent Trilemma is Stalling Your Go-to-Market.</h2></div>
-				<p className='max-w-3xl text-sm text-brand-text-secondary sm:text-base'>Enterprises are struggling to launch AI agents because they are caught between three conflicting demands. Getting one right often means sacrificing the others.</p>
+				<p className='max-w-3xl text-sm text-brand-text-secondary sm:text-base'>This new cost paradigm creates a trilemma for enterprises, forcing a choice between three conflicting demands. Getting one right often means sacrificing the others.</p>
 				<div className='overflow-hidden rounded-2xl border border-brand-overlay/60 bg-brand-surface shadow-sm'>
 					<div className='grid divide-y divide-brand-border/60 text-left md:grid-cols-3 md:divide-y-0 md:divide-x'>
 						<article className='flex flex-col gap-3 p-6'>
@@ -128,41 +186,62 @@ export function RevenueFirstSection() {
 	return (
 		<section id='framework' className='bg-brand-base text-brand-text-primary'>
 			<div className='container-custom py-16 sm:py-20'>
-				<div className='grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-start'>
-					<div className='space-y-6'>
-						<h2 className='text-3xl font-matter font-semibold sm:text-4xl'>We Solved It by Putting Revenue First.</h2>
-						<p className='text-sm text-brand-text-secondary sm:text-base'><strong className='text-brand-text-primary'>StringCost is the first framework that solves AI agent design by going revenue, costs, and billing first.</strong> Metering and monetization aren&apos;t bolted on after launch—they become core primitives of the agent itself.</p>
-						<p className='text-sm text-brand-text-secondary sm:text-base'>By instrumenting every agent action for cost and auditability from the very first line of code, your operations behave like a financial transaction ledger with an unbreakable source of truth.</p>
-						<div className='grid gap-4 sm:grid-cols-2'>
-							<div className='rounded-2xl border border-brand-accent-100 bg-brand-accent-100/30 p-5 shadow-sm'>
-								<p className='text-xs uppercase tracking-[0.25em] text-brand-text-muted'>Ledgers, not logs</p>
-								<p className='mt-3 text-sm text-brand-text-secondary'>Every action is captured as a financial transaction—complete with cost, owner, and entitlement metadata.</p>
-							</div>
-							<div className='rounded-2xl border border-brand-accent-200 bg-brand-accent-200/30 p-5 shadow-sm'>
-								<p className='text-xs uppercase tracking-[0.25em] text-brand-text-muted'>Revenue primitives</p>
-								<p className='mt-3 text-sm text-brand-text-secondary'>Usage, pricing, and margins become configurable primitives that ship with your agent logic on day one.</p>
-							</div>
-						</div>
+				<div className='space-y-8'>
+					<div className='max-w-3xl space-y-4'>
+						<h2 className='text-3xl font-matter font-semibold sm:text-4xl'>The Double-Entry Ledger for AI Agent Operations</h2>
+						<blockquote className='border-l-4 border-brand-accent-200 bg-brand-surface/50 pl-5 py-4 italic text-brand-text-secondary rounded-r-lg'>
+							<p className='text-sm sm:text-base'>Simple token counters and API proxies are failing. They see the token count and total bill from your model provider, but they <span className='relative inline-block'>
+								<strong className='relative z-10 text-brand-text-primary'>can&apos;t tell you the profitability of a single agent run</strong>
+								<svg className='absolute -bottom-0.5 left-0 w-full h-2 z-0' viewBox='0 0 400 8' preserveAspectRatio='none'>
+									<path d='M3,5 Q80,3 160,5 T395,6' stroke='#EF4444' strokeWidth='2' fill='none' strokeLinecap='round' opacity='0.7' />
+								</svg>
+							</span>.</p>
+						</blockquote>
 					</div>
-					<div className='flex flex-col gap-5 rounded-2xl border border-brand-accent-300 bg-brand-accent-300/25 p-6 shadow-sm'>
-						<div>
-							<p className='text-xs uppercase tracking-[0.3em] text-brand-text-muted'>Revenue-first blueprint</p>
-							<p className='mt-3 text-sm text-brand-text-secondary'>Our architecture treats your agent&apos;s operations as a financial transaction ledger, giving you an unbreakable source of truth for your AI business.</p>
+					<div className='space-y-6'>
+						<div className='flex flex-col lg:flex-row gap-6 items-center'>
+							<div className='flex-1 rounded-2xl border border-brand-accent-100 bg-brand-accent-100/20 p-6 shadow-sm w-full'>
+								<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Deep Framework Integration</h3>
+								<p className='mt-3 text-sm text-brand-text-secondary'>StringCost isn&apos;t a language-level library; it&apos;s a <span className='relative inline-block'>
+									<strong className='relative z-10 text-brand-text-primary'>compile-time harness for your framework</strong>
+									<svg className='absolute -bottom-0.5 left-0 w-full h-2 z-0' viewBox='0 0 300 8' preserveAspectRatio='none'>
+										<path d='M3,5 Q60,3 120,5 T295,6' stroke='#10B981' strokeWidth='2' fill='none' strokeLinecap='round' opacity='0.7' />
+									</svg>
+								</span>. We integrate directly into the build and deployment lifecycle. For our first target, Next.js, we use deep framework-level tools like the <span className='relative inline-block'>
+									<strong className='relative z-10 text-brand-text-primary'>Vercel Build Output API</strong>
+									<svg className='absolute -bottom-0.5 left-0 w-full h-2 z-0' viewBox='0 0 220 8' preserveAspectRatio='none'>
+										<path d='M3,5 Q50,3 100,5 T215,6' stroke='#10B981' strokeWidth='2' fill='none' strokeLinecap='round' opacity='0.7' />
+									</svg>
+								</span> to package your agents and their instrumentation together, ensuring perfect compatibility and control over the deployment environment.</p>
+							</div>
+							<div className='flex items-center justify-center'>
+								<div className='rounded-full bg-brand-accent-300 text-white w-12 h-12 flex items-center justify-center text-2xl font-bold'>
+									+
+								</div>
+							</div>
+							<div className='flex-1 rounded-2xl border border-brand-accent-200 bg-brand-accent-200/20 p-6 shadow-sm w-full'>
+								<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Every Step is a Ledger Entry</h3>
+								<p className='mt-3 text-sm text-brand-text-secondary'>Our <code className='text-xs bg-brand-accent-100 px-2 py-0.5 rounded'>step</code> primitive is the core of this ledger. It forces every discrete computational action to be recorded as a distinct line item with two sides:</p>
+								<ul className='mt-3 space-y-2 text-sm text-brand-text-secondary'>
+									<li className='flex items-start gap-2'>
+										<span className='mt-1 inline-block size-1.5 rounded-full bg-brand-accent-200' />
+										<span><strong className='text-brand-text-primary'>Cost Side (Debits):</strong> The tokens you paid, the price of the tool call, and the compute time.</span>
+									</li>
+									<li className='flex items-start gap-2'>
+										<span className='mt-1 inline-block size-1.5 rounded-full bg-brand-accent-200' />
+										<span><strong className='text-brand-text-primary'>Revenue Side (Credits):</strong> The billable event for your customer based on your pricing model.</span>
+									</li>
+								</ul>
+							</div>
 						</div>
-						<ul className='space-y-3 text-sm text-brand-text-secondary'>
-							<li className='flex items-start gap-3'>
-								<span className='mt-1 inline-block size-2 rounded-full bg-brand-accent-100' />
-								Full auditability per step, tool, and cost center.
-							</li>
-							<li className='flex items-start gap-3'>
-								<span className='mt-1 inline-block size-2 rounded-full bg-brand-accent-200' />
-								Multi-tenant, usage-based pricing with margin protection baked in.
-							</li>
-							<li className='flex items-start gap-3'>
-								<span className='mt-1 inline-block size-2 rounded-full bg-brand-accent-300' />
-								Finance-ready exports that map directly into Stripe and your ERP.
-							</li>
-						</ul>
+						<div className='flex items-center justify-center'>
+							<svg className='w-8 h-8 text-brand-accent-300' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+								<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 14l-7 7m0 0l-7-7m7 7V3' />
+							</svg>
+						</div>
+						<div className='max-w-3xl mx-auto rounded-2xl border border-brand-accent-300 bg-brand-accent-300/15 p-6 shadow-sm'>
+							<p className='text-sm text-brand-text-secondary'>The result is a perfect, auditable, real-time <strong className='text-brand-text-primary'>P&amp;L for every single agent run</strong>. You can finally answer critical business questions: <em>&ldquo;Which agents are most profitable?&rdquo;</em>, <em>&ldquo;Which tools are driving the most cost?&rdquo;</em>, and <em>&ldquo;What is the true margin on our AI features?&rdquo;</em></p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -306,80 +385,74 @@ export function AccountingSection() {
 			<div className='container-custom flex flex-col gap-10 py-16 sm:py-20'>
 				<div className='max-w-3xl space-y-3'>
 					<h2 className='text-3xl font-matter font-semibold sm:text-4xl'>Flexible Accounting for Any AI Business Model</h2>
-					<p className='text-sm text-brand-text-secondary sm:text-base'>Because every action is a discrete, billable `step`, you can implement any pricing strategy you can imagine.</p>
+					<p className='text-sm text-brand-text-secondary sm:text-base'>This double-entry approach unlocks any pricing strategy you can imagine.</p>
 				</div>
-				<div className='grid gap-6 lg:grid-cols-2'>
+				<div className='grid gap-6 lg:grid-cols-3'>
 					<article className='flex flex-col gap-4 rounded-2xl border border-brand-accent-100 bg-brand-surface p-6 shadow-sm'>
-						<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-100/60 px-3 py-1 text-xs font-semibold text-brand-text-secondary'>01 · Usage-Based</span>
-						<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Simple Usage-Based Billing</h3>
-						<p className='text-sm text-brand-text-secondary'>Charge a flat rate for any agent action. Perfect for pay-as-you-go models.</p>
+						<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-100 px-3 py-1 text-xs font-semibold text-brand-text-secondary'>01 · Tiered</span>
+						<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Tiered &amp; Hybrid Billing</h3>
+						<p className='text-sm text-brand-text-secondary'>Assign different costs and prices to different actions. Charge more for premium tools or more powerful models.</p>
 						<div className='cli-window p-4'>
 							<pre className='text-xs sm:text-sm'>
 {`// Agent Code
-await step({ name: "Thought 1", actionType: "llm_call", unitCost: 0.002 }, ...);
-await step({ name: "Tool Use", actionType: "tool_use", unitCost: 0.002 }, ...);
+await step({
+  name: "Basic Analysis",
+  actionType: "llm_call",
+  unitCost: 0.001
+}, ...);
 
-// Invoice Line Items
-// - Thought 1: $0.0020
-// - Tool Use:  $0.0020`}
+await step({
+  name: "Premium Data Tool",
+  actionType: "tool_use",
+  unitCost: 0.050
+}, ...);
+
+// Resulting Ledger
+// DEBIT: Cost of gpt-4-turbo tokens
+// CREDIT: $0.0010 revenue
+// DEBIT: Cost of Premium Data API
+// CREDIT: $0.0500 revenue`}
 							</pre>
 						</div>
 					</article>
 					<article className='flex flex-col gap-4 rounded-2xl border border-brand-accent-200 bg-brand-accent-200/25 p-6 shadow-sm'>
-						<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-200 px-3 py-1 text-xs font-semibold text-brand-text-primary'>02 · Tiered</span>
-						<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Tiered &amp; Hybrid Billing</h3>
-						<p className='text-sm text-brand-text-secondary'>Assign different costs to different actions. Charge more for premium tools or more powerful models.</p>
-						<div className='cli-window p-4'>
-							<pre className='text-xs sm:text-sm'>
-{`// Agent Code
-await step({ name: "Basic Analysis", actionType: "llm_call", unitCost: 0.001 }, ...);
-await step({ name: "Premium Data Tool", actionType: "tool_use", unitCost: 0.050 }, ...);
-
-// Invoice Line Items
-// - Basic Analysis:    $0.0010
-// - Premium Data Tool: $0.0500`}
-							</pre>
-						</div>
-					</article>
-					<article className='flex flex-col gap-4 rounded-2xl border border-brand-accent-300 bg-brand-accent-300/15 p-6 shadow-sm'>
-						<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-300 px-3 py-1 text-xs font-semibold text-white'>03 · Dynamic</span>
+						<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-200 px-3 py-1 text-xs font-semibold text-brand-text-primary'>02 · Dynamic</span>
 						<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Dynamic &amp; Performance-Based Billing</h3>
-						<p className='text-sm text-brand-text-secondary'>Calculate the cost of a step at runtime so you always capture the true cost of external dependencies.</p>
+						<p className='text-sm text-brand-text-secondary'>The price of a step can be calculated at runtime. Charge based on execution time, ensuring your margins are always protected.</p>
 						<div className='cli-window p-4'>
 							<pre className='text-xs sm:text-sm'>
-{`McpRegistry.register(
+{`// Registering a tool with
+// a dynamic cost function
+McpRegistry.register(
   'dataApi',
-  'https://.../api/data',
+  '...',
   (metrics) => {
-    const timeCost = Math.floor(metrics.durationMs / 100) * 0.005;
+    // Base fee + time-based markup
+    const timeCost = Math.floor(
+      metrics.durationMs / 100
+    ) * 0.005;
     return 0.01 + timeCost;
   }
 );`}
 							</pre>
 						</div>
 					</article>
-					<article className='flex flex-col gap-4 rounded-2xl border border-brand-text-secondary/20 bg-brand-surface p-6 shadow-sm'>
-						<span className='inline-flex w-fit items-center rounded-full bg-brand-text-primary px-3 py-1 text-xs font-semibold text-white'>04 · Outcome-Based</span>
+					<article className='flex flex-col gap-4 rounded-2xl border border-brand-accent-300 bg-brand-accent-300/15 p-6 shadow-sm'>
+						<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-300 px-3 py-1 text-xs font-semibold text-white'>03 · Outcome-Based</span>
 						<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Outcome-Based Billing: Only Pay for Results</h3>
-						<p className='text-sm text-brand-text-secondary'>Build trust with enterprise SLAs by charging only for successful actions.</p>
+						<p className='text-sm text-brand-text-secondary'>Build ultimate trust with your customers. Since every step captures execution outcome, you can design billing models that only create a revenue entry for successful actions.</p>
 						<div className='cli-window p-4'>
 							<pre className='text-xs sm:text-sm'>
-{`try {
-  await step({ name: "AnalyzeSentiment", actionType: "tool_use", unitCost: 0.02 },
-    () => callUnreliableApi(text)
-  );
-} catch (e) {
-  console.error("Sentiment analysis failed. Customer will not be billed.");
-}`}
-							</pre>
-						</div>
-						<div className='cli-window p-4'>
-							<pre className='text-xs sm:text-sm'>
-{`function processBillingEvent(event) {
+{`// Your billing logic
+function processBillingEvent(event) {
+  // The COGS (debit) is always
+  // recorded, but the revenue
+  // (credit) is conditional
   if (event.outcome === 'success') {
-    chargeCustomer(event.userId, event.cost);
-  } else {
-    logFailedActionForReview(event.userId, event.action);
+    chargeCustomer(
+      event.userId,
+      event.cost
+    );
   }
 }`}
 							</pre>
@@ -396,8 +469,8 @@ export function FinalCtaSection() {
 		<section id='demo' className='bg-brand-base text-brand-text-primary'>
 			<div className='container-custom flex flex-col gap-6 py-20 text-center sm:py-24'>
 				<div className='mx-auto flex max-w-3xl flex-col gap-4 rounded-3xl border border-brand-accent-100 bg-brand-surface p-10 shadow-sm'>
-					<h2 className='text-3xl font-matter font-semibold sm:text-4xl'>Stop Building Billing Workarounds. Start Shipping Profitable Agents.</h2>
-					<p className='text-sm text-brand-text-secondary sm:text-base'>Schedule a demo to see how StringCost&apos;s revenue-first approach helps you launch enterprise AI agents faster and more profitably.</p>
+					<h2 className='text-3xl font-matter font-semibold sm:text-4xl'>Stop Building on Proxies. Start Building on a System of Record.</h2>
+					<p className='text-sm text-brand-text-secondary sm:text-base'>Schedule a demo to see how StringCost&apos;s double-entry ledger can give you the financial control to ship profitable AI agents with confidence.</p>
 					<div className='flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row'>
 						<a href='https://www.google.com/search?q=https://stringcost.com/demo' className={primaryButton}>
 							Schedule a Demo

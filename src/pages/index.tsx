@@ -2,6 +2,7 @@ import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import {
 	HeroSection,
+	RootCauseSection,
 	TrilemmaSection,
 	RevenueFirstSection,
 	SystemSection,
@@ -16,6 +17,7 @@ export default function Home() {
 		<Layout title={`${siteConfig.title}`} description={`${siteConfig.tagline}`}>
 			<div className='-mt-[64px] flex flex-col'>
 				<HeroSection />
+				<RootCauseSection />
 				<TrilemmaSection />
 				<RevenueFirstSection />
 				<SystemSection />
