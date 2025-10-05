@@ -3,7 +3,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import {
 	HeroSection,
 	RootCauseSection,
-	TrilemmaSection,
 	RevenueFirstSection,
 	SystemSection,
 	SourceOfTruthSection,
@@ -18,7 +17,6 @@ export default function Home() {
 			<div className='-mt-[64px] flex flex-col'>
 				<HeroSection />
 				<RootCauseSection />
-				<TrilemmaSection />
 				<RevenueFirstSection />
 				<SystemSection />
 				<SourceOfTruthSection />

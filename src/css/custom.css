@@ -36,6 +36,37 @@ body {
 	overflow-x: auto;
 }
 
+/* Black background variant for accounting section */
+.cli-window-dark {
+	position: relative;
+	background: #1a1a1a;
+	border-radius: 0.75rem;
+	border: 1px solid #333;
+	box-shadow: 0 8px 30px -20px rgba(0, 0, 0, 0.5);
+}
+
+.cli-window-dark pre {
+	background: transparent !important;
+	color: #e0e0e0 !important;
+	font-family: "Fira Code", "Source Code Pro", monospace;
+	margin: 0;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	overflow-x: auto;
+}
+
+/* Style comments in code blocks */
+.code-comment {
+	color: #6a9955 !important;
+	font-style: italic;
+	font-family: "Matter", sans-serif !important;
+}
+
+.cli-window-dark .code-comment {
+	color: #7cb668 !important;
+}
+
 @media (max-width: 768px) {
 	.cli-window pre {
 		font-size: 0.65rem;
@@ -43,8 +74,14 @@ body {
 		padding: 0.25rem;
 	}
 
+	.cli-window-dark pre {
+		font-size: 0.65rem;
+		line-height: 1.3;
+		padding: 0.25rem;
+	}
+
 	/* Allow horizontal scroll for very long code lines that can't wrap */
-	.cli-window {
+	.cli-window, .cli-window-dark {
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
 	}

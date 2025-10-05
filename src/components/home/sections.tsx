@@ -349,30 +349,59 @@ export async function middleware(request: NextRequest) {
 
 export function SourceOfTruthSection() {
 	return (
-		<section id='teams' className='bg-brand-base text-brand-text-primary'>
-			<div className='container-custom flex flex-col gap-8 py-16 sm:py-20'>
-				<div className='max-w-3xl space-y-3'>
-					<h2 className='text-3xl font-matter font-semibold sm:text-4xl'>The Double-Entry Ledger for AI Agent Operations</h2>
+		<section id='teams' className='bg-gradient-to-br from-brand-accent-100/30 via-brand-base to-brand-accent-200/20 text-brand-text-primary'>
+			<div className='container-custom flex flex-col gap-10 py-16 sm:py-20'>
+				<div className='text-center max-w-3xl mx-auto space-y-4'>
+					<h2 className='text-3xl font-matter font-semibold sm:text-4xl'>Built for Every Team in Your Organization</h2>
 					<p className='text-sm text-brand-text-secondary sm:text-base'>Every team gets the visibility and control they need without rebuilding billing infrastructure from scratch.</p>
 				</div>
-				<div className='overflow-hidden rounded-2xl border border-brand-overlay/70 bg-brand-surface shadow-sm'>
-					<div className='grid divide-y divide-brand-border/60 md:grid-cols-3 md:divide-y-0 md:divide-x'>
-						<article className='flex flex-col gap-3 p-6'>
-							<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-100/70 px-3 py-1 text-xs font-semibold text-brand-text-secondary'>Product</span>
-							<h3 className='text-sm font-semibold text-brand-text-primary'>For Product Teams</h3>
-							<p className='text-sm text-brand-text-secondary'>Go to market with complex, usage-based pricing models in days, not quarters. Experiment with billing per-action, per-thought, or per-tool.</p>
-						</article>
-						<article className='flex flex-col gap-3 p-6'>
-							<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-300/70 px-3 py-1 text-xs font-semibold text-white'>Engineering</span>
-							<h3 className='text-sm font-semibold text-brand-text-primary'>For Engineering Teams</h3>
-							<p className='text-sm text-brand-text-secondary'>Build any agent imaginable with a Next.js-native DX while the framework handles billing, observability, and compliance-grade audit trails.</p>
-						</article>
-						<article className='flex flex-col gap-3 p-6'>
-							<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-200/80 px-3 py-1 text-xs font-semibold text-brand-text-primary'>Finance &amp; Ops</span>
-							<h3 className='text-sm font-semibold text-brand-text-primary'>For Finance &amp; Ops</h3>
-							<p className='text-sm text-brand-text-secondary'>Eliminate billing errors with a perfect record of every billable action. Sync usage to Stripe for invoices your customers—and auditors—can trust.</p>
-						</article>
-					</div>
+				<div className='grid gap-6 lg:grid-cols-3'>
+					<article className='relative flex flex-col gap-4 p-8 rounded-3xl bg-gradient-to-br from-brand-accent-100/40 to-white border-2 border-brand-accent-100 shadow-lg hover:shadow-xl transition-shadow'>
+						<div className='flex items-center gap-3 mb-2'>
+							<div className='w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center'>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-700">
+									<line x1="18" y1="20" x2="18" y2="10"></line>
+									<line x1="12" y1="20" x2="12" y2="4"></line>
+									<line x1="6" y1="20" x2="6" y2="14"></line>
+								</svg>
+							</div>
+							<div>
+								<span className='block text-xs uppercase tracking-wider text-brand-text-muted font-semibold'>Product</span>
+								<h3 className='text-lg font-matter font-bold text-brand-text-primary'>For Product Teams</h3>
+							</div>
+						</div>
+						<p className='text-sm text-brand-text-secondary leading-relaxed'>Go to market with complex, usage-based pricing models in days, not quarters. Experiment with billing per-action, per-thought, or per-tool.</p>
+					</article>
+					<article className='relative flex flex-col gap-4 p-8 rounded-3xl bg-gradient-to-br from-brand-accent-300/30 to-white border-2 border-brand-accent-300 shadow-lg hover:shadow-xl transition-shadow'>
+						<div className='flex items-center gap-3 mb-2'>
+							<div className='w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center'>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-700">
+									<polyline points="16 18 22 12 16 6"></polyline>
+									<polyline points="8 6 2 12 8 18"></polyline>
+								</svg>
+							</div>
+							<div>
+								<span className='block text-xs uppercase tracking-wider text-brand-text-muted font-semibold'>Engineering</span>
+								<h3 className='text-lg font-matter font-bold text-brand-text-primary'>For Engineering Teams</h3>
+							</div>
+						</div>
+						<p className='text-sm text-brand-text-secondary leading-relaxed'>Build any agent imaginable with a Next.js-native DX while the framework handles billing, observability, and compliance-grade audit trails.</p>
+					</article>
+					<article className='relative flex flex-col gap-4 p-8 rounded-3xl bg-gradient-to-br from-brand-accent-200/40 to-white border-2 border-brand-accent-200 shadow-lg hover:shadow-xl transition-shadow'>
+						<div className='flex items-center gap-3 mb-2'>
+							<div className='w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center'>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-700">
+									<line x1="12" y1="1" x2="12" y2="23"></line>
+									<path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+								</svg>
+							</div>
+							<div>
+								<span className='block text-xs uppercase tracking-wider text-brand-text-muted font-semibold'>Finance & Ops</span>
+								<h3 className='text-lg font-matter font-bold text-brand-text-primary'>For Finance & Ops</h3>
+							</div>
+						</div>
+						<p className='text-sm text-brand-text-secondary leading-relaxed'>Eliminate billing errors with a perfect record of every billable action. Sync usage to Stripe for invoices your customers—and auditors—can trust.</p>
+					</article>
 				</div>
 			</div>
 		</section>
@@ -392,9 +421,8 @@ export function AccountingSection() {
 						<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-100 px-3 py-1 text-xs font-semibold text-brand-text-secondary'>01 · Tiered</span>
 						<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Tiered &amp; Hybrid Billing</h3>
 						<p className='text-sm text-brand-text-secondary'>Assign different costs and prices to different actions. Charge more for premium tools or more powerful models.</p>
-						<div className='cli-window p-4'>
-							<pre className='text-xs sm:text-sm'>
-{`// Agent Code
+						<div className='cli-window-dark p-4'>
+							<pre className='text-xs sm:text-sm' dangerouslySetInnerHTML={{__html: `<span class="code-comment">// Agent Code</span>
 await step({
   name: "Basic Analysis",
   actionType: "llm_call",
@@ -407,55 +435,50 @@ await step({
   unitCost: 0.050
 }, ...);
 
-// Resulting Ledger
-// DEBIT: Cost of gpt-4-turbo tokens
-// CREDIT: $0.0010 revenue
-// DEBIT: Cost of Premium Data API
-// CREDIT: $0.0500 revenue`}
-							</pre>
+<span class="code-comment">// Resulting Ledger</span>
+<span class="code-comment">// DEBIT: Cost of gpt-4-turbo tokens</span>
+<span class="code-comment">// CREDIT: $0.0010 revenue</span>
+<span class="code-comment">// DEBIT: Cost of Premium Data API</span>
+<span class="code-comment">// CREDIT: $0.0500 revenue</span>`}} />
 						</div>
 					</article>
 					<article className='flex flex-col gap-4 rounded-2xl border border-brand-accent-200 bg-brand-accent-200/25 p-6 shadow-sm'>
 						<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-200 px-3 py-1 text-xs font-semibold text-brand-text-primary'>02 · Dynamic</span>
 						<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Dynamic &amp; Performance-Based Billing</h3>
 						<p className='text-sm text-brand-text-secondary'>The price of a step can be calculated at runtime. Charge based on execution time, ensuring your margins are always protected.</p>
-						<div className='cli-window p-4'>
-							<pre className='text-xs sm:text-sm'>
-{`// Registering a tool with
-// a dynamic cost function
+						<div className='cli-window-dark p-4'>
+							<pre className='text-xs sm:text-sm' dangerouslySetInnerHTML={{__html: `<span class="code-comment">// Registering a tool with</span>
+<span class="code-comment">// a dynamic cost function</span>
 McpRegistry.register(
   'dataApi',
   '...',
   (metrics) => {
-    // Base fee + time-based markup
+    <span class="code-comment">// Base fee + time-based markup</span>
     const timeCost = Math.floor(
       metrics.durationMs / 100
     ) * 0.005;
     return 0.01 + timeCost;
   }
-);`}
-							</pre>
+);`}} />
 						</div>
 					</article>
 					<article className='flex flex-col gap-4 rounded-2xl border border-brand-accent-300 bg-brand-accent-300/15 p-6 shadow-sm'>
 						<span className='inline-flex w-fit items-center rounded-full bg-brand-accent-300 px-3 py-1 text-xs font-semibold text-white'>03 · Outcome-Based</span>
 						<h3 className='text-lg font-matter font-semibold text-brand-text-primary'>Outcome-Based Billing: Only Pay for Results</h3>
 						<p className='text-sm text-brand-text-secondary'>Build ultimate trust with your customers. Since every step captures execution outcome, you can design billing models that only create a revenue entry for successful actions.</p>
-						<div className='cli-window p-4'>
-							<pre className='text-xs sm:text-sm'>
-{`// Your billing logic
+						<div className='cli-window-dark p-4'>
+							<pre className='text-xs sm:text-sm' dangerouslySetInnerHTML={{__html: `<span class="code-comment">// Your billing logic</span>
 function processBillingEvent(event) {
-  // The COGS (debit) is always
-  // recorded, but the revenue
-  // (credit) is conditional
+  <span class="code-comment">// The COGS (debit) is always</span>
+  <span class="code-comment">// recorded, but the revenue</span>
+  <span class="code-comment">// (credit) is conditional</span>
   if (event.outcome === 'success') {
     chargeCustomer(
       event.userId,
       event.cost
     );
   }
-}`}
-							</pre>
+}`}} />
 						</div>
 					</article>
 				</div>
