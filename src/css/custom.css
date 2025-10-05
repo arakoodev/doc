@@ -1,0 +1,73 @@
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
+
+/* /src/css/custom.css */
+@import './custom-markdown.css';
+
+/* Dark mode overrides */
+:root {
+	--ifm-color-primary: #D9C1D7;
+	--ifm-background-color: #F8F6F9;
+	--ifm-color-emphasis-100: #D9C1D7;
+}
+
+body {
+	background-color: #F4EAF3;
+	color: #210F26;
+}
+
+.cli-window {
+	position: relative;
+	background: #FFFFFF;
+	border-radius: 0.75rem;
+	border: 1px solid #D9C1D7;
+	box-shadow: 0 8px 30px -20px rgba(33, 15, 38, 0.35);
+}
+
+.cli-window pre {
+	background: transparent !important;
+	color: #210F26 !important;
+	font-family: "Fira Code", "Source Code Pro", monospace;
+	margin: 0;
+	white-space: pre-wrap;
+}
+@font-face {
+	font-family: "Matter";
+	src: url("/fonts/Matter-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Matter";
+	src: url("/fonts/Matter-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Matter";
+	src: url("/fonts/Matter-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Matter";
+	src: url("/fonts/Matter-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+.container-custom {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 1400px;
+	padding-inline: 1rem;
+}
+
+.navbar__title {
+	color: var(--ifm-color-primary);
+}

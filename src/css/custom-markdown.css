@@ -1,0 +1,141 @@
+/* custom-markdown.css */
+
+/* General content styling */
+.markdown {
+    --ifm-h1-font-size: 2.5rem;
+    --ifm-h2-font-size: 2rem;
+    --ifm-h3-font-size: 1.5rem;
+    --ifm-h4-font-size: 1.25rem;
+    --ifm-h5-font-size: 1rem;
+    --ifm-h6-font-size: 0.875rem;
+    
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  /* Headers */
+  .markdown h1 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--ifm-color-primary);
+  }
+  
+  .markdown h2 {
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--ifm-color-gray-200);
+  }
+  
+  .markdown h3 {
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Paragraphs */
+  .markdown p {
+    margin-bottom: 1.25rem;
+  }
+  
+  /* Bold text */
+  .markdown strong {
+    font-weight: 700;
+    color: var(--ifm-color-primary-darker);
+  }
+  
+  /* Lists */
+  .markdown ul, 
+  .markdown ol {
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .markdown li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .markdown li > p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .markdown li > ul, 
+  .markdown li > ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Blockquotes */
+  .markdown blockquote {
+    border-left: 4px solid var(--ifm-color-primary);
+    padding: 0.75rem 1rem;
+    margin: 0 0 1rem 0;
+    background-color: var(--ifm-color-primary-lightest);
+    border-radius: 0 var(--ifm-global-radius) var(--ifm-global-radius) 0;
+  }
+  
+  .markdown blockquote > p {
+    margin-bottom: 0;
+  }
+  
+  /* Code */
+  .markdown code {
+    border-radius: var(--ifm-code-border-radius);
+    font-size: 0.9em;
+  }
+  
+  /* Tables */
+  .markdown table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+  }
+  
+  .markdown th,
+  .markdown td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border: 1px solid var(--ifm-color-gray-300);
+  }
+  
+  .markdown th {
+    background-color: var(--ifm-color-gray-100);
+    font-weight: 600;
+  }
+  
+  /* Horizontal rule */
+  .markdown hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid var(--ifm-color-gray-300);
+  }
+  
+  /* Images */
+  .markdown img {
+    max-width: 100%;
+    margin: 1rem auto;
+    display: block;
+    border-radius: var(--ifm-global-radius);
+  }
+  
+  /* Special formatting for privacy policy */
+  .markdown h3 + ul {
+    margin-top: -0.5rem;
+  }
+  
+  .markdown h3 + ul > li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .markdown h3 + ul > li > strong {
+    display: inline-block;
+    margin-right: 0.25rem;
+  }
+  
+  /* Contact information */
+  .markdown p:has(strong) {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }

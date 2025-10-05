@@ -1,0 +1,31 @@
+/* Original navbar styles */
+.navbarHideable {
+	transition: transform var(--ifm-transition-fast) ease;
+}
+
+.navbarHidden {
+	transform: translate3d(0, calc(-100% - 2px), 0);
+}
+
+/* Custom styles for transition and scroll effects */
+.navbarCustom {
+	transition: all 0.3s ease;
+	z-index: 1000;
+}
+
+/* Transparent state (default/top of page) */
+.navbarTransparent {
+	background-color: transparent !important;
+	box-shadow: none;
+}
+
+/* Scrolled state (after scrolling down) */
+.navbarScrolled {
+	background-color: #fef7f3 !important;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Override the default navbar styles */
+:global(.navbar) {
+	--ifm-navbar-background-color: transparent;
+}
