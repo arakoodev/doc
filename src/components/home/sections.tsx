@@ -273,7 +273,7 @@ export function SourceOfTruthSection() {
 		<section id='teams' className='bg-brand-base text-brand-text-primary'>
 			<div className='container-custom flex flex-col gap-8 py-16 sm:py-20'>
 				<div className='max-w-3xl space-y-3'>
-					<h2 className='text-3xl font-matter font-semibold sm:text-4xl'>The Single Source of Truth for Your AI Business</h2>
+					<h2 className='text-3xl font-matter font-semibold sm:text-4xl'>The Double-Entry Ledger for AI Agent Operations</h2>
 					<p className='text-sm text-brand-text-secondary sm:text-base'>Every team gets the visibility and control they need without rebuilding billing infrastructure from scratch.</p>
 				</div>
 				<div className='overflow-hidden rounded-2xl border border-brand-overlay/70 bg-brand-surface shadow-sm'>
