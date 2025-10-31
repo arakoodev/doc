@@ -7,6 +7,8 @@ import {
 	SystemSection,
 	SourceOfTruthSection,
 	AccountingSection,
+	BYOKSection,
+	DeploymentSection,
 	FinalCtaSection,
 } from "../components/home/sections";
 
@@ -21,6 +23,8 @@ export default function Home() {
 				<SystemSection />
 				<SourceOfTruthSection />
 				<AccountingSection />
+				<BYOKSection />
+				<DeploymentSection />
 				<FinalCtaSection />
 			</div>
 		</Layout>
