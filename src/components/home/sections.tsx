@@ -18,7 +18,7 @@ export function HeroSection() {
 				<span className='text-xs uppercase tracking-[0.3em] text-brand-text-muted'>SAP for AI Agents</span>
 				<div className='flex flex-col gap-4 max-w-3xl'>
 					<h1 className='font-matter text-4xl leading-tight sm:text-5xl lg:text-6xl'>StringCost: Think SAP for AI Agents.</h1>
-					<p className='text-base text-brand-text-secondary sm:text-lg'>A revenue-first framework that creates a <strong className='text-brand-text-primary'>double-entry ledger</strong> for every agent operation. Stop building on shallow proxies. Start building on a true system of record for your AI business.</p>
+					<p className='text-base text-brand-text-secondary sm:text-lg'>Our LLM proxy simplifies AI billing by creating a <strong className='text-brand-text-primary'>double-entry ledger</strong> for every model call. Send your prompt, chosen model, and Customer ID; we handle routing to the provider, returning the response, and attributing tokens by model and type, all in one request.</p>
 					<div className='flex flex-wrap gap-2 pt-1'>
 						{accentTags.map((tag) => (
 							<span key={tag.label} className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${tag.color}`}>
