@@ -290,17 +290,29 @@ export function SourceOfTruthSection() {
 					</div>
 					<div className='lg:w-1/2 space-y-6'>
 						<div className='relative p-6 rounded-2xl bg-gradient-to-br from-brand-accent-100/50 to-transparent border-l-4 border-brand-accent-100 shadow-lg'>
-							<div className='absolute -left-8 top-8 w-12 h-12 rounded-full bg-brand-accent-100 flex items-center justify-center text-brand-text-primary font-bold shadow-md'>⚡</div>
+							<div className='absolute -left-8 top-8 w-12 h-12 rounded-full bg-brand-accent-100 flex items-center justify-center text-brand-text-primary shadow-md'>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+									<path fillRule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clipRule="evenodd" />
+								</svg>
+							</div>
 							<h3 className='text-lg font-matter font-bold mb-2'>Zero-Latency Accounting</h3>
 							<p className='text-sm text-brand-text-secondary'>Our <code className='text-xs bg-white px-2 py-1 rounded border border-brand-accent-100'>Event Collector</code> logs the raw event instantly and returns the response to your user with zero delay.</p>
 						</div>
 						<div className='relative p-6 rounded-2xl bg-gradient-to-br from-brand-accent-300/20 to-transparent border-l-4 border-brand-accent-300 shadow-lg'>
-							<div className='absolute -left-8 top-8 w-12 h-12 rounded-full bg-brand-accent-300 flex items-center justify-center text-white font-bold shadow-md'>⚙️</div>
+							<div className='absolute -left-8 top-8 w-12 h-12 rounded-full bg-brand-accent-300 flex items-center justify-center text-white shadow-md'>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+									<path fillRule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 5.33a5.632 5.632 0 00-1.866.749L5.555 3.58a1.53 1.53 0 00-1.752 1.039l-1.903 5.87a1.526 1.526 0 00.792 1.832l1.271.655a5.655 5.655 0 000 1.924l-1.271.655a1.526 1.526 0 00-.792 1.832l1.903 5.87a1.53 1.53 0 001.752 1.039l1.629-2.499a5.632 5.632 0 001.866.749l.178 1.513c.151.904.933 1.567 1.85 1.567h3.844c.916 0 1.699-.663 1.85-1.567l.178-1.513a5.632 5.632 0 001.866-.749l1.629 2.499a1.53 1.53 0 001.752-1.039l1.903-5.87a1.526 1.526 0 00-.792-1.832l-1.271-.655a5.655 5.655 0 000-1.924l1.271-.655a1.526 1.526 0 00.792-1.832l-1.903-5.87a1.53 1.53 0 00-1.752-1.039l-1.629 2.499a5.632 5.632 0 00-1.866-.749L14.922 3.817c-.151-.904-.933-1.567-1.85-1.567h-3.844zM12 15a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+								</svg>
+							</div>
 							<h3 className='text-lg font-matter font-bold mb-2'>Asynchronous Classification</h3>
 							<p className='text-sm text-brand-text-secondary'>A background <code className='text-xs bg-white px-2 py-1 rounded border border-brand-accent-300'>Worker</code> (polling every 200ms) calls a meta-classifier to tag every request with an <code className='text-xs bg-white px-2 py-1 rounded border border-brand-accent-300'>action_type</code> (e.g., <em>synthesis</em>, <em>tool_selection</em>, <em>evaluation</em>).</p>
 						</div>
 						<div className='relative p-6 rounded-2xl bg-gradient-to-br from-brand-accent-200/30 to-transparent border-l-4 border-brand-accent-200 shadow-lg'>
-							<div className='absolute -left-8 top-8 w-12 h-12 rounded-full bg-brand-accent-200 flex items-center justify-center text-brand-text-primary font-bold shadow-md'>💡</div>
+							<div className='absolute -left-8 top-8 w-12 h-12 rounded-full bg-brand-accent-200 flex items-center justify-center text-brand-text-primary shadow-md'>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+									<path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+								</svg>
+							</div>
 							<h3 className='text-lg font-matter font-bold mb-2'>Know Your &ldquo;Why&rdquo;</h3>
 							<p className='text-sm text-brand-text-secondary'>Finally, you can answer critical business questions. What&apos;s the P&L of your Tree-of-Thought agent? Are &ldquo;evaluation&rdquo; steps costing more than &ldquo;synthesis&rdquo; steps? StringCost gives you the answers.</p>
 						</div>
