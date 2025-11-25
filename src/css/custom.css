@@ -4,6 +4,7 @@
 
 /* /src/css/custom.css */
 @import './custom-markdown.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 /* Dark mode overrides */
 :root {
@@ -85,33 +86,6 @@ body {
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
 	}
-}
-@font-face {
-	font-family: "Matter";
-	src: url("/fonts/Matter-Regular.ttf") format("truetype");
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Matter";
-	src: url("/fonts/Matter-Bold.ttf") format("truetype");
-	font-weight: 700;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Matter";
-	src: url("/fonts/Matter-Medium.ttf") format("truetype");
-	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Matter";
-	src: url("/fonts/Matter-SemiBold.ttf") format("truetype");
-	font-weight: 600;
-	font-style: normal;
 }
 
 .container-custom {

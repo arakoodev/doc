@@ -1,4 +1,5 @@
 import React from "react";
+import { Zap, Settings, Lightbulb, Lock } from 'lucide-react';
 
 const buttonBase = "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-matter font-semibold transition-colors duration-150";
 const primaryButton = `${buttonBase} bg-[#210F26] text-white hover:bg-[#0D0D0D]`;
@@ -15,10 +16,10 @@ export function HeroSection() {
 	return (
 		<section id='overview' className='bg-brand-base text-brand-text-primary'>
 			<div className='container-custom flex flex-col gap-8 py-24 sm:py-28'>
-				<span className='text-xs uppercase tracking-[0.3em] text-brand-text-muted'>SAP for AI Agents</span>
+				<span className='font-body text-sm uppercase tracking-[0.3em] text-brand-text-muted font-medium'>SAP for AI Agents</span>
 				<div className='flex flex-col gap-4 max-w-3xl'>
-					<h1 className='font-matter text-4xl leading-tight sm:text-5xl lg:text-6xl'>StringCost: Think SAP for AI Agents.</h1>
-					<p className='text-base text-brand-text-secondary sm:text-lg'>A revenue-first framework that creates a <strong className='text-brand-text-primary'>double-entry ledger</strong> for every agent operation. Stop building on shallow proxies. Start building on a true system of record for your AI business.</p>
+					<h1 className='font-display text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight'>StringCost: Think SAP for AI Agents.</h1>
+					<p className='font-body text-xl sm:text-2xl text-brand-text-secondary'>A revenue-first framework that creates a <strong className='text-brand-text-primary font-semibold'>double-entry ledger</strong> for every agent operation. Stop building on shallow proxies. Start building on a true system of record for your AI business.</p>
 					<div className='flex flex-wrap gap-2 pt-1'>
 						{accentTags.map((tag) => (
 							<span key={tag.label} className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${tag.color}`}>
@@ -36,12 +37,12 @@ export function HeroSection() {
 								<img src='/img/a16z-logo.svg' alt='a16z' className='h-8 w-auto' />
 							</div>
 							<div className='flex-1'>
-								<p className='text-sm font-semibold text-brand-text-primary sm:text-base'>
+								<p className='font-body text-base font-semibold text-brand-text-primary sm:text-lg'>
 									<a href='https://a16z.com/newsletter/december-2024-enterprise-newsletter-ai-is-driving-a-shift-towards-outcome-based-pricing/' target='_blank' rel='noopener noreferrer' className='hover:underline'>
 										Andreessen Horowitz just declared:
 									</a>
 								</p>
-								<p className='mt-2 text-sm italic text-brand-text-secondary sm:text-base'>
+								<p className='mt-2 font-body text-base italic text-brand-text-secondary sm:text-lg'>
 									<em>&ldquo;AI is driving a shift towards <span className='relative inline-block'>
 										<span className='relative z-10'>outcome-based pricing</span>
 										<svg className='absolute -bottom-0.5 left-0 w-full h-2 z-0' viewBox='0 0 200 8' preserveAspectRatio='none'>
@@ -52,7 +53,7 @@ export function HeroSection() {
 							</div>
 						</div>
 						<div className='border-l-4 border-brand-accent-200 pl-4'>
-							<p className='text-base font-semibold text-brand-text-primary sm:text-lg'>
+							<p className='font-body text-lg font-semibold text-brand-text-primary sm:text-xl'>
 								But where is the infrastructure for outcome-based <span className='relative inline-block'>
 									<span className='relative z-10'>billing &amp; accounting</span>
 									<svg className='absolute -bottom-1 left-0 w-full h-3 z-0' viewBox='0 0 300 12' preserveAspectRatio='none'>
@@ -60,10 +61,10 @@ export function HeroSection() {
 									</svg>
 								</span>?
 							</p>
-							<p className='mt-2 text-sm text-brand-text-secondary'>
+							<p className='mt-2 font-body text-base text-brand-text-secondary'>
 								This <span className='line-through'>not a <strong>payments</strong> problem</span>, but an <strong>accounting</strong> problem that leads to catastrophic failure. The future is outcome based...but the tools to build it don&apos;t exist.
 								<br />
-								<span className='relative inline-block mt-2 font-semibold text-brand-text-primary text-base sm:text-lg'>
+								<span className='relative inline-block mt-2 font-display font-semibold text-brand-text-primary text-lg sm:text-xl'>
 									Until now.
 									<svg className='absolute -inset-2 w-[calc(100%+20px)] h-[calc(100%+20px)]' viewBox='0 0 100 40' preserveAspectRatio='none'>
 										<path d='M5,20 Q8,8 25,5 T75,8 Q92,10 95,20 Q92,30 75,32 T25,35 Q8,32 5,20' stroke='#10B981' strokeWidth='2.5' fill='none' strokeLinecap='round' strokeLinejoin='round' opacity='0.8' />
@@ -77,13 +78,13 @@ export function HeroSection() {
 				<div className='flex flex-col gap-3 sm:flex-row sm:items-center'>
 					<a
 						href='https://calendar.app.google/hjN2HkZBLJMtSuku7'
-						className={primaryButton}
+						className="inline-flex items-center justify-center rounded-full px-6 py-3 font-display text-base font-semibold transition-colors duration-150 bg-[#210F26] text-white hover:bg-[#0D0D0D]"
 					>
 						Schedule a Strategic Demo
 					</a>
 					<a
 						href='https://calendar.app.google/hjN2HkZBLJMtSuku7'
-						className={secondaryButton}
+						className="inline-flex items-center justify-center rounded-full px-6 py-3 font-display text-base font-semibold transition-colors duration-150 border border-brand-accent-300 text-brand-text-secondary hover:bg-brand-accent-100/60"
 					>
 						Contact Sales
 					</a>
@@ -291,27 +292,21 @@ export function SourceOfTruthSection() {
 					<div className='lg:w-1/2 space-y-6'>
 						<div className='relative p-6 rounded-2xl bg-gradient-to-br from-brand-accent-100/50 to-transparent border-l-4 border-brand-accent-100 shadow-lg'>
 							<div className='absolute -left-8 top-8 w-12 h-12 rounded-full bg-brand-accent-100 flex items-center justify-center text-brand-text-primary shadow-md'>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-									<path fillRule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clipRule="evenodd" />
-								</svg>
+								<Zap className="w-6 h-6" />
 							</div>
 							<h3 className='text-lg font-matter font-bold mb-2'>Zero-Latency Accounting</h3>
 							<p className='text-sm text-brand-text-secondary'>Our <code className='text-xs bg-white px-2 py-1 rounded border border-brand-accent-100'>Event Collector</code> logs the raw event instantly and returns the response to your user with zero delay.</p>
 						</div>
 						<div className='relative p-6 rounded-2xl bg-gradient-to-br from-brand-accent-300/20 to-transparent border-l-4 border-brand-accent-300 shadow-lg'>
 							<div className='absolute -left-8 top-8 w-12 h-12 rounded-full bg-brand-accent-300 flex items-center justify-center text-white shadow-md'>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-									<path fillRule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 5.33a5.632 5.632 0 00-1.866.749L5.555 3.58a1.53 1.53 0 00-1.752 1.039l-1.903 5.87a1.526 1.526 0 00.792 1.832l1.271.655a5.655 5.655 0 000 1.924l-1.271.655a1.526 1.526 0 00-.792 1.832l1.903 5.87a1.53 1.53 0 001.752 1.039l1.629-2.499a5.632 5.632 0 001.866.749l.178 1.513c.151.904.933 1.567 1.85 1.567h3.844c.916 0 1.699-.663 1.85-1.567l.178-1.513a5.632 5.632 0 001.866-.749l1.629 2.499a1.53 1.53 0 001.752-1.039l1.903-5.87a1.526 1.526 0 00-.792-1.832l-1.271-.655a5.655 5.655 0 000-1.924l1.271-.655a1.526 1.526 0 00.792-1.832l-1.903-5.87a1.53 1.53 0 00-1.752-1.039l-1.629 2.499a5.632 5.632 0 00-1.866-.749L14.922 3.817c-.151-.904-.933-1.567-1.85-1.567h-3.844zM12 15a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
-								</svg>
+								<Settings className="w-6 h-6" />
 							</div>
 							<h3 className='text-lg font-matter font-bold mb-2'>Asynchronous Classification</h3>
 							<p className='text-sm text-brand-text-secondary'>A background <code className='text-xs bg-white px-2 py-1 rounded border border-brand-accent-300'>Worker</code> (polling every 200ms) calls a meta-classifier to tag every request with an <code className='text-xs bg-white px-2 py-1 rounded border border-brand-accent-300'>action_type</code> (e.g., <em>synthesis</em>, <em>tool_selection</em>, <em>evaluation</em>).</p>
 						</div>
 						<div className='relative p-6 rounded-2xl bg-gradient-to-br from-brand-accent-200/30 to-transparent border-l-4 border-brand-accent-200 shadow-lg'>
 							<div className='absolute -left-8 top-8 w-12 h-12 rounded-full bg-brand-accent-200 flex items-center justify-center text-brand-text-primary shadow-md'>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-									<path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
-								</svg>
+								<Lightbulb className="w-6 h-6" />
 							</div>
 							<h3 className='text-lg font-matter font-bold mb-2'>Know Your &ldquo;Why&rdquo;</h3>
 							<p className='text-sm text-brand-text-secondary'>Finally, you can answer critical business questions. What&apos;s the P&L of your Tree-of-Thought agent? Are &ldquo;evaluation&rdquo; steps costing more than &ldquo;synthesis&rdquo; steps? StringCost gives you the answers.</p>
@@ -329,7 +324,7 @@ export function AccountingSection() {
 			<div className='container-custom flex flex-col gap-12 py-16 sm:py-20'>
 				<div className='text-center max-w-3xl mx-auto space-y-4'>
 					<div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-50 border border-red-200'>
-						<span className='text-2xl'>🔒</span>
+						<Lock className="w-5 h-5 text-red-600" />
 						<span className='text-xs font-bold text-red-600 uppercase tracking-wider'>Security First</span>
 					</div>
 					<h2 className='text-3xl font-matter font-semibold sm:text-4xl lg:text-5xl'>Unbreakable Security: No More Static API Keys</h2>

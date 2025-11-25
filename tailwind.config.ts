@@ -39,7 +39,10 @@ module.exports = {
       },
 
       fontFamily: {
-        matter: ["Matter", ...fontFamily.sans],
+        matter: ["Space Grotesk", ...fontFamily.sans], // Keep 'matter' alias but map to Space Grotesk for immediate "Wow"
+        display: ["Space Grotesk", ...fontFamily.sans],
+        body: ["Inter", ...fontFamily.sans],
+        sans: ["Inter", ...fontFamily.sans],
       },
     },
   },
