@@ -18,7 +18,7 @@ export function HeroSection() {
 				<span className='text-xs uppercase tracking-[0.3em] text-brand-text-muted'>SAP for AI Agents</span>
 				<div className='flex flex-col gap-4 max-w-3xl'>
 					<h1 className='font-matter text-4xl leading-tight sm:text-5xl lg:text-6xl'>StringCost: Think SAP for AI Agents.</h1>
-					<p className='text-base text-brand-text-secondary sm:text-lg'>Our LLM proxy simplifies AI billing by creating a <strong className='text-brand-text-primary'>double-entry ledger</strong> for every model call. Send your prompt, chosen model, and Customer ID; we handle routing to the provider, returning the response, and attributing tokens by model and type, all in one request.</p>
+					<p className='text-base text-brand-text-secondary sm:text-lg'>A revenue-first framework that creates a <strong className='text-brand-text-primary'>double-entry ledger</strong> for every agent operation. Stop building on shallow proxies. Start building on a true system of record for your AI business.</p>
 					<div className='flex flex-wrap gap-2 pt-1'>
 						{accentTags.map((tag) => (
 							<span key={tag.label} className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${tag.color}`}>
@@ -259,32 +259,16 @@ export function SystemSection() {
 		<section id='system' className='bg-gradient-to-br from-[#210F26] to-[#3D1F4A] text-white'>
 			<div className='container-custom flex flex-col gap-10 py-16 sm:py-20'>
 				<div className='text-center max-w-4xl mx-auto space-y-4'>
-					<h2 className='text-3xl font-matter font-semibold sm:text-4xl lg:text-5xl'>Your Single Endpoint for the Entire AI Ecosystem</h2>
-					<p className='text-base text-white/80 sm:text-lg'>Why waste months integrating different providers? We&apos;ve done the work so you can focus on building.</p>
+					<h2 className='text-3xl font-matter font-semibold sm:text-4xl lg:text-5xl'>Your Single Financial Endpoint for your Entire AI Deployment</h2>
+					<p className='text-base text-white/80 sm:text-lg'>Zero-time Integration. No SDK. 250+ Providers, 1 API.</p>
+					<p className='text-sm font-light italic text-white/70 mt-2'>Account for your usage of OpenAI, Anthropic, Google Gemini, Cohere, Groq, and hundreds more through a single, unified, OpenAI-compatible proxy</p>
 				</div>
-				<div className='grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto'>
-					<article className='relative flex flex-col gap-6 p-8 rounded-3xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl hover:bg-white/15 transition-all'>
-						<div className='absolute -top-4 -left-4 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D9C1D7] to-[#EAD4E8] flex items-center justify-center text-[#210F26] font-bold text-2xl shadow-lg'>
-							1
-						</div>
-						<h3 className='text-xl font-matter font-bold mt-6'>250+ Providers, 1 API</h3>
-						<p className='text-sm text-white/80 leading-relaxed'>Access OpenAI, Anthropic, Google Gemini, Cohere, Groq, and hundreds more through a single, unified, OpenAI-compatible endpoint.</p>
-					</article>
-					<article className='relative flex flex-col gap-6 p-8 rounded-3xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl hover:bg-white/15 transition-all'>
-						<div className='absolute -top-4 -left-4 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#EAD4E8] to-[#F4EAF3] flex items-center justify-center text-[#210F26] font-bold text-2xl shadow-lg'>
-							2
-						</div>
-						<h3 className='text-xl font-matter font-bold mt-6'>Write Once, Run Anywhere</h3>
-						<p className='text-sm text-white/80 leading-relaxed'>Write your code in the standard OpenAI format. We build on top of <strong className='text-white'>production-grade open-source tooling</strong> that automatically handles the complex prompt and response transformations for you.</p>
-					</article>
-					<article className='relative flex flex-col gap-6 p-8 rounded-3xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl hover:bg-white/15 transition-all'>
-						<div className='absolute -top-4 -left-4 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#F4EAF3] to-white flex items-center justify-center text-[#210F26] font-bold text-2xl shadow-lg'>
-							3
-						</div>
-						<h3 className='text-xl font-matter font-bold mt-6'>Future-Proof Your Stack</h3>
-						<p className='text-sm text-white/80 leading-relaxed'>A new, cheaper model just dropped? Swap to it by changing a single parameter in your config. No refactoring, no new SDKs, no vendor lock-in.</p>
-					</article>
+				
+				<div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-white/5 backdrop-blur-sm p-4 sm:p-8">
+					<img src="/img/financial-architecture.svg" alt="StringCost Financial Architecture" className="w-full h-auto rounded-lg" />
 				</div>
+
+				
 			</div>
 		</section>
 	);
