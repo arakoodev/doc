@@ -92,14 +92,32 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
-	max-width: 1400px;
-	padding-inline: 1rem;
+	max-width: 1200px;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+	.container-custom {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.container-custom {
+		padding-left: 4rem; /* More generous padding on desktop */
+		padding-right: 4rem;
+	}
 }
 
 @media (max-width: 768px) {
+	/* Override previously defined mobile padding if necessary or keep consistent */
 	.container-custom {
-		padding-inline: 1rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
 	}
+
 
 	/* Ensure all cards and content blocks fit within mobile viewport */
 	article, .rounded-2xl, .rounded-xl {
