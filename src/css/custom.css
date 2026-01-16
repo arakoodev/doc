@@ -3,20 +3,191 @@
 @tailwind components;
 
 /* /src/css/custom.css */
-@import './custom-markdown.css';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&family=JetBrains+Mono:wght@400;700&display=swap');
 
-/* Dark mode overrides */
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
+
+/* CORE VARIABLES - STRANGER THINGS RESTORED */
 :root {
-	--ifm-color-primary: #D9C1D7;
-	--ifm-background-color: #F8F6F9;
-	--ifm-color-emphasis-100: #D9C1D7;
+  --st-red: #FF2A4D;
+  --st-glow: #FF7096;
+  --st-neon: #00FFFF;
+  --st-purple: #D000FF;
+  
+  --bg-dark: #050505;
+  --text-main: #FFFFFF;
+  --text-muted: #B0B0B0;
+  
+  --ifm-background-color: var(--bg-dark);
+  --ifm-color-primary: var(--st-red);
+  --ifm-navbar-background-color: rgba(5, 5, 5, 0.95);
+  
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
 }
 
 body {
-	background-color: #F4EAF3;
-	color: #210F26;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
 }
+
+/* CRT Subtle Grain */
+.crt::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  z-index: 50;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+  opacity: 0.05; /* Drastically reduced for clarity */
+  mix-blend-mode: overlay;
+}
+
+/* STRANGER THINGS TITLE STYLE - PREMIUM CINEMATIC */
+.font-stranger {
+  font-family: 'Playfair Display', serif !important;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -0.04em; /* Tight tracking like the poster */
+  
+  /* Metallic/Glowing Gradient Text */
+  background: linear-gradient(180deg, #FF2A4D 20%, #D10026 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback */
+  
+  /* Deep Cinematic Glow/Shadow */
+  filter: drop-shadow(0 0 15px rgba(255, 42, 77, 0.5)) drop-shadow(0 4px 4px rgba(0,0,0,0.8));
+  
+  /* Remove cheap strokes */
+  -webkit-text-stroke: 0;
+  text-shadow: none;
+}
+
+.text-shadow-st {
+  /* Deprecated in favor of the filter above, but keeping for compatibility if needed */
+  text-shadow: none;
+  filter: drop-shadow(0 0 20px rgba(255, 42, 77, 0.6));
+}
+
+/* RETRO GRID - Red/Purple Vibe - Slower & Smoother */
+.retro-grid {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  bottom: -50%;
+  left: -50%;
+  background-image: 
+    linear-gradient(rgba(255, 42, 77, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 42, 77, 0.2) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform: perspective(500px) rotateX(60deg);
+  animation: grid-move 20s linear infinite; /* Slowed down */
+  opacity: 0.2; /* Subtler */
+  z-index: 0;
+  mask-image: linear-gradient(to top, black 10%, transparent 90%);
+}
+
+@keyframes grid-move {
+  0% { transform: perspective(500px) rotateX(60deg) translateY(0); }
+  100% { transform: perspective(500px) rotateX(60deg) translateY(60px); }
+}
+
+/* Tech Text - High Legibility */
+.font-terminal {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.02em;
+}
+
+/* Glitch - Only use for specific hover effects */
+.glitch {
+  position: relative;
+}
+/* Removed the infinite text duplication to stop the "jank" */
+.glitch::before, .glitch::after {
+  display: none; 
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--st-red);
+  border-radius: 4px;
+}
+
+/* Navbar Update */
+.navbar {
+  border-bottom: 1px solid rgba(255, 42, 77, 0.3);
+  background-color: #000000 !important;
+  backdrop-filter: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  height: 70px;
+}
+
+.navbar__title {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.1em;
+  color: var(--st-red) !important;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px var(--st-red);
+}
+
+.navbar__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-muted) !important;
+  text-transform: uppercase;
+}
+
+.navbar__link:hover, .navbar__link--active {
+  color: var(--st-neon) !important;
+  text-shadow: 0 0 10px var(--st-neon);
+}
+
+/* Footer overrides */
+.footer {
+  background-color: #000;
+  border-top: 2px solid var(--st-red);
+  color: var(--text-muted);
+}
+
+.footer__title {
+  font-family: 'Playfair Display', serif;
+  color: var(--st-red);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.footer__link-item {
+  font-family: 'Inter', sans-serif;
+}
+
+.footer__copyright {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+
+
 
 .cli-window {
 	position: relative;

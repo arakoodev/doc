@@ -3,8 +3,8 @@ import type {Config} from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "StringCost",
-  tagline: "SAP for AI Agents.",
+  title: "Arakoo Research",
+  tagline: "Infrastructure is the Model.",
   favicon: "/img/favicon.png",
 
 
@@ -76,21 +76,26 @@ baseUrl: "/",
   ],
 
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
     image: "/img/og-arakoo.png",
     metadata: [
     // 1) Standard meta description
     {
-      content: 'SAP for AI Agents.',
+      content: 'Infrastructure is the Model.',
     },
     // 2) Open Graph description (used by Telegram, Facebook, LinkedIn…)
     {
       property: 'og:description',
-      content: 'SAP for AI Agents.',
+      content: 'Arakoo Research Group - Led by Sandeep Srinivasa.',
     },
     // 3) Twitter Card description
     {
       name: 'twitter:description',
-      content: 'SAP for AI Agents.',
+      content: 'Arakoo Research Group - Led by Sandeep Srinivasa.',
     },
     // (you can still leave twitter:card or override it to “summary_large_image”)
     {
@@ -101,62 +106,43 @@ baseUrl: "/",
     navbar: {
       title: "",
       logo: {
-        alt: "StringCost",
-        src: "/img/arakoo-01.png",
+        alt: "Arakoo Research",
+        src: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", // Transparent 1x1 pixel
+        style: { display: 'none' }, // Ensure it's hidden
       },
-      items: [
-        {
-          position: "left",
-          label: "Github",
-          to: "https://github.com/arakoodev/stringcost",
-        },
-        { to: "https://x.com/arakoo", label: "Twitter", position: "left" },
-      ],
+      items: [],
     },
     footer: {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Research",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: "Projects",
+              to: "/",
             },
-          ],
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "X",
-              href: "https://x.com/docusaurus",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
             {
               label: "Blog",
               to: "/blog",
             },
+          ],
+        },
+        {
+          title: "Connect",
+          items: [
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/arakoodev",
+            },
+            {
+              label: "Twitter",
+              href: "https://x.com/sandeep_srinivasa",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Arakoo Research Group. Led by Sandeep Srinivasa. © ${new Date().getFullYear()}`,
     },
     prism: {
       theme: prismThemes.github,

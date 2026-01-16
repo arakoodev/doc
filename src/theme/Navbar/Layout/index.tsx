@@ -62,10 +62,7 @@ export default function NavbarLayout({children}: Props): ReactNode {
 					"navbar--dark": style === "dark",
 					"navbar--primary": style === "primary",
 					"navbar-sidebar--show": mobileSidebar.shown,
-				},
-				// Apply background color and shadow based on scroll state
-				isScrolled ? styles.navbarScrolled : styles.navbarTransparent
-				// Apply max-width style for home page
+				}
 			)}
 		>
 			<div className={`w-full ${isHomePage ? "container-custom md:h-[70px]" : ""}`}>{children}</div>

@@ -57,44 +57,24 @@ export default function NavbarContent(): ReactNode {
 	return (
 		<NavbarContentLayout
 			left={
-				// TODO stop hardcoding items?
-				<div className='flex items-center h-[44px] md:h-auto w-full '>
-					<div className='min-w-[160px]'>
-						<NavbarLogo />
-					</div>
-
-					<div className='flex items-center justify-center w-full'>
+				<div className='flex items-center h-[44px] md:h-auto'>
+					<NavbarLogo />
+					<div className='hidden md:flex items-center ml-6'>
 						<NavbarItems items={leftItems} />
 					</div>
-					{!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
 				</div>
 			}
 			right={
-				// TODO stop hardcoding items?
-				// Ask the user to add the respective navbar items => more flexible
-				<>
-<NavbarItems items={rightItems} />
-<div className="hidden md:inline-block relative group mr-4">
-  <div className="bg-brand-border rounded-md absolute inset-0 translate-y-[2px]"></div>
-  <a
-    href="https://calendar.app.google.com/UCdRbHAHJYTwUEgF6"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-full hover:no-underline"
-  >
-    <button className="relative px-4 py-0.5 md:px-6 md:py-2 text-brand-black-100 text-sm lg:text-base font-matter font-medium bg-brand-accent-100 rounded-md transition-transform duration-150 -translate-y-1 group-hover:-translate-y-1.5 active:-translate-y-0.5 cursor-pointer border-[1.5px] border-brand-accent-200 w-full">
-      Get Started
-    </button>
-  </a>
-</div>
-
+				<div className='flex items-center'>
+					<NavbarItems items={rightItems} />
+					{!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
 					{/* <NavbarColorModeToggle className={styles.colorModeToggle} /> */}
 					{!searchBarItem && (
 						<NavbarSearch>
 							<SearchBar />
 						</NavbarSearch>
 					)}
-				</>
+				</div>
 			}
 		/>
 	);

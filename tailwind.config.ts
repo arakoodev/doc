@@ -13,6 +13,22 @@ module.exports = {
     fontSize,
     extend: {
       colors: {
+        st: {
+          red: '#FF2A4D', // The iconic bright red
+          dark: '#050505', // Deep black
+          glow: '#FF7096', // Pinkish glow
+          neon: '#00FFFF', // Cyan accents
+          purple: '#D000FF',
+        },
+        synth: { // Keep synth vars to prevent breaking if referenced, but map to ST
+          bg: '#050505',
+          surface: '#0A0A0A',
+          primary: '#FF2A4D',
+          secondary: '#00FFFF',
+          tertiary: '#D000FF',
+          text: '#FFFFFF',
+          muted: '#B0B0B0',
+        },
         brand: {
           base: "#F4EAF3",
           surface: "#FFFFFF",
@@ -39,10 +55,17 @@ module.exports = {
       },
 
       fontFamily: {
-        matter: ["Space Grotesk", ...fontFamily.sans], // Keep 'matter' alias but map to Space Grotesk for immediate "Wow"
-        display: ["Space Grotesk", ...fontFamily.sans],
+        // Stranger Things Vibe
+        display: ["Playfair Display", ...fontFamily.serif], // ST Serif for Headings
+        stranger: ["Playfair Display", ...fontFamily.serif],
+        
+        // Clean Body Text (fixing the "janky" issue by avoiding pixel fonts for body)
         body: ["Inter", ...fontFamily.sans],
         sans: ["Inter", ...fontFamily.sans],
+        
+        // Tech accents
+        mono: ["JetBrains Mono", ...fontFamily.mono],
+        terminal: ["JetBrains Mono", ...fontFamily.mono], 
       },
     },
   },
