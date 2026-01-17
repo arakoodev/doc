@@ -14,20 +14,20 @@ module.exports = {
     extend: {
       colors: {
         st: {
-          red: '#FF2A4D', // The iconic bright red
-          dark: '#050505', // Deep black
-          glow: '#FF7096', // Pinkish glow
-          neon: '#00FFFF', // Cyan accents
-          purple: '#D000FF',
+          red: '#FF2E6F', // Cassette magenta
+          dark: '#07060A', // Deep charcoal
+          glow: '#FF8AB7', // Soft glow
+          neon: '#39F2FF', // Neon cyan
+          purple: '#5B2CFF',
         },
         synth: { // Keep synth vars to prevent breaking if referenced, but map to ST
-          bg: '#050505',
-          surface: '#0A0A0A',
-          primary: '#FF2A4D',
-          secondary: '#00FFFF',
-          tertiary: '#D000FF',
-          text: '#FFFFFF',
-          muted: '#B0B0B0',
+          bg: '#07060A',
+          surface: '#0B0A12',
+          primary: '#FF2E6F',
+          secondary: '#39F2FF',
+          tertiary: '#5B2CFF',
+          text: '#F9F4FF',
+          muted: '#B9AEC9',
         },
         brand: {
           base: "#F4EAF3",
@@ -56,12 +56,12 @@ module.exports = {
 
       fontFamily: {
         // Stranger Things Vibe
-        display: ["Playfair Display", ...fontFamily.serif], // ST Serif for Headings
-        stranger: ["Playfair Display", ...fontFamily.serif],
+        display: ["Space Grotesk", ...fontFamily.sans],
+        stranger: ["Space Grotesk", ...fontFamily.sans],
         
         // Clean Body Text (fixing the "janky" issue by avoiding pixel fonts for body)
-        body: ["Inter", ...fontFamily.sans],
-        sans: ["Inter", ...fontFamily.sans],
+        body: ["Sora", ...fontFamily.sans],
+        sans: ["Sora", ...fontFamily.sans],
         
         // Tech accents
         mono: ["JetBrains Mono", ...fontFamily.mono],

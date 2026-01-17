@@ -1,13 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 // @ts-ignore
 import projectsData from '@site/tmp-data/projects.json';
-import { FaGithub, FaStar, FaCode, FaTerminal } from 'react-icons/fa';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { FaGithub, FaStar, FaCode } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
-// Types
 type Project = {
   id: number;
   name: string;
@@ -19,115 +17,296 @@ type Project = {
   topics: string[];
 };
 
-// Components
+type CliLine = {
+  width: string;
+  delay: string;
+  content: React.ReactNode;
+};
+
+const cliLines: CliLine[] = [
+  {
+    width: '56ch',
+    delay: '0s',
+    content: (
+      <>
+        <span className="cli-prompt">
+          <span className="cli-user">arakoo</span>
+          <span className="cli-host">@lab</span>:<span className="cli-path">~</span>$
+        </span>{' '}
+        <span className="cli-command">claude</span>{' '}
+        <span className="cli-arg">code</span>{' '}
+        <span className="cli-arg">run</span>{' '}
+        <span className="cli-path">protocol/ark-01</span>
+      </>
+    ),
+  },
+  {
+    width: '40ch',
+    delay: '0.9s',
+    content: (
+      <>
+        <span className="cli-tag">[init]</span>{' '}
+        <span className="cli-output">loading orchestration graph...</span>
+      </>
+    ),
+  },
+  {
+    width: '32ch',
+    delay: '1.6s',
+    content: (
+      <>
+        <span className="cli-tag">[scan]</span>{' '}
+        <span className="cli-output">tracing agent calls...</span>
+      </>
+    ),
+  },
+  {
+    width: '36ch',
+    delay: '2.4s',
+    content: (
+      <>
+        <span className="cli-tag">[build]</span>{' '}
+        <span className="cli-output">generating ledger schema...</span>
+      </>
+    ),
+  },
+  {
+    width: '34ch',
+    delay: '3.2s',
+    content: (
+      <>
+        <span className="cli-diff">+ write</span>{' '}
+        <span className="cli-path">src/runtime/ledger.ts</span>
+      </>
+    ),
+  },
+  {
+    width: '33ch',
+    delay: '3.8s',
+    content: (
+      <>
+        <span className="cli-diff">+ write</span>{' '}
+        <span className="cli-path">src/runtime/audit.ts</span>
+      </>
+    ),
+  },
+  {
+    width: '37ch',
+    delay: '4.4s',
+    content: (
+      <>
+        <span className="cli-diff">+ write</span>{' '}
+        <span className="cli-path">src/runtime/telemetry.ts</span>
+      </>
+    ),
+  },
+  {
+    width: '26ch',
+    delay: '5.1s',
+    content: (
+      <>
+        <span className="cli-tag cli-tag-ok">[ok]</span>{' '}
+        <span className="cli-output">3 files, 0 errors</span>
+      </>
+    ),
+  },
+];
+
+const principles = [
+  {
+    title: 'Orchestration > Models',
+    description:
+      'We build around the runtime, not the model. Orchestration is where reliability, cost control, and governance actually live.',
+  },
+  {
+    title: 'Ledgered Reality',
+    description:
+      'Every action creates a line item. We trace intent, cost, and outcome so enterprise teams can trust the margins.',
+  },
+  {
+    title: 'Private by Default',
+    description:
+      'Research ships with security and auditability from day one. No demos, no noise, only controlled access.',
+  },
+];
+
 const Hero = () => {
+  const [cliCycle, setCliCycle] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCliCycle((prev) => prev + 1);
+    }, 9000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden perspective-1000">
-      {/* Background Grid */}
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      <div className="absolute inset-0 hero-sky" />
       <div className="retro-grid" />
-      
-      {/* Stranger Things Style Title - Restored */}
-      <motion.div 
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        className="z-10 text-center px-4 max-w-5xl mx-auto"
-      >
-        <h2 className="font-stranger text-xl md:text-2xl text-st-red mb-6 tracking-[0.2em] opacity-80 animate-pulse">
-          ARAKOO RESEARCH
-        </h2>
-        
-        <div className="relative inline-block mb-12">
-          {/* Top Bar - Iconic ST Vibe */}
-          <div className="h-1 md:h-2 w-full bg-st-red shadow-[0_0_10px_#FF2A4D,0_0_20px_#FF2A4D] mb-2 transform -skew-x-12" />
-          
-          <h1 className="font-stranger text-5xl md:text-8xl text-transparent bg-clip-text bg-st-red text-shadow-st leading-none tracking-normal transform scale-y-110">
-            SANDEEP<br/>SRINIVASA
-          </h1>
-          
-          {/* Bottom Bar */}
-          <div className="h-1 md:h-2 w-full bg-st-red shadow-[0_0_10px_#FF2A4D,0_0_20px_#FF2A4D] mt-2 transform -skew-x-12" />
-        </div>
-        
-        <div className="mt-8 pt-8 relative">
-           <div className="inline-block bg-st-red/10 px-4 py-1 text-st-red border border-st-red/30 font-terminal text-xs tracking-[0.2em] mb-6 rounded-sm">
-             CORE_THESIS_V9
-           </div>
-           {/* Static, high-impact text - Removed glitch class */}
-           <h3 className="font-stranger text-2xl md:text-4xl leading-tight mb-6 tracking-wide text-white drop-shadow-md">
-             INFRASTRUCTURE IS THE MODEL.<br/>
-             <span className="text-st-red">NOT THE LLM.</span>
-           </h3>
-           
-           <p className="text-gray-400 font-sans text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-             We are identifying and exploiting the structural weaknesses in current LLM deployment strategies.
-             The future belongs to those who control the <span className="text-st-red font-bold">orchestration layer</span>.
-           </p>
-        </div>
-      </motion.div>
-      
-      {/* Fog/Mist Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-0 pointer-events-none" />
-    </div>
+      <div className="absolute inset-0 signal-noise pointer-events-none" />
+
+      <div className="container-custom relative z-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center py-20 sm:py-28">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, ease: 'easeOut' }}
+          className="space-y-6"
+        >
+          <span className="inline-flex font-terminal text-2xl sm:text-3xl lg:text-4xl uppercase tracking-[0.5em] text-st-neon/80">
+            Arakoo Research
+          </span>
+
+          <div className="space-y-4">
+            <div className="inline-block">
+              <div className="h-1 w-full bg-st-red shadow-[0_0_10px_rgba(255,46,111,0.7)] mb-3 transform -skew-x-12" />
+              <h1 className="font-stranger text-5xl sm:text-6xl lg:text-7xl leading-tight text-shadow-st">
+                Sandeep Srinivasa
+              </h1>
+              <div className="h-1 w-full bg-st-red shadow-[0_0_10px_rgba(255,46,111,0.7)] mt-3 transform -skew-x-12" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-display text-white leading-snug">
+              Infrastructure is the model. <span className="text-st-neon">Not the LLM.</span>
+            </h2>
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl">
+              Arakoo Research maps the orchestration layer that makes agent systems accountable.
+              This private archive documents experiments in control planes, ledgered telemetry, and
+              enterprise-grade agent economics.
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: 'easeOut', delay: 0.15 }}
+        >
+          <div className="cli-terminal">
+            <div className="cli-terminal-title">
+              <span>xterm - arakoo@lab</span>
+              <span className="cli-terminal-controls" aria-hidden="true">
+                <span className="cli-window-btn" />
+                <span className="cli-window-btn" />
+                <span className="cli-window-btn" />
+              </span>
+            </div>
+            <div key={cliCycle} className="cli-terminal-body">
+              {cliLines.map((line) => (
+                <div
+                  key={line.delay}
+                  className="cli-line"
+                  style={{ '--line-width': line.width, '--delay': line.delay } as React.CSSProperties}
+                >
+                  {line.content}
+                </div>
+              ))}
+              <div
+                className="cli-line cli-line-live"
+                style={{ '--line-width': '18ch', '--delay': '6.2s' } as React.CSSProperties}
+              >
+                <span className="cli-prompt">
+                  <span className="cli-user">arakoo</span>
+                  <span className="cli-host">@lab</span>:<span className="cli-path">~</span>$
+                </span>
+                <span className="cli-cursor" />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 
+const PrinciplesSection = () => (
+  <section className="relative py-20 sm:py-24">
+    <div className="container-custom space-y-10">
+      <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] items-end">
+        <div className="space-y-3">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display text-white">
+            Operating Principles
+          </h2>
+        </div>
+        <p className="text-sm sm:text-base text-gray-400">
+          Each experiment is built to survive enterprise scrutiny: compliance constraints, cost
+          accountability, and runtime auditability.
+        </p>
+      </div>
+
+      <div className="grid gap-6 md:grid-cols-3">
+        {principles.map((principle, index) => (
+          <motion.div
+            key={principle.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            className="rounded-2xl border border-st-purple/30 bg-black/40 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+          >
+            <h3 className="mt-4 text-xl font-display text-white">{principle.title}</h3>
+            <p className="mt-3 text-sm text-gray-400">{principle.description}</p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
-  // Generate a random blinking delay between 0 and 2 seconds
   const blinkDelay = useRef(Math.random() * 2).current;
-  // Generate a random duration between 0.8s and 1.3s for organic feel
   const blinkDuration = useRef(0.8 + Math.random() * 0.5).current;
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.1 }}
+      transition={{ delay: index * 0.08 }}
     >
-      <Link
-        to={project.html_url}
-        className="block h-full group no-underline hover:no-underline"
-      >
-        {/* Darker ST Style Card */}
-        <div className="relative h-full bg-black/80 border border-st-red/30 p-6 rounded-sm overflow-hidden hover:border-st-neon transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,243,255,0.3)]">
-          {/* Subtle Scanlines */}
-          <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.5)_50%)] bg-[length:100%_4px] pointer-events-none opacity-20" />
-          
-          <div className="relative z-10">
-            <div className="flex justify-between items-start mb-4">
-              {/* Blinking Cursor Terminal Icon */}
-              <div className="font-terminal text-2xl font-bold text-st-red mr-4 flex items-center">
-                &gt;
+      <Link to={project.html_url} className="block h-full group no-underline hover:no-underline">
+        <div className="relative h-full rounded-2xl border border-st-red/30 bg-[linear-gradient(135deg,rgba(16,12,24,0.95),rgba(7,6,10,0.95))] p-6 overflow-hidden transition-all duration-300 hover:border-st-neon/70 hover:shadow-[0_0_30px_rgba(57,242,255,0.2)]">
+          <div className="absolute inset-0 signal-noise pointer-events-none opacity-20" />
+          <div className="absolute -top-16 -right-16 h-44 w-44 rounded-full bg-st-purple/30 blur-3xl opacity-70" />
+
+          <div className="relative z-10 flex h-full flex-col">
+            <div className="flex items-center justify-between text-[11px] font-terminal uppercase tracking-[0.3em] text-st-neon/70">
+              <span>Case File {index + 1}</span>
+              <span className="flex items-center gap-2 text-st-red/80">
                 <motion.span
-                  animate={{ opacity: [1, 0, 1] }}
-                  transition={{ 
-                    duration: blinkDuration, 
-                    repeat: Infinity, 
-                    ease: "linear", // Using simpler easing to avoid type issues, step effect can be done with keyframes
-                    delay: blinkDelay 
+                  animate={{ opacity: [1, 0.3, 1] }}
+                  transition={{
+                    duration: blinkDuration,
+                    repeat: Infinity,
+                    ease: 'linear',
+                    delay: blinkDelay,
                   }}
-                >
-                  _
-                </motion.span>
-              </div>
-              
-              <div className="flex items-center gap-2 text-xs font-terminal text-st-neon opacity-70">
-                <span className="w-2 h-2 rounded-full bg-st-neon animate-pulse" />
-                ACTIVE
-              </div>
+                  className="h-2 w-2 rounded-full bg-st-red shadow-[0_0_8px_rgba(255,46,111,0.8)]"
+                />
+                Active
+              </span>
             </div>
 
-            <h3 className="text-2xl font-bold mb-3 text-white font-display tracking-wide group-hover:text-st-neon transition-colors truncate">
+            <h3 className="mt-5 text-2xl font-display text-white tracking-wide group-hover:text-st-neon transition-colors truncate">
               {project.name}
             </h3>
-            
-            <p className="text-gray-400 mb-6 text-sm font-sans line-clamp-3 min-h-[60px] group-hover:text-gray-300">
-              {project.description || "Experimental repository. Classified data."}
+
+            <p className="mt-3 text-sm text-gray-400 line-clamp-3 min-h-[60px] group-hover:text-gray-300">
+              {project.description || 'Experimental repository. Classified data.'}
             </p>
-            
-            <div className="flex justify-between items-center border-t border-white/10 pt-4 mt-auto">
-              <div className="flex items-center gap-4 text-xs font-mono text-st-red">
+
+            {project.topics?.length ? (
+              <div className="mt-4 flex flex-wrap gap-2 text-[10px] font-terminal uppercase tracking-[0.2em] text-st-neon/70">
+                {project.topics.slice(0, 3).map((topic) => (
+                  <span key={topic} className="rounded-full border border-st-neon/30 px-2 py-1">
+                    {topic}
+                  </span>
+                ))}
+              </div>
+            ) : null}
+
+            <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-xs font-terminal text-st-neon/70">
+              <div className="flex items-center gap-4 text-st-neon/70">
                 {project.language && (
                   <span className="flex items-center gap-1">
                     <FaCode /> {project.language}
@@ -137,10 +316,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
                   <FaStar /> {project.stargazers_count}
                 </span>
               </div>
-              
-              <span className="text-xs font-terminal text-st-neon group-hover:underline decoration-st-neon underline-offset-4">
-                ACCESS_CODE &rarr;
-              </span>
+              <span className="text-st-neon group-hover:text-white transition-colors">Open repo -></span>
             </div>
           </div>
         </div>
@@ -149,116 +325,67 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
   );
 };
 
-const SectionHeader = ({ title, subtitle }: { title: string, subtitle: string }) => (
-  <div className="text-center mb-16 relative">
-    <motion.h2 
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      className="text-4xl md:text-6xl font-bold font-display text-white mb-4 relative inline-block"
-    >
-      <span className="absolute -inset-1 blur-sm bg-st-red/30 animate-pulse"></span>
-      <span className="relative z-10">{title}</span>
-    </motion.h2>
-    <div className="h-1 w-24 bg-st-neon mx-auto shadow-[0_0_10px_#00f3ff]" />
-    <p className="mt-4 font-terminal text-st-neon text-sm md:text-base tracking-widest uppercase">
-      {subtitle}
-    </p>
+const SectionHeader = ({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle?: string;
+}) => (
+  <div className="space-y-4">
+    <span className="font-terminal text-xs uppercase tracking-[0.4em] text-st-neon/80">
+      Private Archive
+    </span>
+    <h2 className="text-4xl md:text-5xl font-display text-white">{title}</h2>
+    <div className="h-[2px] w-28 bg-gradient-to-r from-st-red via-st-purple to-st-neon" />
+    {subtitle ? (
+      <p className="text-sm sm:text-base text-gray-400 max-w-2xl">{subtitle}</p>
+    ) : null}
   </div>
 );
 
-const AboutSection = () => (
-  <section className="py-24 relative overflow-hidden">
-    <div className="container-custom">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="border border-st-neon/50 p-8 bg-black/50 backdrop-blur-sm relative"
-        >
-          <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-st-neon" />
-          <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-st-neon" />
-          <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-st-neon" />
-          <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-st-neon" />
-          
-          <h3 className="text-2xl font-display text-white mb-6 flex items-center gap-3">
-            <span className="text-st-red">///</span> CLASSIFIED BRIEFING
-          </h3>
-          
-          <p className="text-gray-300 mb-6 font-mono leading-relaxed">
-            We are identifying and exploiting the structural weaknesses in current LLM deployment strategies.
-            The future belongs to those who control the <span className="text-st-neon">orchestration layer</span>.
-          </p>
-          
-          <ul className="space-y-4 font-terminal text-sm text-st-red">
-            <li className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-st-red animate-pulse" />
-              SUBJECT: Enterprise AGI
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-st-red animate-pulse" />
-              STATUS: Active Development
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-st-red animate-pulse" />
-              THREAT LEVEL: Midnight
-            </li>
-          </ul>
-        </motion.div>
-        
-        <div className="relative h-full flex items-center justify-center">
-           <div className="w-64 h-64 border-4 border-st-red rounded-full flex items-center justify-center animate-[spin_10s_linear_infinite] opacity-50">
-             <div className="w-48 h-48 border-4 border-st-neon rounded-full border-dashed animate-[spin_15s_linear_infinite_reverse]" />
-           </div>
-           <div className="absolute inset-0 flex items-center justify-center">
-             <span className="font-stranger text-6xl text-white mix-blend-overlay">AI</span>
-           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
 export default function Home(): React.ReactNode {
-  const {siteConfig} = useDocusaurusContext();
-  const sortedProjects = (projectsData as Project[]).slice(0, 9); // Top 9 projects
+  const sortedProjects = (projectsData as Project[]).slice(0, 9);
 
   return (
     <Layout
-      title={`Arakoo Research`}
-      description="The Upside Down of AI Infrastructure">
-      
+      title="Arakoo Research"
+      description="Private archive of enterprise-grade AI infrastructure research."
+    >
       <main className="crt bg-st-dark min-h-screen text-white relative selection:bg-st-neon selection:text-black">
         <Hero />
-        
-        <div className="relative z-10 bg-st-dark/90 backdrop-blur-xl border-t border-st-red/20 shadow-[0_-20px_50px_rgba(0,0,0,1)]">
-          
-          <section className="py-24 container-custom">
-            <SectionHeader title="ACTIVE EXPERIMENTS" subtitle="" />
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <PrinciplesSection />
+
+        <section className="relative z-10 bg-st-dark/90 backdrop-blur-xl border-t border-st-red/20">
+          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_20%_20%,rgba(91,44,255,0.18),transparent_50%)]" />
+          <div className="container-custom relative py-24">
+            <SectionHeader
+              title="Active Experiments"
+              subtitle="A private showcase of research projects exploring orchestration, governance, and enterprise economics for agent systems."
+            />
+
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {sortedProjects.map((project, idx) => (
                 <ProjectCard key={project.id} project={project} index={idx} />
               ))}
             </div>
-            
-            <div className="text-center mt-20">
+
+            <div className="text-center mt-16">
               <Link
                 to="https://github.com/arakoodev"
                 className="group relative inline-flex items-center gap-4 px-8 py-4 bg-transparent overflow-hidden"
               >
-                <span className="absolute inset-0 border border-st-neon/50 group-hover:border-st-neon transition-colors duration-300" />
+                <span className="absolute inset-0 border border-st-neon/40 group-hover:border-st-neon transition-colors duration-300" />
                 <span className="absolute inset-0 bg-st-neon/10 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                <span className="relative font-terminal text-st-neon text-lg tracking-widest uppercase group-hover:text-white transition-colors">
+                <span className="relative font-terminal text-st-neon text-sm tracking-[0.3em] uppercase group-hover:text-white transition-colors">
                   View Full Protocol
                 </span>
-                <FaGithub className="relative w-6 h-6 text-st-neon group-hover:text-white transition-colors" />
+                <FaGithub className="relative w-5 h-5 text-st-neon group-hover:text-white transition-colors" />
               </Link>
             </div>
-          </section>
-        </div>
-        
-        {/* Footer Ambient Glow */}
+          </div>
+        </section>
+
         <div className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-st-neon/10 to-transparent pointer-events-none z-0" />
       </main>
     </Layout>
