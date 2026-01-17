@@ -130,6 +130,47 @@ const principles = [
   },
 ];
 
+const KnightRiderBar = () => {
+  const ledCount = 28;
+  const [leds, setLeds] = useState(() => Array(ledCount).fill(0));
+
+  useEffect(() => {
+    let index = 0;
+    let direction = 1;
+    const decay = 0.84;
+    const stepMs = 60;
+
+    const interval = setInterval(() => {
+      setLeds((prev) => {
+        const next = prev.map((value) => Math.max(0, value * decay));
+        next[index] = 1;
+        return next;
+      });
+
+      if (index === ledCount - 1) {
+        direction = -1;
+      } else if (index === 0) {
+        direction = 1;
+      }
+      index += direction;
+    }, stepMs);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="knight-rider-bar" aria-hidden="true">
+      {leds.map((intensity, idx) => (
+        <span
+          key={idx}
+          className="knight-led"
+          style={{ '--i': intensity } as React.CSSProperties}
+        />
+      ))}
+    </div>
+  );
+};
+
 const Hero = () => {
   const [cliCycle, setCliCycle] = useState(0);
 
@@ -332,12 +373,12 @@ const SectionHeader = ({
   title: string;
   subtitle?: string;
 }) => (
-  <div className="space-y-4">
-    <span className="font-terminal text-xs uppercase tracking-[0.4em] text-st-neon/80">
-      Private Archive
-    </span>
-    <h2 className="text-4xl md:text-5xl font-display text-white">{title}</h2>
-    <div className="knight-rider-bar" />
+    <div className="space-y-4">
+      <span className="font-terminal text-xs uppercase tracking-[0.4em] text-st-neon/80">
+        Private Archive
+      </span>
+      <h2 className="text-4xl md:text-5xl font-display text-white">{title}</h2>
+    <KnightRiderBar />
     {subtitle ? (
       <p className="text-sm sm:text-base text-gray-400 max-w-2xl">{subtitle}</p>
     ) : null}
