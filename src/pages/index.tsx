@@ -195,24 +195,24 @@ const Hero = () => {
           transition={{ duration: 1.1, ease: 'easeOut' }}
           className="space-y-6"
         >
-          <span className="inline-flex font-terminal text-2xl sm:text-3xl lg:text-4xl uppercase tracking-[0.5em] text-st-neon/80">
+          <span className="inline-flex font-terminal fluid-xl uppercase tracking-[0.5em] text-st-neon/80">
             Arakoo Research
           </span>
 
           <div className="space-y-4">
             <div className="inline-block">
               <div className="h-1 w-full bg-st-red shadow-[0_0_10px_rgba(255,46,111,0.7)] mb-3 transform -skew-x-12" />
-              <h1 className="font-stranger text-5xl sm:text-6xl lg:text-7xl leading-tight text-shadow-st">
+              <h1 className="font-stranger fluid-3xl leading-tight text-shadow-st">
                 Sandeep Srinivasa
               </h1>
               <div className="h-1 w-full bg-st-red shadow-[0_0_10px_rgba(255,46,111,0.7)] mt-3 transform -skew-x-12" />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-display text-white leading-snug">
+            <h2 className="font-display fluid-lg text-white leading-snug">
               Infrastructure is the model.
               <br />
               <span className="text-st-neon">Not the LLM.</span>
             </h2>
-            <p className="text-base sm:text-lg text-gray-300 max-w-2xl">
+            <p className="text-gray-300 max-w-2xl fluid-base">
               This private archive documents experiments in control planes, ledgered telemetry, and
               enterprise-grade agent economics.
             </p>
@@ -267,11 +267,11 @@ const PrinciplesSection = () => (
     <div className="container-custom space-y-10">
       <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] items-end">
         <div className="space-y-3">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display text-white">
+          <h2 className="font-display text-white fluid-2xl">
             Operating Principles
           </h2>
         </div>
-        <p className="text-sm sm:text-base text-gray-400">
+        <p className="text-gray-400 fluid-base">
           Arakoo Research maps the orchestration layer that makes agent systems accountable. Each
           experiment is built to survive enterprise scrutiny: compliance constraints, cost
           accountability, and runtime auditability.
@@ -288,8 +288,8 @@ const PrinciplesSection = () => (
             transition={{ duration: 0.6, delay: index * 0.1 }}
             className="rounded-2xl border border-st-purple/30 bg-black/40 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
           >
-            <h3 className="mt-4 text-xl font-display text-white">{principle.title}</h3>
-            <p className="mt-3 text-sm text-gray-400">{principle.description}</p>
+            <h3 className="mt-4 font-display text-white fluid-lg">{principle.title}</h3>
+            <p className="mt-3 text-gray-400 fluid-sm">{principle.description}</p>
           </motion.div>
         ))}
       </div>
@@ -314,7 +314,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           <div className="absolute -top-16 -right-16 h-44 w-44 rounded-full bg-st-purple/30 blur-3xl opacity-70" />
 
           <div className="relative z-10 flex h-full flex-col">
-            <div className="flex items-center justify-between text-[11px] font-terminal uppercase tracking-[0.3em] text-st-neon/70">
+            <div className="flex items-center justify-between font-terminal uppercase tracking-[0.3em] text-st-neon/70 fluid-xxs">
               <span>Case File {index + 1}</span>
               <span className="flex items-center gap-2 text-st-red/80">
                 <motion.span
@@ -331,16 +331,16 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               </span>
             </div>
 
-            <h3 className="mt-5 text-2xl font-display text-white tracking-wide group-hover:text-st-neon transition-colors truncate">
+            <h3 className="mt-5 font-display text-white tracking-wide group-hover:text-st-neon transition-colors truncate fluid-lg">
               {project.name}
             </h3>
 
-            <p className="mt-3 text-sm text-gray-400 line-clamp-3 min-h-[60px] group-hover:text-gray-300">
+            <p className="mt-3 text-gray-400 line-clamp-3 min-h-[60px] group-hover:text-gray-300 fluid-sm">
               {project.description || 'Experimental repository. Classified data.'}
             </p>
 
             {project.topics?.length ? (
-              <div className="mt-4 flex flex-wrap gap-2 text-[10px] font-terminal uppercase tracking-[0.2em] text-st-neon/70">
+              <div className="mt-4 flex flex-wrap gap-2 font-terminal uppercase tracking-[0.2em] text-st-neon/70 fluid-xxs">
                 {project.topics.slice(0, 3).map((topic) => (
                   <span key={topic} className="rounded-full border border-st-neon/30 px-2 py-1">
                     {topic}
@@ -349,7 +349,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               </div>
             ) : null}
 
-            <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-xs font-terminal text-st-neon/70">
+            <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 font-terminal text-st-neon/70 fluid-xxs">
               <div className="flex items-center gap-4 text-st-neon/70">
                 {project.language && (
                   <span className="flex items-center gap-1">
@@ -377,13 +377,13 @@ const SectionHeader = ({
   subtitle?: string;
 }) => (
     <div className="space-y-4">
-      <span className="font-terminal text-xs uppercase tracking-[0.4em] text-st-neon/80">
+      <span className="font-terminal uppercase tracking-[0.4em] text-st-neon/80 fluid-xxs">
         Private Archive
       </span>
-      <h2 className="text-4xl md:text-5xl font-display text-white">{title}</h2>
+      <h2 className="font-display text-white fluid-xl">{title}</h2>
     <KnightRiderBar />
     {subtitle ? (
-      <p className="text-sm sm:text-base text-gray-400 max-w-2xl">{subtitle}</p>
+      <p className="text-gray-400 max-w-2xl fluid-sm">{subtitle}</p>
     ) : null}
   </div>
 );
@@ -421,7 +421,7 @@ export default function Home(): React.ReactNode {
               >
                 <span className="absolute inset-0 border border-st-neon/40 group-hover:border-st-neon transition-colors duration-300" />
                 <span className="absolute inset-0 bg-st-neon/10 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                <span className="relative font-terminal text-st-neon text-sm tracking-[0.3em] uppercase group-hover:text-white transition-colors">
+                <span className="relative font-terminal text-st-neon tracking-[0.3em] uppercase group-hover:text-white transition-colors fluid-xs">
                   View Full Protocol
                 </span>
                 <FaGithub className="relative w-5 h-5 text-st-neon group-hover:text-white transition-colors" />

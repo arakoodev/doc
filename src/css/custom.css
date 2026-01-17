@@ -23,6 +23,13 @@
   --ifm-background-color: var(--bg-dark);
   --ifm-color-primary: var(--st-red);
   --ifm-navbar-background-color: rgba(5, 5, 5, 0.95);
+  --ifm-font-size-base: clamp(0.875rem, 2.2vw, 1rem);
+  --ifm-h1-font-size: clamp(2rem, 6vw, 3rem);
+  --ifm-h2-font-size: clamp(1.6rem, 4.8vw, 2.4rem);
+  --ifm-h3-font-size: clamp(1.3rem, 3.6vw, 1.9rem);
+  --ifm-h4-font-size: clamp(1.1rem, 3vw, 1.5rem);
+  --ifm-h5-font-size: clamp(1rem, 2.6vw, 1.25rem);
+  --ifm-h6-font-size: clamp(0.95rem, 2.2vw, 1.1rem);
   
   --ifm-font-family-base: 'Sora', system-ui, -apple-system, sans-serif;
   --ifm-font-family-monospace: 'JetBrains Mono', monospace;
@@ -32,6 +39,10 @@ body {
   background-color: var(--bg-dark);
   color: var(--text-main);
   overflow-x: hidden;
+}
+
+html {
+  font-size: clamp(14px, 2.2vw, 16px);
 }
 
 /* CRT Subtle Grain */
@@ -145,13 +156,13 @@ body {
   color: var(--st-red) !important;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 3.4vw, 1.5rem);
   text-shadow: 0 0 5px var(--st-red);
 }
 
 .navbar__link {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 2.4vw, 1rem);
   font-weight: 600;
   letter-spacing: 0.05em;
   color: var(--text-muted) !important;
@@ -176,6 +187,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 700;
+  font-size: clamp(1rem, 2.8vw, 1.4rem);
 }
 
 .footer__link-item {
@@ -185,7 +197,7 @@ body {
 .footer__copyright {
   font-family: 'JetBrains Mono', monospace;
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 2.2vw, 0.85rem);
 }
 
 .hero-sky {
@@ -283,7 +295,7 @@ body {
 .cli-terminal-title {
   padding: 4px 8px;
   font-family: 'Sora', system-ui, sans-serif;
-  font-size: 12px;
+  font-size: clamp(10px, 2.4vw, 12px);
   letter-spacing: 0;
   color: #111111;
   background: #b0b0b0;
@@ -426,6 +438,38 @@ body {
   .cli-terminal {
     max-width: 100%;
   }
+}
+
+.fluid-xxs {
+  font-size: clamp(0.6rem, 1.7vw, 0.75rem);
+}
+
+.fluid-xs {
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+}
+
+.fluid-sm {
+  font-size: clamp(0.85rem, 2.4vw, 1rem);
+}
+
+.fluid-base {
+  font-size: clamp(0.95rem, 2.7vw, 1.1rem);
+}
+
+.fluid-lg {
+  font-size: clamp(1.2rem, 3.8vw, 1.6rem);
+}
+
+.fluid-xl {
+  font-size: clamp(1.6rem, 5.2vw, 2.6rem);
+}
+
+.fluid-2xl {
+  font-size: clamp(2rem, 6.5vw, 3.4rem);
+}
+
+.fluid-3xl {
+  font-size: clamp(2.6rem, 8.5vw, 4.8rem);
 }
 
 @keyframes cli-blink {

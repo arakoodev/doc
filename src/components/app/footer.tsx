@@ -29,23 +29,23 @@ export function Footer() {
                 {/* Brand / Copyright */}
 				<div className='flex flex-col gap-4 text-center md:text-left'>
                     <div className="group relative inline-block">
-                        <h2 className='text-3xl font-stranger text-st-red tracking-widest uppercase mb-0 group-hover:text-white transition-colors'>
+                        <h2 className='font-stranger text-st-red tracking-widest uppercase mb-0 group-hover:text-white transition-colors fluid-xl'>
                             ARAKOO
                         </h2>
-                        <span className="text-xs font-terminal text-st-neon tracking-[0.5em] block group-hover:animate-pulse">
+                        <span className="font-terminal text-st-neon tracking-[0.5em] block group-hover:animate-pulse fluid-xxs">
                             RESEARCH
                         </span>
                     </div>
-					<p className='text-sm text-gray-500 font-terminal mt-2'>
+					<p className='text-gray-500 font-terminal mt-2 fluid-sm'>
 						{`© ${currentYear} SANDEEP SRINIVASA. ALL RIGHTS RESERVED.`}
                         <br/>
-                        <span className="text-xs opacity-50">SYSTEM VERSION 9.0.1</span>
+                        <span className="opacity-50 fluid-xxs">SYSTEM VERSION 9.0.1</span>
 					</p>
 				</div>
 
                 {/* Contact / Social */}
 				<div className='flex flex-col gap-6 text-center md:text-right'>
-					<h3 className='text-sm font-terminal font-bold text-st-neon uppercase tracking-[0.2em] mb-2 border-b border-st-neon/30 pb-2 inline-block md:inline'>
+					<h3 className='font-terminal font-bold text-st-neon uppercase tracking-[0.2em] mb-2 border-b border-st-neon/30 pb-2 inline-block md:inline fluid-sm'>
                         Comms Link
                     </h3>
                     
@@ -61,7 +61,7 @@ export function Footer() {
                         </a>
                     </div>
                     
-                    <div className="flex flex-col gap-1 text-xs font-terminal text-gray-500">
+                    <div className="flex flex-col gap-1 font-terminal text-gray-500 fluid-xxs">
                         <a href="/privacy" className="hover:text-st-red hover:underline decoration-st-red underline-offset-4">PRIVACY_PROTOCOL</a>
                     </div>
 				</div>
