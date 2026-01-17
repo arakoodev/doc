@@ -208,10 +208,11 @@ const Hero = () => {
               <div className="h-1 w-full bg-st-red shadow-[0_0_10px_rgba(255,46,111,0.7)] mt-3 transform -skew-x-12" />
             </div>
             <h2 className="text-2xl sm:text-3xl font-display text-white leading-snug">
-              Infrastructure is the model. <span className="text-st-neon">Not the LLM.</span>
+              Infrastructure is the model.
+              <br />
+              <span className="text-st-neon">Not the LLM.</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-300 max-w-2xl">
-              Arakoo Research maps the orchestration layer that makes agent systems accountable.
               This private archive documents experiments in control planes, ledgered telemetry, and
               enterprise-grade agent economics.
             </p>
@@ -222,6 +223,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: 'easeOut', delay: 0.15 }}
+          className="min-w-0 w-full"
         >
           <div className="cli-terminal">
             <div className="cli-terminal-title">
@@ -270,7 +272,8 @@ const PrinciplesSection = () => (
           </h2>
         </div>
         <p className="text-sm sm:text-base text-gray-400">
-          Each experiment is built to survive enterprise scrutiny: compliance constraints, cost
+          Arakoo Research maps the orchestration layer that makes agent systems accountable. Each
+          experiment is built to survive enterprise scrutiny: compliance constraints, cost
           accountability, and runtime auditability.
         </p>
       </div>

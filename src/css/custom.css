@@ -270,6 +270,10 @@ body {
   background: #c0c0c0;
   box-shadow: 1px 1px 0 #3b3b3b, -1px -1px 0 #efefef, 0 0 18px rgba(124, 255, 178, 0.08);
   padding: 6px 6px 10px;
+  width: 100%;
+  max-width: 520px;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .cli-terminal::before {
@@ -313,12 +317,15 @@ body {
   background: #000000;
   font-family: 'JetBrains Mono', monospace;
   color: #e8e8e8;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: clamp(10px, 2.4vw, 12px);
+  line-height: 1.55;
   position: relative;
   overflow: hidden;
+  height: 240px;
   min-height: 240px;
   box-shadow: inset 0 0 0 1px #0f0f0f;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cli-terminal-body::after {
@@ -332,13 +339,16 @@ body {
 }
 
 .cli-line {
-  width: 0;
-  white-space: nowrap;
+  width: 100%;
+  white-space: pre-wrap;
   overflow: hidden;
-  animation: cli-type 1.4s steps(36) forwards;
+  clip-path: inset(0 100% 0 0);
+  animation: cli-reveal 1.4s steps(36) forwards;
   animation-delay: var(--delay);
   animation-fill-mode: both;
   display: block;
+  max-width: 100%;
+  word-break: break-word;
 }
 
 .cli-line + .cli-line {
@@ -346,7 +356,7 @@ body {
 }
 
 .cli-line-live {
-  animation: cli-type 1.1s steps(18) forwards;
+  animation: cli-reveal 1.1s steps(18) forwards;
   animation-delay: var(--delay);
   animation-fill-mode: both;
 }
@@ -407,9 +417,15 @@ body {
   50% { opacity: 1; transform: scale(1); }
 }
 
-@keyframes cli-type {
-  from { width: 0; opacity: 1; }
-  to { width: var(--line-width); opacity: 1; }
+@keyframes cli-reveal {
+  from { clip-path: inset(0 100% 0 0); opacity: 1; }
+  to { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+
+@media (max-width: 640px) {
+  .cli-terminal {
+    max-width: 100%;
+  }
 }
 
 @keyframes cli-blink {
