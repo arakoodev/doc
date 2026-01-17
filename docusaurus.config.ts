@@ -137,7 +137,7 @@ baseUrl: "/",
             },
             {
               label: "Twitter",
-              href: "https://x.com/sandeep_srinivasa",
+              href: "https://x.com/sandeepssrin",
             },
           ],
         },

@@ -53,7 +53,7 @@ export function Footer() {
                         <a href='https://github.com/arakoodev' className='text-gray-400 hover:text-st-neon transition-colors transform hover:scale-110'>
                             <FaGithub size={24} />
                         </a>
-                        <a href='https://x.com/sandeep_srinivasa' className='text-gray-400 hover:text-st-neon transition-colors transform hover:scale-110'>
+                        <a href='https://x.com/sandeepssrin' className='text-gray-400 hover:text-st-neon transition-colors transform hover:scale-110'>
                             <FaTwitter size={24} />
                         </a>
                         <a href='mailto:founders@arakoo.com' className='text-gray-400 hover:text-st-neon transition-colors transform hover:scale-110'>

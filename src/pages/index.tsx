@@ -337,7 +337,7 @@ const SectionHeader = ({
       Private Archive
     </span>
     <h2 className="text-4xl md:text-5xl font-display text-white">{title}</h2>
-    <div className="h-[2px] w-28 bg-gradient-to-r from-st-red via-st-purple to-st-neon" />
+    <div className="knight-rider-bar" />
     {subtitle ? (
       <p className="text-sm sm:text-base text-gray-400 max-w-2xl">{subtitle}</p>
     ) : null}
